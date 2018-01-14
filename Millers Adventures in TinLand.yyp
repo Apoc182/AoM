@@ -343,14 +343,6 @@
             }
         },
         {
-            "Key": "76f8fbb8-6b65-4958-940c-e9c3290ca3a2",
-            "Value": {
-                "id": "86281b42-3973-4040-87b8-627f5fde78d0",
-                "resourcePath": "sounds\\snd_drop_dodged\\snd_drop_dodged.yy",
-                "resourceType": "GMSound"
-            }
-        },
-        {
             "Key": "78a54fd8-4ecb-464e-be41-4bc12900fab9",
             "Value": {
                 "id": "3195416f-3267-47bb-bcbf-e241d738cd74",
