@@ -18,9 +18,9 @@ alarm[3] = speed_jump;
 
 //Constants
 global.whiteDropGround = 5;
-global.whiteDropHead = 150;
-global.whiteDropUmberella = 50;
-global.blackDropGround = 5;
-global.blackDropHead = 500;
+global.whiteDropHead = -150;
+global.whiteDropUmberella = -50;
+global.blackDropGround = -5;
+global.blackDropHead = -500;
 global.blackDropUmberella = 100;
 global.rbCanPickup = 100;
