@@ -4,6 +4,9 @@
 global.user_name = "";
 keyboard_string = "";
 
+//Initialise fonts
+draw_set_font(fnt_main);
+
 
 //This is a boolean indicating whether or not the username is Thor or thor.
 global.is_thor = false

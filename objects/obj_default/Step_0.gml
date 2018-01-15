@@ -27,7 +27,7 @@ if (x - (sprite_actual_width/2) + spd <= 0 || x + (sprite_actual_width/2) + spd 
 if (pressed_right && x + (sprite_actual_width/2) + spd < window_get_width()){
 	moving = true;
 	if (spd < top_spd){
-		spd += .1 * multiplier;
+		spd += inertia * multiplier;
 	}
 	
 	sprite_index = walking;
@@ -39,7 +39,7 @@ if (pressed_right && x + (sprite_actual_width/2) + spd < window_get_width()){
 if (pressed_left && x - (sprite_actual_width/2) > 0){
 	moving = true;
 	if (spd > -top_spd){
-		spd -= .1 * multiplier;
+		spd -= inertia * multiplier;
 	}
 	sprite_index = walking;
 	image_xscale = -1;
