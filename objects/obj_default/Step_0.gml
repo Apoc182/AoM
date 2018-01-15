@@ -57,9 +57,13 @@ if (!keyboard_check(ord("A")) && !keyboard_check(ord("D")) && !keyboard_check(or
 	if (spd > 0){
 		spd -= inertia;
 	}
+	
+	if (spd >= -.1 && spd <= .1 ){
+		spd = 0;
+	}
 }
 
-
+show_debug_message(spd)
 
 //X position is updated every frame based on the above speed logic.
 x += spd;

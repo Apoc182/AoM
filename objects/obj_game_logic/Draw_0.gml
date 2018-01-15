@@ -8,7 +8,7 @@ if(global.debugging){
 	draw_text(10,70,"Time: " +  string(timer mod 60));
 }else{
 	//Timer
-	draw_text(10,50,"Time: " +  string(timer mod 60));
+	draw_text(10,50,"Time: " + string(floor(timer/60)) + ":" + string(timer mod 60));
 }
 
 
