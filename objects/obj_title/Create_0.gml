@@ -85,5 +85,33 @@ global.rain_hit = [
 //Max score
 global.max_score = 0;
 
-//Beard selection array
-global.beards_to_choose = [spr_beard_normal, spr_beard_chops, spr_beard_black];
+//Beard selection array. This will check what they player has unlocked and apply it.
+
+//An array of all possible beards
+all_beards = [spr_beard_normal, spr_beard_chops, spr_beard_black,
+			  spr_abe, spr_chaplin, spr_chops_2, spr_blonde, spr_grey,
+		      spr_white, spr_van_dyke];
+			  
+//A variable tracking where we are up to in the beards_to_choose array. Would be easier if i could
+//find an append function.
+beards_to_choose_array_location = 0;
+
+//This loop will go through and set each part of the save.ini to true based on if they are unlocked or not.
+
+for (var i = 0; i < array_length_1d(all_beards); i++){
+	ini_open("Save.ini")
+	if(ini_read_real("Save", sprite_get_name(all_beards[i]), 0) > 0){
+		global.beards_to_choose[beards_to_choose_array_location] = all_beards[i];
+		beards_to_choose_array_location++;
+	}
+	
+	
+	
+}
+
+ini_close();
+ini_close();
+
+
+//Set the amount of lives to initialize
+global.player_lives = 3;

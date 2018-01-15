@@ -13,6 +13,7 @@ global.is_thor = false
 if(!file_exists("Save.ini")){
 	ini_open("Save.ini");
 	ini_write_string("Save", "Current_Beard", 0);
+	scr_initialise_beards();
 	global.beard_setting = 0;
 }else{
 	ini_open("Save.ini");

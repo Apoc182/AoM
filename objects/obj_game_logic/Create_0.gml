@@ -3,6 +3,8 @@ drop_speed = .5 * room_speed; // Less is more. This is the length of time the al
 global.scr = 0;
 spd = 4;
 array_count = 0;
+timer = 0;
+alarm[4] = room_speed;
 
 global.time_multiplier = 0;
 

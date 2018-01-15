@@ -4,10 +4,11 @@ mover -= max(keyboard_check_pressed(ord("A")), keyboard_check_pressed(vk_left), 
 mover += max(keyboard_check_pressed(ord("D")), keyboard_check_pressed(vk_right), 0);
 
 if(mover < 0){
-	mover = array_length_1d(menu) - 1;
+	mover = array_length_1d(global.beards_to_choose) - 1;
 }
 
-if(mover > array_length_1d(menu) - 1){
+
+if(mover > array_length_1d(global.beards_to_choose) - 1){
 	mover = 0;
 }
 
@@ -33,6 +34,25 @@ if(confirm){
 			break;
 		case 3:
 			ini_write_real("Save", "Current_Beard", 3);
+			break;
+			
+		case 4:			
+			ini_write_real("Save", "Current_Beard", 4);
+			break;			
+		case 5:
+			ini_write_real("Save", "Current_Beard", 5);
+			break;
+		case 6:
+			ini_write_real("Save", "Current_Beard", 6);
+			break;
+		case 7:
+			ini_write_real("Save", "Current_Beard", 7);
+			break;
+		case 8:			
+			ini_write_real("Save", "Current_Beard", 8);
+			break;			
+		case 9:
+			ini_write_real("Save", "Current_Beard", 9);
 			break;
 		default:
 			break;

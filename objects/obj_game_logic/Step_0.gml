@@ -42,3 +42,8 @@ if(!alarm[1]){
 	alarm[1] = room_speed * (10 + random(5));
 }
 
+//If run out of lives, game over
+if (global.player_lives <= 0){
+	room_goto(game_over);
+}
+

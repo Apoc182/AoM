@@ -6,7 +6,7 @@
 
 
 //Check for drop collision with player
-//if (!place_empty(x, y) && y > umberella_out_kill_location && place_meeting(x,y,obj_default) && x + sprite_width >= obj_default.x * obj_default.image_xscale && x <= obj_default.x + 64 * obj_default.image_xscale){
+
 
 
 if(place_meeting(x,y,obj_default) && !drop_contact){
@@ -31,6 +31,9 @@ if(place_meeting(x,y,obj_default) && !drop_contact){
 		
 	//If umberella is away
 	}else{
+		
+		//Added for the lives
+		global.player_lives -= 1;
 		if(this_colour == c_white){
 			current = global.whiteDropHead * -1;
 			this_text = string(current);

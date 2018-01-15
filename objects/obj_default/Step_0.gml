@@ -19,7 +19,7 @@ if(global.time_multiplier > 0){
 }
 
 //Sets speed to 0 if player tries to leave the screen.
-if (x - (sprite_actual_width/2) + spd <= 0 || x + (sprite_actual_width/2) >= window_get_width()){
+if (x - (sprite_actual_width/2) + spd <= 0 || x + (sprite_actual_width/2) + spd >= window_get_width()){
 	spd = 0;
 }
 
