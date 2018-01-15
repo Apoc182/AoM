@@ -3,5 +3,5 @@
 
 if(keyboard_check_pressed(vk_space)){
 	scr_restart();
-	room_goto(rm_title);
+	room_goto(dream);
 }
