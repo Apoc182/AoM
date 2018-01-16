@@ -3,7 +3,9 @@
 
 if(keyboard_check(vk_anykey) && !keyboard_check(vk_enter) && !keyboard_check(vk_backspace)){
 
-	global.user_name += keyboard_string;
+	if(string_length(global.user_name) < 12){
+		global.user_name += keyboard_string;
+	}
 	keyboard_string = "";
 
 }
