@@ -1,7 +1,7 @@
 //write your messages in an array, starting at 0, like so
-message[0] = "Good morning Damien! I am ready to....";
+message[0] = "Good morning Damien!\n\nI am ready to....";
 message[1] = "Damien?";
-message[2] = "Damien wake up! This is no time to be selfish!";
+message[2] = "Damien wake up!\n\nThis is no time to be selfish!";
 message[3] = "...";
 message[4] = "Your friends are here...";
 

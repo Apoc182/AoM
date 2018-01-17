@@ -1,20 +1,36 @@
 //scoreboard
-
 draw_set_color(c_black);
-draw_text(10,10,"Score: " + string(global.scr));
-draw_text(10,30,"Current Max: " + string(global.max_score));
-if(global.debugging){
-	draw_text(10,50,"Debug name: " + global.user_name);
-	draw_text(10,70,"Time: " +  string(timer mod 60));
-}else{
-	//Timer
-	draw_text(10,50,"Time: " + string(floor(timer/60)) + ":" + string(timer mod 60));
+draw_text(64,32,global.user_name);
+draw_text(448,32,"Time");
+
+//display zeros in front of score
+if(global.scr)<10{
+	draw_text(64,64,"00000");
+}
+else if(global.scr)<100{
+	draw_text(64,64,"0000");
+}
+else if(global.scr)<1000{
+	draw_text(64,64,"000");
+}
+else if(global.scr)<10000{
+	draw_text(64,64,"00");
+}
+else if(global.scr)<100000{
+	draw_text(64,64,"0");
 }
 
+//display score
+draw_set_halign(fa_right);
+draw_text(256,64,string(global.scr));
+
+//Timer
+draw_text(576,64, string(floor(timer/60)) + ":" + string(timer mod 60));
+draw_set_halign(fa_left)
 
 //Draw the lives on the screen
 for (var i = 0; i < global.player_lives; i++){
-	draw_sprite(spr_lives, -1, (window_get_width() - 150) - ((sprite_get_width(spr_lives) + 10) * i), 50);
+	draw_sprite(spr_lives, -1, (816) - (64 * i), 64);
 }
 
 //Display beard unlocked.
