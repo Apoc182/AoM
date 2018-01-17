@@ -4,7 +4,7 @@
 if (instance_place(x, y, obj_default) && !picked_up){
 	instance_create_depth(-10,-10,-1000,obj_rbcountdown);
 	global.drop_base_speed = 0;
-	global.scr += global.rbCanPickup; 
+	global.scr += global.rb_can_pickup; 
 	picked_up = true;
 }
 

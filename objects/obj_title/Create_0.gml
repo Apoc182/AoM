@@ -11,16 +11,16 @@ if(!audio_is_playing(snd_title)){
 	audio_sound_gain(title_theme, .25, 0);
 }
 
-global.debugging = false;
+global.debugging = true;
 
 global.drop_base_speed = 4;
 
 //Below are global variables I want to make sure are in memory before the game loads.
-//So we know when the umberella is out
-global.umberella_out = false;
+//So we know when the umbrella is out
+global.umbrella_out = false;
 
-//Set the cooldown for the umberella in seconds
-global.umberella_cooldown_time = 2; //This is wrong. There are 8 frames.
+//Set the cooldown for the umbrella in seconds
+global.umbrella_cooldown_time = 2; //This is wrong. There are 8 frames.
 
 //For the drops
 global.kirsten_whinging = [
@@ -109,7 +109,6 @@ for (var i = 0; i < array_length_1d(all_beards); i++){
 	
 }
 
-ini_close();
 ini_close();
 
 

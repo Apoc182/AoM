@@ -2,7 +2,7 @@
 // You can write your code in this editor
 
 
-//A simple vaiable to determine which sprite to use for umberella
+//A simple vaiable to determine which sprite to use for umbrella
 moving = false;
 
 
@@ -63,7 +63,6 @@ if (!keyboard_check(ord("A")) && !keyboard_check(ord("D")) && !keyboard_check(or
 	}
 }
 
-show_debug_message(spd)
 
 //X position is updated every frame based on the above speed logic.
 x += spd;
@@ -73,15 +72,15 @@ if(image_index = 1){
 	audio_play_sound(snd_step, 0, false);
 }
 
-//Detects space bar and draws umberella
+//Detects space bar and draws umbrella
 if (keyboard_check(vk_space)){
 	
 	if(moving){
-		sprite_index = umberella_walking;
+		sprite_index = umbrella_walking;
 	}else{
-		sprite_index = umberella_standing;
+		sprite_index = umbrella_standing;
 	}
-	global.umberella_out = true;
+	global.umbrella_out = true;
 }else{	
-	global.umberella_out = false;
+	global.umbrella_out = false;
 }

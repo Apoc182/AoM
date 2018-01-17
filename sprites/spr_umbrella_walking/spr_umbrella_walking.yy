@@ -2,7 +2,7 @@
     "id": "e537996f-4f2d-44dc-91bb-57b5619cc134",
     "modelName": "GMSprite",
     "mvc": "1.12",
-    "name": "spr_umberella_walking",
+    "name": "spr_umbrella_walking",
     "For3D": false,
     "HTile": false,
     "VTile": false,

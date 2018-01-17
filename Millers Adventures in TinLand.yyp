@@ -290,7 +290,7 @@
             "Key": "4d949ce4-044b-4d94-8aaa-bcb1407c2478",
             "Value": {
                 "id": "cb434033-ffee-431b-a3a1-c27e852e77f5",
-                "resourcePath": "sprites\\spr_umberella_standing\\spr_umberella_standing.yy",
+                "resourcePath": "sprites\\spr_umbrella_standing\\spr_umbrella_standing.yy",
                 "resourceType": "GMSprite"
             }
         },
@@ -322,7 +322,7 @@
             "Key": "5cb865bd-6679-4eb4-aa02-43854733c2a7",
             "Value": {
                 "id": "b875c3ea-c4b8-4d21-be92-9b694246d351",
-                "resourcePath": "sprites\\spr_thor_umberella\\spr_thor_umberella.yy",
+                "resourcePath": "sprites\\spr_thor_umbrella\\spr_thor_umbrella.yy",
                 "resourceType": "GMSprite"
             }
         },
@@ -807,6 +807,14 @@
             }
         },
         {
+            "Key": "e0ddfc44-c6f5-4f6c-96c3-2a50cc763cff",
+            "Value": {
+                "id": "3586b840-131e-46a7-8c60-d237021345a8",
+                "resourcePath": "views\\e0ddfc44-c6f5-4f6c-96c3-2a50cc763cff.yy",
+                "resourceType": "GMFolder"
+            }
+        },
+        {
             "Key": "e4ece695-7c9b-4dd8-bf06-f84ecb9d424d",
             "Value": {
                 "id": "e5ebe53a-a1a7-447d-9795-64a4c1ee260e",
@@ -826,7 +834,7 @@
             "Key": "e537996f-4f2d-44dc-91bb-57b5619cc134",
             "Value": {
                 "id": "ed0a9d83-65b1-4ce7-b8a8-4eeb416001a2",
-                "resourcePath": "sprites\\spr_umberella_walking\\spr_umberella_walking.yy",
+                "resourcePath": "sprites\\spr_umbrella_walking\\spr_umbrella_walking.yy",
                 "resourceType": "GMSprite"
             }
         },

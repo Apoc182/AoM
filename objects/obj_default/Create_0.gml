@@ -1,7 +1,7 @@
 /// @description Insert description here
 // You can write your code in this editor
 
-umberella_cooldown = false;
+umbrella_cooldown = false;
 countdown = 4;
 pressed_left = false;
 pressed_right = false;
@@ -16,14 +16,14 @@ sprite_actual_width = sprite_width;
 //These variables store the standing and walking sprites
 walking = spr_walking;
 standing = spr_default_standing;
-umberella_standing = spr_umberella_standing;
-umberella_walking = spr_umberella_walking;
+umbrella_standing = spr_umbrella_standing;
+umbrella_walking = spr_umbrella_walking;
 
 //This will handle the Thor costume
 if(global.is_thor){
 	standing = spr_thor_standing;
-	umberella_standing = spr_thor_umberella;
+	umbrella_standing = spr_thor_umbrella;
 	
 	//This is for when we have the walking sprite
-	//walking = spr_thor_umberella;
+	//walking = spr_thor_umbrella;
 }

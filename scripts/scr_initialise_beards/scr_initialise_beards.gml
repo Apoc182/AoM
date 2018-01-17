@@ -7,3 +7,4 @@ ini_write_real("Save", "spr_chops_2", 0);
 ini_write_real("Save", "spr_grey", 0);
 ini_write_real("Save", "spr_white", 0);
 ini_write_real("Save", "spr_van_dyke", 0);
+ini_write_real("Save", "spr_blonde", 0);
