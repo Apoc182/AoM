@@ -463,6 +463,14 @@
             }
         },
         {
+            "Key": "85f45737-bb17-4aec-a006-42999a21c648",
+            "Value": {
+                "id": "d24a5319-3bc6-4c43-bdb1-7acbce01611b",
+                "resourcePath": "sprites\\spr_nesfont\\spr_nesfont.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "8924ba8c-9cd8-43fa-a7fb-0068002ef134",
             "Value": {
                 "id": "40fbe6ac-cfad-417f-b347-ee94ac5781b4",

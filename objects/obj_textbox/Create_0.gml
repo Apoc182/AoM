@@ -5,7 +5,10 @@ global.user_name = "";
 keyboard_string = "";
 
 //Initialise fonts
-draw_set_font(fnt_main);
+map_string = " !\"#$%&'()*+,-./0123456789:;<=>?@ABCDEFGHIJKLMNOPQRSTUVWXYZ[\\]^_`abcdefghijklmnopqrstuvwxyz{|}~";
+nesfont = font_add_sprite_ext(spr_nesfont, map_string, false, 0);
+draw_set_font(nesfont);
+
 
 
 //This is a boolean indicating whether or not the username is Thor or thor.
