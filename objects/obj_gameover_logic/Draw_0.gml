@@ -11,7 +11,7 @@ draw_text(160, 512, "PRESS SPACE TO RESTART");
 
 if(array_length_1d(top_players) > 0){
 	for (var i = 0; i < array_length_1d(top_players); i++){
-		draw_text(96, 32 + (i * 32), top_players[i]);
+		draw_text(64, 32 + (i * 32), top_players[i]);
 	}
 }
 
