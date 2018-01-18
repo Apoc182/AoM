@@ -7,11 +7,11 @@ image_alpha = 0;
 
 
 if(!audio_is_playing(snd_title)){
-	title_theme = audio_play_sound(snd_title, 0, true);
-	audio_sound_gain(title_theme, .25, 0);
+	audio_play_sound(snd_title, 0, true);
+	audio_sound_gain(snd_title, .25, 0);
 }
 
-global.debugging = true;
+global.debugging = false;
 
 global.drop_base_speed = 4;
 
@@ -20,7 +20,7 @@ global.drop_base_speed = 4;
 global.umbrella_out = false;
 
 //Set the cooldown for the umbrella in seconds
-global.umbrella_cooldown_time = 2; //This is wrong. There are 8 frames.
+global.umbrella_cooldown_time = 2; 
 
 //For the drops
 global.kirsten_whinging = [

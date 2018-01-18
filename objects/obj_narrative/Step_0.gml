@@ -27,7 +27,7 @@ if (global.kirsten_ready){
 if(keyboard_check_pressed(vk_space)){
 	room_goto(dream);
 	audio_sound_gain(snd_lullaby, 0, 2000);
-	audio_sound_gain(snd_title, .5, 2000);
+	audio_sound_gain(snd_title, .25, 2000);
 	keyboard_clear(vk_space);
 
 }

@@ -1,28 +1,19 @@
 //scoreboard
 draw_set_color(c_black);
-draw_text(64,32,global.user_name);
+draw_text(32,32,global.user_name);
 draw_text(448,32,"Time");
 
 //display zeros in front of score
-if(global.scr)<10{
-	draw_text(64,64,"00000");
-}
-else if(global.scr)<100{
-	draw_text(64,64,"0000");
-}
-else if(global.scr)<1000{
-	draw_text(64,64,"000");
-}
-else if(global.scr)<10000{
-	draw_text(64,64,"00");
-}
-else if(global.scr)<100000{
-	draw_text(64,64,"0");
-}
+
+if(global.scr < 10) zeros_in_front = "00000";
+else if(global.scr < 100) zeros_in_front = "0000";
+else if(global.scr < 1000) zeros_in_front = "000";
+else if(global.scr < 10000) zeros_in_front = "00";
+else if (global.scr < 100000) zeros_in_front = "0";
+else zeros_in_front = "";
 
 //display score
-draw_set_halign(fa_right);
-draw_text(256,64,string(global.scr));
+draw_text(32,64,zeros_in_front + string(global.scr));
 
 //Make zero appear
 if(timer mod 60 < 10){
@@ -32,7 +23,7 @@ if(timer mod 60 < 10){
 }
 
 //Timer
-draw_text(576,64, string(floor(timer/60)) + ":" + leading_zero + string(timer mod 60));
+draw_text(448,64, string(floor(timer/60)) + ":" + leading_zero + string(timer mod 60));
 draw_set_halign(fa_left)
 
 //Draw the lives on the screen
@@ -50,8 +41,10 @@ if(beard_unlocked){
 
 //Ignorancometre
 
-draw_sprite(spr_ignorancometre, global.ignorance_level, 100, 100);
-show_debug_message(global.ignorance_level)
+draw_sprite(spr_ignorancometre, global.ignorance_level, 
+			992, 
+			512);
+
 
 
 

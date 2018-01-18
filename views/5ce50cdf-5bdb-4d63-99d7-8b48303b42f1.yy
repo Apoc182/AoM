@@ -11,7 +11,8 @@
         "48e01107-0e94-4b50-bffe-4065a1ebf0f8",
         "1b5a2a53-4b8a-4dc1-b5f0-5040ea0da84d",
         "2c693880-6282-45cf-8c9b-1eac2f45311e",
-        "6cd1a6a6-ea8c-4b09-9f0b-2bc7e21cef02"
+        "6cd1a6a6-ea8c-4b09-9f0b-2bc7e21cef02",
+        "cba65b37-110c-4ed3-afb1-242dbaa3ada1"
     ],
     "filterType": "GMObject",
     "folderName": "main_game",
