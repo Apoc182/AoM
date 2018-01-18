@@ -6,6 +6,7 @@ if (instance_place(x, y, obj_default) && !picked_up){
 	global.drop_base_speed = 0;
 	global.scr += global.rb_can_pickup; 
 	picked_up = true;
+	global.ignorance_level += global.rb_can_ignorance_points;
 }
 
 if(picked_up){

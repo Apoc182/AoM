@@ -73,7 +73,7 @@ if(image_index = 1){
 }
 
 //Detects space bar and draws umbrella
-if (keyboard_check(vk_space)){
+if (keyboard_check(vk_space) && global.ignorance_level > 0){
 	
 	if(moving){
 		sprite_index = umbrella_walking;

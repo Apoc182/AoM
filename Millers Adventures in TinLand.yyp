@@ -111,6 +111,14 @@
             }
         },
         {
+            "Key": "19d046fa-88b7-4315-9888-ede81137e96e",
+            "Value": {
+                "id": "8cd12e58-9da2-421b-9ad0-8732f63b4bf0",
+                "resourcePath": "sprites\\spr_ignorancometre\\spr_ignorancometre.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "1b5a2a53-4b8a-4dc1-b5f0-5040ea0da84d",
             "Value": {
                 "id": "0c86fbb7-f2d1-4e7a-bf66-6a79ec3a29f4",

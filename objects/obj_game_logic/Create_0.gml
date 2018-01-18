@@ -25,6 +25,9 @@ global.black_drop_ground = -5;
 global.black_drop_head = -500;
 global.black_drop_umbrella = 100;
 global.rb_can_pickup = 100;
+//Ignorance levels
+global.rb_can_ignorance_points = 4;
+global.drop_on_umbrella_ignorance_points = 4;
 
 //Points to unlock beards
 global.unlock_black_beard = 1000;
@@ -86,3 +89,6 @@ ini_open("Save.ini");
 	}
 	
 	ini_close();
+	
+//Ignorance power level
+global.ignorance_level = sprite_get_number(spr_ignorancometre) - 1;

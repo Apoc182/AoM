@@ -1,8 +1,7 @@
 
 //Create array for drawing sprites
 
-menu_titles = ["Miller", "Chops", "Black", "Abe", "Chaplin", "Chops 2", "Blondie", "Gandalf",
-			   "White", "Van Dyke"];
+
 beard_locations = [];
 
 

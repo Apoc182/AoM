@@ -48,6 +48,11 @@ if(beard_unlocked){
 	}
 }
 
+//Ignorancometre
+
+draw_sprite(spr_ignorancometre, global.ignorance_level, 100, 100);
+show_debug_message(global.ignorance_level)
+
 
 
 
