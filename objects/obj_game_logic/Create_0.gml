@@ -7,12 +7,7 @@ array_count = 0;
 timer = 0;
 alarm[4] = room_speed;
 
-//Random colour array
-colours = [c_aqua, c_blue, c_fuchsia, c_maroon, c_purple, c_yellow];
 
-//For beard unlocked floating
-floater = 0;
-first_unlocked = true;
 
 global.time_multiplier = 0;
 
@@ -102,4 +97,3 @@ ini_open("Save.ini");
 	
 //Ignorance power level
 global.ignorance_level = sprite_get_number(spr_ignorancometre) - 1;
-
