@@ -33,11 +33,27 @@ for (var i = 0; i < global.player_lives; i++){
 
 //Display beard unlocked.
 if(beard_unlocked){
-	draw_text(obj_default.x - obj_default.sprite_width/2 , obj_default.y - obj_default.sprite_height/2 - 20, "New beard Unlocked!");
+	draw_set_halign(fa_center);
+	draw_set_color(colours[random(array_length_1d(colours))]);
+	if(first_unlocked){
+		x_co = obj_default.x - obj_default.sprite_width/2;
+		y_co = obj_default.y- obj_default.sprite_height/2 - 20;
+		draw_text(x_co, y_co, "New beard Unlocked!");
+		first_unlocked = false;
+	}else{
+		draw_text(x_co, y_co - floater, "New beard Unlocked!");
+		floater++;
+	}
+	
+	
 	if(!alarm[5]){
 		alarm[5] = room_speed;
 	}
+	
+	draw_set_halign(fa_left);
+	draw_set_color(c_black)
 }
+
 
 //Ignorancometre
 
