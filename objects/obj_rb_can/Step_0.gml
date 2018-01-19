@@ -2,8 +2,6 @@
 // You can write your code in this editor
 
 if (instance_place(x, y, obj_default) && !picked_up){
-	instance_create_depth(-10, -10, -1000, obj_rbcountdown);
-	global.drop_base_speed = 0;
 	global.scr += global.rb_can_pickup; 
 	picked_up = true;
 	if(global.ignorance_level < (sprite_get_number(spr_ignorancometre) - 1) - global.drop_on_umbrella_ignorance_points){

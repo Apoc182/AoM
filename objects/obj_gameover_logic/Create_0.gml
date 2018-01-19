@@ -1,6 +1,10 @@
 /// @description Insert description here
 // You can write your code in this editor
 
+//dotdotdot
+dot_dot = "";
+alarm[1] = room_speed/2;
+
 if(global.max_score > 0){
 	http_get("http://gmscoreboard.com/handle_score.php?tagid=5a46f6769a1aa15146000542325&player=" + global.user_name +"&score=" + string(global.max_score));
 }

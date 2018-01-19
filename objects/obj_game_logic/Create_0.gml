@@ -7,6 +7,8 @@ array_count = 0;
 timer = 0;
 alarm[4] = room_speed;
 
+
+
 global.time_multiplier = 0;
 
 
@@ -39,6 +41,9 @@ global.unlock_blonde = 110;
 global.unlock_grey = 1020;
 global.unlock_white = 1550;
 global.unlock_van_dyke = 1121;
+
+//Grid box size
+global.grid_size = 32;
 
 array_counter = 0;
 

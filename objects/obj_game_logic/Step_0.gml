@@ -22,10 +22,7 @@ if (!alarm_on){
 }
 
 
-//If a rb can picked up, increase drop speed after 5 seconds
-if(global.drop_base_speed == 0 && !alarm[2]){
-	alarm[2] = room_speed * 5;
-}
+
 
 //Update max score
 
