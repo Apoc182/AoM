@@ -5,10 +5,9 @@
 
 
 
-colour_array = [c_white, c_white, c_white, c_white,
-				c_white, c_white, c_white, c_white, 
-				c_white, c_white, c_white, c_white, 
-				c_black];
+colour_array = [c_white, c_white, c_white, c_white, 
+				c_white, c_white, c_white, c_black];
+				
 this_colour = colour_array[random(array_length_1d(colour_array))];
 
 

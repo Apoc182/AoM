@@ -13,7 +13,8 @@ global.time_multiplier = 0;
 
 
 //The amount of time between speed increases
-speed_jump = room_speed * 15;
+speed_jump = room_speed * 30;
+time_speed_jump = .25;
 
 
 //Start the alarm

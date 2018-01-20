@@ -3,7 +3,7 @@
 
 
 if(picked_up){
-	draw_text(x,rising, "+" + string(global.rb_can_pickup));
+	draw_text(x,rising, "+" + "NOTHING");
 }else{
 	draw_self();
 }

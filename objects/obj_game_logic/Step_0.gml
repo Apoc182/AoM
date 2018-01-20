@@ -30,11 +30,6 @@ if (global.scr > global.max_score){
 	global.max_score = global.scr;
 }
 
-//If score too low, game over
-if (global.scr < 0){
-	room_goto(game_over);
-}
-
 
 if(!alarm[1]){
 	alarm[1] = room_speed * (10 + random(5));
@@ -53,3 +48,6 @@ for(var i = 0; i < array_length_1d(global.all_unlocks_available); i++){
 		beard_unlocked = true;
 	}
 }
+
+//Store coords of player.
+global.current_player_loc_x = obj_default.x;

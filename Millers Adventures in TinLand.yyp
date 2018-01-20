@@ -343,6 +343,14 @@
             }
         },
         {
+            "Key": "61919720-1751-4d5a-8189-db1ad4d14c3d",
+            "Value": {
+                "id": "6b444cf5-62fd-4c01-b1a2-33a0497480d9",
+                "resourcePath": "objects\\obj_hot_sauce\\obj_hot_sauce.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "61a3f07d-8472-4b41-8148-7ba54f0de631",
             "Value": {
                 "id": "cbecb49d-c55d-4019-80b7-64c9eff508fa",

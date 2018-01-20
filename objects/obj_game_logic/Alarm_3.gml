@@ -2,7 +2,7 @@
 // You can write your code in this editor
 
 if(global.time_multiplier < 2){
-	global.time_multiplier += .5;
+	global.time_multiplier += time_speed_jump;
 }
 
 
