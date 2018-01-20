@@ -7,3 +7,6 @@ if(x = 736){
 	global.kirsten_ready = true;
 	sprite_index = spr_kirsten_talking;
 }
+
+if image_speed = .5
+{sprite_index = spr_kirstyn_blink}

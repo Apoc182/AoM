@@ -35,7 +35,7 @@ global.beard_setting = ini_read_real("Save", "Current_Beard", 0);
 if(ini_key_exists("Save", "Name")){
 	global.user_name = ini_read_string("Save", "Name", "No name");
 	ini_close();
-	if(global.user_name == "Thor" || global.user_name == "thor"){
+	if(global.user_name == "Thor" || global.user_name == "thor" || global.user_name == "THOR"){
 		global.is_thor = true;
 	}
 	room_goto(rm_title);

@@ -13,7 +13,7 @@ if(keyboard_check(vk_anykey) && !keyboard_check(vk_enter) && !keyboard_check(vk_
 if (keyboard_check_pressed(vk_enter)){
 	ini_write_string("Save", "Name", global.user_name);
 	ini_close();
-	if(global.user_name == "Thor" || global.user_name == "thor"){
+	if(global.user_name == "Thor" || global.user_name == "thor" || global.user_name == "THOR"){
 		global.is_thor = true;
 	}
 	room_goto(rm_title);

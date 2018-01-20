@@ -159,6 +159,14 @@
             }
         },
         {
+            "Key": "27eb7005-285f-412f-a502-da3deb98d604",
+            "Value": {
+                "id": "5c105740-aaa2-4003-aab1-3441a50e941b",
+                "resourcePath": "sprites\\spr_kirstyn_blink\\spr_kirstyn_blink.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "2b2f6fbe-a9d5-460e-bf33-45233f6b937d",
             "Value": {
                 "id": "ad707b76-b585-47b2-895c-bb366d21aecb",
@@ -639,6 +647,14 @@
             }
         },
         {
+            "Key": "bf2c7f03-bc33-4c06-8a5f-8e5960218338",
+            "Value": {
+                "id": "6be6a3d2-90bb-43d4-aa6a-990aac4967bf",
+                "resourcePath": "sprites\\spr_thor_walking\\spr_thor_walking.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "c02989ea-d9a1-4aa4-a544-48039a4f8637",
             "Value": {
                 "id": "626c3d4b-67f9-4679-a7a2-3e054882464d",
@@ -660,6 +676,14 @@
                 "id": "63fd51b8-57d6-4108-bf24-e19caa82fc33",
                 "resourcePath": "sounds\\snd_lullaby\\snd_lullaby.yy",
                 "resourceType": "GMSound"
+            }
+        },
+        {
+            "Key": "c138376b-2b30-4aa8-8c35-1400e78b7177",
+            "Value": {
+                "id": "51deadbc-a12c-4235-9e6f-6e36c13d9318",
+                "resourcePath": "sprites\\spr_thor_umbrella_walking\\spr_thor_umbrella_walking.yy",
+                "resourceType": "GMSprite"
             }
         },
         {

@@ -21,9 +21,8 @@ umbrella_walking = spr_umbrella_walking;
 
 //This will handle the Thor costume
 if(global.is_thor){
+	walking = spr_thor_walking;
 	standing = spr_thor_standing;
 	umbrella_standing = spr_thor_umbrella;
-	
-	//This is for when we have the walking sprite
-	//walking = spr_thor_umbrella;
+	umbrella_walking = spr_thor_umbrella_walking;
 }

@@ -8,8 +8,7 @@ if (global.kirsten_ready){
 	} 
 	else { //if current character is more than the amount in the current message
 		with (obj_kirsten_side) {
-			image_speed = 0;
-			image_index = 0;
+			image_speed = .5;
 		}
 		if (keyboard_check_pressed(ord("Z"))) { //if we press Z...
 		    if (message_current < message_end) { //if there are more messages left to show (0 -> 6, in our case)
