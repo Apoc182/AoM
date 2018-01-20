@@ -19,6 +19,13 @@ speed_jump = room_speed * 15;
 //Start the alarm
 alarm[3] = speed_jump;
 
+//Random colour array		
+colours = [c_aqua, c_blue, c_fuchsia, c_maroon, c_purple, c_yellow];
+
+//For beard unlocked floating		
+floater = 0;		
+first_unlocked = true;
+
 //Constants
 global.white_drop_ground = 5;
 global.white_drop_head = -150;
