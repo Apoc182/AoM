@@ -9,4 +9,4 @@ draw_text(window_get_width()/2 - 200, window_get_height()/2 - 200, "Select your 
 
 
 draw_sprite(spr_default_standing, 0, window_get_width()/2, window_get_height()/2);
-draw_sprite(global.beards_to_choose[mover], 0, window_get_width()/2, window_get_height()/2)
+draw_sprite(global.beards_to_choose[mover], 0, window_get_width()/2, window_get_height()/2);
