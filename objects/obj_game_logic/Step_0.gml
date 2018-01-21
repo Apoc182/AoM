@@ -10,9 +10,6 @@ falling_drops = [];
 if(global.debugging){
 	global.scr = 100;
 	global.player_lives = 3;
-	if(keyboard_check_pressed(vk_escape)){
-		game_restart();
-	}
 }
 
 

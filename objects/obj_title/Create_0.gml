@@ -11,7 +11,7 @@ if(!audio_is_playing(snd_title)){
 	audio_sound_gain(snd_title, .25, 0);
 }
 
-global.debugging = true;
+global.debugging = false;
 
 global.drop_base_speed = 4;
 
@@ -25,55 +25,49 @@ global.umbrella_cooldown_time = 2;
 //For the drops
 global.kirsten_whinging = [
 
-	"But i love",
-	"Why you do dis?",
-	"wake up!",
-	"do it!",
-	"Why you do dis?",
-	"wake up!",
-	"do it!",
-	"Why you do dis?",
-	"wake up!",
-	"do it!",
-	"Why you do dis?",
-	"wake up!",
-	"do it!",
-	"Why you do dis?",
-	"wake up!",
-	"do it!",
-	"Why you do dis?",
-	"wake up!",
-	"do it!",
-	"Why you do dis?",
-	"wake up!",
-	"do it!",
-	"But i love",
-	"Why you do dis?",
-	"wake up!",
-	"do it!",
-	"Why you do dis?",
-	"wake up!",
-	"do it!",
-	"Why you do dis?",
-	"wake up!",
-	"do it!",
-	"Why you do dis?",
-	"wake up!",
-	"do it!",
-	"Why you do dis?",
-	"wake up!",
-	"do it!",
-	"Why you do dis?",
-	"wake up!",
-	"do it!",
-	"Why you do dis?",
-	"wake up!",
-	"do it!"
-	
+"You have to clean the house",
+
+"Let's go for a walk at the Gorge",
+
+"You're urinating on yourself",
+
+"We have to do the groceries",
+
+"How much did you drink last night?",
+
+"It's time for work",
+
+"You're snoring too loud",
+
+"You're being selfish",
+
+"You can't just sleep all day",
+
+"We have things to do",
+
+"Take me to the monkey park",
+
+"You have gardening to do",
+
+"Who the hell is Durry Jesus?",
+
+"Our deck needs fixing",
+
+"I want to go and get some food",
+
+"Your friends are waiting for you",
+
+"Where is your wedding ring?",
+
+"You've been sleeping all day",
+
+"You need to wash your body",
+
+"Why are you this way?",
 
 ]
 
-global.kirsten_whinging_length = 42;
+global.kirsten_whinging_length = array_length_1d(global.kirsten_whinging);
 
 global.rain_hit = [
 	snd_quick_cunt,

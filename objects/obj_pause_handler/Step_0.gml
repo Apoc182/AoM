@@ -10,3 +10,16 @@ if(keyboard_check_pressed(vk_escape)){
 		paused = false;
 	}
 }
+
+if(keyboard_check_pressed(ord("M")) && paused){
+
+	scr_restart();
+	room_goto(rm_title);
+
+}
+
+if(keyboard_check_pressed(ord("Q")) && paused){
+
+	game_end();
+
+}
