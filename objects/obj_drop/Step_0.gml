@@ -13,8 +13,8 @@ if(place_meeting(x,y,obj_default) && !drop_contact){
 	//If umbrella is out
 	if(global.umbrella_out){
 		
-		
 		if(this_colour == c_black){
+			if(global.is_thor) audio_play_sound(snd_thunder, 0, false);
 			this_text = scr_score_display(global.black_drop_umbrella);	
 		}else{
 			if(global.ignorance_level > 0){

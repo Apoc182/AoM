@@ -11,7 +11,7 @@ if(!audio_is_playing(snd_title)){
 	audio_sound_gain(snd_title, .25, 0);
 }
 
-global.debugging = false;
+global.debugging = true;
 
 global.drop_base_speed = 4;
 

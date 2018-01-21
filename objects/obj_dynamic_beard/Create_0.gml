@@ -13,3 +13,7 @@ dynamic beard allocation.
 */
 
 sprite_index = global.beards_to_choose[global.beard_setting];
+alarm[0] = room_speed * random(5);
+blinking = false;
+
+frame_counter = 0;
