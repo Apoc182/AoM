@@ -15,3 +15,5 @@ this_text = global.kirsten_whinging[random(global.kirsten_whinging_length)];
 this_speed =  random(4) + global.time_multiplier;
 
 drop_contact = false;
+
+

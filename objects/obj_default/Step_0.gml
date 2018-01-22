@@ -84,3 +84,11 @@ if (keyboard_check(vk_space) && global.ignorance_level > 0){
 }else{	
 	global.umbrella_out = false;
 }
+
+//Handle the flashing when invulnerable
+if(global.invulnerable && !alarm[1]){
+	visible = !visible;
+	with obj_dynamic_beard visible = !visible;
+	global.invulnerable_flasher = !global.invulnerable_flasher;
+	alarm[1] = flasher_speed * room_speed;
+}

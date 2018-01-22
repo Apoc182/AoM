@@ -26,3 +26,6 @@ if(global.is_thor){
 	umbrella_standing = spr_thor_umbrella;
 	umbrella_walking = spr_thor_umbrella_walking;
 }
+
+invulnerable_time = 5;
+flasher_speed = .1;

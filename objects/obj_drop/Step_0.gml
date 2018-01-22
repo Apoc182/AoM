@@ -4,8 +4,16 @@
 if(place_meeting(x,y,obj_default) && !drop_contact){
 	//If the umbrella is away when this happens.
 	if(!global.umbrella_out){		
-		global.player_lives -= 1;
-		audio_play_sound(global.rain_hit[random(array_length_1d(global.rain_hit) - 1)], 0, false);
+		if(!global.invulnerable){
+			global.player_lives -= 1;
+			audio_play_sound(global.rain_hit[random(array_length_1d(global.rain_hit) - 1)], 0, false);
+		}
+		global.invulnerable = true;
+		with (obj_default){
+			if(!alarm[0]){
+				alarm[0] = invulnerable_time * room_speed;
+			}
+		}
 		instance_destroy();
 	}
 	

@@ -8,7 +8,7 @@ truncate_value = frac(obj_default.image_index);
 frame = obj_default.image_index - truncate_value;
 y_increment = obj_default.y;
 
-if(blinking){
+if(blinking && !global.invulnerable_flasher){
 	if(frame == 1){
 		y_increment = obj_default.y + 4;
 	}

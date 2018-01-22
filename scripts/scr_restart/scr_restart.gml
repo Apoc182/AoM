@@ -12,3 +12,6 @@ global.max_score = 0;
 global.scr = 0;
 global.time_multiplier = 0;
 global.player_lives = 3;
+global.invulnerable = false;
+global.invulnerable_flasher = false;
+keyboard_clear(vk_space);

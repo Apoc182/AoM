@@ -12,7 +12,9 @@ map_string = " !\"#$%&'()*+,-./0123456789:;<=>?@ABCDEFGHIJKLMNOPQRSTUVWXYZ[\\]^_
 nesfont = font_add_sprite_ext(spr_nesfont, map_string, false, 0);
 draw_set_font(nesfont);
 
-
+//Boolean for invulnerability
+global.invulnerable = false;
+global.invulnerable_flasher = false;
 
 //This is a boolean indicating whether or not the username is Thor or thor.
 global.is_thor = false
