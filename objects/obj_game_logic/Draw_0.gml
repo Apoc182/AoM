@@ -13,7 +13,8 @@ else if (global.scr < 100000) zeros_in_front = "0";
 else zeros_in_front = "";
 
 //display score
-draw_text(global.grid_size, 2 * global.grid_size, zeros_in_front + string(global.scr));
+draw_text(global.grid_size, 2 * global.grid_size, "Current Score: " + zeros_in_front + string(global.scr));
+draw_text(global.grid_size, 3 * global.grid_size, "Recent Best: " + zeros_in_front + string(global.max_score));
 
 //Make zero appear
 if(timer mod 60 < 10){

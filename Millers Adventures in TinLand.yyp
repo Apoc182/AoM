@@ -87,6 +87,14 @@
             }
         },
         {
+            "Key": "169cfe2a-0080-48a2-a8ae-2a676fa3de9b",
+            "Value": {
+                "id": "d230a004-dd1f-4308-8569-93f68da76e25",
+                "resourcePath": "sounds\\snd_beard_unlocked\\snd_beard_unlocked.yy",
+                "resourceType": "GMSound"
+            }
+        },
+        {
             "Key": "199b18eb-ee89-4562-8c1a-b1efd4ded1d6",
             "Value": {
                 "id": "07430bff-6055-4172-8f27-c759eb046ac4",
@@ -276,6 +284,14 @@
                 "id": "775d39a6-6af6-4de7-ab7c-c212e4a36b84",
                 "resourcePath": "sprites\\spr_lives\\spr_lives.yy",
                 "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "4bf747c8-0893-498a-bc47-8f487b996f5a",
+            "Value": {
+                "id": "4cd7d824-9edb-4ecb-8195-1742d87cec57",
+                "resourcePath": "objects\\obj_splash\\obj_splash.yy",
+                "resourceType": "GMObject"
             }
         },
         {
@@ -599,11 +615,27 @@
             }
         },
         {
+            "Key": "ab8251f3-a4e3-4185-8c38-a05244ca29b6",
+            "Value": {
+                "id": "0e5167da-9c4c-48fc-b607-b15913682d65",
+                "resourcePath": "sprites\\spr_logo\\spr_logo.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "acffff1d-67b4-47f3-841e-a45162d3a4a5",
             "Value": {
                 "id": "86e19466-b11f-4c46-9c7c-5f930132c898",
                 "resourcePath": "objects\\obj_drop\\obj_drop.yy",
                 "resourceType": "GMObject"
+            }
+        },
+        {
+            "Key": "aeaa2651-8da4-48a7-a45e-e606104d9294",
+            "Value": {
+                "id": "b6f78708-54b1-4f4d-9a11-14e58fa8b494",
+                "resourcePath": "rooms\\rm_splash\\rm_splash.yy",
+                "resourceType": "GMRoom"
             }
         },
         {
@@ -756,6 +788,14 @@
                 "id": "725a718b-c7f2-4a38-bd7a-59020b5bcda9",
                 "resourcePath": "objects\\obj_couch\\obj_couch.yy",
                 "resourceType": "GMObject"
+            }
+        },
+        {
+            "Key": "d3e53e55-686d-4449-afe6-dd315140185c",
+            "Value": {
+                "id": "d0662769-a349-4f54-ad9b-9bca14c3e981",
+                "resourcePath": "sounds\\snd_splash\\snd_splash.yy",
+                "resourceType": "GMSound"
             }
         },
         {

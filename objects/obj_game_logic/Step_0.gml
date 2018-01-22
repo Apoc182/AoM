@@ -43,6 +43,7 @@ for(var i = 0; i < array_length_1d(global.all_unlocks_available); i++){
 		scr_unlock_beards(global.all_unlocks_available[i]);
 		global.all_unlocks_available[i] = 0;
 		beard_unlocked = true;
+		audio_play_sound(snd_beard_unlocked, 0, false);
 	}
 }
 

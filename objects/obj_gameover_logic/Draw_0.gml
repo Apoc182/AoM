@@ -3,7 +3,7 @@
 
 draw_set_color(c_red);
 draw_text(11 * global.grid_size, 12 * global.grid_size, "GAME OVER!");
-draw_text(7 * global.grid_size, 14 * global.grid_size, "YOU REACHED " + string(global.max_score))
+draw_text(7 * global.grid_size, 14 * global.grid_size, "YOU REACHED " + string(global.scr))
 draw_set_halign(fa_left);
 draw_text(5 * global.grid_size, 16 * global.grid_size, "PRESS SPACE TO RESTART");
 draw_text(5 * global.grid_size, 17 * global.grid_size, "PRESS ESC TO RETURN TO MENU");
