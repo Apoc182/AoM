@@ -3,7 +3,7 @@
 
 
 if(image_alpha == 1) fade_in = false; 
-
+if(image_index == 6) image_speed = 0
 if(fade_in) image_alpha += .01;
 if(!fade_in) {
 	image_alpha -= .01;
