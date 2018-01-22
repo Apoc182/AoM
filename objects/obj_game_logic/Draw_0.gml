@@ -58,7 +58,13 @@ if(beard_unlocked){
 
 //Ignorancometre
 
-draw_sprite(spr_ignorancometre, global.ignorance_level, 
+if(global.ignorance_level > previous_ignorance_level){
+	previous_ignorance_level += bar_refill_speed;
+}else{
+	previous_ignorance_level = global.ignorance_level;
+}
+
+draw_sprite(spr_ignorancometre, previous_ignorance_level, 
 			20 * global.grid_size, 
 			2 * global.grid_size);
 

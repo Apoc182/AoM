@@ -10,6 +10,11 @@ if(global.scr > 0){
 }
 audio_play_sound(snd_awCunt, 0, false);
 
+//Save max_score
+ini_open("Save.ini");
+ini_write_real("Save", "local_max", global.max_score);
+ini_close();
+
 
 
 //Fade out theme

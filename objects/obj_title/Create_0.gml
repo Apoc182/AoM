@@ -76,8 +76,13 @@ global.rain_hit = [
 
 ]
 
-//Max score
-global.max_score = 0;
+//Max score - Check ini first, then if not present, load 0.
+ini_open("Save.ini");
+if(ini_key_exists("Save", "local_max")){
+	global.max_score = ini_read_real("Save", "local_max", 0);
+}else{
+	global.max_score = 0;
+}
 
 //Beard selection array. This will check what they player has unlocked and apply it.
 
