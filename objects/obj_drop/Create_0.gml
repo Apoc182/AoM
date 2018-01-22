@@ -15,5 +15,8 @@ this_text = global.kirsten_whinging[random(global.kirsten_whinging_length)];
 this_speed =  random(4) + global.time_multiplier;
 
 drop_contact = false;
-
+is_thunder = false;
+lightning_frame = 0;
+thunder_timer = room_speed/4
+counter = 0;
 
