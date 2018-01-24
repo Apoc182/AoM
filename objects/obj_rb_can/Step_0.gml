@@ -1,6 +1,3 @@
-/// @description Insert description here
-// You can write your code in this editor
-
 if (instance_place(x, y, obj_default) && !picked_up){
 	audio_play_sound(snd_gulp, 0, false);
 	global.scr += global.rb_can_pickup; 
@@ -16,3 +13,13 @@ if(picked_up){
 	alarm[0] = 2 * room_speed;
 	rising -= 1;
 }
+
+//Particle system
+
+
+
+
+
+//Particle
+
+//Particle Emitter

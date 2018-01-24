@@ -5,7 +5,7 @@ global.scr = 0;
 spd = 4;
 array_count = 0;
 timer = 0;
-alarm[4] = room_speed;
+if(!global.tutorial_on) alarm[4] = room_speed;
 
 
 
@@ -51,7 +51,7 @@ global.unlock_white = 1550;
 global.unlock_van_dyke = 1121;
 
 //Grid box size
-global.grid_size = 32;
+#macro GRID_SIZE 32
 
 array_counter = 0;
 

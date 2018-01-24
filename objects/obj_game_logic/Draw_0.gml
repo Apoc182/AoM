@@ -1,7 +1,7 @@
 //scoreboard
 draw_set_color(c_black);
-draw_text(global.grid_size, global.grid_size, global.user_name);
-draw_text(14 * global.grid_size, global.grid_size,"Time");
+draw_text(GRID_SIZE, GRID_SIZE, global.user_name);
+draw_text(14 * GRID_SIZE, GRID_SIZE,"Time");
 
 //display zeros in front of score
 
@@ -13,8 +13,8 @@ else if (global.scr < 100000) zeros_in_front = "0";
 else zeros_in_front = "";
 
 //display score
-draw_text(global.grid_size, 2 * global.grid_size, "Current Score: " + zeros_in_front + string(global.scr));
-draw_text(global.grid_size, 3 * global.grid_size, "Recent Best: " + zeros_in_front + string(global.max_score));
+draw_text(GRID_SIZE, 2 * GRID_SIZE, "Current Score: " + zeros_in_front + string(global.scr));
+draw_text(GRID_SIZE, 3 * GRID_SIZE, "Recent Best: " + zeros_in_front + string(global.max_score));
 
 //Make zero appear
 if(timer mod 60 < 10){
@@ -24,12 +24,12 @@ if(timer mod 60 < 10){
 }
 
 //Timer
-draw_text(14 * global.grid_size, 2 * global.grid_size, string(floor(timer/60)) + ":" + leading_zero + string(timer mod 60));
+draw_text(14 * GRID_SIZE, 2 * GRID_SIZE, string(floor(timer/60)) + ":" + leading_zero + string(timer mod 60));
 draw_set_halign(fa_left)
 
 //Draw the lives on the screen
 for (var i = 0; i < global.player_lives; i++){
-	draw_sprite(spr_lives, 0, (26 * global.grid_size) - ((2 * global.grid_size) * i), 2 * global.grid_size);
+	draw_sprite(spr_lives, 0, (26 * GRID_SIZE) - ((2 * GRID_SIZE) * i), 2 * GRID_SIZE);
 }
 
 //Display beard unlocked.
@@ -65,8 +65,8 @@ if(global.ignorance_level > previous_ignorance_level){
 }
 
 draw_sprite(spr_ignorancometre, previous_ignorance_level, 
-			20 * global.grid_size, 
-			2 * global.grid_size);
+			20 * GRID_SIZE, 
+			2 * GRID_SIZE);
 
 
 

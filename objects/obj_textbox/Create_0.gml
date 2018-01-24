@@ -2,7 +2,8 @@
 // You can write your code in this editor
 
 
-
+//Switch for tutorial_mode
+global.tutorial_on = false;
 
 global.user_name = "";
 keyboard_string = "";
@@ -26,6 +27,7 @@ if(!file_exists("Save.ini")){
 	ini_write_string("Save", "Current_Beard", 0);
 	scr_initialise_beards();
 	global.beard_setting = 0;
+	global.tutorial_on = true;
 }else{
 	ini_open("Save.ini");
 }

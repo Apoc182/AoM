@@ -13,7 +13,7 @@ if(global.debugging){
 }
 
 
-if (!alarm_on){
+if (!alarm_on && !global.tutorial_on){
 	alarm[0] = drop_speed;
 	alarm_on = true;
 }
@@ -28,7 +28,7 @@ if (global.scr > global.max_score){
 }
 
 
-if(!alarm[1]){
+if(!alarm[1] && !global.tutorial_on){
 	alarm[1] = room_speed * (10 + random(5));
 }
 
