@@ -5,10 +5,9 @@
 
 
 
-colour_array = [c_white, c_white, c_white, c_white, 
-				c_white, c_white, c_white, c_black];
+
 				
-this_colour = colour_array[random(array_length_1d(colour_array))];
+this_colour = global.colour_array[random(array_length_1d(global.colour_array))];
 
 
 this_text = global.kirsten_whinging[random(global.kirsten_whinging_length)];

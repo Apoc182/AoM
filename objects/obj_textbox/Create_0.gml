@@ -3,7 +3,11 @@
 
 
 //Switch for tutorial_mode
-global.tutorial_on = false;
+global.tutorial_on = true;
+
+//For the drops
+global.colour_array = [c_white, c_white, c_white, c_white, 
+					   c_white, c_white, c_white, c_black];
 
 global.user_name = "";
 keyboard_string = "";
