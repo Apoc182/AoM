@@ -6,18 +6,18 @@ if(!global.tutorial_on){
 }
 
 tutorial_text = [
-
+				 "",
 				 "Welcome to Miller's dream!\nPress SPACE to use your Umbrella of Ignorance!",
 				 "Collect 'Der Bitter' to fill Umbrella metre.", 
 				 "Awesome! Now here comes the rain!",
 				 "Collect Smokey Joe's delicious hotsauce to replenish lives!",
 				 "Collect the black sentences with the umbrella for mad-ass points!",
-				 ""
+				 "GTFO, you good"
 			]
 
-
+next_text = false;
 current_text_pos = 0;
-alpha_variance = .01;
+alpha_variance = 0;
 
 fade_in = false;
 fade_out = false;
@@ -30,7 +30,7 @@ global.ignorance_level = 8;
 
 
 alarm_delay = 2;
-alarm[0] = alarm_delay * room_speed;
+alarm[1] = alarm_delay * room_speed;
 
 red_bitter_spawns = false;
 hot_sauce_spawns = false;
