@@ -1,7 +1,7 @@
 //scoreboard
 draw_set_color(c_black);
 draw_text(GRID_SIZE, GRID_SIZE, global.user_name);
-draw_text(14 * GRID_SIZE, GRID_SIZE,"Time");
+draw_text(15 * GRID_SIZE, GRID_SIZE,"Time");
 
 //display zeros in front of score
 
@@ -12,9 +12,19 @@ else if(global.scr < 10000) zeros_in_front = "00";
 else if (global.scr < 100000) zeros_in_front = "0";
 else zeros_in_front = "";
 
+//display zeros in front of high score
+
+if(global.max_score < 10) zeros_in_front_again = "00000";
+else if(global.max_score < 100) zeros_in_front_again = "0000";
+else if(global.max_score < 1000) zeros_in_front_again = "000";
+else if(global.max_score < 10000) zeros_in_front_again = "00";
+else if (global.max_score < 100000) zeros_in_front_again = "0";
+else zeros_in_front_again = "";
+
 //display score
-draw_text(GRID_SIZE, 2 * GRID_SIZE, "Current Score: " + zeros_in_front + string(global.scr));
-draw_text(GRID_SIZE, 3 * GRID_SIZE, "Recent Best: " + zeros_in_front + string(global.max_score));
+draw_text(8 * GRID_SIZE, GRID_SIZE, "High Score");
+draw_text(3 * GRID_SIZE, 2 * GRID_SIZE, zeros_in_front + string(global.scr));
+draw_text(10 * GRID_SIZE, 2 * GRID_SIZE, zeros_in_front_again + string(global.max_score));
 
 //Make zero appear
 if(timer mod 60 < 10){
@@ -24,12 +34,12 @@ if(timer mod 60 < 10){
 }
 
 //Timer
-draw_text(14 * GRID_SIZE, 2 * GRID_SIZE, string(floor(timer/60)) + ":" + leading_zero + string(timer mod 60));
+draw_text(15 * GRID_SIZE, 2 * GRID_SIZE, string(floor(timer/60)) + ":" + leading_zero + string(timer mod 60));
 draw_set_halign(fa_left)
 
 //Draw the lives on the screen
 for (var i = 0; i < global.player_lives; i++){
-	draw_sprite(spr_lives, 0, (26 * GRID_SIZE) - ((2 * GRID_SIZE) * i), 2 * GRID_SIZE);
+	draw_sprite(spr_lives, 0, (26.5 * GRID_SIZE) - ((GRID_SIZE) * i), 2 * GRID_SIZE);
 }
 
 //Display beard unlocked.
@@ -65,7 +75,7 @@ if(global.ignorance_level > previous_ignorance_level){
 }
 
 draw_sprite(spr_ignorancometre, previous_ignorance_level, 
-			20 * GRID_SIZE, 
+			21 * GRID_SIZE, 
 			2 * GRID_SIZE);
 
 

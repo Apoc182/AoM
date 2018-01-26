@@ -106,4 +106,4 @@ ini_open("Save.ini");
 //Ignorance power level
 global.ignorance_level = sprite_get_number(spr_ignorancometre) - 1;
 previous_ignorance_level = global.ignorance_level;
-bar_refill_speed = .1;
+bar_refill_speed = .2;
