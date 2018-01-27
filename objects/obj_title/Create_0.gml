@@ -1,9 +1,11 @@
 /// @description Insert description here
 // You can write your code in this editor
 
+//Just making the can sit still
+inst_39953F04.alarm[1] = 0;
 
-
-image_alpha = 0;
+//Fade the box
+alpha_variance = 1;
 
 
 if(!audio_is_playing(snd_title)){
