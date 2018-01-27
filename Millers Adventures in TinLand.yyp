@@ -1095,6 +1095,14 @@
             }
         },
         {
+            "Key": "feb1201f-1f95-4583-867c-781d5b58750c",
+            "Value": {
+                "id": "0b5ec184-c35f-4db5-bfe2-1030684a88a6",
+                "resourcePath": "sprites\\spr_clean_shaven\\spr_clean_shaven.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "ff44268a-7abb-4547-a6b6-b79d018f9178",
             "Value": {
                 "id": "dc9238bc-666a-4c18-affd-43be01064934",

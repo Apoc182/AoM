@@ -16,7 +16,9 @@ if (keyboard_check_pressed(vk_enter) || keyboard_check_pressed(vk_space)){
 	if(global.user_name == "Thor" || global.user_name == "thor" || global.user_name == "THOR"){
 		global.is_thor = true;
 	}
+	ini_close();
 	room_goto(rm_title);
+	
 }
 
 if (keyboard_check_pressed(vk_backspace)){

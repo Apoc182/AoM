@@ -4,6 +4,14 @@ move = 0;
 move -= max(keyboard_check_pressed(ord("W")), keyboard_check_pressed(vk_up), 0);
 move += max(keyboard_check_pressed(ord("S")), keyboard_check_pressed(vk_down), 0);
 
+//If fading occuring, freeze menu.
+
+fading = alpha_variance != 0 || alpha_variance_in != 0;
+
+if(fading) move = 0;
+
+
+
 if (move != 0){
 	mpos += move;
 	if (mpos < 0) {
@@ -15,9 +23,9 @@ if (move != 0){
 	audio_play_sound(snd_quick_cunt, 0, false);
 }
 
-
 push = max(keyboard_check_pressed(vk_enter), keyboard_check_pressed(vk_space), 0);
-if (push){
+
+if (push && !fading){
 	ini_open("Save.ini");
 	audio_play_sound(snd_calledMeACunt, 0, false);
 	switch (mpos){

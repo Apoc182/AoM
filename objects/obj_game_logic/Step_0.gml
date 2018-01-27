@@ -49,7 +49,7 @@ previous_time_multiplier = global.time_multiplier;
 unlocked = ds_map_find_value(global.sprite_points, global.scr);
 
 //constantly check the score agains the price of points
-if(!is_undefined(unlocked) && ds_list_find_index(global.unlocked_beards, unlocked) == -1){
+if(!is_undefined(unlocked) && ds_list_find_index(global.unlocked_beards, unlocked) == -1 && !global.tutorial_on){
 	beard_unlocked = true;
 	ds_list_add(global.unlocked_beards, unlocked);
 	ini_open("beards.ini")

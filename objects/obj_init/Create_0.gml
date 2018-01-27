@@ -25,8 +25,16 @@ default_beard = spr_beard_normal;
 global.sprite_points = ds_map_create();
 
 /* All that has to be done to add a new beard */
-ds_map_add(global.sprite_points, 200, spr_white);
-ds_map_add(global.sprite_points, 100, spr_beard_black);
+ds_map_add(global.sprite_points, 0, spr_clean_shaven);
+ds_map_add(global.sprite_points, 200, spr_beard_black);
+ds_map_add(global.sprite_points, 100, spr_beard_chops);
+ds_map_add(global.sprite_points, 200, spr_abe);
+ds_map_add(global.sprite_points, 100, spr_chaplin);
+ds_map_add(global.sprite_points, 200, spr_chops_2);
+ds_map_add(global.sprite_points, 100, spr_blonde);
+ds_map_add(global.sprite_points, 200, spr_grey);
+ds_map_add(global.sprite_points, 100, spr_white);
+ds_map_add(global.sprite_points, 100, spr_van_dyke);
 //Map of all the points needed
 
 
