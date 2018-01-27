@@ -11,3 +11,9 @@ for (var i = 0; i < array_length_1d(menu); i += 1){
 	}
 	draw_text(x + space, y + (i * space), string(menu[i]));
 }
+
+if(draw_fader){
+	draw_sprite_ext(spr_lightning, 0, window_get_width()/2, window_get_height()/2 - GRID_SIZE * 12, 1, 1, 0, c_black, alpha_variance);
+}
+
+draw_sprite_ext(spr_lightning, 0, window_get_width()/2, window_get_height()/2, 1, 1, 0, c_black, alpha_variance_in);

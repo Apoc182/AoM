@@ -1,3 +1,6 @@
+if(show_escape_string){
+	draw_text(GRID_SIZE, GRID_SIZE * 3, "Press ESC to skip tutorial");
+}
 draw_set_alpha(alpha_variance);
 draw_set_color(c_red);
 draw_set_halign(fa_center);

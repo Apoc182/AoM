@@ -37,10 +37,12 @@ if(current_text_pos == 2 && next_text = false){
 	}
 	
 	//Constantly running
-	if(new_bitter.picked_up){
+
+	if(!instance_exists(new_bitter)){
 		red_bitter_spawns = true;
 		next_text = true;
 	}
+
 }
 
 
@@ -53,19 +55,35 @@ if(current_text_pos == 3 && next_text = false){
 							   c_white, c_white, c_white, c_white];
 		active = false;
 		current_lives = global.player_lives;
+		with obj_kirsten_front {
+			image_speed = 1;
+		}
 	}
 	
 	//Constantly running
 	else{
 		rain_drop_spawns = true;
-		}
 		
-	//Get hit on the head
-	if(global.player_lives < current_lives){
-		next_text = true;
-		red_bitter_spawns = false;
+		//Get hit on the head
+		if(global.player_lives < current_lives){
+			next_text = true;
+			red_bitter_spawns = false;
+			global.time_multiplier = 0;
+			with obj_game_logic {
+				drop_speed = .5 * room_speed;
+			}
+		}
+			
+		
+		global.time_multiplier += .01;
+		with obj_game_logic {
+			if(drop_speed > (.1 * room_speed)){
+				drop_speed -= .001 * room_speed;
+			}
+		}
 	}
 }
+		
 
 
 //"Collect Smokey Joe's delicious hotsauce to replenish lives!"
@@ -79,7 +97,7 @@ if(current_text_pos == 4 && next_text = false){
 	}
 	
 	//Constantly running
-	if(new_sauce.picked_up){
+	if(!instance_exists(new_sauce)){
 		next_text = true;
 		hot_sauce_spawns = true;
 		red_bitter_spawns = true;
@@ -98,19 +116,19 @@ if(current_text_pos == 5 && next_text = false){
 	}
 	
 	//Constantly running
-	if(global.scr = 500){
-	next_text = true;
+	if(global.scr == 500){
+		next_text = true;
 	}
 }
 
 if(current_text_pos == 6 && next_text = false){
 
-		if(global.player_lives <= 0 && alpha_variance_again < 1){
-			alpha_variance_again += .01;
-		}
-		if(alpha_variance_again == 1){
-			room_restart();
-		}
+	alpha_variance_again += .01;
+	if(alpha_variance_again >= max_alpha_variance_again){
+		global.tutorial_on = false;
+		scr_restart();
+		room_restart();
+	}
 	
 }
 
@@ -136,5 +154,26 @@ if(rain_drop_spawns){
 				alarm[0] = drop_speed;
 				alarm_on = true;
 		}
+	}
+}
+
+if(global.player_lives == 0){
+	alpha_variance_again += .01;
+	if(alpha_variance_again >= max_alpha_variance_again){
+		scr_restart();
+		room_restart();
+	}
+}
+
+if(keyboard_check(vk_escape)){
+	esc_set = true;
+}
+
+if(esc_set){
+	alpha_variance_again += .01;
+	if(alpha_variance_again >= max_alpha_variance_again){
+		global.tutorial_on = false;
+		scr_restart();
+		room_restart();
 	}
 }

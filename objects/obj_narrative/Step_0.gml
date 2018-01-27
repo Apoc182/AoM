@@ -23,6 +23,7 @@ if (global.kirsten_ready){
 	}
 }
 
+
 if(keyboard_check(vk_space) && message_current == message_end &&
    string_length(message_draw) == string_length(message[message_current])){
 	room_goto(dream);

@@ -14,8 +14,10 @@ if(place_meeting(x,y,obj_default) && !drop_contact){
 				alarm[0] = invulnerable_time * room_speed;
 			}
 		}
+
 		instance_destroy();
 	}
+	
 	
 	
 	//If umbrella is out
@@ -31,6 +33,7 @@ if(place_meeting(x,y,obj_default) && !drop_contact){
 			if(global.ignorance_level > 0){
 				global.ignorance_level -= global.drop_on_umbrella_ignorance_points;
 			}
+
 			instance_destroy();
 		}		
 	}
@@ -39,11 +42,11 @@ if(place_meeting(x,y,obj_default) && !drop_contact){
 	alarm[0] = 2 * room_speed;
 	drop_contact = true;
 	
-	
 }
 
 
 if (y > window_get_height() - sprite_get_height(spr_floor) && !drop_contact){
+
 	
 	instance_destroy();
 }

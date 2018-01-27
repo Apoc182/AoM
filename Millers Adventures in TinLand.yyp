@@ -39,14 +39,6 @@
             }
         },
         {
-            "Key": "0144cb15-dedc-43ba-9d0e-1eabf3a97506",
-            "Value": {
-                "id": "9b001529-cca1-4124-88a6-63bc30df2f32",
-                "resourcePath": "views\\0144cb15-dedc-43ba-9d0e-1eabf3a97506.yy",
-                "resourceType": "GMFolder"
-            }
-        },
-        {
             "Key": "02bc3602-6b32-4590-b93e-7a890c107b8a",
             "Value": {
                 "id": "2fe7e0d9-e72b-4011-a251-253a8c5b21a7",
@@ -148,6 +140,14 @@
                 "id": "0f613854-851a-4433-9578-40c025da9603",
                 "resourcePath": "sounds\\snd_cunt_lng\\snd_cunt_lng.yy",
                 "resourceType": "GMSound"
+            }
+        },
+        {
+            "Key": "1ee3ba66-9ffc-4620-a782-f9d933e89e21",
+            "Value": {
+                "id": "eb7d0059-113c-4465-af41-34ac17b7a125",
+                "resourcePath": "sprites\\spr_speech_box\\spr_speech_box.yy",
+                "resourceType": "GMSprite"
             }
         },
         {
@@ -548,6 +548,14 @@
                 "id": "8cbed930-fb4f-48ab-b17d-2f17db4c2ce4",
                 "resourcePath": "sprites\\spr_lightning\\spr_lightning.yy",
                 "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "87932094-8b90-40dc-a3a4-3b436dd24440",
+            "Value": {
+                "id": "91a20dac-8595-4051-953b-e81847f9b222",
+                "resourcePath": "objects\\obj_init\\obj_init.yy",
+                "resourceType": "GMObject"
             }
         },
         {
@@ -1036,6 +1044,14 @@
                 "id": "54ba0602-470b-46bd-a6f1-be36a6bdcd00",
                 "resourcePath": "sprites\\spr_walking\\spr_walking.yy",
                 "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "efae81c0-8736-4b0a-b789-580b378d3856",
+            "Value": {
+                "id": "f22c901a-881c-4ce8-99ec-3a77f5c05bdc",
+                "resourcePath": "tilesets\\til_speech_box\\til_speech_box.yy",
+                "resourceType": "GMTileSet"
             }
         },
         {

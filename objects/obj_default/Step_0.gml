@@ -10,13 +10,6 @@ moving = false;
 pressed_left = keyboard_check(ord("A")) || keyboard_check(vk_left);
 pressed_right = keyboard_check(ord("D")) || keyboard_check(vk_right);
 
-//Just so we dont times things by 0
-if(global.time_multiplier > 0){
-	multiplier = global.time_multiplier + 1;
-}else{
-	multiplier = 1;
-}
-
 //Sets speed to 0 if player tries to leave the screen.
 if (x - (sprite_actual_width/2) + spd <= 0 || x + (sprite_actual_width/2) + spd >= window_get_width()){
 	spd = 0;
@@ -26,7 +19,7 @@ if (x - (sprite_actual_width/2) + spd <= 0 || x + (sprite_actual_width/2) + spd 
 if (pressed_right && x + (sprite_actual_width/2) + spd < window_get_width()){
 	moving = true;
 	if (spd < top_spd){
-		spd += inertia * multiplier;
+		spd += inertia;
 	}
 	
 	sprite_index = walking;
@@ -38,7 +31,7 @@ if (pressed_right && x + (sprite_actual_width/2) + spd < window_get_width()){
 if (pressed_left && x - (sprite_actual_width/2) > 0){
 	moving = true;
 	if (spd > -top_spd){
-		spd -= inertia * multiplier;
+		spd -= inertia;
 	}
 	sprite_index = walking;
 	image_xscale = -1;

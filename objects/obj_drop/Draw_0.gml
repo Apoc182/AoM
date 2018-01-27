@@ -15,3 +15,4 @@ if(is_thunder){
 	if(counter >= thunder_timer) is_thunder = false;
 	counter++;
 }
+

@@ -15,6 +15,7 @@ if (move != 0){
 	audio_play_sound(snd_quick_cunt, 0, false);
 }
 
+
 push = max(keyboard_check_pressed(vk_enter), keyboard_check_pressed(vk_space), 0);
 if (push){
 	ini_open("Save.ini");
@@ -23,8 +24,7 @@ if (push){
 		
 		case 0: {					
 			//Goto the room
-			keyboard_clear(vk_space);
-			room_goto(rm_intro);
+			draw_fader = true;
 			break;
 		}
 		
@@ -49,3 +49,21 @@ if (push){
 	}
 	ini_close();
 } //End menu stuff
+
+if(draw_fader){
+	
+	alpha_variance += .01;
+	
+	if(alpha_variance == 1){
+		keyboard_clear(vk_space);
+		room_goto(rm_intro);
+	}
+	
+}
+
+
+
+//Fade
+if(alpha_variance_in > 0){
+	alpha_variance_in -= .01;
+}

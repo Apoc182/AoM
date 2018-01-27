@@ -27,3 +27,9 @@ audio_sound_gain(snd_title, 0, 2000);
 audio_play_sound(snd_lullaby, 0, true);
 audio_sound_gain(snd_lullaby, 0, 0);
 audio_sound_gain(snd_lullaby, 1, 5000);
+
+
+show_escape_string = false;
+number_of_flashes = 0;
+max_flash = 10;
+alarm[2] = room_speed * .5;

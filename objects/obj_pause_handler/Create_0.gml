@@ -1,2 +1,7 @@
 //Pause toggle
-paused = false;
+
+if(global.tutorial_on){
+	instance_destroy();
+}else{
+	paused = false;
+}

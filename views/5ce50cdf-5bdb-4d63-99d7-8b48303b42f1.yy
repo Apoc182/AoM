@@ -11,9 +11,10 @@
         "6cd1a6a6-ea8c-4b09-9f0b-2bc7e21cef02",
         "cba65b37-110c-4ed3-afb1-242dbaa3ada1",
         "61919720-1751-4d5a-8189-db1ad4d14c3d",
-        "0144cb15-dedc-43ba-9d0e-1eabf3a97506",
         "1a2d5581-b8e7-46e4-8422-a21d41bfef4a",
-        "bd75b0c1-7a3e-4229-806e-87efec34c51f"
+        "bd75b0c1-7a3e-4229-806e-87efec34c51f",
+        "1b5a2a53-4b8a-4dc1-b5f0-5040ea0da84d",
+        "86077097-2df6-488d-88b9-f51895e50825"
     ],
     "filterType": "GMObject",
     "folderName": "main_game",

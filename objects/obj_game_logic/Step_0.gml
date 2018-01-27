@@ -1,10 +1,8 @@
 /// @description Insert description here
 // You can write your code in this editor
 
-y_location = random(50) * -1;
-x_location = random(window_get_width());
 
-falling_drops = [];
+
 
 //Debug invincibility
 if(global.debugging){
@@ -23,7 +21,7 @@ if (!alarm_on && !global.tutorial_on){
 
 //Update max score
 
-if (global.scr > global.max_score){
+if (global.scr > global.max_score && !global.tutorial_on){
 	global.max_score = global.scr;
 }
 
@@ -39,7 +37,7 @@ if (global.player_lives <= 0 && !global.tutorial_on){
 }
 
 //Check to see if beard is unlocked.
-if(global.tutorial_on){
+if(!global.tutorial_on){
 	for(var i = 0; i < array_length_1d(global.all_unlocks_available); i++){
 		if(global.scr >= global.all_unlocks_available[i] && global.all_unlocks_available[i] != 0){
 			scr_unlock_beards(global.all_unlocks_available[i]);
@@ -53,7 +51,7 @@ if(global.tutorial_on){
 //Store coords of player.
 global.current_player_loc_x = obj_default.x;
 
-if(global.time_multiplier > previous_time_multiplier){
+if(global.time_multiplier > previous_time_multiplier && !global.tutorial_on){
 	layer_background_blend(bg1, make_color_rgb(random(255), random(255), random(255)));
 }
 

@@ -1,28 +1,10 @@
 /// @description Insert description here
 // You can write your code in this editor
 
-
-//Switch for tutorial_mode
-global.tutorial_on = true;
-
-//For the drops
-global.colour_array = [c_white, c_white, c_white, c_white, 
-					   c_white, c_white, c_white, c_black];
-
 global.user_name = "";
 keyboard_string = "";
 
-//Initialise fonts
-map_string = " !\"#$%&'()*+,-./0123456789:;<=>?@ABCDEFGHIJKLMNOPQRSTUVWXYZ[\\]^_`abcdefghijklmnopqrstuvwxyz{|}~";
-nesfont = font_add_sprite_ext(spr_nesfont, map_string, false, 0);
-draw_set_font(nesfont);
 
-//Boolean for invulnerability
-global.invulnerable = false;
-global.invulnerable_flasher = false;
-
-//This is a boolean indicating whether or not the username is Thor or thor.
-global.is_thor = false
 
 
 //If theis is the first time the game is ran, it will come here and apply the default beard.
@@ -48,6 +30,8 @@ if(ini_key_exists("Save", "Name")){
 	}
 	room_goto(rm_title);
 }
+
+ini_close();
 
 
 
