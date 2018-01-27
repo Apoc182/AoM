@@ -23,6 +23,7 @@ if (push){
 		
 		case 0: {					
 			//Goto the room
+			keyboard_clear(vk_space);
 			room_goto(rm_intro);
 			break;
 		}

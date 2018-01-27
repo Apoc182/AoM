@@ -5,4 +5,4 @@ draw_text(32, 32, message_draw); //draw the text at the coordinates
 draw_text(160, 252, "Press space to skip...");
 
 //Indicate the z is the way
-draw_text(160, 300, "Hold 'Z' to speed up and\nprogress the dialouge");
+draw_text(160, 300, "Hold SPACE to speed up and\nprogress the dialouge");
