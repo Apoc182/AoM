@@ -1,7 +1,7 @@
 //Debugging tools
 
 	//Master switch
-	global.debugging = true;
+	global.debugging = false;
 	
 	//Starting room
 	starting_room = rm_intro;
@@ -13,7 +13,6 @@
 	
 	//Dummy values for skipping rooms
 	if(global.debugging){
-		global.beard_setting = 0;
 		global.user_name = "Debugger";
 	}
 	
@@ -21,6 +20,16 @@
 //Master Switches
 global.tutorial_on = true;
 global.is_thor = false;
+global.beard_setting = ds_list_create();
+default_beard = spr_beard_normal;
+global.sprite_points = ds_map_create();
+
+/* All that has to be done to add a new beard */
+ds_map_add(global.sprite_points, 200, spr_white);
+ds_map_add(global.sprite_points, 100, spr_beard_black);
+//Map of all the points needed
+
+
 
 
 ///
@@ -112,34 +121,24 @@ if(ini_key_exists("Save", "local_max")){
 }
 
 
-//An array of all possible beards
-all_beards = [spr_beard_normal, spr_beard_chops, spr_beard_black,
-			  spr_abe, spr_chaplin, spr_chops_2, spr_blonde, spr_grey,
-		      spr_white, spr_van_dyke];
-			  
-//A variable tracking where we are up to in the beards_to_choose array. Would be easier if i could
-//find an append function.
-beards_to_choose_array_location = 0;
-
-//This loop will go through and set each part of the save.ini to true based on if they are unlocked or not.
-
-for (var i = 0; i < array_length_1d(all_beards); i++){
-	ini_open("Save.ini")
-	if(ini_read_real("Save", sprite_get_name(all_beards[i]), 0) > 0){
-		global.beards_to_choose[beards_to_choose_array_location] = all_beards[i];
-		beards_to_choose_array_location++;
-	}
-	
-	
-	
-}
-
 ini_close();
 
 
 //Set the amount of lives to initialize
 global.player_lives = 3;
 
+
+//Constants
+global.white_drop_ground = 5;
+global.white_drop_head = -150;
+global.white_drop_umbrella = -50;
+global.black_drop_ground = -5;
+global.black_drop_head = -500;
+global.black_drop_umbrella = 100;
+global.rb_can_pickup = 100;
+//Ignorance levels
+global.rb_can_ignorance_points = 4;
+global.drop_on_umbrella_ignorance_points = 2;
 
 
 global.ignorance_level = 16;
@@ -151,4 +150,27 @@ global.colour_array = [c_white, c_white, c_white, c_white,
 //Boolean for invulnerability
 global.invulnerable = false;
 global.invulnerable_flasher = false;
+
+
+
+//Global list of currently unlocked beards.
+global.unlocked_beards = ds_list_create();
+
+if(!file_exists("beards.ini")){	
+	ini_open("beards.ini");
+	ds_list_add(global.unlocked_beards, spr_beard_normal);
+	write_to_ini = ds_list_write(global.unlocked_beards);
+	ini_write_string("GameData", "unlocked_beards", write_to_ini);
+	ds_list_add(global.beard_setting, default_beard) 
+	ini_write_string("GameData", "beard_setting", write_to_ini);
+}
+
+else{	
+	ini_open("beards.ini");
+	ds_list_read(global.unlocked_beards, ini_read_string("GameData", "unlocked_beards", ""));
+	ds_list_read(global.beard_setting, ini_read_string("GameData", "beard_setting", ""));
+}
+
+ini_close()
+
 

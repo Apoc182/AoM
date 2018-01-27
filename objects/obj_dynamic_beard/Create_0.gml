@@ -12,7 +12,9 @@ dynamic beard allocation.
 
 */
 
-sprite_index = global.beards_to_choose[global.beard_setting];
+sprite_index = ds_list_find_value(global.beard_setting, 0);
+
+
 alarm[0] = room_speed * random(5);
 blinking = false;
 

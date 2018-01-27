@@ -36,17 +36,6 @@ if (global.player_lives <= 0 && !global.tutorial_on){
 	room_goto(game_over);
 }
 
-//Check to see if beard is unlocked.
-if(!global.tutorial_on){
-	for(var i = 0; i < array_length_1d(global.all_unlocks_available); i++){
-		if(global.scr >= global.all_unlocks_available[i] && global.all_unlocks_available[i] != 0){
-			scr_unlock_beards(global.all_unlocks_available[i]);
-			global.all_unlocks_available[i] = 0;
-			beard_unlocked = true;
-			audio_play_sound(snd_beard_unlocked, 0, false);
-		}
-	}
-}
 
 //Store coords of player.
 global.current_player_loc_x = obj_default.x;
@@ -56,3 +45,15 @@ if(global.time_multiplier > previous_time_multiplier && !global.tutorial_on){
 }
 
 previous_time_multiplier = global.time_multiplier;
+
+unlocked = ds_map_find_value(global.sprite_points, global.scr);
+
+//constantly check the score agains the price of points
+if(!is_undefined(unlocked) && ds_list_find_index(global.unlocked_beards, unlocked) == -1){
+	beard_unlocked = true;
+	ds_list_add(global.unlocked_beards, unlocked);
+	ini_open("beards.ini")
+	to_add = ds_list_write(global.unlocked_beards);
+	ini_write_string("GameData", "unlocked_beards", to_add);
+	ini_close();
+}
