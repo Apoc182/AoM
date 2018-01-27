@@ -18,7 +18,7 @@ if(!global.tutorial_on){
 	next_text = false;
 	current_text_pos = 0;
 	alpha_variance = 0;
-
+	fade_speed = .025;
 	fade_in = false;
 	fade_out = false;
 
@@ -39,6 +39,7 @@ if(!global.tutorial_on){
 	alpha_variance_again = 0;
 	max_alpha_variance_again = 1.5;
 	esc_set = false;
+	death = false;
 	show_escape_string = false;
 	number_of_flashes = 0;
 	max_flash = 10;

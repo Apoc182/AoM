@@ -1,7 +1,7 @@
 /// @description Insert description here
 // You can write your code in this editor
 
-if(keyboard_check(vk_anykey) && !keyboard_check(vk_enter) && !keyboard_check(vk_backspace)){
+if(keyboard_check(vk_anykey) && !keyboard_check(vk_enter) && !keyboard_check(vk_backspace) && !keyboard_check(vk_space)){
 
 	if(string_length(global.user_name) < 12){
 		global.user_name += keyboard_string;

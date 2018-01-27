@@ -60,7 +60,7 @@ if (push && !fading){
 
 if(draw_fader){
 	
-	alpha_variance += .01;
+	alpha_variance += .025;
 	
 	if(alpha_variance == 1){
 		keyboard_clear(vk_space);
@@ -73,5 +73,5 @@ if(draw_fader){
 
 //Fade
 if(alpha_variance_in > 0){
-	alpha_variance_in -= .01;
+	alpha_variance_in -= .025;
 }

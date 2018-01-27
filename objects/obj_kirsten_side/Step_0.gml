@@ -15,5 +15,5 @@ if(x <= 736){
 	speed = 4;
 
 }else{
-	speed = 2;
+	speed = 1;
 }

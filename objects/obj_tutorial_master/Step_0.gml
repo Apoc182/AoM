@@ -1,10 +1,10 @@
 //Controllers
 if(fade_in && alpha_variance < 1){
-	alpha_variance += .02;
+	alpha_variance += fade_speed;
 }
 
 if(fade_out && alpha_variance > 0){
-	alpha_variance -= .02;
+	alpha_variance -= fade_speed;
 }
 
 //text delay while alarms are triggered
@@ -51,8 +51,7 @@ if(current_text_pos == 3 && next_text = false){
 	
 	//Ran once only
 	if(active){
-		global.colour_array = [c_white, c_white, c_white, c_white, 
-							   c_white, c_white, c_white, c_white];
+		global.colour_array = [c_white];
 		active = false;
 		current_lives = global.player_lives;
 		with obj_kirsten_front {
@@ -122,14 +121,7 @@ if(current_text_pos == 5 && next_text = false){
 }
 
 if(current_text_pos == 6 && next_text = false){
-
-	alpha_variance_again += .01;
-	if(alpha_variance_again >= max_alpha_variance_again){
-		global.tutorial_on = false;
-		scr_restart();
-		room_restart();
-	}
-	
+	esc_set = true;
 }
 
 
@@ -158,7 +150,11 @@ if(rain_drop_spawns){
 }
 
 if(global.player_lives == 0){
-	alpha_variance_again += .01;
+	death = true;	
+}
+
+if (death){	
+	alpha_variance_again += fade_speed;
 	if(alpha_variance_again >= max_alpha_variance_again){
 		scr_restart();
 		room_restart();
@@ -170,7 +166,7 @@ if(keyboard_check(vk_escape)){
 }
 
 if(esc_set){
-	alpha_variance_again += .01;
+	alpha_variance_again += fade_speed;
 	if(alpha_variance_again >= max_alpha_variance_again){
 		global.tutorial_on = false;
 		scr_restart();

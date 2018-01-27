@@ -143,14 +143,6 @@
             }
         },
         {
-            "Key": "1ee3ba66-9ffc-4620-a782-f9d933e89e21",
-            "Value": {
-                "id": "eb7d0059-113c-4465-af41-34ac17b7a125",
-                "resourcePath": "sprites\\spr_speech_box\\spr_speech_box.yy",
-                "resourceType": "GMSprite"
-            }
-        },
-        {
             "Key": "209cc254-5da6-4d64-9507-3efb4a3b0ee4",
             "Value": {
                 "id": "0b2ea243-763f-4a66-8b0b-41dc4e6f735c",
@@ -180,6 +172,14 @@
                 "id": "5c105740-aaa2-4003-aab1-3441a50e941b",
                 "resourcePath": "sprites\\spr_kirstyn_blink\\spr_kirstyn_blink.yy",
                 "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "2b1217ab-d568-41c0-88fa-894e7e8898a9",
+            "Value": {
+                "id": "3aeaca9d-cee7-4a3b-87e2-2ff78b174708",
+                "resourcePath": "scripts\\scr_text_box\\scr_text_box.yy",
+                "resourceType": "GMScript"
             }
         },
         {
@@ -1047,14 +1047,6 @@
             }
         },
         {
-            "Key": "efae81c0-8736-4b0a-b789-580b378d3856",
-            "Value": {
-                "id": "f22c901a-881c-4ce8-99ec-3a77f5c05bdc",
-                "resourcePath": "tilesets\\til_speech_box\\til_speech_box.yy",
-                "resourceType": "GMTileSet"
-            }
-        },
-        {
             "Key": "f08b6bb5-e011-46dc-a6af-bdc912a3de8f",
             "Value": {
                 "id": "e4d3f3d3-eebe-4d1c-9a8d-66730791bb15",
@@ -1116,7 +1108,8 @@
         "26be656e-99a4-4d1c-940c-51ec58883358",
         "03b1e0c4-2d88-4b07-a2e2-096fba119680",
         "35f4981c-bde9-429f-8713-49e6aa56fc49",
-        "623aea5c-972b-4e05-bbdd-167fe13236a9"
+        "623aea5c-972b-4e05-bbdd-167fe13236a9",
+        "2b1217ab-d568-41c0-88fa-894e7e8898a9"
     ],
     "tutorial": ""
 }
