@@ -9,7 +9,12 @@ if(!global.tutorial_on) alarm[4] = room_speed;
 
 
 
+
 global.time_multiplier = 0;
+
+//Store the background sprite for colour changing.
+bg1 = layer_background_get_id(layer_get_id("bg1"));
+previous_time_multiplier = global.time_multiplier;
 
 
 //The amount of time between speed increases
