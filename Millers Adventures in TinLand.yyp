@@ -775,6 +775,14 @@
             }
         },
         {
+            "Key": "ba660207-177e-4120-acf2-995d5bc5c9b8",
+            "Value": {
+                "id": "de3ff8c9-a9df-45ae-a479-ff3dd5081580",
+                "resourcePath": "objects\\obj_wallpaper_handler\\obj_wallpaper_handler.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "ba901a17-d207-4a10-b0a6-0d19db936623",
             "Value": {
                 "id": "558db636-c8b6-41a9-8623-5a20e6de7645",

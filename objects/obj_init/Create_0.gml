@@ -46,7 +46,8 @@ ds_map_add(global.sprite_points, 100, spr_van_dyke);
 ///
 ///
 
-
+//For when the drops get faster and wallpaper
+global.speed_jump = room_speed * 30;
 
 //Initialise fonts
 map_string = " !\"#$%&'()*+,-./0123456789:;<=>?@ABCDEFGHIJKLMNOPQRSTUVWXYZ[\\]^_`abcdefghijklmnopqrstuvwxyz{|}~";

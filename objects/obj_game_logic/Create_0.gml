@@ -11,18 +11,15 @@ occupied_x = ds_list_create();
 
 global.time_multiplier = 0;
 
-//Store the background sprite for colour changing.
-bg1 = layer_background_get_id(layer_get_id("bg1"));
 previous_time_multiplier = global.time_multiplier;
 
 
 //The amount of time between speed increases
-speed_jump = room_speed * 30;
 time_speed_jump = .25;
 
 
 //Start the alarm
-alarm[3] = speed_jump;
+alarm[3] = global.speed_jump;
 
 //Random colour array		
 colours = [c_aqua, c_blue, c_fuchsia, c_maroon, c_purple, c_yellow];

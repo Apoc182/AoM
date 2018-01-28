@@ -12,4 +12,4 @@ if(drop_speed > .1 * room_speed){
 }else{
 	drop_speed = .1 * room_speed;
 }
-alarm[3] = speed_jump;
+alarm[3] = global.speed_jump;
