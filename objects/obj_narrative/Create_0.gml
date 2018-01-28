@@ -36,8 +36,14 @@ max_flash = 10;
 alarm[2] = room_speed * .5;
 
 
-x1 = GRID_SIZE * 6;
-y1 = GRID_SIZE * 8;
-x2_animate = x1; 
-y2_animate = y1;
-box_ready = false;
+x1 = GRID_SIZE * 15;
+x2 = GRID_SIZE * 17; 
+y1 = GRID_SIZE * 10;
+y2 = GRID_SIZE * 12;
+x_ready_in = false;
+y_ready_in = false;
+x_ready_out = false;
+y_ready_out = false;
+box_in = false;
+box_out = false;
+box_speed = 16;
