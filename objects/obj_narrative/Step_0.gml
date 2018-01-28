@@ -1,4 +1,4 @@
-if (global.kirsten_ready){
+if (global.kirsten_ready && box_ready){
 	if(keyboard_check_released(vk_space)) hold_block = 1;
 	if (characters < message_length) { //if current character count is less than the amount in current message* 
 		hold = keyboard_check(vk_space); //hold is true or false if we hold 'Z' or not
@@ -28,6 +28,8 @@ if (global.kirsten_ready){
 
 if(keyboard_check_pressed(vk_space) && message_current == message_end &&
    string_length(message_draw) == string_length(message[message_current])){
+	audio_sound_gain(snd_lullaby, 0, 2000);
+	audio_sound_gain(snd_title, .25, 2000);
 	room_goto(dream);
 }
 

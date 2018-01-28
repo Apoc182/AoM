@@ -10,6 +10,13 @@ if(x <= 736){
 	speed = 0;
 	global.kirsten_ready = true;
 	sprite_index = spr_kirsten_talking;
+	
+	if(obj_narrative.box_ready){
+		image_speed = 1; 
+	}else{
+		image_index = 0;
+		image_speed = 0;
+	}
 }else if(speed_key){
 	
 	speed = 4;

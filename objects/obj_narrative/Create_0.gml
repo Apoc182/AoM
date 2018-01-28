@@ -34,3 +34,10 @@ show_escape_string = false;
 number_of_flashes = 0;
 max_flash = 10;
 alarm[2] = room_speed * .5;
+
+
+x1 = GRID_SIZE * 6;
+y1 = GRID_SIZE * 8;
+x2_animate = x1; 
+y2_animate = y1;
+box_ready = false;

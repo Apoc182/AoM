@@ -38,6 +38,8 @@ ds_map_add(global.sprite_points, 100, spr_van_dyke);
 //Map of all the points needed
 
 
+//Grid box size
+#macro GRID_SIZE 32
 
 
 ///

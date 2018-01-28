@@ -32,8 +32,7 @@ floater = 0;
 first_unlocked = true;
 
 
-//Grid box size
-#macro GRID_SIZE 32
+
 
 array_counter = 0;
 
