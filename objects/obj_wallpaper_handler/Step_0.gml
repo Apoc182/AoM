@@ -3,7 +3,8 @@
 
 if(current_RGB[0] == destination_RGBs[destination_selector, 0] &&
    current_RGB[1] == destination_RGBs[destination_selector, 1] &&
-   current_RGB[2] == destination_RGBs[destination_selector, 2]){
+   current_RGB[2] == destination_RGBs[destination_selector, 2] &&
+   destination_selector < array_height_2d(destination_RGBs) - 1){
 	destination_selector++;
 	init = true;
    }
