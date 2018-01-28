@@ -559,6 +559,14 @@
             }
         },
         {
+            "Key": "8805d4b8-39f6-4c40-b36b-ef5626608eb6",
+            "Value": {
+                "id": "516676bb-5750-494e-8329-29222c8266ff",
+                "resourcePath": "sprites\\spr_HUD\\spr_HUD.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "8924ba8c-9cd8-43fa-a7fb-0068002ef134",
             "Value": {
                 "id": "40fbe6ac-cfad-417f-b347-ee94ac5781b4",

@@ -14,7 +14,6 @@ if (global.kirsten_ready) && box_out == false{
 }
 	
 if box_in{
-	///ALEX, SHOULD WE LEAVE Y2 AT WHERE IT SHOULD BE SO IT OPENS LIKE A SCROLL??
 	//draw the text box
 	scr_text_box(spr_text_box, x1, y1, x2, y2);
 	//draw the text at the coordinates
@@ -28,7 +27,6 @@ if box_in{
 		if(y2 < GRID_SIZE * 14) y2 += box_speed;
 	}
 	if(y1 <= GRID_SIZE * 8 && y2 >= GRID_SIZE * 14) y_ready_in = true;
-		show_debug_message("x2: " + string(x2) + "y2: " + string(y2));
 }
 
 if (box_out){

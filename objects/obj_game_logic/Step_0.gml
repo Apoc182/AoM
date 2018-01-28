@@ -40,9 +40,6 @@ if (global.player_lives <= 0 && !global.tutorial_on){
 //Store coords of player.
 global.current_player_loc_x = obj_default.x;
 
-if(global.time_multiplier > previous_time_multiplier && !global.tutorial_on){
-	layer_background_blend(bg1, make_color_rgb(random(255), random(255), random(255)));
-}
 
 previous_time_multiplier = global.time_multiplier;
 

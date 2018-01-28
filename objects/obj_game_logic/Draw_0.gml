@@ -1,3 +1,5 @@
+draw_sprite(spr_HUD, 0, 0, 0);
+
 //scoreboard
 draw_set_color(c_black);
 draw_text(GRID_SIZE, GRID_SIZE, global.user_name);

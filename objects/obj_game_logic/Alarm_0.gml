@@ -20,7 +20,7 @@ for(var i = 0; i < sprite_get_width(drop) * 2; i++){
 
 ds_list_add(occupied_x, x_location);
 
-instance_create_depth(x_location,y_location,0,obj_drop);
+instance_create_depth(x_location,y_location,500,obj_drop);
 alarm[0] = drop_speed ;
 
 //debug -- information

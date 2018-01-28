@@ -17,20 +17,21 @@ current_RGB = [255, 255, 255];
 	destination_RGBs[n, 1] = Green
 	destination_RGBs[n, 2] = Blue
 
+
 */
 
-destination_RGBs[0, 0] = 0
-destination_RGBs[0, 1] = 0
-destination_RGBs[0, 2] = 0
-destination_RGBs[1, 0] = 100
-destination_RGBs[1, 1] = 150
-destination_RGBs[1, 2] = 125
-//destination_RGBs[2, 0] = 
-//destination_RGBs[2, 1] = 
-//destination_RGBs[2, 2] = 
-//destination_RGBs[3, 0] = 
-//destination_RGBs[3, 1] =
-//destination_RGBs[3, 2] = 
+destination_RGBs[0, 0] = 255
+destination_RGBs[0, 1] = 191
+destination_RGBs[0, 2] = 191
+destination_RGBs[1, 0] = 255
+destination_RGBs[1, 1] = 127
+destination_RGBs[1, 2] = 127
+destination_RGBs[2, 0] = 255
+destination_RGBs[2, 1] = 63
+destination_RGBs[2, 2] = 63
+destination_RGBs[3, 0] = 255
+destination_RGBs[3, 1] = 0
+destination_RGBs[3, 2] = 0
 
 //To select the correct coordinate
 destination_selector = 0;
