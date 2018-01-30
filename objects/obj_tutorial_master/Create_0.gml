@@ -9,10 +9,10 @@ if(!global.tutorial_on){
 					 "",
 					 "Welcome to Miller's dream!\nPress SPACE to use your Umbrella of Ignorance!",
 					 "Collect 'Der Bitter' to fill Umbrella metre.", 
-					 "Awesome! Now here comes the rain!",
+					 "Awesome! Now here comes the rain!\nDon't let Kirsten wake you!",
 					 "Collect Smokey Joe's delicious hotsauce to replenish lives!",
-					 "Collect the black sentences with the umbrella for mad-ass points!",
-					 "Good to go!"
+					 "Collect the black sentences with the \numbrella for mad-ass points!",
+					 "You know what's up, now get out there!"
 				]
 
 	next_text = false;
