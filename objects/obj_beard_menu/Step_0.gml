@@ -16,7 +16,7 @@ if(mover > ds_list_size(global.unlocked_beards) - 1){
 confirm = keyboard_check_pressed(vk_enter) || keyboard_check_pressed(vk_space);
 
 
-ini_open("Save.ini");
+
 if(confirm){
 	ds_list_clear(global.beard_setting);
 	ds_list_add(global.beard_setting, ds_list_find_value(global.unlocked_beards, mover));

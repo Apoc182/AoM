@@ -1,7 +1,7 @@
 //Debugging tools
 
 	//Master switch
-	global.debugging = true;
+	global.debugging = false;
 	
 	//Starting room
 	starting_room = dream;
@@ -23,8 +23,11 @@ global.is_thor = false;
 global.beard_setting = ds_list_create();
 default_beard = spr_beard_normal;
 global.sprite_points = ds_map_create();
+global.sprite_names = ds_list_create();
 
 /* All that has to be done to add a new beard */
+//NOTE: These MUST be in order of lowest to highest points wise and the list with names has to have a name for each.
+//in this position is the default beard.
 ds_map_add(global.sprite_points, 0, spr_clean_shaven);
 ds_map_add(global.sprite_points, 200, spr_beard_black);
 ds_map_add(global.sprite_points, 100, spr_beard_chops);
@@ -35,7 +38,8 @@ ds_map_add(global.sprite_points, 100, spr_blonde);
 ds_map_add(global.sprite_points, 200, spr_grey);
 ds_map_add(global.sprite_points, 100, spr_white);
 ds_map_add(global.sprite_points, 100, spr_van_dyke);
-//Map of all the points needed
+
+ds_list_add(global.sprite_names, "Cunt", "dick", "wank", "", "", "", "", "", "", "", "");
 
 
 //Grid box size
