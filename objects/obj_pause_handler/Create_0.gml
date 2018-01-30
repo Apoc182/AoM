@@ -5,3 +5,9 @@ if(global.tutorial_on){
 }else{
 	paused = false;
 }
+
+
+//Pause menu
+mover = 0;
+menu_items = ["Return", "Restart", "Main Menu"];
+text_height = sprite_get_height(spr_nesfont);

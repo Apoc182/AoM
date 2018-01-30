@@ -47,3 +47,8 @@ y_ready_out = false;
 box_in = false;
 box_out = false;
 box_speed = 16;
+
+text_increaser = 0;
+shrink = false;
+max_size = .05;
+rate_of_change = .001;

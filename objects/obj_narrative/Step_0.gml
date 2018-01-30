@@ -44,3 +44,16 @@ if(keyboard_check_pressed(vk_escape)){
 	keyboard_clear(vk_escape);
 
 }
+
+if(text_increaser == max_size || text_increaser == 0){
+	shrink = !shrink
+}
+
+if(text_increaser < max_size && !shrink){
+	text_increaser += rate_of_change;
+}else{
+	
+}
+if(text_increaser > 0 && shrink){
+	text_increaser -= rate_of_change;
+}

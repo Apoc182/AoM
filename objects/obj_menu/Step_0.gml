@@ -41,8 +41,7 @@ if (push && !fading){
 			break;
 		}
 		
-		case 2:{
-			ini_key_delete("Save", "Name");			
+		case 2:{		
 			room_goto(rm_enter_name);
 			break;
 		}

@@ -54,7 +54,9 @@ map_string = " !\"#$%&'()*+,-./0123456789:;<=>?@ABCDEFGHIJKLMNOPQRSTUVWXYZ[\\]^_
 nesfont = font_add_sprite_ext(spr_nesfont, map_string, false, 0);
 draw_set_font(nesfont);
 
-
+//This flag indicates to the name screen that it has already done this initial check for whether
+//the user has a username or not and that it is now being changed from the menu.
+global.username_exists = false;
 
 
 
