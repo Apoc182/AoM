@@ -1,7 +1,7 @@
 /// @description Insert description here
 // You can write your code in this editor
 
-global.user_name = "";
+user_name = "";
 keyboard_string = "";
 
 
@@ -29,6 +29,13 @@ if(ini_key_exists("Save", "Name") && !global.username_exists){
 	room_goto(rm_title);
 	global.username_exists = true;
 }
+
+
+
+
+
+
+
 
 
 
