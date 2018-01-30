@@ -2,7 +2,7 @@
 //Checks for ESC key and opens and closed the menu appropriately
 if(keyboard_check_pressed(vk_escape)){
 	
-	if(paused){
+	if(paused && box.open){
 		box.box_in = false;
 		box.box_out = true;
 		quitting = true;
@@ -20,10 +20,10 @@ if(keyboard_check_pressed(vk_escape)){
 }
 
 if(quitting && box.closed){
-	box.x_ready_in = false;
-	box.y_ready_in = false;
-	box.x_ready_out = false;
-	box.y_ready_out = false;
+	box.x_open = false;
+	box.y_open = false;
+	box.x_closed = false;
+	box.y_closed = false;
 	box.visible = false;
 	paused = false;
 	box.box_out = false;
@@ -35,7 +35,7 @@ if(quitting && box.closed){
 
 
 //Menu selection
-if(paused){
+if(paused && box.open){
 	mover += keyboard_check_pressed(ord("S")) || keyboard_check_pressed(vk_down);
 	mover -= keyboard_check_pressed(ord("W")) || keyboard_check_pressed(vk_up);
 
@@ -57,7 +57,9 @@ if(paused){
 			case 0:
 				keyboard_clear(vk_space);
 				instance_activate_all();
-				paused = false;
+				box.box_in = false;
+				box.box_out = true;
+				quitting = true;
 				break;
 				
 			case 1:

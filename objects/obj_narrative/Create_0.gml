@@ -35,18 +35,7 @@ number_of_flashes = 0;
 max_flash = 10;
 alarm[2] = room_speed * .5;
 
-
-x1 = GRID_SIZE * 15;
-x2 = GRID_SIZE * 17; 
-y1 = GRID_SIZE * 10;
-y2 = GRID_SIZE * 12;
-x_ready_in = false;
-y_ready_in = false;
-x_ready_out = false;
-y_ready_out = false;
-box_in = false;
-box_out = false;
-box_speed = 16;
+box = instance_create_depth(0, 0, 0, obj_animated_box);
 
 text_increaser = 0;
 shrink = false;
