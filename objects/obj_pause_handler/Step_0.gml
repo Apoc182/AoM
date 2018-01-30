@@ -1,14 +1,37 @@
 
 //Checks for ESC key and opens and closed the menu appropriately
 if(keyboard_check_pressed(vk_escape)){
+	
+	if(paused){
+		box.box_in = false;
+		box.box_out = true;
+		quitting = true;
+	
+	}
+	
 	if(!paused){
 		instance_deactivate_all(true);
 		paused = true;
-	}else{
-		instance_activate_all();
-		paused = false;
+		box.visible = true;
+		instance_activate_object(box);
+		box.box_in = true;
 	}
+	
 }
+
+if(quitting && box.closed){
+	box.x_ready_in = false;
+	box.y_ready_in = false;
+	box.x_ready_out = false;
+	box.y_ready_out = false;
+	box.visible = false;
+	paused = false;
+	box.box_out = false;
+	quitting = false;
+	instance_activate_all();
+}
+
+
 
 
 //Menu selection

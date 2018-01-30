@@ -9,11 +9,11 @@ if(show_escape_string){
 	
 }
 
-if (global.kirsten_ready) && box_out == false{
+if (global.kirsten_ready && !box_out){
 	box_in = true;
 }
 	
-if box_in{
+if (box_in){
 	//draw the text box
 	scr_text_box(spr_text_box, x1, y1, x2, y2);
 	//draw the text at the coordinates

@@ -1,10 +1,10 @@
 //Debugging tools
 
 	//Master switch
-	global.debugging = false;
+	global.debugging = true;
 	
 	//Starting room
-	starting_room = rm_intro;
+	starting_room = dream;
 	
 	//Room skipper
 	if(global.debugging){
