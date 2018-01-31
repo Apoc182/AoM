@@ -22,24 +22,37 @@ global.tutorial_on = true;
 global.is_thor = false;
 global.beard_setting = ds_list_create();
 default_beard = spr_beard_normal;
-global.sprite_points = ds_map_create();
-global.sprite_names = ds_list_create();
 
-/* All that has to be done to add a new beard */
-//NOTE: These MUST be in order of lowest to highest points wise and the list with names has to have a name for each.
-//in this position is the default beard.
-ds_map_add(global.sprite_points, 0, spr_clean_shaven);
-ds_map_add(global.sprite_points, 200, spr_beard_black);
-ds_map_add(global.sprite_points, 100, spr_beard_chops);
-ds_map_add(global.sprite_points, 200, spr_abe);
-ds_map_add(global.sprite_points, 100, spr_chaplin);
-ds_map_add(global.sprite_points, 200, spr_chops_2);
-ds_map_add(global.sprite_points, 100, spr_blonde);
-ds_map_add(global.sprite_points, 200, spr_grey);
-ds_map_add(global.sprite_points, 100, spr_white);
-ds_map_add(global.sprite_points, 100, spr_van_dyke);
+//Temp beard information
+beard_sprites = [];
+beard_names = [];
+beard_score = [];
+counter = 0;
 
-ds_list_add(global.sprite_names, "Cunt", "dick", "wank", "", "", "", "", "", "", "", "");
+//ADDING BEARDS
+//Just call the scr_creat_beard_grid script and give it the values it requires
+scr_create_beard_grid(spr_clean_shaven, "shaven", 100);
+scr_create_beard_grid(spr_abe, "abe", 200);
+
+var number_of_possible_beards = array_length_1d(beard_sprites);
+
+
+
+
+//Below, add the scores
+global.all_beard_properties = ds_grid_create(number_of_possible_beards, 3);
+
+for(i = 0; i < number_of_possible_beards; i++){
+
+	ds_grid_add(global.all_beard_properties, i, 0, beard_sprites[i]);
+	ds_grid_add(global.all_beard_properties, i, 1, beard_names[i]);
+	ds_grid_add(global.all_beard_properties, i, 2, beard_score[i]);
+
+}
+
+
+
+
 
 
 //Grid box size

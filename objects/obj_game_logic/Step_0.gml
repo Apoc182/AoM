@@ -43,7 +43,15 @@ global.current_player_loc_x = obj_default.x;
 
 previous_time_multiplier = global.time_multiplier;
 
-unlocked = ds_map_find_value(global.sprite_points, global.scr);
+unlocked = undefined;
+
+//Cycle through grid and check to see if current score equals anything
+for(i = 0; i < ds_grid_width(global.all_beard_properties); i++){	
+	if(ds_grid_get( global.all_beard_properties, i, 2) == global.scr){
+		unlocked = ds_grid_get(global.all_beard_properties, i, 0);
+		show_debug_message("true")
+	}
+}
 
 //constantly check the score agains the price of points
 if(!is_undefined(unlocked) && ds_list_find_index(global.unlocked_beards, unlocked) == -1 && !global.tutorial_on){

@@ -47,14 +47,6 @@
             }
         },
         {
-            "Key": "03b1e0c4-2d88-4b07-a2e2-096fba119680",
-            "Value": {
-                "id": "205fe204-2501-4121-98f3-cd517fd2fd47",
-                "resourcePath": "scripts\\scr_initialise_beards\\scr_initialise_beards.yy",
-                "resourceType": "GMScript"
-            }
-        },
-        {
             "Key": "077149fb-0191-47fd-8ffa-c4f71390dbfc",
             "Value": {
                 "id": "ce31e246-b328-48ea-9ca1-8d482122a0d6",
@@ -163,14 +155,6 @@
             "Value": {
                 "id": "5dcacfd2-b53f-42c0-ad31-c536a58fe2cf",
                 "resourcePath": "scripts\\scr_restart\\scr_restart.yy",
-                "resourceType": "GMScript"
-            }
-        },
-        {
-            "Key": "26be656e-99a4-4d1c-940c-51ec58883358",
-            "Value": {
-                "id": "c911e84c-927d-4d50-8161-1e264d5c0820",
-                "resourcePath": "scripts\\scr_unlock_beards\\scr_unlock_beards.yy",
                 "resourceType": "GMScript"
             }
         },
@@ -831,6 +815,14 @@
             }
         },
         {
+            "Key": "bedb2b08-ddbe-4e58-9f6f-6130ff0ccf3b",
+            "Value": {
+                "id": "9df42097-f2df-427b-add2-1d088a000bbb",
+                "resourcePath": "scripts\\scr_create_beard_grid\\scr_create_beard_grid.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "bf2c7f03-bc33-4c06-8a5f-8e5960218338",
             "Value": {
                 "id": "6be6a3d2-90bb-43d4-aa6a-990aac4967bf",
@@ -1145,11 +1137,10 @@
     ],
     "script_order": [
         "23138fc4-3a7d-4e1f-8fb1-1b12758cc877",
-        "26be656e-99a4-4d1c-940c-51ec58883358",
-        "03b1e0c4-2d88-4b07-a2e2-096fba119680",
         "35f4981c-bde9-429f-8713-49e6aa56fc49",
         "623aea5c-972b-4e05-bbdd-167fe13236a9",
-        "2b1217ab-d568-41c0-88fa-894e7e8898a9"
+        "2b1217ab-d568-41c0-88fa-894e7e8898a9",
+        "bedb2b08-ddbe-4e58-9f6f-6130ff0ccf3b"
     ],
     "tutorial": ""
 }
