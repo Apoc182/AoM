@@ -1,8 +1,8 @@
 {
-    "id": "7b6e1f6b-6c10-40a1-b306-ee0c2da7dce4",
+    "id": "ac907794-f8fb-4a0e-8d70-34c332a9f749",
     "modelName": "GMScript",
     "mvc": "1.0",
-    "name": "scr_save_beard_grid_state",
+    "name": "scr_apply_multipliers",
     "IsCompatibility": false,
     "IsDnD": false
 }

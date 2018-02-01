@@ -159,6 +159,14 @@
             }
         },
         {
+            "Key": "27063578-762e-43ef-b783-76d5560f0571",
+            "Value": {
+                "id": "bc5ef9aa-3cfa-4c41-96d8-e3b835f19c09",
+                "resourcePath": "views\\27063578-762e-43ef-b783-76d5560f0571.yy",
+                "resourceType": "GMFolder"
+            }
+        },
+        {
             "Key": "27eb7005-285f-412f-a502-da3deb98d604",
             "Value": {
                 "id": "5c105740-aaa2-4003-aab1-3441a50e941b",
@@ -260,6 +268,14 @@
                 "id": "3a1553b1-4196-4caf-b1a4-8088327c4beb",
                 "resourcePath": "views\\4196810a-83e5-4862-82f8-fa5b486acbcf.yy",
                 "resourceType": "GMFolder"
+            }
+        },
+        {
+            "Key": "43e06358-1583-4706-b50f-737f3c3e9bf0",
+            "Value": {
+                "id": "2e16a0b8-267f-439f-bcac-30754efe61e7",
+                "resourcePath": "scripts\\scr_set_multipliers\\scr_set_multipliers.yy",
+                "resourceType": "GMScript"
             }
         },
         {
@@ -474,7 +490,7 @@
             "Key": "7b6e1f6b-6c10-40a1-b306-ee0c2da7dce4",
             "Value": {
                 "id": "65dde0c3-ffee-4186-8a24-5769a6013d50",
-                "resourcePath": "scripts\\scr_save_beard_grid_state\\scr_save_beard_grid_state.yy",
+                "resourcePath": "scripts\\scr_save_beard_grid\\scr_save_beard_grid.yy",
                 "resourceType": "GMScript"
             }
         },
@@ -895,6 +911,14 @@
             }
         },
         {
+            "Key": "c461d64f-8a97-4856-a149-eff5e53889c0",
+            "Value": {
+                "id": "e51b1118-4397-46ac-9e4a-3b8610f1cec8",
+                "resourcePath": "scripts\\scr_load_beard_grid\\scr_load_beard_grid.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "cba65b37-110c-4ed3-afb1-242dbaa3ada1",
             "Value": {
                 "id": "ebf1bc6c-f58f-414e-8805-15d98fe787bf",
@@ -1156,9 +1180,11 @@
         "35f4981c-bde9-429f-8713-49e6aa56fc49",
         "623aea5c-972b-4e05-bbdd-167fe13236a9",
         "2b1217ab-d568-41c0-88fa-894e7e8898a9",
-        "bedb2b08-ddbe-4e58-9f6f-6130ff0ccf3b",
+        "c461d64f-8a97-4856-a149-eff5e53889c0",
+        "7b6e1f6b-6c10-40a1-b306-ee0c2da7dce4",
         "86f62d63-7673-4644-b4c5-afe5ec28320d",
-        "7b6e1f6b-6c10-40a1-b306-ee0c2da7dce4"
+        "bedb2b08-ddbe-4e58-9f6f-6130ff0ccf3b",
+        "43e06358-1583-4706-b50f-737f3c3e9bf0"
     ],
     "tutorial": ""
 }

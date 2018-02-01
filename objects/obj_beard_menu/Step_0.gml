@@ -25,7 +25,7 @@ if(confirm){
 	ds_grid_set(global.all_beard_properties, mover, BRD_CURRENT, true);
 	
 	//Save changes
-	scr_save_beard_grid_state();
+	scr_save_beard_grid();
 	
 	//Return to menu
 	room_goto_previous();

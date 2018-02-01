@@ -45,7 +45,7 @@ ini_open("beards.ini");
 
 if(file_exists("beards.ini")){
 	global.all_beard_properties = ds_grid_create(BRD_NUMBER_OF_BEARDS, BRD_MAX_BEARD_PROPERTIES);
-	ds_grid_read(global.all_beard_properties, ini_read_string("GameData", "beard_settings", "unknown"));
+	global.all_beard_properties = scr_load_beard_grid();
 }else{
 	
 	global.all_beard_properties = ds_grid_create(BRD_NUMBER_OF_BEARDS, BRD_MAX_BEARD_PROPERTIES);
@@ -55,12 +55,42 @@ if(file_exists("beards.ini")){
 	scr_add_beard_to_grid(spr_chaplin, "chap", false, false, 100, ["lives", 2]);
 
 	//Save them
-	var beards = ds_grid_write(global.all_beard_properties);
-	ini_write_string("GameData", "beard_settings", beards);
+	scr_save_beard_grid();
 	
 }
 
 ini_close();
+
+//Set the amount of lives to initialize
+global.player_lives = 3 
+
+
+//Constants
+global.white_drop_ground = 5;
+global.white_drop_head = -150;
+global.white_drop_umbrella = -50;
+global.black_drop_ground = -5;
+global.black_drop_head = -500;
+global.black_drop_umbrella = 100;
+global.rb_can_pickup = 100;
+//Ignorance levels
+global.rb_can_ignorance_points = 4;
+global.drop_on_umbrella_ignorance_points = 2;
+
+
+global.ignorance_level = 16;
+
+//For the drops
+global.colour_array = [c_white, c_white, c_white, c_white, 
+					   c_white, c_white, c_white, c_black];
+					   
+//Boolean for invulnerability
+global.invulnerable = false;
+global.invulnerable_flasher = false;
+
+
+//Apply buffs
+scr_set_multipliers();
 
 
 
@@ -163,32 +193,7 @@ if(ini_key_exists("Save", "local_max")){
 ini_close();
 
 
-//Set the amount of lives to initialize
-global.player_lives = 3;
 
-
-//Constants
-global.white_drop_ground = 5;
-global.white_drop_head = -150;
-global.white_drop_umbrella = -50;
-global.black_drop_ground = -5;
-global.black_drop_head = -500;
-global.black_drop_umbrella = 100;
-global.rb_can_pickup = 100;
-//Ignorance levels
-global.rb_can_ignorance_points = 4;
-global.drop_on_umbrella_ignorance_points = 2;
-
-
-global.ignorance_level = 16;
-
-//For the drops
-global.colour_array = [c_white, c_white, c_white, c_white, 
-					   c_white, c_white, c_white, c_black];
-					   
-//Boolean for invulnerability
-global.invulnerable = false;
-global.invulnerable_flasher = false;
 
 
 

@@ -10,7 +10,6 @@ if(global.debugging){
 	global.player_lives = 3;
 }
 
-
 if (!alarm_on && !global.tutorial_on){
 	alarm[0] = drop_speed;
 	alarm_on = true;
@@ -53,6 +52,6 @@ for(i = 0; i < ds_grid_width(global.all_beard_properties); i++){
 		ds_grid_set(global.all_beard_properties, i, BRD_UNLOCKED, true);
 		beard_unlocked = true;
 		
-		scr_save_beard_grid_state();
+		scr_save_beard_grid();
 	}
 }
