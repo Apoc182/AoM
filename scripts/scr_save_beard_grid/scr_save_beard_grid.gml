@@ -7,6 +7,7 @@ var grid;
 
 grid = ds_grid_write(global.all_beard_properties);
 ini_write_string("GameData", "all_beard_properties", grid);
+ds_grid_destroy(grid);
 
 for(i = 0; i < ds_grid_width(global.all_beard_properties); i++){
 

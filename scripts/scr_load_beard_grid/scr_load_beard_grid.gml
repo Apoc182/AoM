@@ -14,6 +14,7 @@ for(i = 0; i < ds_grid_width(grid); i++){
 	ds_maps[i] = ds_map_create();
 	ds_map_read(ds_maps[i], ini_read_string("GameData", "multipliers" + string(i), ""))
 	ds_grid_set(grid, i, BRD_MULTIPLIERS, ds_maps[i]);
+	ds_map_destroy(ds_maps[i]);
 	
 }
 
