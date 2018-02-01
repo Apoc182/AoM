@@ -471,6 +471,14 @@
             }
         },
         {
+            "Key": "7b6e1f6b-6c10-40a1-b306-ee0c2da7dce4",
+            "Value": {
+                "id": "65dde0c3-ffee-4186-8a24-5769a6013d50",
+                "resourcePath": "scripts\\scr_save_beard_grid_state\\scr_save_beard_grid_state.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "7c64f797-7ecd-4f2b-bd2e-f95e6d4f1c44",
             "Value": {
                 "id": "85b17987-5357-4481-92c9-f4883ffe6cdb",
@@ -540,6 +548,14 @@
                 "id": "8cbed930-fb4f-48ab-b17d-2f17db4c2ce4",
                 "resourcePath": "sprites\\spr_lightning\\spr_lightning.yy",
                 "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "86f62d63-7673-4644-b4c5-afe5ec28320d",
+            "Value": {
+                "id": "c9c6a7af-2e27-4dd7-9a79-3a87bf6f5f72",
+                "resourcePath": "scripts\\scr_get_current_beard\\scr_get_current_beard.yy",
+                "resourceType": "GMScript"
             }
         },
         {
@@ -818,7 +834,7 @@
             "Key": "bedb2b08-ddbe-4e58-9f6f-6130ff0ccf3b",
             "Value": {
                 "id": "9df42097-f2df-427b-add2-1d088a000bbb",
-                "resourcePath": "scripts\\scr_create_beard_grid\\scr_create_beard_grid.yy",
+                "resourcePath": "scripts\\scr_add_beard_to_grid\\scr_add_beard_to_grid.yy",
                 "resourceType": "GMScript"
             }
         },
@@ -1140,7 +1156,9 @@
         "35f4981c-bde9-429f-8713-49e6aa56fc49",
         "623aea5c-972b-4e05-bbdd-167fe13236a9",
         "2b1217ab-d568-41c0-88fa-894e7e8898a9",
-        "bedb2b08-ddbe-4e58-9f6f-6130ff0ccf3b"
+        "bedb2b08-ddbe-4e58-9f6f-6130ff0ccf3b",
+        "86f62d63-7673-4644-b4c5-afe5ec28320d",
+        "7b6e1f6b-6c10-40a1-b306-ee0c2da7dce4"
     ],
     "tutorial": ""
 }

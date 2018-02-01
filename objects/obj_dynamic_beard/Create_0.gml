@@ -12,7 +12,10 @@ dynamic beard allocation.
 
 */
 
-sprite_index = ds_list_find_value(global.beard_setting, 0);
+//Get current beard
+sprite_index = scr_get_current_beard(BRD_SPRITE_NAME);
+
+
 
 
 alarm[0] = room_speed * random(5);

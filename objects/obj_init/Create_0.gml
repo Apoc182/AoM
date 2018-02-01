@@ -20,38 +20,47 @@
 //Master Switches
 global.tutorial_on = true;
 global.is_thor = false;
-global.beard_setting = ds_list_create();
-default_beard = spr_beard_normal;
 
-//Temp beard information
-beard_sprites = [];
-beard_names = [];
-beard_score = [];
+//Beard grid macro's
+#macro BRD_MAX_BEARD_PROPERTIES 6
+
+//Update this macro when adding new beards.
+#macro BRD_NUMBER_OF_BEARDS 2
+
+//For accessing beard information
+#macro BRD_SPRITE_NAME 0
+#macro BRD_BEARD_NAME 1
+#macro BRD_UNLOCKED 2
+#macro BRD_CURRENT 3
+#macro BRD_SCORE_TO_UNLOCK 4
+#macro BRD_MULTIPLIERS 5
+
+
+
+
+
+//NEW GRID SYSTEM
 counter = 0;
+ini_open("beards.ini");
 
-//ADDING BEARDS
-//Just call the scr_creat_beard_grid script and give it the values it requires
-scr_create_beard_grid(spr_clean_shaven, "shaven", 100);
-scr_create_beard_grid(spr_abe, "abe", 200);
+if(file_exists("beards.ini")){
+	global.all_beard_properties = ds_grid_create(BRD_NUMBER_OF_BEARDS, BRD_MAX_BEARD_PROPERTIES);
+	ds_grid_read(global.all_beard_properties, ini_read_string("GameData", "beard_settings", "unknown"));
+}else{
+	
+	global.all_beard_properties = ds_grid_create(BRD_NUMBER_OF_BEARDS, BRD_MAX_BEARD_PROPERTIES);
+	
+	//Here is where we add our beards... Only ONE beard may have true as its 'current' argument.
+	scr_add_beard_to_grid(spr_beard_normal, "Normal", true, true, 100, ["lives", 2]);
+	scr_add_beard_to_grid(spr_chaplin, "chap", false, false, 100, ["lives", 2]);
 
-var number_of_possible_beards = array_length_1d(beard_sprites);
-
-
-
-
-//Below, add the scores
-global.all_beard_properties = ds_grid_create(number_of_possible_beards, 3);
-
-for(i = 0; i < number_of_possible_beards; i++){
-
-	ds_grid_add(global.all_beard_properties, i, 0, beard_sprites[i]);
-	ds_grid_add(global.all_beard_properties, i, 1, beard_names[i]);
-	ds_grid_add(global.all_beard_properties, i, 2, beard_score[i]);
-
+	//Save them
+	var beards = ds_grid_write(global.all_beard_properties);
+	ini_write_string("GameData", "beard_settings", beards);
+	
 }
 
-
-
+ini_close();
 
 
 
@@ -181,26 +190,5 @@ global.colour_array = [c_white, c_white, c_white, c_white,
 global.invulnerable = false;
 global.invulnerable_flasher = false;
 
-
-
-//Global list of currently unlocked beards.
-global.unlocked_beards = ds_list_create();
-
-if(!file_exists("beards.ini")){	
-	ini_open("beards.ini");
-	ds_list_add(global.unlocked_beards, spr_beard_normal);
-	write_to_ini = ds_list_write(global.unlocked_beards);
-	ini_write_string("GameData", "unlocked_beards", write_to_ini);
-	ds_list_add(global.beard_setting, default_beard) 
-	ini_write_string("GameData", "beard_setting", write_to_ini);
-}
-
-else{	
-	ini_open("beards.ini");
-	ds_list_read(global.unlocked_beards, ini_read_string("GameData", "unlocked_beards", ""));
-	ds_list_read(global.beard_setting, ini_read_string("GameData", "beard_setting", ""));
-}
-
-ini_close()
 
 

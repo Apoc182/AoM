@@ -43,22 +43,16 @@ global.current_player_loc_x = obj_default.x;
 
 previous_time_multiplier = global.time_multiplier;
 
-unlocked = undefined;
 
-//Cycle through grid and check to see if current score equals anything
+//Cycle through grid and check to see if current score equals anything. If so, unlock it and save it to the ini.
 for(i = 0; i < ds_grid_width(global.all_beard_properties); i++){	
-	if(ds_grid_get( global.all_beard_properties, i, 2) == global.scr){
-		unlocked = ds_grid_get(global.all_beard_properties, i, 0);
-		show_debug_message("true")
+	
+	if(ds_grid_get(global.all_beard_properties, i, BRD_SCORE_TO_UNLOCK) == global.scr &&
+	   !ds_grid_get(global.all_beard_properties, i, BRD_UNLOCKED)){
+		
+		ds_grid_set(global.all_beard_properties, i, BRD_UNLOCKED, true);
+		beard_unlocked = true;
+		
+		scr_save_beard_grid_state();
 	}
-}
-
-//constantly check the score agains the price of points
-if(!is_undefined(unlocked) && ds_list_find_index(global.unlocked_beards, unlocked) == -1 && !global.tutorial_on){
-	beard_unlocked = true;
-	ds_list_add(global.unlocked_beards, unlocked);
-	ini_open("beards.ini")
-	to_add = ds_list_write(global.unlocked_beards);
-	ini_write_string("GameData", "unlocked_beards", to_add);
-	ini_close();
 }
