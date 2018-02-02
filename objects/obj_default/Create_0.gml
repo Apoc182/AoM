@@ -7,7 +7,6 @@ pressed_left = false;
 pressed_right = false;
 spd = 0;
 isMoving = 0;
-top_spd = 5;
 inertia = .2
 
 //Because i invert the sprite by the x axis alot, i need a constant to track the width of the sprite

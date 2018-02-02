@@ -7,10 +7,13 @@ if(keyboard_check_pressed(ord("A")) || keyboard_check_pressed(vk_left)){
 	mover -= 1;
 	left = true;
 }
+
 if(keyboard_check_pressed(ord("D")) || keyboard_check_pressed(vk_right)){
 	mover += 1;
 	left = false;
 }
+
+
 
 //So we never leave the grid bounds
 do{

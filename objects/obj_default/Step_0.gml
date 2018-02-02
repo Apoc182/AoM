@@ -18,7 +18,7 @@ if (x - (sprite_actual_width/2) + spd <= 0 || x + (sprite_actual_width/2) + spd 
 //Increments speed accordingly when player goes right.
 if (pressed_right && x + (sprite_actual_width/2) + spd < window_get_width()){
 	moving = true;
-	if (spd < top_spd){
+	if (spd < global.top_spd){
 		spd += inertia;
 	}
 	
@@ -30,7 +30,7 @@ if (pressed_right && x + (sprite_actual_width/2) + spd < window_get_width()){
 //Increments speed accordingly when player goes left.
 if (pressed_left && x - (sprite_actual_width/2) > 0){
 	moving = true;
-	if (spd > -top_spd){
+	if (spd > -global.top_spd){
 		spd -= inertia;
 	}
 	sprite_index = walking;

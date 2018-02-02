@@ -16,6 +16,8 @@ player_damage_multiplier = ds_map_find_value(map, "damage"); //Need to rework da
 global.player_lives = player_lives_multiplier;
 
 
+global.top_spd = 5 * player_speed_multiplier;
+
 //Constants
 global.black_drop_umbrella = 100;
 
@@ -31,7 +33,3 @@ global.colour_array = [c_white, c_white, c_white, c_white,
 //Boolean for invulnerability
 global.invulnerable = false;
 global.invulnerable_flasher = false;
-
-
-
-///THIS NEED WORKING ON
