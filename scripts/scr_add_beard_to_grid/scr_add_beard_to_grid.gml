@@ -15,6 +15,10 @@ ds_grid_set(global.all_beard_properties, counter, 4, argument4);
 //Create a map of multiplier name to its effect
 var multipliers = ds_map_create();
 ds_map_add(multipliers, argument5[0], argument5[1]);
+ds_map_add(multipliers, argument6[0], argument6[1]);
+ds_map_add(multipliers, argument7[0], argument7[1]);
+ds_map_add(multipliers, argument8[0], argument8[1]);
+ds_map_add(multipliers, argument9[0], argument9[1]);
 
 //Store it in the grid.
 ds_grid_set(global.all_beard_properties, counter, 5, ds_map_create());

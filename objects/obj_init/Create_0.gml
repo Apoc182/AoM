@@ -1,7 +1,7 @@
 //Debugging tools
 
 	//Master switch
-	global.debugging = false;
+	global.debugging = true;
 	
 	//Starting room
 	starting_room = dream;
@@ -25,7 +25,7 @@ global.is_thor = false;
 #macro BRD_MAX_BEARD_PROPERTIES 6
 
 //Update this macro when adding new beards.
-#macro BRD_NUMBER_OF_BEARDS 3
+#macro BRD_NUMBER_OF_BEARDS 11
 
 //For accessing beard information
 #macro BRD_SPRITE_NAME 0
@@ -50,9 +50,40 @@ if(file_exists("beards.ini")){
 	global.all_beard_properties = ds_grid_create(BRD_NUMBER_OF_BEARDS, BRD_MAX_BEARD_PROPERTIES);
 	
 	//Here is where we add our beards... Only ONE beard may have true as its 'current' argument.
-	scr_add_beard_to_grid(spr_beard_normal, "Normal", true, true, 100, ["lives", 1]);
-	scr_add_beard_to_grid(spr_chaplin, "chap", false, false, 200, ["lives", 2]);
-	scr_add_beard_to_grid(spr_van_dyke, "Van Dyke", false, false, 100, ["lives", 4]);
+	scr_add_beard_to_grid(spr_beard_normal, "Miller's default beard", true, true, 0, ["umbrella", 1],
+						  ["speed", 1], ["lives", 3], ["score", 1], ["damage", 1]);
+	
+	scr_add_beard_to_grid(spr_beard_black, "Slightly increases speed", false, false, 500, ["umbrella", 1],
+						  ["speed", 1.25], ["lives", 3], ["score", 1], ["damage", 1]);
+						  
+	scr_add_beard_to_grid(spr_beard_chops, "Increases lives", false, false, 1000, ["umbrella", 1],
+						  ["speed", 1], ["lives", 4], ["score", 1], ["damage", 1]);
+	
+	scr_add_beard_to_grid(spr_abe, "Slightly increases umbrella endurance", false, false, 1500, ["umbrella", .75],
+						  ["speed", 1], ["lives", 3], ["score", 1], ["damage", 1]);
+	
+	scr_add_beard_to_grid(spr_chaplin, "Slightly increases score", false, false, 2000, ["umbrella", 1],
+						  ["speed", 1], ["lives", 3], ["score", 1.25], ["damage", 1]);
+						  
+	scr_add_beard_to_grid(spr_chops_2, "Greatly increases speed", false, false, 3000, ["umbrella", 1],
+						  ["speed", 1.5], ["lives", 3], ["score", 1], ["damage", 1]);
+						  
+	scr_add_beard_to_grid(spr_blonde, "Reduces damage taken", false, false, 4000, ["umbrella", 1],
+						  ["speed", 1], ["lives", 3], ["score", 1], ["damage", .5]);
+						  
+	scr_add_beard_to_grid(spr_grey, "Greatly increases umbrella indurance", false, false, 5000, ["umbrella", .5],
+						  ["speed", 1], ["lives", 3], ["score", 1], ["damage", 1]);
+	
+	scr_add_beard_to_grid(spr_white, "Greatly increases score", false, false, 6000, ["umbrella", 1],
+						  ["speed", 1], ["lives", 3], ["score", 1.5], ["damage", 1]);
+	
+	scr_add_beard_to_grid(spr_van_dyke, "Slightly increases all stats", false, false, 8000, ["umbrella", .75],
+						  ["speed", 1.25], ["lives", 4], ["score", 1.25], ["damage", 1]);
+						  
+	scr_add_beard_to_grid(spr_clean_shaven, "Greatly increases all stats", false, false, 10000, ["umbrella", .5],
+						  ["speed", 1.5], ["lives", 4], ["score", 1.5], ["damage", .5]);
+
+	
 
 	//Save them
 	scr_save_beard_grid();

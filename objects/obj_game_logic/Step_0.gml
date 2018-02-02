@@ -6,8 +6,7 @@
 
 //Debug invincibility
 if(global.debugging){
-	global.scr = 100;
-	global.player_lives = 3;
+	if(keyboard_check_pressed(vk_control)) global.scr += 100;
 }
 
 if (!alarm_on && !global.tutorial_on){
