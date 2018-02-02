@@ -39,6 +39,3 @@ if(current_RGB[2] < destination_RGBs[destination_selector, 2]) current_RGB[2] = 
 
 //Change BG colour
 layer_background_blend(bg1, make_color_rgb(current_RGB[0], current_RGB[1], current_RGB[2]));
-show_debug_message(string(current_RGB[0]))
-show_debug_message(string(current_RGB[1]))
-show_debug_message(string(current_RGB[2]))

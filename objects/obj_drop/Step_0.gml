@@ -5,7 +5,7 @@ if(place_meeting(x,y,obj_default) && !drop_contact){
 	//If the umbrella is away when this happens.
 	if(!global.umbrella_out){		
 		if(!global.invulnerable){
-			global.player_lives -= 1;
+			global.player_lives -= global.player_damage;
 			audio_play_sound(global.rain_hit[random(array_length_1d(global.rain_hit) - 1)], 0, false);
 		}
 		global.invulnerable = true;

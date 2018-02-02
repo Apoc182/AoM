@@ -831,6 +831,14 @@
             }
         },
         {
+            "Key": "bbe9c852-778e-4a37-b80e-c4e023fe745f",
+            "Value": {
+                "id": "ae95c979-d081-49fc-97d1-e9babcb904ab",
+                "resourcePath": "scripts\\scr_number_beards_unlocked\\scr_number_beards_unlocked.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "bceeadae-0d80-43ba-86b9-d2d13fbfeb87",
             "Value": {
                 "id": "9c84dbb7-9e93-4712-8c2e-b3be94320f14",
@@ -1184,7 +1192,8 @@
         "7b6e1f6b-6c10-40a1-b306-ee0c2da7dce4",
         "86f62d63-7673-4644-b4c5-afe5ec28320d",
         "bedb2b08-ddbe-4e58-9f6f-6130ff0ccf3b",
-        "43e06358-1583-4706-b50f-737f3c3e9bf0"
+        "43e06358-1583-4706-b50f-737f3c3e9bf0",
+        "bbe9c852-778e-4a37-b80e-c4e023fe745f"
     ],
     "tutorial": ""
 }

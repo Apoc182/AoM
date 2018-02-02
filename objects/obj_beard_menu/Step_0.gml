@@ -3,40 +3,29 @@
 
 
 
-if(keyboard_check_pressed(ord("A")) || keyboard_check_pressed(vk_left)){
+if(keyboard_check_pressed(ord("W")) || keyboard_check_pressed(vk_up)){
 	mover -= 1;
-	left = true;
 }
 
-if(keyboard_check_pressed(ord("D")) || keyboard_check_pressed(vk_right)){
+if(keyboard_check_pressed(ord("S")) || keyboard_check_pressed(vk_down)){
 	mover += 1;
-	left = false;
 }
 
 
 
-//So we never leave the grid bounds
-do{
-	if(mover < 0){
-		mover = ds_grid_width(global.all_beard_properties) - 1;
-	}
 
 
-	if(mover > ds_grid_width(global.all_beard_properties) - 1){
-		mover = 0;
-	}
+if(mover < 0){
 
-	//So we know if it's unlocked or not before we go to it.
-	unlocked = ds_grid_get(global.all_beard_properties, mover, BRD_UNLOCKED)
-	
-	if(!unlocked && left) mover--;
-	if(!unlocked && !left) mover++;
-	
+	mover = 0;
+
 }
-until unlocked;
 
+if(mover == scr_number_beards_unlocked()){
 
+	mover = scr_number_beards_unlocked() - 1;
 
+}
 
 
 
@@ -62,5 +51,6 @@ if(confirm){
 	room_goto_previous();
 	
 }
+
 
 if(keyboard_check_pressed(vk_escape)) room_goto_previous();

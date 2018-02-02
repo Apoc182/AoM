@@ -45,7 +45,7 @@ previous_time_multiplier = global.time_multiplier;
 //Cycle through grid and check to see if current score equals anything. If so, unlock it and save it to the ini.
 for(i = 0; i < ds_grid_width(global.all_beard_properties); i++){	
 	
-	if(ds_grid_get(global.all_beard_properties, i, BRD_SCORE_TO_UNLOCK) == global.scr &&
+	if(ds_grid_get(global.all_beard_properties, i, BRD_SCORE_TO_UNLOCK) <= global.scr &&
 	   !ds_grid_get(global.all_beard_properties, i, BRD_UNLOCKED)){
 		
 		ds_grid_set(global.all_beard_properties, i, BRD_UNLOCKED, true);
