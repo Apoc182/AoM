@@ -4,7 +4,13 @@
 ///@arg3 unlocked
 ///@arg4 current
 ///@arg5 beard_score
-///@arg6 multiplier(array)
+///@arg6 umbrella_damage
+///@arg7 speed_multiplier
+///@arg8 lives_multiplier
+///@arg9 score_multiplier
+///@arg10 damage_multiplier
+///@arg11 drop_ratio
+
 
 //Set the first five properties: sprite, name and score to unlock.
 ds_grid_set(global.all_beard_properties, counter, 0, argument0);

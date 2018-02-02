@@ -1,7 +1,7 @@
 //Debugging tools
 
 	//Master switch
-	global.debugging = false;
+	global.debugging = true;
 	
 	//Starting room
 	starting_room = dream;
@@ -51,8 +51,29 @@ if(file_exists("beards.ini")){
 	global.all_beard_properties = ds_grid_create(BRD_NUMBER_OF_BEARDS, BRD_MAX_BEARD_PROPERTIES);
 	
 	//Here is where we add our beards... Only ONE beard may have true as its 'current' argument.
+	//NOTE, there will be defaults applied if none are specified.
+	/*Key: 
+	0: Sprite (sprite reference)
+	1: Name (string)
+	2: Description (string)
+	3: Is unlocked? (Boolean)
+	4: Is currently selected (Booleal) NOTE: only one beard should be set to true at any given time.
+	5: Score (Real)
+	6: Umbrella damage multiplier (Array[string, real])
+	7: Speed multiplier (Array[string, real])
+	8: Lives multiplier (Array[string, real]) NOTE: Default is 3.
+	9: Score multiplier (Array[string, real])
+	10: Damage multiplier (Array[string, real])
+	11: Drop Ratio multiplier (Array[string, real])
+	12: Umbrella damage multiplier (Array[string, real]) NOTE: It is the fractional chance of getting a black drop out of 6.
+															  eg. 1/6, 2/6, 3/6, 4/6, 5/6, 6/6.
+
+	
+	
+	*/
+	
 	scr_add_beard_to_grid(spr_beard_normal,  "Miller", "Miller's default beard", true, true, 0, ["umbrella", 1],
-						  ["speed", 1], ["lives", 3], ["score", 1], ["damage", 1], ["drop_ratio", 4]);
+						  ["speed", 1], ["lives", 3], ["score", 1], ["damage", 1], ["drop_ratio", 1]);
 	
 	scr_add_beard_to_grid(spr_beard_black,  "Cpt. Black Beard", "Slightly increases speed", false, false, 500, ["umbrella", 1],
 						  ["speed", 1.25], ["lives", 3], ["score", 1], ["damage", 1], ["drop_ratio", 1]);

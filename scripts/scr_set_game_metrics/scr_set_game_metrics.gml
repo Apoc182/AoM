@@ -32,7 +32,7 @@ global.ignorance_level = 16;
 
 global.colour_array = [];
 
-	
+
 switch(player_drop_ratio){
 	
 	case 1:
