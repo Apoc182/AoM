@@ -10,8 +10,5 @@ draw_set_color(c_white);
 
 global.scr = 0;
 global.time_multiplier = 0;
-global.player_lives = 3;
-global.invulnerable = false;
-global.invulnerable_flasher = false;
-global.ignorance_level = 16;
+scr_set_game_metrics();
 keyboard_clear(vk_space);

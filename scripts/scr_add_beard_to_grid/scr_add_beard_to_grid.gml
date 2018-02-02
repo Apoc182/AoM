@@ -17,6 +17,7 @@ var multipliers = ds_map_create();
 ds_map_add(multipliers, argument5[0], argument5[1]);
 
 //Store it in the grid.
+ds_grid_set(global.all_beard_properties, counter, 5, ds_map_create());
 ds_grid_set(global.all_beard_properties, counter, 5, multipliers);
 
 //Increment counter for next cycle

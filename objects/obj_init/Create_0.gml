@@ -25,7 +25,7 @@ global.is_thor = false;
 #macro BRD_MAX_BEARD_PROPERTIES 6
 
 //Update this macro when adding new beards.
-#macro BRD_NUMBER_OF_BEARDS 2
+#macro BRD_NUMBER_OF_BEARDS 3
 
 //For accessing beard information
 #macro BRD_SPRITE_NAME 0
@@ -44,15 +44,15 @@ counter = 0;
 ini_open("beards.ini");
 
 if(file_exists("beards.ini")){
-	global.all_beard_properties = ds_grid_create(BRD_NUMBER_OF_BEARDS, BRD_MAX_BEARD_PROPERTIES);
-	global.all_beard_properties = scr_load_beard_grid();
+	scr_load_beard_grid();
 }else{
 	
 	global.all_beard_properties = ds_grid_create(BRD_NUMBER_OF_BEARDS, BRD_MAX_BEARD_PROPERTIES);
 	
 	//Here is where we add our beards... Only ONE beard may have true as its 'current' argument.
-	scr_add_beard_to_grid(spr_beard_normal, "Normal", true, true, 100, ["lives", 2]);
-	scr_add_beard_to_grid(spr_chaplin, "chap", false, false, 100, ["lives", 2]);
+	scr_add_beard_to_grid(spr_beard_normal, "Normal", true, true, 100, ["lives", 1]);
+	scr_add_beard_to_grid(spr_chaplin, "chap", false, false, 200, ["lives", 2]);
+	scr_add_beard_to_grid(spr_van_dyke, "Van Dyke", false, false, 100, ["lives", 4]);
 
 	//Save them
 	scr_save_beard_grid();
@@ -61,36 +61,9 @@ if(file_exists("beards.ini")){
 
 ini_close();
 
-//Set the amount of lives to initialize
-global.player_lives = 3 
-
-
-//Constants
-global.white_drop_ground = 5;
-global.white_drop_head = -150;
-global.white_drop_umbrella = -50;
-global.black_drop_ground = -5;
-global.black_drop_head = -500;
-global.black_drop_umbrella = 100;
-global.rb_can_pickup = 100;
-//Ignorance levels
-global.rb_can_ignorance_points = 4;
-global.drop_on_umbrella_ignorance_points = 2;
-
-
-global.ignorance_level = 16;
-
-//For the drops
-global.colour_array = [c_white, c_white, c_white, c_white, 
-					   c_white, c_white, c_white, c_black];
-					   
-//Boolean for invulnerability
-global.invulnerable = false;
-global.invulnerable_flasher = false;
-
 
 //Apply buffs
-scr_set_multipliers();
+scr_set_game_metrics();
 
 
 

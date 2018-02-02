@@ -274,7 +274,7 @@
             "Key": "43e06358-1583-4706-b50f-737f3c3e9bf0",
             "Value": {
                 "id": "2e16a0b8-267f-439f-bcac-30754efe61e7",
-                "resourcePath": "scripts\\scr_set_multipliers\\scr_set_multipliers.yy",
+                "resourcePath": "scripts\\scr_set_game_metrics\\scr_set_game_metrics.yy",
                 "resourceType": "GMScript"
             }
         },
