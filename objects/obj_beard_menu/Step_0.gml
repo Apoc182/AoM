@@ -1,40 +1,27 @@
 //For the menu
-
-
-
-
-if(keyboard_check_pressed(ord("W")) || keyboard_check_pressed(vk_up)){
+if(keyboard_check_pressed(ord("W")) || keyboard_check_pressed(vk_up)) && box.open && !confirm{
 	mover -= 1;
 }
 
-if(keyboard_check_pressed(ord("S")) || keyboard_check_pressed(vk_down)){
+if(keyboard_check_pressed(ord("S")) || keyboard_check_pressed(vk_down)) && box.open && !confirm{
 	mover += 1;
 }
 
-
-
-
-
 if(mover < 0){
-
 	mover = 0;
-
 }
 
 if(mover == scr_number_beards_unlocked()){
-
 	mover = scr_number_beards_unlocked() - 1;
-
 }
 
+if((keyboard_check_pressed(vk_enter) || keyboard_check_pressed(vk_space)) && box.open){
+	confirm = true;
+	box.box_in = false;
+	box.box_out = true;
+}
 
-
-
-confirm = keyboard_check_pressed(vk_enter) || keyboard_check_pressed(vk_space);
-
-
-
-if(confirm){
+if(confirm && box.closed){
 	//Clears the current default status.
 	ds_grid_set(global.all_beard_properties, beard_index, BRD_CURRENT, false);
 	
@@ -48,9 +35,7 @@ if(confirm){
 	scr_set_game_metrics();
 	
 	//Return to menu
-	room_goto_previous();
-	
+	room_goto_previous();	
 }
-
 
 if(keyboard_check_pressed(vk_escape)) room_goto_previous();
