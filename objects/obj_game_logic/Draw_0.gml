@@ -79,6 +79,22 @@ if(global.ignorance_level > previous_ignorance_level){
 draw_sprite(spr_ignorancometre, previous_ignorance_level, 
 			21 * GRID_SIZE, 
 			GRID_SIZE);
+			
+//Debugger HUD
+if(global.debugging){
+
+	var text_size = sprite_get_height(spr_nesfont);
+	
+	draw_text(10, GRID_SIZE * 4, "Ignoracometre: " + string(string(global.ignorance_level)));
+	draw_text(10, GRID_SIZE * 4 + text_size, "Lives: " + string(global.player_lives));
+	draw_text(10, GRID_SIZE * 4 + (text_size * 2), "Umbrella multiplier: " + string(ds_map_find_value(scr_get_current_beard(BRD_MULTIPLIERS), "umbrella")));
+	draw_text(10, GRID_SIZE * 4 + (text_size * 3), "Speed multiplier: " + string(ds_map_find_value(scr_get_current_beard(BRD_MULTIPLIERS), "speed")));
+	draw_text(10, GRID_SIZE * 4 + (text_size * 4), "Lives multiplier: " + string(ds_map_find_value(scr_get_current_beard(BRD_MULTIPLIERS), "lives")));
+	draw_text(10, GRID_SIZE * 4 + (text_size * 5), "Score multiplier: " + string(ds_map_find_value(scr_get_current_beard(BRD_MULTIPLIERS), "score")));
+	draw_text(10, GRID_SIZE * 4 + (text_size * 6), "Damage multiplier: " + string(ds_map_find_value(scr_get_current_beard(BRD_MULTIPLIERS), "damage")));
+	draw_text(10, GRID_SIZE * 4 + (text_size * 7), "Drop multiplier: " + string(ds_map_find_value(scr_get_current_beard(BRD_MULTIPLIERS), "drop_ratio")));
+
+}
 
 
 
