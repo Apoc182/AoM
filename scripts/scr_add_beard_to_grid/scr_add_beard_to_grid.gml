@@ -24,7 +24,7 @@ ds_grid_set(global.all_beard_properties, counter, 5, argument5);
 var multipliers = ds_map_create();
 ds_map_add(multipliers, argument6[0], argument6[1]);
 ds_map_add(multipliers, argument7[0], argument7[1]);
-ds_map_add(multipliers, argument8[0], argument8[1]);
+ds_map_add(multipliers, argument8[0], argument8[1] * 6); //Converts multiplier into lives
 ds_map_add(multipliers, argument9[0], argument9[1]);
 ds_map_add(multipliers, argument10[0], argument10[1]);
 ds_map_add(multipliers, argument11[0], argument11[1]);

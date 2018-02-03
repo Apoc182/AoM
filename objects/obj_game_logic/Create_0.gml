@@ -50,3 +50,5 @@ if(scr_get_current_beard(BRD_SPRITE_NAME) == spr_ginger){
 		
 
 }
+
+max_lives = global.player_lives;

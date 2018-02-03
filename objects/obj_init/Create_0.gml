@@ -1,7 +1,7 @@
 //Debugging tools
 
 	//Master switch
-	global.debugging = false;
+	global.debugging = true;
 	
 	//Starting room
 	starting_room = dream;
@@ -57,7 +57,7 @@ if(file_exists("beards.ini")){
 	1: Name (string)
 	2: Description (string)
 	3: Is unlocked? (Boolean)
-	4: Is currently selected (Booleal) NOTE: only one beard should be set to true at any given time.
+	4: Is currently selected (Boolean) NOTE: only one beard should be set to true at any given time.
 	5: Score (Real)
 	6: Umbrella damage multiplier (Array[string, real])
 	7: Speed multiplier (Array[string, real])
@@ -116,6 +116,13 @@ if(file_exists("beards.ini")){
 
 	//Save them
 	scr_save_beard_grid();
+	
+	//Open all beards for debugger
+	if(global.debugging){
+		for(i = 0; i < BRD_NUMBER_OF_BEARDS; i++){
+			ds_grid_set(global.all_beard_properties, i, BRD_UNLOCKED, true);
+		}
+	}
 	
 }
 

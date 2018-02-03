@@ -39,10 +39,7 @@ if(timer mod 60 < 10){
 draw_text(15 * GRID_SIZE, GRID_SIZE, string(floor(timer/60)) + ":" + leading_zero + string(timer mod 60));
 draw_set_halign(fa_left)
 
-//Draw the lives on the screen
-for (var i = 0; i < global.player_lives; i++){
-	draw_sprite(spr_lives, 0, (27.5 * GRID_SIZE) - ((GRID_SIZE) * i), GRID_SIZE);
-}
+scr_draw_lives();
 
 //Display beard unlocked.
 if(beard_unlocked){
@@ -86,7 +83,7 @@ if(global.debugging){
 	var text_size = sprite_get_height(spr_nesfont);
 	
 	draw_text(10, GRID_SIZE * 4, "Ignoracometre: " + string(string(global.ignorance_level)));
-	draw_text(10, GRID_SIZE * 4 + text_size, "Lives: " + string(global.player_lives));
+	draw_text(10, GRID_SIZE * 4 + text_size, "Lives: " + string(global.player_lives / 6));
 	draw_text(10, GRID_SIZE * 4 + (text_size * 2), "Umbrella multiplier: " + string(ds_map_find_value(scr_get_current_beard(BRD_MULTIPLIERS), "umbrella")));
 	draw_text(10, GRID_SIZE * 4 + (text_size * 3), "Speed multiplier: " + string(ds_map_find_value(scr_get_current_beard(BRD_MULTIPLIERS), "speed")));
 	draw_text(10, GRID_SIZE * 4 + (text_size * 4), "Lives multiplier: " + string(ds_map_find_value(scr_get_current_beard(BRD_MULTIPLIERS), "lives")));

@@ -19,6 +19,7 @@ ini_close();
 
 //Fade out theme
 audio_sound_gain(snd_title, 0, 1000);
+audio_sound_gain(snd_sheeran, 0, 1000);
 
 //Fade in gamover
 audio_stop_sound(snd_gameover);

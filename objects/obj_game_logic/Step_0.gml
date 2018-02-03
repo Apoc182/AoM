@@ -7,6 +7,7 @@
 //Debug invincibility
 if(global.debugging){
 	if(keyboard_check_pressed(vk_control)) global.scr += 100;
+	if(keyboard_check_pressed(vk_alt)) instance_create_depth(scr_place_pickup("x"), scr_place_pickup("y"), obj_default.depth, obj_hot_sauce);
 }
 
 if (!alarm_on && !global.tutorial_on){

@@ -21,7 +21,7 @@ global.top_spd = 5 * player_speed_multiplier;
 
 //Constants
 global.black_drop_umbrella = 100 * player_score_multiplier;
-global.player_damage = player_damage_multiplier;
+global.player_damage = player_damage_multiplier * 6;
 
 //Ignorance levels
 global.rb_can_ignorance_points = 4;
