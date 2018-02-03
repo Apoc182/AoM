@@ -11,12 +11,12 @@ pressed_left = keyboard_check(ord("A")) || keyboard_check(vk_left);
 pressed_right = keyboard_check(ord("D")) || keyboard_check(vk_right);
 
 //Sets speed to 0 if player tries to leave the screen.
-if (x - (sprite_actual_width/2) + spd <= 0 || x + (sprite_actual_width/2) + spd >= window_get_width()){
+if (x - (sprite_actual_width/2) + spd <= 0 || x + (sprite_actual_width/2) + spd >= (GRID_SIZE * 32)){
 	spd = 0;
 }
 
 //Increments speed accordingly when player goes right.
-if (pressed_right && x + (sprite_actual_width/2) + spd < window_get_width()){
+if (pressed_right && x + (sprite_actual_width/2) + spd < (GRID_SIZE * 32)){
 	moving = true;
 	if (spd < global.top_spd){
 		spd += inertia;
@@ -83,4 +83,25 @@ if(global.invulnerable && !alarm[1]){
 	with obj_dynamic_beard visible = !visible;
 	global.invulnerable_flasher = !global.invulnerable_flasher;
 	alarm[1] = flasher_speed * room_speed;
+}
+
+
+//Change sprite for moving turn
+if(sign(spd) == 1 && pressed_left){
+	if(global.umbrella_out) {
+		sprite_index = umbrella_standing;
+	}else{
+		sprite_index = turning;
+	}
+
+}
+
+if(sign(spd) == -1 && pressed_right){
+	
+	if(global.umbrella_out) {
+		sprite_index = umbrella_standing;
+	}else{
+		sprite_index = turning;
+	}
+
 }

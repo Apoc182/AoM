@@ -6,7 +6,7 @@ if(global.tutorial_on){
 	paused = false;
 }
 
-box = instance_create_depth(window_get_width()/2, window_get_height()/2, 500, obj_animated_box);
+box = instance_create_depth((GRID_SIZE * 32)/2, (GRID_SIZE * 24)/2, 500, obj_animated_box);
 box.visible = false;
 
 

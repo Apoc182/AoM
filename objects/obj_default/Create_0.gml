@@ -17,6 +17,7 @@ walking = spr_walking;
 standing = spr_default_standing;
 umbrella_standing = spr_umbrella_standing;
 umbrella_walking = spr_umbrella_walking;
+turning = spr_turning;
 
 //This will handle the Thor costume
 if(global.is_thor){

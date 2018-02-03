@@ -12,7 +12,7 @@ if(paused){
 				draw_set_color(make_color_rgb(124,124,124));
 			}
 		
-			draw_text(window_get_width()/2, (window_get_height()/2 - (2 * GRID_SIZE)) + (i * text_height), menu_items[i]);	
+			draw_text((GRID_SIZE * 32)/2, ((GRID_SIZE * 24)/2 - (2 * GRID_SIZE)) + (i * text_height), menu_items[i]);	
 			draw_set_color(c_white);
 		}
 	}

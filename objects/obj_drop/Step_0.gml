@@ -45,7 +45,7 @@ if(place_meeting(x,y,obj_default) && !drop_contact){
 }
 
 
-if (y > window_get_height() - sprite_get_height(spr_floor) && !drop_contact){
+if (y > (GRID_SIZE * 24) - sprite_get_height(spr_floor) && !drop_contact){
 
 	
 	instance_destroy();

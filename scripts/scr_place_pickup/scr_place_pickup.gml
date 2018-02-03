@@ -7,5 +7,5 @@ if(argument0 == "x"){
 }
 
 if(argument0 == "y"){
-	return window_get_height() - (sprite_get_height(spr_floor) + sprite_get_height(spr_rb_can)/2);
+	return (GRID_SIZE * 24) - (sprite_get_height(spr_floor) + sprite_get_height(spr_rb_can)/2);
 }

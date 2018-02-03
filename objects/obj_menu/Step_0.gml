@@ -25,8 +25,7 @@ if (move != 0){
 
 push = max(keyboard_check_pressed(vk_enter), keyboard_check_pressed(vk_space), 0);
 
-if (push && !fading){
-	ini_open("Save.ini");
+if (push && !fading && !options){
 	audio_play_sound(snd_calledMeACunt, 0, false);
 	switch (mpos){
 		
@@ -37,25 +36,74 @@ if (push && !fading){
 		}
 		
 		case 1:{
-			room_goto(rm_beard_select);
+			menu = ["Change Name", "Change Beard", "Full Screen | off"];
+			if(global.tutorial_on){
+				menu[3] = "Tutorial | on";
+			}else{
+				menu[3] = "Tutorial | off";
+			}
+			mpos = 0;
+			push = false;
+			options = true;
 			break;
 		}
 		
 		case 2:{		
-			room_goto(rm_enter_name);
-			break;
-		}
-		
-		case 3: {
 			game_end();
 			break;
 		}
+
 		
 		default: break;
 	
 	}
-	ini_close();
 } //End menu stuff
+
+
+if (push && !fading && options){
+
+	audio_play_sound(snd_calledMeACunt, 0, false);
+	switch (mpos){
+		
+		case 0: {					
+			room_goto(rm_enter_name);
+			break;
+		}
+		
+		case 1:{
+			room_goto(rm_beard_select);
+			break;					  
+		}							  
+									  
+		case 2:{					  
+			if(!window_get_fullscreen()){			  
+				menu[2] = "Full Screen + on";
+				window_set_fullscreen(true);
+			}else{		
+				menu[2] = "Full Screen + off";
+				window_set_fullscreen(false);
+			}
+			break;
+		}
+		
+		case 3:{
+			global.tutorial_on = !global.tutorial_on
+			if(global.tutorial_on){
+				menu[3] = "Tutorial | on";
+			}else{
+				menu[3] = "Tutorial | off";
+			}
+			break;
+		}
+		
+		
+		default: break;
+	
+	}
+
+} //End menu stuff
+
+
 
 if(draw_fader){
 	
@@ -73,4 +121,15 @@ if(draw_fader){
 //Fade
 if(alpha_variance_in > 0){
 	alpha_variance_in -= .025;
+}
+
+//Esc takes to exit
+if(keyboard_check_pressed(vk_escape) && !options) mpos = 2; 
+
+//Esc takes to exit
+if(keyboard_check_pressed(vk_escape) && options){
+	//Menu options
+	menu = ["Start", "Options", "Exit"];
+	mpos = 0;
+	options = false;
 }

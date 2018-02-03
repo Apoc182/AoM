@@ -1,6 +1,10 @@
 
 //Menu options
-menu = ["Start", "Beard Select", "Change Name", "Exit"];
+menu = ["Start", "Options", "Exit"];
+
+//Which menu
+options = false;
+
 
 //Menu item spacing
 space = 32;

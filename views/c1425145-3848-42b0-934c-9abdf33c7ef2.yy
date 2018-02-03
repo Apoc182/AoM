@@ -13,7 +13,8 @@
         "5f2412d0-da56-40dc-a43f-2af239622f07",
         "bf2c7f03-bc33-4c06-8a5f-8e5960218338",
         "5cb865bd-6679-4eb4-aa02-43854733c2a7",
-        "c138376b-2b30-4aa8-8c35-1400e78b7177"
+        "c138376b-2b30-4aa8-8c35-1400e78b7177",
+        "ace97414-192b-4a81-b8ae-89604da9e614"
     ],
     "filterType": "GMSprite",
     "folderName": "miller_sprites",

@@ -2,8 +2,8 @@
 // You can write your code in this editor
 
 
-x = window_get_width()/2;
-y = window_get_height()/2;
+x = (GRID_SIZE * 32)/2;
+y = (GRID_SIZE * 24)/2;
 
 audio_play_sound(snd_splash, 0, false);
 //Sets an alarm to change the room after a certain wait

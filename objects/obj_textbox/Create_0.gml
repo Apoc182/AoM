@@ -26,8 +26,10 @@ if(ini_key_exists("Save", "Name") && !global.username_exists){
 	if(global.user_name == "Thor" || global.user_name == "thor" || global.user_name == "THOR"){
 		global.is_thor = true;
 	}
-	room_goto(rm_title);
+	
 	global.username_exists = true;
+	room_goto(rm_title);
+	
 }
 
 

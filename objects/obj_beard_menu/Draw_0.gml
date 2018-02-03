@@ -3,11 +3,11 @@
 
 //This will draw all the beards
 
-draw_text(window_get_width()/2 - 200, window_get_height()/2 - 200, "Select your Man-Muff");
+draw_text((GRID_SIZE * 32)/2 - 200, (GRID_SIZE * 24)/2 - 200, "Select your Man-Muff");
 
-draw_sprite(spr_default_standing, 0, window_get_width()/2, window_get_height()/2);
-draw_sprite(ds_grid_get(global.all_beard_properties, mover, BRD_SPRITE_NAME), 0, window_get_width()/2, window_get_height()/2);
-draw_text(window_get_width()/2, (window_get_height()/2) + GRID_SIZE * 4, ds_grid_get(global.all_beard_properties, mover, BRD_BEARD_DESCRIPTION));
+draw_sprite(spr_default_standing, 0, (GRID_SIZE * 32)/2, (GRID_SIZE * 24)/2);
+draw_sprite(ds_grid_get(global.all_beard_properties, mover, BRD_SPRITE_NAME), 0, (GRID_SIZE * 32)/2, (GRID_SIZE * 24)/2);
+draw_text((GRID_SIZE * 32)/2, ((GRID_SIZE * 24)/2) + GRID_SIZE * 4, ds_grid_get(global.all_beard_properties, mover, BRD_BEARD_DESCRIPTION));
 
 for(i = 0; i < ds_grid_width(global.all_beard_properties); i++){
 	

@@ -1,7 +1,7 @@
 //Debugging tools
 
 	//Master switch
-	global.debugging = true;
+	global.debugging = false;
 	
 	//Starting room
 	starting_room = dream;

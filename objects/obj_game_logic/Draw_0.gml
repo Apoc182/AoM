@@ -80,6 +80,7 @@ draw_sprite(spr_ignorancometre, previous_ignorance_level,
 //Debugger HUD
 if(global.debugging){
 
+	draw_set_color(c_silver);
 	var text_size = sprite_get_height(spr_nesfont);
 	
 	draw_text(10, GRID_SIZE * 4, "Ignoracometre: " + string(string(global.ignorance_level)));
@@ -90,7 +91,8 @@ if(global.debugging){
 	draw_text(10, GRID_SIZE * 4 + (text_size * 5), "Score multiplier: " + string(ds_map_find_value(scr_get_current_beard(BRD_MULTIPLIERS), "score")));
 	draw_text(10, GRID_SIZE * 4 + (text_size * 6), "Damage multiplier: " + string(ds_map_find_value(scr_get_current_beard(BRD_MULTIPLIERS), "damage")));
 	draw_text(10, GRID_SIZE * 4 + (text_size * 7), "Drop multiplier: " + string(ds_map_find_value(scr_get_current_beard(BRD_MULTIPLIERS), "drop_ratio")));
-
+	draw_text(10, GRID_SIZE * 4 + (text_size * 8), "Seconds between drops: " + string(drop_speed / room_speed));
+	draw_set_color(c_white);
 }
 
 

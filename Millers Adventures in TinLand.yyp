@@ -735,6 +735,14 @@
             }
         },
         {
+            "Key": "ace97414-192b-4a81-b8ae-89604da9e614",
+            "Value": {
+                "id": "4ef9ec64-6abf-4123-810e-efa2873bfa16",
+                "resourcePath": "sprites\\spr_turning\\spr_turning.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "acffff1d-67b4-47f3-841e-a45162d3a4a5",
             "Value": {
                 "id": "86e19466-b11f-4c46-9c7c-5f930132c898",
