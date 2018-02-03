@@ -25,6 +25,14 @@ if (move != 0){
 
 push = max(keyboard_check_pressed(vk_enter), keyboard_check_pressed(vk_space), 0);
 
+//For using left and right to control toggle items
+if(!push && options && (mpos == 2 || mpos == 3)){
+
+	push = max(keyboard_check_pressed(vk_left), keyboard_check_pressed(vk_right), keyboard_check_pressed(ord("A")), keyboard_check_pressed(ord("D")), 0);
+
+}
+
+
 if (push && !fading && !options){
 	audio_play_sound(snd_calledMeACunt, 0, false);
 	switch (mpos){
