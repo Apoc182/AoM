@@ -36,11 +36,11 @@ if (push && !fading && !options){
 		}
 		
 		case 1:{
-			menu = ["Change Name", "Change Beard", "Full Screen | off"];
+			menu = ["Change Name", "Change Beard", "Full Screen"];
 			if(global.tutorial_on){
-				menu[3] = "Tutorial | on";
+				menu[3] = "Tutorial";
 			}else{
-				menu[3] = "Tutorial | off";
+				menu[3] = "Tutorial";
 			}
 			mpos = 0;
 			push = false;
@@ -77,10 +77,8 @@ if (push && !fading && options){
 									  
 		case 2:{					  
 			if(!window_get_fullscreen()){			  
-				menu[2] = "Full Screen + on";
 				window_set_fullscreen(true);
 			}else{		
-				menu[2] = "Full Screen + off";
 				window_set_fullscreen(false);
 			}
 			break;
@@ -89,9 +87,7 @@ if (push && !fading && options){
 		case 3:{
 			global.tutorial_on = !global.tutorial_on
 			if(global.tutorial_on){
-				menu[3] = "Tutorial | on";
 			}else{
-				menu[3] = "Tutorial | off";
 			}
 			break;
 		}
