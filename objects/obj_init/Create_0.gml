@@ -1,3 +1,8 @@
+//Load fullscreen
+ini_open("Save.ini");
+window_set_fullscreen(ini_read_real("Save", "Fullscreen", false));
+ini_close();
+
 //Debugging tools
 
 	//Master switch

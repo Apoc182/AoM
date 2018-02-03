@@ -81,6 +81,7 @@ if (push && !fading && options){
 			}else{		
 				window_set_fullscreen(false);
 			}
+			scr_save_screen_size();
 			break;
 		}
 		
