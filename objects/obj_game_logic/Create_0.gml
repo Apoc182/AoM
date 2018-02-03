@@ -40,3 +40,13 @@ global.all_unlocks_available = [];
 global.ignorance_level = sprite_get_number(spr_ignorancometre) - 1;
 previous_ignorance_level = global.ignorance_level;
 bar_refill_speed = .2;
+
+//Ed for funzies
+if(scr_get_current_beard(BRD_SPRITE_NAME) == spr_ginger){
+	
+		audio_sound_gain(snd_title, 0, 0);
+		if(audio_is_playing(snd_sheeran)) audio_stop_sound(snd_sheeran);
+		audio_play_sound(snd_sheeran, 0, true);
+		
+
+}

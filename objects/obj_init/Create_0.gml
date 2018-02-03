@@ -1,7 +1,7 @@
 //Debugging tools
 
 	//Master switch
-	global.debugging = true;
+	global.debugging = false;
 	
 	//Starting room
 	starting_room = dream;
@@ -75,7 +75,7 @@ if(file_exists("beards.ini")){
 	scr_add_beard_to_grid(spr_beard_normal,  "Miller", "Miller's default beard", true, true, 0, ["umbrella", 1],
 						  ["speed", 1], ["lives", 3], ["score", 1], ["damage", 1], ["drop_ratio", 1]);
 						  
-		scr_add_beard_to_grid(spr_ginger, "Ed Sheeran", "Does nothing", false, false, 100, ["umbrella", 1],
+	scr_add_beard_to_grid(spr_ginger, "Ed Sheeran", "Does nothing", false, false, 100, ["umbrella", 1],
 						  ["speed", 3], ["lives", 10], ["score", 1], ["damage", 1], ["drop_ratio", 1]);
 	
 	scr_add_beard_to_grid(spr_beard_black,  "Cpt. Black Beard", "Slightly increases speed", false, false, 500, ["umbrella", 1],

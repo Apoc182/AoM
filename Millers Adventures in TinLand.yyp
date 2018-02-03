@@ -1063,6 +1063,14 @@
             }
         },
         {
+            "Key": "e0497c37-a171-4ff9-9065-4a68e54a0a70",
+            "Value": {
+                "id": "8b69c1c8-e48e-45a6-b73d-e125c6cd1ce3",
+                "resourcePath": "sounds\\snd_sheeran\\snd_sheeran.yy",
+                "resourceType": "GMSound"
+            }
+        },
+        {
             "Key": "e0ddfc44-c6f5-4f6c-96c3-2a50cc763cff",
             "Value": {
                 "id": "3586b840-131e-46a7-8c60-d237021345a8",
