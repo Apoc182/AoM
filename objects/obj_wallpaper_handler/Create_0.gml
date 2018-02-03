@@ -24,14 +24,14 @@ destination_RGBs[0, 0] = 255
 destination_RGBs[0, 1] = 191
 destination_RGBs[0, 2] = 191
 destination_RGBs[1, 0] = 255
-destination_RGBs[1, 1] = 127
-destination_RGBs[1, 2] = 127
-destination_RGBs[2, 0] = 255
-destination_RGBs[2, 1] = 63
-destination_RGBs[2, 2] = 63
-destination_RGBs[3, 0] = 255
-destination_RGBs[3, 1] = 0
-destination_RGBs[3, 2] = 0
+destination_RGBs[1, 1] = 254
+destination_RGBs[1, 2] = 192
+destination_RGBs[2, 0] = 131
+destination_RGBs[2, 1] = 250
+destination_RGBs[2, 2] = 88
+destination_RGBs[3, 0] = 190
+destination_RGBs[3, 1] = 132
+destination_RGBs[3, 2] = 255
 
 //To select the correct coordinate
 destination_selector = 0;

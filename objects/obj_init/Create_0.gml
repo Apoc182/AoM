@@ -25,7 +25,7 @@ global.is_thor = false;
 #macro BRD_MAX_BEARD_PROPERTIES 7
 
 //Update this macro when adding new beards.
-#macro BRD_NUMBER_OF_BEARDS 11
+#macro BRD_NUMBER_OF_BEARDS 12
 
 //For accessing beard information
 #macro BRD_SPRITE_NAME 0
@@ -74,6 +74,9 @@ if(file_exists("beards.ini")){
 	
 	scr_add_beard_to_grid(spr_beard_normal,  "Miller", "Miller's default beard", true, true, 0, ["umbrella", 1],
 						  ["speed", 1], ["lives", 3], ["score", 1], ["damage", 1], ["drop_ratio", 1]);
+						  
+		scr_add_beard_to_grid(spr_ginger, "Ed Sheeran", "Does nothing", false, false, 100, ["umbrella", 1],
+						  ["speed", 3], ["lives", 10], ["score", 1], ["damage", 1], ["drop_ratio", 1]);
 	
 	scr_add_beard_to_grid(spr_beard_black,  "Cpt. Black Beard", "Slightly increases speed", false, false, 500, ["umbrella", 1],
 						  ["speed", 1.25], ["lives", 3], ["score", 1], ["damage", 1], ["drop_ratio", 1]);
@@ -104,6 +107,8 @@ if(file_exists("beards.ini")){
 						  
 	scr_add_beard_to_grid(spr_clean_shaven, "Gay", "Greatly increases all stats", false, false, 10000, ["umbrella", .5],
 						  ["speed", 1.5], ["lives", 4], ["score", 1.5], ["damage", .5], ["drop_ratio", 1]);
+						  
+
 
 
 

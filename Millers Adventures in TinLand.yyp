@@ -1023,6 +1023,14 @@
             }
         },
         {
+            "Key": "de8daeef-29dd-4766-bb4b-8d5425044099",
+            "Value": {
+                "id": "53d8925d-fb73-4b55-8749-5548e61d27e5",
+                "resourcePath": "sprites\\spr_ginger\\spr_ginger.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "de9d42ea-c1f4-4a08-9d06-21f6991b93da",
             "Value": {
                 "id": "c853932d-93ea-4ee1-b337-5101bab3cfae",
