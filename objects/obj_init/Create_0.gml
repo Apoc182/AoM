@@ -6,10 +6,10 @@ ini_close();
 //Debugging tools
 
 	//Master switch
-	global.debugging = false;
+	global.debugging = true;
 	
 	//Starting room
-	starting_room = dream;
+	starting_room = rm_title;
 	
 	//Room skipper
 	if(global.debugging){
@@ -51,85 +51,83 @@ ini_open("beards.ini");
 
 if(file_exists("beards.ini")){
 	scr_load_beard_grid();
+	ds_grid_resize(global.all_beard_properties, BRD_NUMBER_OF_BEARDS, ds_grid_height(global.all_beard_properties));
 }else{
-	
 	global.all_beard_properties = ds_grid_create(BRD_NUMBER_OF_BEARDS, BRD_MAX_BEARD_PROPERTIES);
-	
-	//Here is where we add our beards... Only ONE beard may have true as its 'current' argument.
-	//NOTE, there will be defaults applied if none are specified.
-	/*Key: 
-	0: Sprite (sprite reference)
-	1: Name (string)
-	2: Description (string)
-	3: Is unlocked? (Boolean)
-	4: Is currently selected (Boolean) NOTE: only one beard should be set to true at any given time.
-	5: Score (Real)
-	6: Umbrella damage multiplier (Array[string, real])
-	7: Speed multiplier (Array[string, real])
-	8: Lives multiplier (Array[string, real]) NOTE: Default is 3.
-	9: Score multiplier (Array[string, real])
-	10: Damage multiplier (Array[string, real])
-	11: Drop Ratio multiplier (Array[string, real])
-	12: Umbrella damage multiplier (Array[string, real]) NOTE: It is the fractional chance of getting a black drop out of 6.
-															  eg. 1/6, 2/6, 3/6, 4/6, 5/6, 6/6.
-
-	
-	
-	*/
-	
-	scr_add_beard_to_grid(spr_beard_normal,  "Miller", "Miller's default beard", true, true, 0, ["umbrella", 1],
-						  ["speed", 1], ["lives", 3], ["score", 1], ["damage", 1], ["drop_ratio", 1]);
-						  
-	scr_add_beard_to_grid(spr_ginger, "Ed Sheeran", "Does nothing", false, false, 100, ["umbrella", 1],
-						  ["speed", 3], ["lives", 10], ["score", 1], ["damage", 1], ["drop_ratio", 1]);
-	
-	scr_add_beard_to_grid(spr_beard_black,  "Cpt. Black Beard", "Slightly increases speed", false, false, 500, ["umbrella", 1],
-						  ["speed", 1.25], ["lives", 3], ["score", 1], ["damage", 1], ["drop_ratio", 1]);
-						  
-	scr_add_beard_to_grid(spr_beard_chops, "Wolverine", "Increases lives", false, false, 1000, ["umbrella", 1],
-						  ["speed", 1], ["lives", 4], ["score", 1], ["damage", 1], ["drop_ratio", 1]);
-	
-	scr_add_beard_to_grid(spr_abe, "Abe", "Slightly increases umbrella endurance", false, false, 1500, ["umbrella", .75],
-						  ["speed", 1], ["lives", 3], ["score", 1], ["damage", 1], ["drop_ratio", 1]);
-	
-	scr_add_beard_to_grid(spr_chaplin, "Chaplin", "Slightly increases score", false, false, 2000, ["umbrella", 1],
-						  ["speed", 1], ["lives", 3], ["score", 1.25], ["damage", 1], ["drop_ratio", 1]);
-						  
-	scr_add_beard_to_grid(spr_chops_2, "Cunt", "Greatly increases speed", false, false, 3000, ["umbrella", 1],
-						  ["speed", 1.5], ["lives", 3], ["score", 1], ["damage", 1], ["drop_ratio", 1]);
-						  
-	scr_add_beard_to_grid(spr_blonde, "Hemsworth", "Reduces damage taken", false, false, 4000, ["umbrella", 1],
-						  ["speed", 1], ["lives", 3], ["score", 1], ["damage", .5], ["drop_ratio", 1]);
-						  
-	scr_add_beard_to_grid(spr_grey, "Gandalf the Grey", "Greatly increases umbrella indurance", false, false, 5000, ["umbrella", .5],
-						  ["speed", 1], ["lives", 3], ["score", 1], ["damage", 1], ["drop_ratio", 1]);
-	
-	scr_add_beard_to_grid(spr_white, "Gandalf the White", "Greatly increases score", false, false, 6000, ["umbrella", 1],
-						  ["speed", 1], ["lives", 3], ["score", 1.5], ["damage", 1], ["drop_ratio", 1]);
-	
-	scr_add_beard_to_grid(spr_van_dyke, "Van Dyke", "Slightly increases all stats", false, false, 8000, ["umbrella", .75],
-						  ["speed", 1.25], ["lives", 4], ["score", 1.25], ["damage", 1], ["drop_ratio", 1]);
-						  
-	scr_add_beard_to_grid(spr_clean_shaven, "Gay", "Greatly increases all stats", false, false, 10000, ["umbrella", .5],
-						  ["speed", 1.5], ["lives", 4], ["score", 1.5], ["damage", .5], ["drop_ratio", 1]);
-						  
-
-
-
-
-	
-
-	//Save them
-	scr_save_beard_grid();
-	
-	//Open all beards for debugger
-	if(global.debugging){
-		for(i = 0; i < BRD_NUMBER_OF_BEARDS; i++){
-			ds_grid_set(global.all_beard_properties, i, BRD_UNLOCKED, true);
-		}
-	}
-	
 }
+	
+//Here is where we add our beards... Only ONE beard may have true as its 'current' argument.
+//NOTE, there will be defaults applied if none are specified.
+/*Key: 
+0: Sprite (sprite reference)
+1: Name (string)
+2: Description (string)
+3: Is unlocked? (Boolean)
+4: Is currently selected (Boolean) NOTE: only one beard should be set to true at any given time.
+5: Score (Real)
+6: Umbrella damage multiplier (Array[string, real])
+7: Speed multiplier (Array[string, real])
+8: Lives multiplier (Array[string, real]) NOTE: Default is 3.
+9: Score multiplier (Array[string, real])
+10: Damage multiplier (Array[string, real])
+11: Drop Ratio multiplier (Array[string, real])
+12: Umbrella damage multiplier (Array[string, real]) NOTE: It is the fractional chance of getting a black drop out of 6.
+															eg. 1/6, 2/6, 3/6, 4/6, 5/6, 6/6.
+
+	
+	
+*/
+	
+scr_add_beard_to_grid(spr_beard_normal,  "Miller", "Miller's default beard", true, true, 0, ["umbrella", 1],
+						["speed", 1], ["lives", 3], ["score", 1], ["damage", 1], ["drop_ratio", 1]);
+						  
+scr_add_beard_to_grid(spr_ginger, "Ed Sheeran", "Does nothing", false, false, 100, ["umbrella", 1],
+						["speed", 3], ["lives", 10], ["score", 1], ["damage", 1], ["drop_ratio", 1]);
+	
+scr_add_beard_to_grid(spr_beard_black,  "Cpt. Black Beard", "Slightly increases speed", false, false, 500, ["umbrella", 1],
+						["speed", 1.25], ["lives", 3], ["score", 1], ["damage", 1], ["drop_ratio", 1]);
+						  
+scr_add_beard_to_grid(spr_beard_chops, "Wolverine", "Increases lives", false, false, 1000, ["umbrella", 1],
+						["speed", 13], ["lives", 4], ["score", 1], ["damage", 1], ["drop_ratio", 1]);
+	
+scr_add_beard_to_grid(spr_abe, "Abe", "Slightly increases umbrella endurance", false, false, 1500, ["umbrella", .75],
+						["speed", 1], ["lives", 3], ["score", 1], ["damage", 1], ["drop_ratio", 1]);
+	
+scr_add_beard_to_grid(spr_chaplin, "Chaplin", "Slightly increases score", false, false, 2000, ["umbrella", 1],
+						["speed", 1], ["lives", 3], ["score", 1.25], ["damage", 1], ["drop_ratio", 1]);
+						  
+scr_add_beard_to_grid(spr_chops_2, "Cunt", "Greatly increases speed", false, false, 3000, ["umbrella", 1],
+						["speed", 1.5], ["lives", 3], ["score", 1], ["damage", 1], ["drop_ratio", 1]);
+						  
+scr_add_beard_to_grid(spr_blonde, "Hemsworth", "Reduces damage taken", false, false, 4000, ["umbrella", 1],
+						["speed", 1], ["lives", 3], ["score", 1], ["damage", .5], ["drop_ratio", 1]);
+						  
+scr_add_beard_to_grid(spr_grey, "Gandalf the Grey", "Greatly increases umbrella indurance", false, false, 5000, ["umbrella", .5],
+						["speed", 1], ["lives", 3], ["score", 1], ["damage", 1], ["drop_ratio", 1]);
+	
+scr_add_beard_to_grid(spr_white, "Gandalf the White", "Greatly increases score", false, false, 6000, ["umbrella", 1],
+						["speed", 1], ["lives", 3], ["score", 1.5], ["damage", 1], ["drop_ratio", 1]);
+	
+scr_add_beard_to_grid(spr_van_dyke, "Van Dyke", "Slightly increases all stats", false, false, 8000, ["umbrella", .75],
+						["speed", 1.25], ["lives", 4], ["score", 1.25], ["damage", 1], ["drop_ratio", 1]);
+						  
+scr_add_beard_to_grid(spr_clean_shaven, "Gay", "Greatly increases all stats", false, false, 10000, ["umbrella", .5],
+						["speed", 1.5], ["lives", 4], ["score", 1.5], ["damage", .5], ["drop_ratio", 1]);
+
+						  
+
+
+//Save them
+scr_save_beard_grid();
+	
+//Open all beards for debugger
+if(global.debugging){
+	for(i = 0; i < BRD_NUMBER_OF_BEARDS; i++){
+		ds_grid_set(global.all_beard_properties, i, BRD_UNLOCKED, true);
+	}
+}
+	
+
 
 ini_close();
 

@@ -11,6 +11,27 @@
 ///@arg10 damage_multiplier
 ///@arg11 drop_ratio
 
+old_counter = counter;
+var updating_existing = false;
+
+if(file_exists("beards.ini")){
+	
+	for(i = 0; i < ds_grid_width(global.all_beard_properties); i++){
+		
+	
+		if(ds_grid_get(global.all_beard_properties, i, BRD_SPRITE_NAME) == argument0){
+		
+			argument3 = ds_grid_get(global.all_beard_properties, i, BRD_UNLOCKED)
+			argument4 = ds_grid_get(global.all_beard_properties, i, BRD_CURRENT)
+			counter = i;
+			updating_existing = true;
+			break;
+		
+		}
+	}
+	
+}
+
 
 //Set the first five properties: sprite, name and score to unlock.
 ds_grid_set(global.all_beard_properties, counter, 0, argument0);
@@ -33,5 +54,7 @@ ds_map_add(multipliers, argument11[0], argument11[1]);
 ds_grid_set(global.all_beard_properties, counter, 6, ds_map_create());
 ds_grid_set(global.all_beard_properties, counter, 6, multipliers);
 
-//Increment counter for next cycle
+//Return the counter to its previous state.
+counter = old_counter;
+//Increment counter for next cycle.
 counter++;
