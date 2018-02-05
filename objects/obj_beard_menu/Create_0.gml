@@ -7,7 +7,7 @@
 
 beard_index = scr_get_current_beard("index");
 
-mover = beard_index;
+highlighted_beard = beard_index;
 
 confirm = false;
 
@@ -27,3 +27,7 @@ box.box_in = true;
 alarm[0] = room_speed * random(5);
 blinking = false;
 frame_count = 0;
+
+//Make the menu scroll
+menu_max_list = 12;
+scroller = 0;

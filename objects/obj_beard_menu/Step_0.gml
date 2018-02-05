@@ -12,21 +12,46 @@ if(blinking){
 
 
 //For the menu
-if(keyboard_check_pressed(ord("W")) || keyboard_check_pressed(vk_up)) && box.open && !confirm{
-	mover -= 1;
+if((keyboard_check_pressed(ord("W")) || keyboard_check_pressed(vk_up)) && box.open && !confirm){
+	highlighted_beard -= 1;
+	
+	if(highlighted_beard < 0){
+		highlighted_beard = 0;
+		if(highlighted_beard < scroller) scroller--;
+	}
+	
 }
 
-if(keyboard_check_pressed(ord("S")) || keyboard_check_pressed(vk_down)) && box.open && !confirm{
-	mover += 1;
+if((keyboard_check_pressed(ord("S")) || keyboard_check_pressed(vk_down)) && box.open && !confirm){
+	highlighted_beard += 1;
+	
+	if(highlighted_beard > menu_max_list - 1){
+	
+		scroller++;
+		highlighted_beard--;
+		
+		if(scroller + highlighted_beard > ds_grid_width(global.all_beard_properties) - 1){
+		
+			scroller--;
+		
+		}
+
+	
+	}
+		
 }
 
-if(mover < 0){
-	mover = 0;
-}
 
-if(mover == scr_number_beards_unlocked()){
-	mover = scr_number_beards_unlocked() - 1;
-}
+
+
+
+
+
+
+
+
+
+
 
 if((keyboard_check_pressed(vk_enter) || keyboard_check_pressed(vk_space)) && box.open){
 	confirm = true;
@@ -39,7 +64,7 @@ if(confirm && box.closed){
 	ds_grid_set(global.all_beard_properties, beard_index, BRD_CURRENT, false);
 	
 	//Sets the new beard.
-	ds_grid_set(global.all_beard_properties, mover, BRD_CURRENT, true);
+	ds_grid_set(global.all_beard_properties, highlighted_beard + scroller, BRD_CURRENT, true);
 	
 	//Save changes
 	scr_save_beard_grid();

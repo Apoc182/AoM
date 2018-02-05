@@ -77,7 +77,7 @@ counter = 0;
 //SET THIS TO THE NUMBER OF TIMES YOU CALL THE BELOW SCRIPT!
 
 //Update this macro when adding new beards.
-#macro BRD_NUMBER_OF_BEARDS 12
+#macro BRD_NUMBER_OF_BEARDS 14
 global.all_beard_properties = ds_grid_create(BRD_NUMBER_OF_BEARDS, BRD_MAX_BEARD_PROPERTIES);
 
 //!!!
@@ -117,6 +117,12 @@ scr_add_beard_to_grid(spr_van_dyke, "Van Dyke", "Slightly increases all stats", 
 						["speed", 1.25], ["lives", 4], ["score", 1.25], ["damage", 1], ["drop_ratio", 1]);
 						  
 scr_add_beard_to_grid(spr_clean_shaven, "Gay", "Greatly increases all stats", false, false, 10000, ["umbrella", .5],
+						["speed", 1.5], ["lives", 4], ["score", 1.5], ["damage", .5], ["drop_ratio", 1]);
+						
+scr_add_beard_to_grid(spr_arrow, "Gay", "Greatly increases all stats", false, false, 10000, ["umbrella", .5],
+						["speed", 1.5], ["lives", 4], ["score", 1.5], ["damage", .5], ["drop_ratio", 1]);
+						
+scr_add_beard_to_grid(spr_barberbg, "Gay", "Greatly increases all stats", false, false, 10000, ["umbrella", .5],
 						["speed", 1.5], ["lives", 4], ["score", 1.5], ["damage", .5], ["drop_ratio", 1]);
 						
 
