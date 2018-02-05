@@ -1,3 +1,16 @@
+//Manipulate dynamic beards.
+if(blinking){
+	
+	frame_count++;
+	if(frame_count >= room_speed * .2){
+		frame_count = 0;
+		blinking = false;
+	}
+
+}
+
+
+
 //For the menu
 if(keyboard_check_pressed(ord("W")) || keyboard_check_pressed(vk_up)) && box.open && !confirm{
 	mover -= 1;

@@ -1,6 +1,8 @@
 //Location for beard selecting
 //The default place for the cursor
 
+
+
 //Default location of cursor
 
 beard_index = scr_get_current_beard("index");
@@ -20,3 +22,8 @@ box.x2_closed = GRID_SIZE * 24
 box.x1 = GRID_SIZE * 22
 box.x2 = GRID_SIZE * 24
 box.box_in = true;
+
+//Make blinking happen.
+alarm[0] = room_speed * random(5);
+blinking = false;
+frame_count = 0;

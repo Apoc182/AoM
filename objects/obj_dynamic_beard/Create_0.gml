@@ -16,7 +16,7 @@ dynamic beard allocation.
 sprite_index = scr_get_current_beard(BRD_SPRITE_NAME);
 
 
-
+snap_to = obj_default;
 
 alarm[0] = room_speed * random(5);
 blinking = false;

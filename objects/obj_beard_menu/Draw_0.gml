@@ -10,6 +10,12 @@ draw_sprite_ext(spr_default_standing, 0, GRID_SIZE * 11, GRID_SIZE * 13.5, -1,1,
 draw_sprite_ext(ds_grid_get(global.all_beard_properties, mover, BRD_SPRITE_NAME), 0, GRID_SIZE * 11, GRID_SIZE * 13.5,-1,1,0,c_white,1);
 draw_sprite(spr_barber, 0, GRID_SIZE * 2, GRID_SIZE * 6);
 
+//Blinker
+if(blinking){
+	draw_sprite(spr_blink_miller, 0, GRID_SIZE * 7, GRID_SIZE * 13.5);
+	draw_sprite_ext(spr_blink_miller, 0, GRID_SIZE * 11, GRID_SIZE * 13.5, -1,1,0,c_white,1);
+}
+
 draw_text(GRID_SIZE * 16, GRID_SIZE * 21, ds_grid_get(global.all_beard_properties, mover, BRD_BEARD_DESCRIPTION));
 
 if(box.open && !confirm){

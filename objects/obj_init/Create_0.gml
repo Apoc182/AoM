@@ -29,8 +29,7 @@ global.is_thor = false;
 //Beard grid macro's
 #macro BRD_MAX_BEARD_PROPERTIES 7
 
-//Update this macro when adding new beards.
-#macro BRD_NUMBER_OF_BEARDS 9
+
 
 //For accessing beard information
 #macro BRD_SPRITE_NAME 0
@@ -46,9 +45,7 @@ global.is_thor = false;
 
 
 //NEW GRID SYSTEM
-counter = 0;
 
-global.all_beard_properties = ds_grid_create(BRD_NUMBER_OF_BEARDS, BRD_MAX_BEARD_PROPERTIES);
 
 	
 //Here is where we add our beards... Only ONE beard may have true as its 'current' argument.
@@ -72,21 +69,34 @@ global.all_beard_properties = ds_grid_create(BRD_NUMBER_OF_BEARDS, BRD_MAX_BEARD
 	
 	
 */
+
+counter = 0;
+
+
+
+//SET THIS TO THE NUMBER OF TIMES YOU CALL THE BELOW SCRIPT!
+
+//Update this macro when adding new beards.
+#macro BRD_NUMBER_OF_BEARDS 12
+global.all_beard_properties = ds_grid_create(BRD_NUMBER_OF_BEARDS, BRD_MAX_BEARD_PROPERTIES);
+
+//!!!
+//!!!
 	
 scr_add_beard_to_grid(spr_beard_normal,  "Miller", "Miller's default beard", true, true, 0, ["umbrella", 1],
 						["speed", 1], ["lives", 3], ["score", 1], ["damage", 1], ["drop_ratio", 1]);
 						  
-//scr_add_beard_to_grid(spr_ginger, "Ed Sheeran", "Does nothing", false, false, 100, ["umbrella", 1],
-//						["speed", 3], ["lives", 10], ["score", 1], ["damage", 1], ["drop_ratio", 1]);
+scr_add_beard_to_grid(spr_ginger, "Ed Sheeran", "Does nothing", false, false, 100, ["umbrella", 1],
+						["speed", 3], ["lives", 10], ["score", 1], ["damage", 1], ["drop_ratio", 1]);
 	
 scr_add_beard_to_grid(spr_beard_black,  "Cpt. Black Beard", "Slightly increases speed", false, false, 500, ["umbrella", 1],
 						["speed", 1.25], ["lives", 3], ["score", 1], ["damage", 1], ["drop_ratio", 1]);
 						  
 scr_add_beard_to_grid(spr_beard_chops, "Wolverine", "Increases lives", false, false, 1000, ["umbrella", 1],
-						["speed", 7], ["lives", 4], ["score", 1], ["damage", 1], ["drop_ratio", 1]);
+						["speed", 13], ["lives", 4], ["score", 1], ["damage", 1], ["drop_ratio", 1]);
 	
-//scr_add_beard_to_grid(spr_abe, "Abe", "Slightly increases umbrella endurance", false, false, 1500, ["umbrella", .75],
-//						["speed", 1], ["lives", 3], ["score", 1], ["damage", 1], ["drop_ratio", 1]);
+scr_add_beard_to_grid(spr_abe, "Abe", "Slightly increases umbrella endurance", false, false, 1500, ["umbrella", .75],
+						["speed", 1], ["lives", 3], ["score", 1], ["damage", 1], ["drop_ratio", 1]);
 	
 scr_add_beard_to_grid(spr_chaplin, "Chaplin", "Slightly increases score", false, false, 2000, ["umbrella", 1],
 						["speed", 1], ["lives", 3], ["score", 1.25], ["damage", 1], ["drop_ratio", 1]);
@@ -97,8 +107,8 @@ scr_add_beard_to_grid(spr_chops_2, "Cunt", "Greatly increases speed", false, fal
 scr_add_beard_to_grid(spr_blonde, "Hemsworth", "Reduces damage taken", false, false, 4000, ["umbrella", 1],
 						["speed", 1], ["lives", 3], ["score", 1], ["damage", .5], ["drop_ratio", 1]);
 						  
-//scr_add_beard_to_grid(spr_grey, "Gandalf the Grey", "Greatly increases umbrella indurance", false, false, 5000, ["umbrella", .5],
-//						["speed", 1], ["lives", 3], ["score", 1], ["damage", 1], ["drop_ratio", 1]);
+scr_add_beard_to_grid(spr_grey, "Gandalf the Grey", "Greatly increases umbrella indurance", false, false, 5000, ["umbrella", .5],
+						["speed", 1], ["lives", 3], ["score", 1], ["damage", 1], ["drop_ratio", 1]);
 	
 scr_add_beard_to_grid(spr_white, "Gandalf the White", "Greatly increases score", false, false, 6000, ["umbrella", 1],
 						["speed", 1], ["lives", 3], ["score", 1.5], ["damage", 1], ["drop_ratio", 1]);

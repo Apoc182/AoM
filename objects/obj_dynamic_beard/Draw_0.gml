@@ -23,7 +23,7 @@ if(blinking && !global.invulnerable_flasher){
 		draw_sprite_ext(spr_blink_miller, 0, obj_default.x, y_increment, -1, 1, 0, c_white, 1);
 	}
 	frame_counter++;
-	if(frame_counter = room_speed * .2){
+	if(frame_counter == room_speed * .2){
 		blinking = false;
 		frame_counter = 0;
 	}
