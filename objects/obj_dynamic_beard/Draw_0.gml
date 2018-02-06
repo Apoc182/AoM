@@ -1,7 +1,7 @@
 /// @description Insert description here
 // You can write your code in this editor
 
-draw_self();
+
 
 //To confirm this is first calculated
 truncate_value = frac(obj_default.image_index);
@@ -28,3 +28,4 @@ if(blinking && !global.invulnerable_flasher){
 		frame_counter = 0;
 	}
 }
+draw_self();

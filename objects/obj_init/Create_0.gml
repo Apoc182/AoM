@@ -6,7 +6,7 @@ ini_close();
 //Debugging tools
 
 	//Master switch
-	global.debugging = false;
+	global.debugging = true;
 	
 	//Starting room
 	starting_room = rm_title;
@@ -94,42 +94,42 @@ scr_add_beard_to_grid(spr_beard_normal,  "Miller", "Miller's default beard", tru
 						["speed", 1], ["lives", 3], ["score", 1], ["damage", 1], ["drop_ratio", 1]);
 						  
 scr_add_beard_to_grid(spr_ginger, "Ed Sheeran", "Does nothing", false, false, 100, ["umbrella", 1],
-						["speed", 3], ["lives", 10], ["score", 1], ["damage", 1], ["drop_ratio", 1]);
+						["speed", 1], ["lives", 3], ["score", 1], ["damage", 1], ["drop_ratio", 2]);
 	
-scr_add_beard_to_grid(spr_beard_black,  "Cpt. Black Beard", "Slightly increases speed", false, false, 500, ["umbrella", 1],
+scr_add_beard_to_grid(spr_beard_black,  "Black Beard", "Slightly increases speed", false, false, 500, ["umbrella", 1],
 						["speed", 1.25], ["lives", 3], ["score", 1], ["damage", 1], ["drop_ratio", 1]);
 						  
 scr_add_beard_to_grid(spr_beard_chops, "Wolverine", "Increases lives", false, false, 1000, ["umbrella", 1],
 						["speed", 13], ["lives", 4], ["score", 1], ["damage", 1], ["drop_ratio", 1]);
 	
-scr_add_beard_to_grid(spr_abe, "Abe", "Slightly increases umbrella endurance", false, false, 1500, ["umbrella", .75],
+scr_add_beard_to_grid(spr_abe, "Honest Abe", "Slightly increases umbrella endurance", false, false, 1500, ["umbrella", .5],
 						["speed", 1], ["lives", 3], ["score", 1], ["damage", 1], ["drop_ratio", 1]);
 	
-scr_add_beard_to_grid(spr_chaplin, "Chaplin", "Slightly increases score", false, false, 2000, ["umbrella", 1],
+scr_add_beard_to_grid(spr_chaplin, "Great Dictator", "Slightly increases score", false, false, 2000, ["umbrella", 1],
 						["speed", 1], ["lives", 3], ["score", 1.25], ["damage", 1], ["drop_ratio", 1]);
 						  
-scr_add_beard_to_grid(spr_chops_2, "Cunt", "Greatly increases speed", false, false, 3000, ["umbrella", 1],
+scr_add_beard_to_grid(spr_chops_2, "Burnside", "Greatly increases speed", false, false, 3000, ["umbrella", 1],
 						["speed", 1.5], ["lives", 3], ["score", 1], ["damage", 1], ["drop_ratio", 1]);
 						  
 scr_add_beard_to_grid(spr_blonde, "Hemsworth", "Reduces damage taken", false, false, 4000, ["umbrella", 1],
 						["speed", 1], ["lives", 3], ["score", 1], ["damage", .5], ["drop_ratio", 1]);
 						  
-scr_add_beard_to_grid(spr_grey, "Gandalf the Grey", "Greatly increases umbrella indurance", false, false, 5000, ["umbrella", .5],
+scr_add_beard_to_grid(spr_grey, "Gandalf the Grey", "Greatly increases umbrella indurance", false, false, 5000, ["umbrella", .25],
 						["speed", 1], ["lives", 3], ["score", 1], ["damage", 1], ["drop_ratio", 1]);
 	
 scr_add_beard_to_grid(spr_white, "Gandalf the White", "Greatly increases score", false, false, 6000, ["umbrella", 1],
 						["speed", 1], ["lives", 3], ["score", 1.5], ["damage", 1], ["drop_ratio", 1]);
 	
-scr_add_beard_to_grid(spr_van_dyke, "Van Dyke", "Slightly increases all stats", false, false, 8000, ["umbrella", .75],
+scr_add_beard_to_grid(spr_van_dyke, "Van Dyke", "Slightly increases all stats", false, false, 8000, ["umbrella", .5],
 						["speed", 1.25], ["lives", 4], ["score", 1.25], ["damage", 1], ["drop_ratio", 1]);
 						  
-scr_add_beard_to_grid(spr_clean_shaven, "Gay", "Greatly increases all stats", false, false, 10000, ["umbrella", .5],
+scr_add_beard_to_grid(spr_clean_shaven, "Gay", "Greatly increases all stats", false, false, 10000, ["umbrella", .25],
 						["speed", 1.5], ["lives", 4], ["score", 1.5], ["damage", .5], ["drop_ratio", 1]);
 						
-scr_add_beard_to_grid(spr_arrow, "Gay", "Greatly increases all stats", false, false, 10000, ["umbrella", .5],
+scr_add_beard_to_grid(spr_viking, "Erik the Red", "Greatly increases all stats", false, false, 10000, ["umbrella", .5],
 						["speed", 1.5], ["lives", 4], ["score", 1.5], ["damage", .5], ["drop_ratio", 1]);
 						
-scr_add_beard_to_grid(spr_barberbg, "Gay", "Greatly increases all stats", false, false, 10000, ["umbrella", .5],
+scr_add_beard_to_grid(spr_mario, "Jumpman", "Greatly increases all stats", false, false, 10000, ["umbrella", .5],
 						["speed", 1.5], ["lives", 4], ["score", 1.5], ["damage", .5], ["drop_ratio", 1]);
 						
 
@@ -179,7 +179,7 @@ scr_set_game_metrics();
 ///
 
 //For when the drops get faster and wallpaper
-global.speed_jump = room_speed * 30;
+global.speed_jump = room_speed * 15;
 
 //Initialise fonts
 map_string = " !\"#$%&'()*+,-./0123456789:;<=>?@ABCDEFGHIJKLMNOPQRSTUVWXYZ[\\]^_`abcdefghijklmnopqrstuvwxyz{|}~";
