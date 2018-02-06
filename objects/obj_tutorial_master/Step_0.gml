@@ -173,6 +173,7 @@ if(esc_set){
 	alpha_variance_again += fade_speed;
 	if(alpha_variance_again >= max_alpha_variance_again){
 		global.tutorial_on = false;
+		scr_save_ini("Save", "tutorial_on", global.tutorial_on);
 		scr_restart();
 		room_restart();
 	}

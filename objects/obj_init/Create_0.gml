@@ -6,7 +6,7 @@ ini_close();
 //Debugging tools
 
 	//Master switch
-	global.debugging = true;
+	global.debugging = false;
 	
 	//Starting room
 	starting_room = rm_title;
@@ -23,7 +23,14 @@ ini_close();
 	
 	
 //Master Switches
-global.tutorial_on = true;
+
+//Lets set tutorial baed on "Save.ini"
+ini_open("Save.ini");
+global.tutorial_on = ini_read_real("Save", "tutorial_on", true);
+ini_close();
+
+
+
 global.is_thor = false;
 
 //Beard grid macro's
@@ -182,6 +189,7 @@ draw_set_font(nesfont);
 //This flag indicates to the name screen that it has already done this initial check for whether
 //the user has a username or not and that it is now being changed from the menu.
 global.username_exists = false;
+
 
 
 

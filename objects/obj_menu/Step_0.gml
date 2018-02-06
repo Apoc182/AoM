@@ -44,12 +44,7 @@ if (push && !fading && !options){
 		}
 		
 		case 1:{
-			menu = ["Change Name", "Change Beard", "Full Screen"];
-			if(global.tutorial_on){
-				menu[3] = "Tutorial";
-			}else{
-				menu[3] = "Tutorial";
-			}
+			menu = ["Change Name", "Change Beard", "Full Screen", "Tutorial"];
 			mpos = 0;
 			push = false;
 			options = true;
@@ -134,6 +129,7 @@ if(keyboard_check_pressed(vk_escape) && !options) mpos = 2;
 //Esc takes to exit
 if(keyboard_check_pressed(vk_escape) && options){
 	//Menu options
+	scr_save_ini("Save", "tutorial_on", global.tutorial_on);
 	menu = ["Start", "Options", "Exit"];
 	mpos = 0;
 	options = false;

@@ -5,13 +5,6 @@ user_name = "";
 keyboard_string = "";
 
 
-
-
-//If theis is the first time the game is ran, it will come here and apply the default beard.
-if(!file_exists("Save.ini")){
-	global.tutorial_on = true;
-}
-
 //If called from anywhere but the splash screen.
 
 
