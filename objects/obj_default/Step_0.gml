@@ -65,13 +65,19 @@ if(image_index = 1){
 }
 
 //Detects space bar and draws umbrella
-if (keyboard_check(vk_space) && global.ignorance_level > 0){
-	
-	if(moving){
-		sprite_index = umbrella_walking;
-	}else{
-		sprite_index = umbrella_standing;
+if (keyboard_check(vk_space)){
+	if(global.ignorance_level > 0){
+		if(moving){
+			sprite_index = umbrella_walking;
+		}else{
+			sprite_index = umbrella_standing;
+		}
+	}else if(keyboard_check_pressed(vk_space)){
+		//Play the 'out of umbrella' sound
+		audio_play_sound(snd_get_cunted, 0, false);
 	}
+	
+	
 	global.umbrella_out = true;
 }else{	
 	global.umbrella_out = false;
@@ -84,6 +90,7 @@ if(global.invulnerable && !alarm[1]){
 	global.invulnerable_flasher = !global.invulnerable_flasher;
 	alarm[1] = flasher_speed * room_speed;
 }
+
 
 
 //Change sprite for moving turn

@@ -27,7 +27,7 @@ if(!alarm[1] && !global.tutorial_on){
 
 //If run out of lives, game over
 if (global.player_lives <= 0 && !global.tutorial_on){
-	//Send stats to db.
+	global.scr += global.timer;
 	room_goto(game_over);
 }
 
