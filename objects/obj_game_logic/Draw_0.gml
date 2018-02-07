@@ -14,6 +14,7 @@ else if(global.scr < 10000) zeros_in_front = "00";
 else if (global.scr < 100000) zeros_in_front = "0";
 else zeros_in_front = "";
 
+
 //display zeros in front of high score
 
 if(global.max_score < 10) zeros_in_front_again = "00000";
