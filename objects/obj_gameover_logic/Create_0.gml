@@ -71,4 +71,4 @@ alarm[2] = 5 * room_speed;
 space_string = "";
 esc_string = "";
 
-scr_send_statistics();
+if(!global.debugging)scr_send_statistics();

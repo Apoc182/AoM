@@ -25,24 +25,25 @@ if((keyboard_check_pressed(ord("W")) || keyboard_check_pressed(vk_up)) && box.op
 if((keyboard_check_pressed(ord("S")) || keyboard_check_pressed(vk_down)) && box.open && !confirm){
 	highlighted_beard += 1;
 	
-	if(highlighted_beard > menu_max_list - 1){
 	
-		scroller++;
-		highlighted_beard--;
-		
-		if(scroller + highlighted_beard > ds_grid_width(global.all_beard_properties) - 1){
-		
-			scroller--;
-		
-		}
-
-	
-	}
 		
 }
 
 
+//Don't let the beard selector off screen
+if(highlighted_beard > menu_max_list - 1){
+	
+	scroller++;
+	highlighted_beard--;
+		
+	if(scroller + highlighted_beard > ds_grid_width(global.all_beard_properties) - 1){
+		
+		scroller--;
+		
+	}
 
+	
+}
 
 
 

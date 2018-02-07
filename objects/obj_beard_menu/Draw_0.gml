@@ -58,7 +58,6 @@ draw_sprite(spr_barber, 0, GRID_SIZE * 2, GRID_SIZE * 6);
 
 if(box.open && !confirm){
 	for(i = 0; i < menu_max_list; i++){
-	
 		if(highlighted_beard == i){
 			draw_set_color(c_white);
 		}else{
@@ -72,12 +71,13 @@ if(box.open && !confirm){
 			draw_set_halign(fa_left);
 			draw_text(GRID_SIZE * 17.5, GRID_SIZE * 6.5 + (i * GRID_SIZE), string(ds_grid_get(global.all_beard_properties, scroller + i, BRD_SCORE_TO_UNLOCK)) + " points to unlock")
 		}
+		
 	}
 
 	//For 'more' arrows
 
 	//Scroll down
-	if(highlighted_beard + scroller < ds_grid_width(global.all_beard_properties) - 1 && ds_grid_width(global.all_beard_properties) > menu_max_list){
+	if(menu_max_list + scroller <= ds_grid_width(global.all_beard_properties) - 1){
 
 		draw_sprite(spr_scroll_arrow, 0, GRID_SIZE * 22, GRID_SIZE * 17.5);
 

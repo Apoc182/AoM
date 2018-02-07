@@ -9,6 +9,9 @@ beard_index = scr_get_current_beard("index");
 
 highlighted_beard = beard_index;
 
+
+
+
 confirm = false;
 
 box = instance_create_depth(0, 0, 0, obj_animated_box);
@@ -31,3 +34,4 @@ frame_count = 0;
 //Make the menu scroll
 menu_max_list = 11;
 scroller = 0;
+final_beard = false;
