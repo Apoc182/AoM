@@ -3,7 +3,7 @@ alarm_on = false;
 drop_speed = .5 * room_speed; // Less is more. This is the length of time the alarm is set for.
 global.scr = 0;
 global.spd = 4;
-timer = 0;
+global.timer = 0;
 if(!global.tutorial_on) alarm[4] = room_speed;
 occupied_x = ds_list_create();
 

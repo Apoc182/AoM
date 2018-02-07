@@ -30,14 +30,14 @@ draw_text(3 * GRID_SIZE, GRID_SIZE, zeros_in_front + string(global.scr));
 draw_text(10 * GRID_SIZE, GRID_SIZE, zeros_in_front_again + string(global.max_score));
 
 //Make zero appear
-if(timer mod 60 < 10){
+if(global.timer mod 60 < 10){
 	leading_zero = "0";
 }else{
 	leading_zero = "";
 }
 
 //Timer
-draw_text(15 * GRID_SIZE, GRID_SIZE, string(floor(timer/60)) + ":" + leading_zero + string(timer mod 60));
+draw_text(15 * GRID_SIZE, GRID_SIZE, string(floor(global.timer/60)) + ":" + leading_zero + string(global.timer mod 60));
 draw_set_halign(fa_left)
 
 scr_draw_lives();

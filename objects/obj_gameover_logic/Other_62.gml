@@ -26,3 +26,4 @@ if(ds_map_find_value(async_load, "url") == "http://gmscoreboard.com/handle_score
 	}
 }
 
+
