@@ -251,6 +251,40 @@ global.kirsten_whinging = [
 
 global.kirsten_whinging_length = array_length_1d(global.kirsten_whinging);
 
+global.thinking_out_loud = [
+
+"I will be loving you 'til we're 70",
+"My heart could still fall as hard at 23",
+"People fall in love in mysterious ways",
+"Maybe just the touch of a hand",
+"I fall in love with you every single day",
+"I just wanna tell you I am",
+
+"Take me into your loving arms",
+"Kiss me under the light of a thousand stars",
+"Place your head on my beating heart",
+"I'm thinking out loud",
+"Maybe we found love right where we are",
+
+"Your soul can never grow old, it's evergreen",
+"Your smile's forever in my mind and memory",
+"People fall in love in mysterious ways",
+"Maybe it's all part of a plan",
+"I'll just keep on making the same mistakes",
+"Hoping that you'll understand",
+
+"Take me into your loving arms",
+"Kiss me under the light of a thousand stars",
+"Place your head on my beating heart",
+"I'm thinking out loud",
+"Maybe we found love right where we are",
+"Maybe we found love right where we are",
+"We found love right where we are",
+
+]
+
+global.thinking_out_loud_length = array_length_1d(global.thinking_out_loud);
+
 global.rain_hit = [
 	snd_quick_cunt,
 	snd_cunt_lng,
