@@ -7,7 +7,8 @@ bg3 = layer_background_get_id(layer_get_id("bg3"));
 //INPUT DESIRED CHANGES HERE
 
 //The current RGB
-current_RGB = [128, 188, 248];
+starting_RGB = [128, 188, 248];
+current_RGB = starting_RGB;
 
 //A 2D array of the upcoming coordinates
 /*
@@ -23,7 +24,7 @@ current_RGB = [128, 188, 248];
 
 destination_RGBs[0, 0] = 128
 destination_RGBs[0, 1] = 188
-destination_RGBs[0, 2] = 248
+destination_RGBs[0, 2] = 252
 
 destination_RGBs[1, 0] = 128
 destination_RGBs[1, 1] = 248
@@ -53,9 +54,53 @@ destination_RGBs[7, 0] = 128
 destination_RGBs[7, 1] = 0
 destination_RGBs[7, 2] = 0
 
-destination_RGBs[8, 0] = 64
+destination_RGBs[8, 0] = 112
 destination_RGBs[8, 1] = 0
 destination_RGBs[8, 2] = 0
+
+destination_RGBs[9, 0] = 96
+destination_RGBs[9, 1] = 0
+destination_RGBs[9, 2] = 0
+
+destination_RGBs[10, 0] = 80
+destination_RGBs[10, 1] = 0
+destination_RGBs[10, 2] = 0
+
+destination_RGBs[11, 0] = 64
+destination_RGBs[11, 1] = 0
+destination_RGBs[11, 2] = 0
+
+destination_RGBs[12, 0] = 56
+destination_RGBs[12, 1] = 0
+destination_RGBs[12, 2] = 0
+
+destination_RGBs[13, 0] = 48
+destination_RGBs[13, 1] = 0
+destination_RGBs[13, 2] = 0
+
+destination_RGBs[14, 0] = 40
+destination_RGBs[14, 1] = 0
+destination_RGBs[14, 2] = 0
+
+destination_RGBs[15, 0] = 32
+destination_RGBs[15, 1] = 0
+destination_RGBs[15, 2] = 0
+
+destination_RGBs[16, 0] = 24
+destination_RGBs[16, 1] = 0
+destination_RGBs[16, 2] = 0
+
+destination_RGBs[17, 0] = 16
+destination_RGBs[17, 1] = 0
+destination_RGBs[17, 2] = 0
+
+destination_RGBs[18, 0] = 8
+destination_RGBs[18, 1] = 0
+destination_RGBs[18, 2] = 0
+
+destination_RGBs[19, 0] = 0
+destination_RGBs[19, 1] = 0
+destination_RGBs[19, 2] = 0
 
 //To select the correct coordinate
 destination_selector = 0;

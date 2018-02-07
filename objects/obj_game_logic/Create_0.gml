@@ -4,7 +4,7 @@ drop_speed = .5 * room_speed; // Less is more. This is the length of time the al
 global.scr = 0;
 global.spd = 4;
 global.timer = 0;
-if(!global.tutorial_on) alarm[4] = room_speed;
+alarm[4] = room_speed;
 occupied_x = ds_list_create();
 
 

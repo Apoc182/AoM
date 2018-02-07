@@ -119,12 +119,16 @@ if(current_text_pos == 5 && next_text = false){
 	}
 	
 	//Constantly running
-	if(global.scr == 500){
+	if(global.scr >= 500){
+		fade_in = true;
+		fade_out = false;
+		active = true;
 		next_text = true;
+		current_text_pos++;
 	}
 }
 
-if(current_text_pos == 6 && next_text = false){
+if(current_text_pos == 7 && next_text = false){
 	esc_set = true;
 }
 

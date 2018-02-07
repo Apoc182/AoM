@@ -38,6 +38,12 @@ if(current_RGB[2] < destination_RGBs[destination_selector, 2]) current_RGB[2] = 
 
 
 //Change BG colour
-layer_background_blend(bg1, make_color_rgb(current_RGB[0], current_RGB[1], current_RGB[2]));
-layer_background_blend(bg2, make_color_rgb((current_RGB[0]*3+255)/4, (current_RGB[1]*3+255)/4, (current_RGB[2]*3+255)/4));
-layer_background_blend(bg3, make_color_rgb((current_RGB[0]+255)/2, (current_RGB[1]+255)/2, (current_RGB[2]+255)/2));
+if(!global.tutorial_on){
+	layer_background_blend(bg1, make_color_rgb(current_RGB[0], current_RGB[1], current_RGB[2]));
+	layer_background_blend(bg2, make_color_rgb((current_RGB[0]*3+starting_RGB[0])/4, (current_RGB[1]*3+starting_RGB[1])/4, (current_RGB[2]*3+starting_RGB[2])/4));
+	layer_background_blend(bg3, make_color_rgb((current_RGB[0]+starting_RGB[0])/2, (current_RGB[1]+starting_RGB[1])/2, (current_RGB[2]+starting_RGB[2])/2));
+}else{
+	layer_background_blend(bg1, make_color_rgb(starting_RGB[0], starting_RGB[1], starting_RGB[2]));
+	layer_background_blend(bg2, make_color_rgb(starting_RGB[0], starting_RGB[1], starting_RGB[2]));
+	layer_background_blend(bg3, make_color_rgb(starting_RGB[0], starting_RGB[1], starting_RGB[2]));
+}
