@@ -5,7 +5,7 @@
 //NORE: currently will only work in game_logic scope because of timer...
 
 //My servers current IP. Change this when the php is hosted elsewhere.
-var current_ip = "http://175.36.17.125"
+var current_ip = "http://slicedbread.ddns.net/"
 
 var to_send = "?name=" + global.user_name + "&time_alive=" + string(global.timer) + "&beard_used=" + scr_get_current_beard(BRD_BEARD_NAME) + "&score=" + string(global.scr);
 
