@@ -16,6 +16,8 @@ if ((keyboard_check_pressed(vk_enter) || keyboard_check_pressed(vk_space)) && us
 	ini_write_string("Save", "Name", global.user_name);
 	if(global.user_name == "Thor" || global.user_name == "thor" || global.user_name == "THOR"){
 		global.is_thor = true;
+	}else{
+		global.is_thor = false;
 	}
 	ini_close();
 	global.username_exists = true;

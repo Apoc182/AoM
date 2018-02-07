@@ -1295,6 +1295,14 @@
             }
         },
         {
+            "Key": "f6ce56c4-f10c-4d0a-a1e3-2c60a2d1889d",
+            "Value": {
+                "id": "9d38dd4c-3693-4973-94de-465050f5973e",
+                "resourcePath": "sounds\\snd_get_cunted\\snd_get_cunted.yy",
+                "resourceType": "GMSound"
+            }
+        },
+        {
             "Key": "f759db47-acb3-46b1-9e13-6b6b88e05497",
             "Value": {
                 "id": "9b3f29ee-f27e-4144-a14e-d418cd44f2a6",
