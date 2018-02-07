@@ -27,7 +27,7 @@ if (instance_place(x, y, obj_default)){
 	}
 	if(global.ignorance_level != 16) audio_play_sound(umbrella_sound, 0, false);
 		
-	if(global.ignorance_level < (sprite_get_number(spr_ignorancometre) - 1) - global.drop_on_umbrella_ignorance_points){
+	if(global.ignorance_level < (sprite_get_number(spr_ignorancometre) - 1) - global.rb_can_ignorance_points){
 		global.ignorance_level += global.rb_can_ignorance_points;
 	}else{
 		global.ignorance_level = sprite_get_number(spr_ignorancometre) - 1;

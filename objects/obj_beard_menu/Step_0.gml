@@ -47,16 +47,13 @@ if((keyboard_check_pressed(ord("S")) || keyboard_check_pressed(vk_down)) && box.
 
 
 
-
-
-
-
-
-
 if((keyboard_check_pressed(vk_enter) || keyboard_check_pressed(vk_space)) && box.open){
+	if(highlighted_beard + scroller >= scr_number_beards_unlocked()){
+	}else{
 	confirm = true;
 	box.box_in = false;
 	box.box_out = true;
+	}
 }
 
 if(confirm && box.closed){
