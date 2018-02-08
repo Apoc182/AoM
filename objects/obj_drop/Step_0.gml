@@ -46,13 +46,16 @@ if(place_meeting(x,y,obj_default) && !drop_contact){
 
 
 if (y > (GRID_SIZE * 24) - sprite_get_height(spr_floor) && !drop_contact){
-
-	
-	instance_destroy();
+	sprite_index = spr_splash;
+	if(this_colour == c_black) image_blend = c_black;
+	image_index = 0;
+	y = 22 * GRID_SIZE;
+	drop_contact = true;
 }
 
 if(drop_contact){
-	y -= 1;
+	if(image_index == 3) instance_destroy();
+	
 }else{
 	y += global.drop_base_speed + this_speed;
 }
