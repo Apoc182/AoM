@@ -95,7 +95,7 @@ if(global.invulnerable && !alarm[1]){
 
 //Change sprite for moving turn
 if(sign(spd) == 1 && pressed_left){
-	if(global.umbrella_out) {
+	if(global.umbrella_out && global.ignorance_level > 0) {
 		sprite_index = umbrella_standing;
 	}else{
 		sprite_index = turning;
@@ -105,7 +105,7 @@ if(sign(spd) == 1 && pressed_left){
 
 if(sign(spd) == -1 && pressed_right){
 	
-	if(global.umbrella_out) {
+	if(global.umbrella_out && global.ignorance_level > 0) {
 		sprite_index = umbrella_standing;
 	}else{
 		sprite_index = turning;
