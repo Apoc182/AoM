@@ -1,4 +1,5 @@
 with(obj_drop) {
+	
 	if(stopper > 0) stopper -= .01;
 
 	

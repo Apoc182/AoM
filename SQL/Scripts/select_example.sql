@@ -1,0 +1,1 @@
+SELECT players.player_id, players.name, statistics.beard_used, statistics.score FROM players INNER JOIN statistics ON players.player_id = statistics.player_id;

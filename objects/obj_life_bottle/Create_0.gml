@@ -19,5 +19,3 @@ half_full = 3;
 full = 6;
 empty = 0;
 fill_to_right = false;
-
-if(global.player_damage mod 6 == 0) half_full = empty;
