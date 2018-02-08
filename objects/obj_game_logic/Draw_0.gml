@@ -40,7 +40,8 @@ if(global.timer mod 60 < 10){
 draw_text(15 * GRID_SIZE, GRID_SIZE, string(floor(global.timer/60)) + ":" + leading_zero + string(global.timer mod 60));
 draw_set_halign(fa_left)
 
-scr_draw_lives();
+
+
 
 //Display beard unlocked.
 if(beard_unlocked){

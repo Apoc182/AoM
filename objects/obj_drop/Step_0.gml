@@ -45,17 +45,28 @@ if(place_meeting(x,y,obj_default) && !drop_contact){
 }
 
 
-if (y > (GRID_SIZE * 24) - sprite_get_height(spr_floor) && !drop_contact){
+if (y > (GRID_SIZE * 24) - sprite_get_height(spr_floor) && !drop_contact && !ground_contact){
+
 	sprite_index = spr_splash;
 	if(this_colour == c_black) image_blend = c_black;
 	image_index = 0;
+	image_speed = 1;
 	y = 22 * GRID_SIZE;
-	drop_contact = true;
+	ground_contact = true;
+		
+}
+	
+	
+
+if(ground_contact){
+	
+
+	if(image_index == 3) instance_destroy();
+
 }
 
 if(drop_contact){
-	if(image_index == 3) instance_destroy();
-	
-}else{
+	y -= 1;
+}else if(!ground_contact){
 	y += global.drop_base_speed + this_speed;
 }

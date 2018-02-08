@@ -51,4 +51,10 @@ if(scr_get_current_beard(BRD_SPRITE_NAME) == spr_ginger){
 
 }
 
-max_lives = global.player_lives;
+//Create life instances
+for(i = 0; i < global.player_lives / 6; i++){
+	
+	bottle = instance_create_depth((27.5 * GRID_SIZE) - ((GRID_SIZE) * i), GRID_SIZE, 0, obj_life_bottle);
+	bottle.position = i;
+
+}

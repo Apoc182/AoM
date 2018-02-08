@@ -6,7 +6,7 @@ ini_close();
 //Debugging tools
 
 	//Master switch
-	global.debugging = false;
+	global.debugging = true;
 	
 	//Starting room
 	starting_room = rm_title;

@@ -479,6 +479,14 @@
             }
         },
         {
+            "Key": "665152c7-9048-4652-94fc-b800ccbe42b5",
+            "Value": {
+                "id": "ab0bb212-d03c-43a6-8dba-d0f067447de1",
+                "resourcePath": "objects\\obj_life_bottle\\obj_life_bottle.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "68d0a28d-7795-4881-9f16-be06af772528",
             "Value": {
                 "id": "a176545c-39e2-41f0-ad4a-a3909685e9fb",

@@ -24,4 +24,5 @@ is_thunder = false;
 lightning_frame = 0;
 thunder_timer = room_speed/4
 counter = 0;
+ground_contact = false;
 
