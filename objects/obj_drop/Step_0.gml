@@ -3,7 +3,7 @@
 //If drop hits player
 if(place_meeting(x,y,obj_default) && !drop_contact){
 	//If the umbrella is away when this happens.
-	if(!global.umbrella_out){		
+	if(!global.umbrella_out && !ground_contact){		
 		if(!global.invulnerable){
 			global.player_lives -= global.player_damage;
 			audio_play_sound(global.rain_hit[random(array_length_1d(global.rain_hit) - 1)], 0, false);
@@ -68,5 +68,5 @@ if(ground_contact){
 if(drop_contact){
 	y -= 1;
 }else if(!ground_contact){
-	y += global.drop_base_speed + this_speed;
+	y += (global.drop_base_speed + this_speed) * stopper;
 }

@@ -6,7 +6,6 @@ if(last_lives > global.player_lives){
 	
 	//This bottle aught be full and the previous one aight be falling.
 	if(current_bottle_full == last_lives){
-		
 		falling = true;
 		level = half_full;
 

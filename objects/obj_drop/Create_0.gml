@@ -26,3 +26,6 @@ thunder_timer = room_speed/4
 counter = 0;
 ground_contact = false;
 
+//For the freezing effect
+stopper = 1;
+
