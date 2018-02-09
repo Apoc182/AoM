@@ -40,6 +40,7 @@ global.current_player_loc_x = obj_default.x;
 previous_time_multiplier = global.time_multiplier;
 
 
+
 //Cycle through grid and check to see if current score equals anything. If so, unlock it and save it to the ini.
 for(i = 0; i < ds_grid_width(global.all_beard_properties); i++){	
 	

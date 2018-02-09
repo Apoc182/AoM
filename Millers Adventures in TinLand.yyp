@@ -1071,14 +1071,6 @@
             }
         },
         {
-            "Key": "ceca53c7-7b11-49e1-8011-8819cab178bc",
-            "Value": {
-                "id": "53281409-0bf3-47b2-b598-e1f886bd8095",
-                "resourcePath": "scripts\\scr_draw_lives\\scr_draw_lives.yy",
-                "resourceType": "GMScript"
-            }
-        },
-        {
             "Key": "d35b564e-56d2-4560-a64a-bdac56d57630",
             "Value": {
                 "id": "725a718b-c7f2-4a38-bd7a-59020b5bcda9",
@@ -1370,7 +1362,6 @@
         "35f4981c-bde9-429f-8713-49e6aa56fc49",
         "623aea5c-972b-4e05-bbdd-167fe13236a9",
         "2b1217ab-d568-41c0-88fa-894e7e8898a9",
-        "ceca53c7-7b11-49e1-8011-8819cab178bc",
         "3e4eda72-ab84-46d0-a42a-2d222d3771f4",
         "aaf924b7-fabd-4afe-b147-127f768300e5",
         "bfc800d8-2341-43d4-b91b-9066b2ac2adb",
