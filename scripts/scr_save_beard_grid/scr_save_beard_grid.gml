@@ -1,4 +1,4 @@
-///scr_save_beard_grid(a cunt)
+///scr_save_beard_grid
 //Saves the state of the beard grid
 
 ini_open("beards.ini");

@@ -292,6 +292,9 @@ global.rain_hit = [
 
 ]
 
+//Count times cunts said
+global.cuntTally = 0;
+
 //Max score - Check ini first, then if not present, load 0.
 ini_open("Save.ini");
 if(ini_key_exists("Save", "local_max")){

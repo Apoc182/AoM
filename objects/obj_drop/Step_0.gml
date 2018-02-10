@@ -7,6 +7,7 @@ if(place_meeting(x,y,obj_default) && !drop_contact){
 		if(!global.invulnerable){
 			global.player_lives -= global.player_damage;
 			audio_play_sound(global.rain_hit[random(array_length_1d(global.rain_hit) - 1)], 0, false);
+			global.cuntTally++;
 		}
 		global.invulnerable = true;
 		with (obj_default){

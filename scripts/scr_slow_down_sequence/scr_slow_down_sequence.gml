@@ -17,7 +17,8 @@ if(freeze_counter == 2 * room_speed){
 	audio_play_sound(snd_dead, 0, false);
 }
 
-if(freeze_counter > 2 * room_speed) obj_default.y -= 5;
+if(freeze_counter > 2 * room_speed) obj_default.y -= 1;
+if(freeze_counter > 4 * room_speed) room_goto(game_over);
 
 if(alarm[4])alarm[4] = 0;
 if(alarm[0])alarm[0] = 0;
