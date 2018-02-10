@@ -5,10 +5,6 @@ menu = ["Start", "Options", "Exit"];
 //Which menu
 options = false;
 
-
-//Menu item spacing
-space = 32;
-
 //Where cursor is
 mpos = 0;
 

@@ -4,7 +4,7 @@
 draw_set_color(c_red);
 draw_set_halign(fa_center);
 draw_text((GRID_SIZE * 32)/2, GRID_SIZE * 12, "GAME OVER!");
-draw_text((GRID_SIZE * 32)/2, GRID_SIZE * 13, "YOU REACHED " + string(global.scr) + " (+ " + string(global.timer*5) + " time bonus.)")
+draw_text((GRID_SIZE * 32)/2, GRID_SIZE * 13, "YOU REACHED " + string(global.scr))
 draw_text((GRID_SIZE * 32)/2, GRID_SIZE * 14, space_string);
 draw_text((GRID_SIZE * 32)/2, GRID_SIZE * 15, esc_string);
 

@@ -3,6 +3,8 @@
 if(global.debugging){
 	if(keyboard_check_pressed(vk_control)) global.scr += 100;
 	if(keyboard_check_pressed(vk_alt)) instance_create_depth(scr_place_pickup("x"), scr_place_pickup("y"), obj_default.depth, obj_hot_sauce);
+	if(keyboard_check_pressed(vk_shift)) instance_create_depth(scr_place_pickup("x"), scr_place_pickup("y"), obj_default.depth, obj_rb_can);
+
 }
 
 if (!alarm_on && !global.tutorial_on){
@@ -53,3 +55,5 @@ for(i = 0; i < ds_grid_width(global.all_beard_properties); i++){
 		scr_save_beard_grid();
 	}
 }
+
+if(keyboard_check_pressed(vk_escape) && !global.tutorial_on)instance_create_depth(x, y, 0, obj_pause_handler);

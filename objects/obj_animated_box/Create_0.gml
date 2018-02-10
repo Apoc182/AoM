@@ -14,7 +14,7 @@ box_in = false;
 box_out = false;
 box_speed = 16;
 open = false;
-closed = true;
+closed = false;
 
 x1 = x1_closed;
 x2 = x2_closed;

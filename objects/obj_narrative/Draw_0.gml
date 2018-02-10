@@ -1,5 +1,6 @@
+if(!instance_exists(box))exit;
+
 if(show_escape_string){
-	
 	
 	//Space to skip
 	draw_text(GRID_SIZE, GRID_SIZE, "Press ESC to skip...");
@@ -9,9 +10,10 @@ if(show_escape_string){
 	
 }
 
-if (global.kirsten_ready && !box.box_out) {
+if (global.kirsten_ready) {
 box.box_in = true;
 
 }
-
+if (box.open){
 draw_text_transformed(GRID_SIZE * 8, GRID_SIZE * 10, message_draw, 1 + text_increaser, 1 + text_increaser, 0);
+}

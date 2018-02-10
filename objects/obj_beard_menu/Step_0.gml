@@ -1,3 +1,23 @@
+if(!instance_exists(box)){
+	if(confirm){
+		//Clears the current default status.
+		ds_grid_set(global.all_beard_properties, beard_index, BRD_CURRENT, false);
+	
+		//Sets the new beard.
+		ds_grid_set(global.all_beard_properties, highlighted_beard + scroller, BRD_CURRENT, true);
+	
+		//Save changes
+		scr_save_beard_grid();
+	
+		//Apply perks
+		scr_set_game_metrics();
+	}
+	//Return to menu
+	room_goto_previous();	
+	exit;
+}
+
+
 //Manipulate dynamic beards.
 if(blinking){
 	
@@ -12,7 +32,7 @@ if(blinking){
 
 
 //For the menu
-if((keyboard_check_pressed(ord("W")) || keyboard_check_pressed(vk_up)) && box.open && !confirm){
+if((keyboard_check_pressed(ord("W")) || keyboard_check_pressed(vk_up)) && box.open){
 	highlighted_beard -= 1;
 	
 	if(highlighted_beard < 0){
@@ -22,7 +42,7 @@ if((keyboard_check_pressed(ord("W")) || keyboard_check_pressed(vk_up)) && box.op
 	
 }
 
-if((keyboard_check_pressed(ord("S")) || keyboard_check_pressed(vk_down)) && box.open && !confirm){
+if((keyboard_check_pressed(ord("S")) || keyboard_check_pressed(vk_down)) && box.open){
 	highlighted_beard += 1;
 	
 	
@@ -52,26 +72,9 @@ if((keyboard_check_pressed(vk_enter) || keyboard_check_pressed(vk_space)) && box
 	if(highlighted_beard + scroller >= scr_number_beards_unlocked()){
 	}else{
 	confirm = true;
-	box.box_in = false;
 	box.box_out = true;
 	}
 }
 
-if(confirm && box.closed){
-	//Clears the current default status.
-	ds_grid_set(global.all_beard_properties, beard_index, BRD_CURRENT, false);
-	
-	//Sets the new beard.
-	ds_grid_set(global.all_beard_properties, highlighted_beard + scroller, BRD_CURRENT, true);
-	
-	//Save changes
-	scr_save_beard_grid();
-	
-	//Apply perks
-	scr_set_game_metrics();
-	
-	//Return to menu
-	room_goto_previous();	
-}
 
-if(keyboard_check_pressed(vk_escape)) room_goto_previous();
+if(keyboard_check_pressed(vk_escape)) box.box_out = true;

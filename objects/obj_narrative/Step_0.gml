@@ -1,4 +1,12 @@
-if (global.kirsten_ready && box.open){
+if(!instance_exists(box)){
+	audio_sound_gain(snd_lullaby, 0, 2000);
+	audio_sound_gain(snd_title, .25, 2000);
+	room_goto(dream);
+	exit;
+}
+
+
+if (box.open){
 	if(keyboard_check_released(vk_space)) hold_block = 1;
 	if (characters < message_length) { //if current character count is less than the amount in current message* 
 		hold = keyboard_check(vk_space); //hold is true or false if we hold 'Z' or not
@@ -20,7 +28,6 @@ if (global.kirsten_ready && box.open){
 		        message_draw = ""; //clear the drawn text
 				hold_block = 0;
 		    }
-
 		}
 	}
 }
@@ -30,21 +37,13 @@ if(keyboard_check_pressed(vk_space) && message_current == message_end &&
    string_length(message_draw) == string_length(message[message_current])){
 	message_draw = "";
 	box.box_out = true;
-	box.box_in = false;
 }
 
-if(box.closed = true && message_current == message_end){
-	audio_sound_gain(snd_lullaby, 0, 2000);
-	audio_sound_gain(snd_title, .25, 2000);
-	room_goto(dream);
-}
+
 
 if(keyboard_check_pressed(vk_escape)){
-	room_goto(dream);
-	audio_sound_gain(snd_lullaby, 0, 2000);
-	audio_sound_gain(snd_title, .25, 2000);
 	keyboard_clear(vk_escape);
-
+	box.box_out = true;
 }
 
 if(text_increaser == max_size || text_increaser == 0){

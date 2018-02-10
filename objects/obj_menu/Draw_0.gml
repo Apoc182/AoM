@@ -9,7 +9,12 @@ for (var i = 0; i < array_length_1d(menu); i += 1){
 	}else{
 		draw_set_color(make_color_rgb(124,124,124));
 	}
-	draw_text(x + space, y + (i * space), string(menu[i]));
+	if(options){
+		draw_text(x - GRID_SIZE, y + (i * GRID_SIZE), string(menu[i]));
+	}else{	
+		
+		draw_text(x + GRID_SIZE*2, y + (i * GRID_SIZE), string(menu[i]));
+	}
 	draw_set_color(c_white);
 }
 

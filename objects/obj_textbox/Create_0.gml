@@ -25,14 +25,6 @@ if(ini_key_exists("Save", "Name") && !global.username_exists){
 	
 }
 
-
-
-
-
-
-
-
-
-
-
-
+box = instance_create_depth((GRID_SIZE * 32)/2, (GRID_SIZE * 24)/2, 50, obj_animated_box);
+box.box_in = true;
+box.y2_open = GRID_SIZE * 14.5

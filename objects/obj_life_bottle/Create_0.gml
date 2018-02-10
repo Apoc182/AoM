@@ -23,5 +23,5 @@ falling = false;
 //fill = false;
 
 
-fill_speed = .2;
+fill_speed = .1;
 previous_lives = global.player_lives;

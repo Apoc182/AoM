@@ -1,3 +1,5 @@
+if(!instance_exists(box))exit;
+
 //This will draw all the beards
 
 draw_set_halign(fa_center);
@@ -56,7 +58,7 @@ draw_sprite(spr_barber, 0, GRID_SIZE * 2, GRID_SIZE * 6);
 
 
 
-if(box.open && !confirm){
+if(box.open){
 	for(i = 0; i < menu_max_list; i++){
 		if(highlighted_beard == i){
 			draw_set_color(c_white);

@@ -17,7 +17,7 @@ if(freeze_counter > 2 * room_speed){
 	if(global.timer > 0){
 		if(!audio_is_playing(snd_typing))audio_play_sound(snd_typing, 0, true);
 		global.scr++;
-		global.timer--;
+		global.timer -= .2;
 	}else{
 		audio_stop_sound(snd_typing);
 	}

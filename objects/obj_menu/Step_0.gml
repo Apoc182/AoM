@@ -124,7 +124,7 @@ if(alpha_variance_in > 0){
 }
 
 //Esc takes to exit
-if(keyboard_check_pressed(vk_escape) && !options) mpos = 2; 
+if(keyboard_check_pressed(vk_escape) && !options && !fading) mpos = 2; 
 
 //Esc takes to exit
 if(keyboard_check_pressed(vk_escape) && options){
