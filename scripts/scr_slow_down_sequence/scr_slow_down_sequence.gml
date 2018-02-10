@@ -13,9 +13,18 @@ if(audio_is_playing(snd_title) && turn_off_title_song){
 }
 
 
-if(freeze_counter == 2 * room_speed){
-	audio_play_sound(snd_dead, 0, false);
+if(freeze_counter > 2 * room_speed){
+	if(global.timer > 0){
+		if(!audio_is_playing(snd_typing))audio_play_sound(snd_typing, 0, true);
+		global.scr++;
+		global.timer--;
+	}else{
+		audio_stop_sound(snd_typing);
+	}
 }
+
+
+if(global.timer == 0 && !audio_is_playing(snd_dead)) audio_play_sound(snd_dead, 0, false);
 
 if(freeze_counter > 2 * room_speed) obj_default.y -= 1;
 if(freeze_counter > 4 * room_speed) room_goto(game_over);
