@@ -12,7 +12,6 @@ falling = false;
 init = true;
 
 right_bottle = undefined;
-left_bottle = undefined;
 
 
 

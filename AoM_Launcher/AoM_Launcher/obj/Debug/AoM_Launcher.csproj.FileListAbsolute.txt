@@ -1,0 +1,9 @@
+C:\AoM\Launcher\AoM_Launcher\AoM_Launcher\bin\Debug\AoM_Launcher.exe.config
+C:\AoM\Launcher\AoM_Launcher\AoM_Launcher\obj\Debug\AoM_Launcher.csprojResolveAssemblyReference.cache
+C:\AoM\Launcher\AoM_Launcher\AoM_Launcher\obj\Debug\AoM_Launcher.main.resources
+C:\AoM\Launcher\AoM_Launcher\AoM_Launcher\obj\Debug\AoM_Launcher.Properties.Resources.resources
+C:\AoM\Launcher\AoM_Launcher\AoM_Launcher\obj\Debug\AoM_Launcher.csproj.GenerateResource.Cache
+C:\AoM\Launcher\AoM_Launcher\AoM_Launcher\bin\Debug\AoM_Launcher.exe
+C:\AoM\Launcher\AoM_Launcher\AoM_Launcher\bin\Debug\AoM_Launcher.pdb
+C:\AoM\Launcher\AoM_Launcher\AoM_Launcher\obj\Debug\AoM_Launcher.exe
+C:\AoM\Launcher\AoM_Launcher\AoM_Launcher\obj\Debug\AoM_Launcher.pdb
