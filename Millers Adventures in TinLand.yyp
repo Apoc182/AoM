@@ -31,6 +31,14 @@
     },
     "resources": [
         {
+            "Key": "001566f2-9d38-436e-aa9f-72ed3bd696fa",
+            "Value": {
+                "id": "4ff61202-d17b-4b07-9499-1b447247d245",
+                "resourcePath": "sprites\\spr_paper_bag_eyes\\spr_paper_bag_eyes.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "0029e5f7-1683-4ef2-8e74-2059c7322f3e",
             "Value": {
                 "id": "c3033d90-b798-4f09-890b-fa68e838534f",
@@ -543,6 +551,14 @@
             }
         },
         {
+            "Key": "71968d8d-c828-4096-bbe3-4bd6d07a4167",
+            "Value": {
+                "id": "e436ad45-7d74-4d8f-aec5-4fceedd3dd9d",
+                "resourcePath": "views\\71968d8d-c828-4096-bbe3-4bd6d07a4167.yy",
+                "resourceType": "GMFolder"
+            }
+        },
+        {
             "Key": "72ccc33d-e451-4556-9c74-d963aa28d900",
             "Value": {
                 "id": "15c0d6a5-bb86-4002-b276-19a7f27a25ec",
@@ -811,14 +827,6 @@
             "Value": {
                 "id": "0d772050-5929-4bab-afd4-ffad10bcac7f",
                 "resourcePath": "sprites\\spr_zzz\\spr_zzz.yy",
-                "resourceType": "GMSprite"
-            }
-        },
-        {
-            "Key": "aaaa1a83-32cf-4a9d-86ba-35d0aa824b02",
-            "Value": {
-                "id": "b05da485-ba1d-4e77-a4e9-dc9db4bda297",
-                "resourcePath": "sprites\\spr_default_talking\\spr_default_talking.yy",
                 "resourceType": "GMSprite"
             }
         },
@@ -1276,6 +1284,14 @@
                 "id": "15cfa731-25bd-4217-8b17-28225e436b42",
                 "resourcePath": "views\\eab7dc85-31ff-4067-99aa-faa37e319257.yy",
                 "resourceType": "GMFolder"
+            }
+        },
+        {
+            "Key": "eb7b5722-0df0-4c7d-8991-4b009a02ac01",
+            "Value": {
+                "id": "2ed706d3-2cdd-484e-bc5c-e80354acd6b1",
+                "resourcePath": "sprites\\spr_freeman\\spr_freeman.yy",
+                "resourceType": "GMSprite"
             }
         },
         {

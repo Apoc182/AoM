@@ -18,18 +18,24 @@ draw_sprite_ext(spr_default_standing, 0, GRID_SIZE * 11, GRID_SIZE * 13.5, -1,1,
 
 //Draw the paperbag overhead when selecting an unlocked beard.
 if(highlighted_beard + scroller >= scr_number_beards_unlocked()){
+	
+	draw_sprite_ext(spr_paper_bag_eyes, 0, GRID_SIZE * 11, GRID_SIZE * 13.5,-1,1,0,c_white,1);
+	draw_sprite(spr_paper_bag_eyes, 0, GRID_SIZE * 7, GRID_SIZE * 13.5);
+
+	//Blinker. I thought it would be funny if the paper bag blinked too.
+	if(blinking){
+		draw_sprite_ext(spr_paper_bag_blink, 0, GRID_SIZE * 11, GRID_SIZE * 13.5, -1,1,0,c_white,1);
+		draw_sprite(spr_paper_bag_blink, 0, GRID_SIZE * 7, GRID_SIZE * 13.5);
+	}
 
 	draw_sprite_ext(spr_paper_bag, 0, GRID_SIZE * 11, GRID_SIZE * 13.5,-1,1,0,c_white,1);
+	draw_sprite(spr_barber, 0, GRID_SIZE * 2, GRID_SIZE * 6);
 	draw_sprite(spr_paper_bag, 0, GRID_SIZE * 7, GRID_SIZE * 13.5);
 	
 	//Here we can mention locked instead of description.
 	draw_text(GRID_SIZE * 16, GRID_SIZE * 21, "LOCKED");
 	
-	//Blinker. I thought it would be funny if the paper bag blinked too.
-	if(blinking){
-		draw_sprite(spr_paper_bag_blink, 0, GRID_SIZE * 7, GRID_SIZE * 13.5);
-		draw_sprite_ext(spr_paper_bag_blink, 0, GRID_SIZE * 11, GRID_SIZE * 13.5, -1,1,0,c_white,1);
-	}
+
 
 }else{
 	
@@ -41,6 +47,7 @@ if(highlighted_beard + scroller >= scr_number_beards_unlocked()){
 	
 	//Draw the beards if the highlighted_beard isnt on one of the locked beards.
 	draw_sprite_ext(ds_grid_get(global.all_beard_properties, highlighted_beard + scroller, BRD_SPRITE_NAME), 0, GRID_SIZE * 11, GRID_SIZE * 13.5,-1,1,0,c_white,1);
+	draw_sprite(spr_barber, 0, GRID_SIZE * 2, GRID_SIZE * 6);
 	draw_sprite(ds_grid_get(global.all_beard_properties, highlighted_beard + scroller, BRD_SPRITE_NAME), 0, GRID_SIZE * 7, GRID_SIZE * 13.5);
 	
 	//We only want a description if the bag is not on the head.
@@ -51,8 +58,6 @@ if(highlighted_beard + scroller >= scr_number_beards_unlocked()){
 }
 
 
-//Draws the mirror last.
-draw_sprite(spr_barber, 0, GRID_SIZE * 2, GRID_SIZE * 6);
 
 
 
