@@ -16,14 +16,16 @@ image_xscale = snap_to.image_xscale;
 
 
 //Then, lets move the beard for the bobbing effect
-if(frame == 1){
-	y = snap_to.y + 4;
-}
-	
-if (frame == 3){
-	y = snap_to.y - 4;
-}
+if(!turning){
 
+	if(frame == 1){
+		y = snap_to.y + 4;
+	}
+	
+	if (frame == 3){
+		y = snap_to.y - 4;
+	}
+}
 
 
 

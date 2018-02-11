@@ -14,7 +14,14 @@ dynamic beard allocation.
 
 //Get current beard
 sprite_index = scr_get_current_beard(BRD_SPRITE_NAME);
+turning = false;
 
+
+//if(obj_default.sprite_index == spr_thor_turning || obj_default.sprite_index == spr_thor_umbrella_turning){
+//	thor_turn = true;
+//}else{
+//	thor_turn = false;
+//}
 
 snap_to = obj_default;
 

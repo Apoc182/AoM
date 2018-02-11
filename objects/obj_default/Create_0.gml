@@ -18,6 +18,7 @@ standing = spr_default_standing;
 umbrella_standing = spr_umbrella_standing;
 umbrella_walking = spr_umbrella_walking;
 turning = spr_turning;
+umbrella_turning = spr_umbrella_turning;
 
 //This will handle the Thor costume
 if(global.is_thor){
@@ -25,6 +26,8 @@ if(global.is_thor){
 	standing = spr_thor_standing;
 	umbrella_standing = spr_thor_umbrella;
 	umbrella_walking = spr_thor_umbrella_walking;
+	turning = spr_thor_turning;
+	umbrella_turning = spr_thor_umbrella_turning;
 }
 
 invulnerable_time = 2;
