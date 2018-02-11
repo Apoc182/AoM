@@ -9,6 +9,11 @@ half_full = 0;
 empty = 0;
 rising = false;
 falling = false;
+init = true;
+
+right_bottle = undefined;
+left_bottle = undefined;
+
 
 
 
