@@ -29,7 +29,7 @@ namespace AoM_Launcher {
 
             gameChecks();
             
-
+  
 
         }
 
@@ -39,6 +39,7 @@ namespace AoM_Launcher {
 
             downloadOrUpdate();
             MessageBox.Show("Update Complete!");
+            btn_download_updates.Enabled = false;
             gameChecks();
 
 
