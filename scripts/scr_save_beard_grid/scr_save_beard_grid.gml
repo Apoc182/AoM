@@ -13,5 +13,9 @@ for(i = 0; i < ds_grid_width(global.all_beard_properties); i++){
 	
 }
 
+
 ini_write_string("Save", "current", ds_list_write(to_add));
+ds_list_destroy(to_add);
+
+
 ini_close();
