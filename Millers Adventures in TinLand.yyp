@@ -1239,6 +1239,14 @@
             }
         },
         {
+            "Key": "e184e29d-8fab-4149-a923-d6033c309a0d",
+            "Value": {
+                "id": "89c29d80-c0d1-4e32-aac8-42cfd54f3fcb",
+                "resourcePath": "sprites\\spr_sorcerer\\spr_sorcerer.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "e1b05635-6847-480f-bd38-e40ef87a1f3c",
             "Value": {
                 "id": "2cab0b61-758a-4268-87dd-8f37c8074589",
