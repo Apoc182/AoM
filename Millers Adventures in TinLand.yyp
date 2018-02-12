@@ -1311,6 +1311,14 @@
             }
         },
         {
+            "Key": "eeb78e78-f6a8-4278-a169-c48647ba0160",
+            "Value": {
+                "id": "54c86b80-3644-41b0-9c88-afbd59564128",
+                "resourcePath": "sprites\\spr_dying\\spr_dying.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "f08b6bb5-e011-46dc-a6af-bdc912a3de8f",
             "Value": {
                 "id": "e4d3f3d3-eebe-4d1c-9a8d-66730791bb15",

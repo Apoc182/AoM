@@ -12,7 +12,8 @@
         "be23f159-1b1a-4af9-8bbe-8fbd675bdf3b",
         "815e7d43-b401-4887-8987-916bc4ed6f67",
         "71968d8d-c828-4096-bbe3-4bd6d07a4167",
-        "eab7dc85-31ff-4067-99aa-faa37e319257"
+        "eab7dc85-31ff-4067-99aa-faa37e319257",
+        "eeb78e78-f6a8-4278-a169-c48647ba0160"
     ],
     "filterType": "GMSprite",
     "folderName": "miller_sprites",

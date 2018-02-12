@@ -1,5 +1,4 @@
-//Don't do anything if tutorial mode on...
-
+if(!active) exit;
 
 //A simple vaiable to determine which sprite to use for umbrella
 moving = false;

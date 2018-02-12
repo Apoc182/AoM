@@ -56,7 +56,7 @@ global.bottle_number = [];
 //Create life instances
 for(i = 0; i < global.player_lives / 6; i++){
 	
-	global.bottle_number[i] = instance_create_depth((27.5 * GRID_SIZE) - ((GRID_SIZE) * i), GRID_SIZE, 0, obj_life_bottle);
+	global.bottle_number[i] = instance_create_depth((27.5 * GRID_SIZE) - ((GRID_SIZE) * i), GRID_SIZE, 198, obj_life_bottle);
 	global.bottle_number[i].empty = i * 6;
 	global.bottle_number[i].half_full = (i + .5) * 6;
 	global.bottle_number[i].full = (i + 1) * 6;
@@ -68,3 +68,7 @@ for(i = 0; i < global.player_lives / 6; i++){
 //So we know when everything is frozen after gameover
 freeze_counter = 0;
 turn_off_title_song = true;
+
+dying = false;
+fade_out_variance = 0;
+

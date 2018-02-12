@@ -302,3 +302,4 @@ ini_close();
 
 
 
+global.fade_to_black = false;
