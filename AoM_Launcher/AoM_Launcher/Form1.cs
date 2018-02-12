@@ -64,6 +64,7 @@ namespace AoM_Launcher {
                 btn_play.Text = "Installing...";
                 downloadOrUpdate();
                 btn_play.Enabled = true;
+                gameChecks();
                 btn_play.Text = "Play!";
 
 
@@ -76,7 +77,7 @@ namespace AoM_Launcher {
 
         private void downloadOrUpdate() {
 
-            String[] files = new String[4] { "data.win", "Millers Adventures in TinLand.exe", "version.txt", "AoM_Launcher.exe"};
+            String[] files = new String[3] { "data.win", "Millers Adventures in TinLand.exe", "version.txt"};
             foreach (String file in files) {
 
                 String temp_download = downloadLocation + file;
@@ -87,7 +88,14 @@ namespace AoM_Launcher {
 
 
 
-            if (!File.Exists(System.Environment.GetFolderPath(Environment.SpecialFolder.CommonDesktopDirectory) + "\\Trouble in TinTown.lnk")) {
+            if (!File.Exists(install_directory + "AoM_Launcher.exe")) {
+                String temp_download = downloadLocation + "AoM_Launcher.exe";
+                Uri download = new Uri(temp_download);
+                wc.DownloadFile(download, install_directory + "AoM_Launcher.exe");
+
+            }
+
+                if (!File.Exists(System.Environment.GetFolderPath(Environment.SpecialFolder.CommonDesktopDirectory) + "\\Trouble in TinTown.lnk")) {
 
                 Uri download = new Uri(downloadLocation + "Trouble in TinTown.lnk");
                 wc.DownloadFile(download, System.Environment.GetFolderPath(Environment.SpecialFolder.DesktopDirectory) + "\\Trouble in TinTown.lnk");
