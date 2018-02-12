@@ -3,10 +3,9 @@
 ini_open("save.ini");
 
 var high_score = ini_read_real("Save", "local_max", 0);
-show_message(high_score);
 current = ds_list_create();
 ds_list_read(current, ini_read_string("Save", "current", ""));
-show_message(ds_list_find_value(current, 0));
+
 
 
 
