@@ -72,13 +72,16 @@ if (keyboard_check(vk_space)){
 		}else{
 			sprite_index = umbrella_standing;
 		}
+		
+		global.umbrella_out = true;
+		
 	}else if(keyboard_check_pressed(vk_space)){
 		//Play the 'out of umbrella' sound
 		audio_play_sound(snd_get_cunted, 0, false);
 	}
 	
+	if(global.ignorance_level == 0) global.umbrella_out = false;
 	
-	global.umbrella_out = true;
 }else{	
 	global.umbrella_out = false;
 }
