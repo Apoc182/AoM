@@ -89,6 +89,7 @@
             this.Controls.Add(this.lbl_version);
             this.Controls.Add(this.btn_download_updates);
             this.Controls.Add(this.btn_play);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "main";
             this.Text = "Trouble in TinTown Launcher";
             this.Load += new System.EventHandler(this.Form1_Load);
