@@ -15,7 +15,7 @@ if(audio_is_playing(snd_title) && turn_off_title_song){
 
 if(freeze_counter > 2 * room_speed){
 	if(global.timer > 0){
-		if(!audio_is_playing(snd_typing))audio_play_sound(snd_typing, 0, true);
+		if(!audio_is_playing(snd_typing))audio_play_sound(snd_typing, 0, false);
 		global.scr++;
 		global.timer -= .2;
 	}else{
