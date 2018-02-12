@@ -37,9 +37,10 @@ namespace AoM_Launcher {
 
         private void btn_download_updates_Click(object sender, EventArgs e) {
 
-            downloadOrUpdate();
-            MessageBox.Show("Update Complete!");
+            btn_download_updates.Text = "Updating...";
             btn_download_updates.Enabled = false;
+            downloadOrUpdate();
+            MessageBox.Show("Update Complete!");          
             gameChecks();
 
 
@@ -129,6 +130,10 @@ namespace AoM_Launcher {
             //Convert full numbers to decimals
             remote_version *= .001;
             local_version *= .001;
+
+            //Delete beards.ini if in beta
+
+    
 
 
             //Check for updates
