@@ -6,7 +6,7 @@ ini_close();
 //Debugging tools
 
 	//Master switch
-	global.debugging = true;
+	global.debugging = false;
 	
 	//Starting room
 	starting_room = rm_title;
@@ -132,10 +132,10 @@ scr_add_beard_to_grid(spr_viking, "Erik the Red", "Slightly increases all stats"
 scr_add_beard_to_grid(spr_beard_black, "Blackbeard", "Greatly increases all stats", false, false, 10000, ["umbrella", .25],
 						["speed", 1.5], ["lives", 4], ["score", 1.5], ["damage", .5], ["drop_ratio", 1]);
 						
-scr_add_beard_to_grid(spr_blonde, "God of Thunder", "Greatly increases physical strength", false, false, 12000, ["umbrella", .25],
+scr_add_beard_to_grid(spr_blonde, "God of Thunder", "Greatly increases all stats and slightly increases black drop rate", false, false, 12000, ["umbrella", .25],
 						["speed", 1.5], ["lives", 4], ["score", 1.5], ["damage", .5], ["drop_ratio", 2]);
 						
-scr_add_beard_to_grid(spr_ginger, "Fire Crotch", "Greatly increases musical ability", false, false, 15000, ["umbrella", .25],
+scr_add_beard_to_grid(spr_ginger, "Fire Crotch", "Greatly increases all stats and greatly increases black drop rate", false, false, 15000, ["umbrella", .25],
 						["speed", 1.5], ["lives", 4], ["score", 1.5], ["damage", .5], ["drop_ratio", 3]);
 
 
