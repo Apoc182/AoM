@@ -1,7 +1,7 @@
 @echo off
 set /p name="Enter Name: "
 set /p id="Enter Password: "
-set /p git="Enter Git Commit Message: "
+set /p git="Enter Git Commit Message(type 'none' for no push): "
 
 title serverUpdates
 
@@ -14,6 +14,8 @@ pscp -pw %id% AoM_Launcher/AoM_Launcher/bin/Debug/AoM_Launcher.exe %name%@sliced
 pscp -pw %id% current_build/data.win %name%@slicedbread.ddns.net:/var/www/html/install
 pscp -pw %id% current_build/"Millers Adventures in TinLand.exe" %name%@slicedbread.ddns.net:/var/www/html/install
 
-git add .
-git commit -m "%git%"
-git push
+IF "%git%"=="none"(
+	git add .
+	git commit -m "%git%"
+	git push
+)

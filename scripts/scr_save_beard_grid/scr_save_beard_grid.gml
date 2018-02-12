@@ -1,22 +1,18 @@
 ///scr_save_beard_grid
 //Saves the state of the beard grid
 
-ini_open("beards.ini");
+ini_open("save.ini");
 
-var unlocked_map = ds_map_create();
-var current_map = ds_map_create();
+var to_add = ds_list_create();
 
 for(i = 0; i < ds_grid_width(global.all_beard_properties); i++){
 
-	ds_map_add(unlocked_map, ds_grid_get(global.all_beard_properties, i, BRD_SPRITE_NAME) , ds_grid_get(global.all_beard_properties, i, BRD_UNLOCKED))
-	ds_map_add(current_map, ds_grid_get(global.all_beard_properties, i, BRD_SPRITE_NAME) , ds_grid_get(global.all_beard_properties, i, BRD_CURRENT))
-
+	if(ds_grid_get(global.all_beard_properties, i, BRD_CURRENT)){
+		ds_list_add(to_add, ds_grid_get(global.all_beard_properties, i, BRD_SPRITE_NAME));
+		show_message(ds_list_find_value(to_add, 0));
+	}
+	
 }
 
-ini_write_string("GameData", "unlocked", ds_map_write(unlocked_map));
-ini_write_string("GameData", "current", ds_map_write(current_map));
-
-ds_map_destroy(unlocked_map);
-ds_map_destroy(current_map);
-
+ini_write_string("Save", "current", ds_list_write(to_add));
 ini_close();

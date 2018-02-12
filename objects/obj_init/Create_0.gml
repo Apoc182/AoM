@@ -90,17 +90,17 @@ global.all_beard_properties = ds_grid_create(BRD_NUMBER_OF_BEARDS, BRD_MAX_BEARD
 //!!!
 //!!!
 	
-scr_add_beard_to_grid(spr_beard_normal, "Miller's Beard", "No bonus", true, true, 0, ["umbrella", 1],
+scr_add_beard_to_grid(spr_beard_normal, "Miller's Beard", "No bonus", true, false, 0, ["umbrella", 1],
 						["speed", 1], ["lives", 3], ["score", 1], ["damage", 1], ["drop_ratio", 1]);
 						  
 scr_add_beard_to_grid(spr_clean_shaven, "Clean Shaven", "No bonus", true, false, 0, ["umbrella", 1],
 						["speed", 1], ["lives", 3], ["score", 1], ["damage", 1], ["drop_ratio", 1]);
-	
+
 scr_add_beard_to_grid(spr_freeman,  "Free Man", "Slightly increases speed", false, false, 500, ["umbrella", 1],
 						["speed", 1.25], ["lives", 3], ["score", 1], ["damage", 1], ["drop_ratio", 1]);
-						  
+
 scr_add_beard_to_grid(spr_van_dyke, "Van Dyke", "Increases lives", false, false, 1000, ["umbrella", 1],
-						["speed", 1], ["lives", 4], ["score", 1], ["damage", 1], ["drop_ratio", 1]);
+						["speed", 1], ["lives", 4], ["score", 1], ["damage", 1], ["drop_ratio", 1]);			  
 	
 scr_add_beard_to_grid(spr_chops_2, "Burnside", "Slightly increases umbrella endurance", false, false, 1500, ["umbrella", .5],
 						["speed", 1], ["lives", 3], ["score", 1], ["damage", 1], ["drop_ratio", 1]);
@@ -140,23 +140,11 @@ scr_add_beard_to_grid(spr_ginger, "Fire Crotch", "Greatly increases all stats an
 
 
 //Load current and unlocked values from player save.
-if(file_exists("beards.ini")){
+if(file_exists("Save.ini")){
 	scr_load_beard_grid();
 }
 
-//Incase we have removed a beard that the player had as their current beard.
-var current_counter = 0;
-for(i = 0; i < ds_grid_width(global.all_beard_properties); i++){
-	
-	if(ds_grid_get(global.all_beard_properties, i, BRD_CURRENT) == true) current_counter++;
-	
-}
 
-if(current_counter == 0) ds_grid_set(global.all_beard_properties, 0, BRD_CURRENT, true);
-
-
-//Save them
-scr_save_beard_grid();
 	
 //Open all beards for debugger
 if(global.debugging){
@@ -166,8 +154,6 @@ if(global.debugging){
 }
 	
 
-
-ini_close();
 
 
 //Apply buffs

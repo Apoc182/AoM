@@ -51,8 +51,7 @@ for(i = 0; i < ds_grid_width(global.all_beard_properties); i++){
 		
 		ds_grid_set(global.all_beard_properties, i, BRD_UNLOCKED, true);
 		beard_unlocked = true;
-		
-		scr_save_beard_grid();
+
 	}
 }
 
