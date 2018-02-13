@@ -11,5 +11,6 @@ draw_set_color(c_white);
 
 global.scr = 0;
 global.time_multiplier = 0;
+global.fade_to_black = false;
 scr_set_game_metrics();
 keyboard_clear(vk_space);

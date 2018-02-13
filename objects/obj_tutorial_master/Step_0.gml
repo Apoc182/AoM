@@ -158,15 +158,9 @@ if(rain_drop_spawns){
 }
 
 if(global.player_lives == 0){
-	death = true;	
-}
 
-if (death){	
-	alpha_variance_again += fade_speed;
-	if(alpha_variance_again >= max_alpha_variance_again){
-		scr_restart();
-		room_restart();
-	}
+	scr_slow_down_sequence();
+
 }
 
 if(keyboard_check(vk_escape)){

@@ -20,7 +20,7 @@ if (move != 0){
 	if (mpos > array_length_1d(menu) -1) {
 		mpos = 0;
 	}
-	audio_play_sound(snd_quick_cunt, 0, false);
+	audio_play_sound(snd_selected, 0, false);
 }
 
 push = max(keyboard_check_pressed(vk_enter), keyboard_check_pressed(vk_space), 0);
@@ -34,7 +34,8 @@ if(!push && options && (mpos == 2 || mpos == 3)){
 
 
 if (push && !fading && !options){
-	audio_play_sound(snd_calledMeACunt, 0, false);
+	
+	audio_play_sound(snd_confirm, 0, false);
 	switch (mpos){
 		
 		case 0: {					
@@ -65,7 +66,7 @@ if (push && !fading && !options){
 
 if (push && !fading && options){
 
-	audio_play_sound(snd_calledMeACunt, 0, false);
+	audio_play_sound(snd_confirm, 0, false);
 	switch (mpos){
 		
 		case 0: {					
@@ -84,15 +85,14 @@ if (push && !fading && options){
 			}else{		
 				window_set_fullscreen(false);
 			}
+			audio_play_sound(snd_selected, 0, false);
 			scr_save_screen_size();
 			break;
 		}
 		
 		case 3:{
-			global.tutorial_on = !global.tutorial_on
-			if(global.tutorial_on){
-			}else{
-			}
+			global.tutorial_on = !global.tutorial_on;
+			audio_play_sound(snd_selected, 0, false);
 			break;
 		}
 		
@@ -123,8 +123,12 @@ if(alpha_variance_in > 0){
 	alpha_variance_in -= .025;
 }
 
+
 //Esc takes to exit
-if(keyboard_check_pressed(vk_escape) && !options && !fading) mpos = 2; 
+if(keyboard_check_pressed(vk_escape) && !options && !fading){
+	mpos = 2; 
+	audio_play_sound(snd_back, 0, false);
+}
 
 //Esc takes to exit
 if(keyboard_check_pressed(vk_escape) && options){
@@ -133,4 +137,5 @@ if(keyboard_check_pressed(vk_escape) && options){
 	menu = ["Start", "Options", "Exit"];
 	mpos = 0;
 	options = false;
+	audio_play_sound(snd_back, 0, false);
 }

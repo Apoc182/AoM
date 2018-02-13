@@ -28,6 +28,10 @@ if(place_meeting(x,y,obj_default) && !drop_contact){
 			if(global.is_thor){
 				audio_play_sound(snd_thunder, 0, false);
 				is_thunder = true;
+			}else{
+			
+				audio_play_sound(snd_black_drop_caught, 0, false);
+			
 			}
 			this_text = scr_score_display(global.black_drop_umbrella);	
 		}else{

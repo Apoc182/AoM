@@ -40,9 +40,9 @@ if(!global.tutorial_on){
 	alpha_variance_again = 0;
 	max_alpha_variance_again = 1.5;
 	esc_set = false;
-	death = false;
 	show_escape_string = false;
 	number_of_flashes = 0;
 	max_flash = 10;
+	freeze_counter = 0;
 	alarm[2] = room_speed * .5;
 }

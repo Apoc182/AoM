@@ -73,8 +73,8 @@ if(global.timer == 0){
 	
 	}
 	
-	obj_drop.x = -1000;
-	obj_drop.y = -1000;
+	if(instance_exists(obj_drop)) obj_drop.x = -1000;
+	if(instance_exists(obj_drop)) obj_drop.y = -1000;
 	
 	global.fade_to_black = true;
 
@@ -83,7 +83,15 @@ if(global.timer == 0){
 
 if(obj_game_logic.fade_out_variance == 1) {
 	global.fade_to_black = false;
-	room_goto(game_over);
+	
+	if(global.tutorial_on){
+		
+		scr_restart();
+		room_restart();
+	
+	}else{
+		room_goto(game_over);
+	}
 }
 
 

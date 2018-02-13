@@ -37,7 +37,10 @@ if((keyboard_check_pressed(ord("W")) || keyboard_check_pressed(vk_up)) && box.op
 	
 	if(highlighted_beard < 0){
 		highlighted_beard = 0;
-		if(highlighted_beard < scroller) scroller--;
+		if(highlighted_beard < scroller){
+			scroller--;
+			audio_play_sound(snd_selected, 0, false);
+		}
 	}
 	
 }
@@ -60,11 +63,15 @@ if(highlighted_beard > menu_max_list - 1){
 		
 		scroller--;
 		
+	}else{
+		audio_play_sound(snd_selected, 0, false);
 	}
 
 	
 }
 
+//Other times to play sound
+if(previous_highlighted != highlighted_beard) audio_play_sound(snd_selected, 0, false);
 
 
 
@@ -78,3 +85,5 @@ if((keyboard_check_pressed(vk_enter) || keyboard_check_pressed(vk_space)) && box
 
 
 if(keyboard_check_pressed(vk_escape)) box.box_out = true;
+
+previous_highlighted = highlighted_beard;

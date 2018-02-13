@@ -26,16 +26,21 @@ if(!instance_exists(box)){
 if(keyboard_check_pressed(vk_escape)){
 	box.box_out = true;
 	resume = true;
+	audio_play_sound(snd_selected, 0, false);
 }
 
 ////Menu selection
 if(box.open){
-mover += keyboard_check_pressed(ord("S")) || keyboard_check_pressed(vk_down);
-mover -= keyboard_check_pressed(ord("W")) || keyboard_check_pressed(vk_up);
+	
+	
+	mover += keyboard_check_pressed(ord("S")) || keyboard_check_pressed(vk_down);
+	mover -= keyboard_check_pressed(ord("W")) || keyboard_check_pressed(vk_up);
+	if(previous_mover != mover) audio_play_sound(snd_selected, 0, false);
 
-if(mover < 0){
-		mover = array_length_1d(menu_items) - 1
+	if(mover < 0){
+		mover = array_length_1d(menu_items) - 1;
 	}
+
 	if(mover > array_length_1d(menu_items) - 1){
 		mover = 0;
 	}
@@ -44,6 +49,8 @@ if(mover < 0){
 	confirm = keyboard_check_pressed(vk_enter) || keyboard_check_pressed(vk_space);
 	
 	if(confirm){
+		
+		audio_play_sound(snd_confirm, 0, false);
 		box.box_out = true;
 		switch(mover){
 		
@@ -62,3 +69,5 @@ if(mover < 0){
 		}
 	}
 }
+
+previous_mover = mover;

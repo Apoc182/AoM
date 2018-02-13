@@ -6,6 +6,7 @@ layer_hspeed(layer_get_id("bg1"),0);
 layer_hspeed(layer_get_id("bg2"),0);
 layer_hspeed(layer_get_id("bg3"),0);
 
+
 box = instance_create_depth((GRID_SIZE * 32)/2, (GRID_SIZE * 24)/2, 50, obj_animated_box);
 box.box_in = true;
 box.x1_open = GRID_SIZE * 11.5
@@ -19,4 +20,5 @@ menu_items = ["Resume", "Restart", "Main Menu"];
 resume = false;
 restart = false;
 title = false;
+previous_mover = mover;
 
