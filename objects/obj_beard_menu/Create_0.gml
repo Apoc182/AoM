@@ -36,3 +36,7 @@ menu_max_list = 11;
 scroller = 0;
 final_beard = false;
 previous_highlighted = highlighted_beard;
+
+//Animate the barber pole
+animation_frame = 0;
+animation_fps = 10;
