@@ -163,6 +163,14 @@ if(global.player_lives == 0){
 
 }
 
+if (death){	
+	alpha_variance_again += fade_speed;
+	if(alpha_variance_again >= max_alpha_variance_again){
+		scr_restart();
+		room_restart();
+	}
+}
+
 if(keyboard_check(vk_escape)){
 	esc_set = true;
 }

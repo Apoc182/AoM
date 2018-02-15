@@ -1,19 +1,27 @@
-//Stop the rain
-with(obj_drop) stopper = 0;
-
 //Timer stop
 obj_game_logic.alarm[4] = 0;
 
 //Stop the cans n shit
 obj_game_logic.alarm[1] = 0;
 
+//stop drops spawning
+obj_game_logic.alarm[0] = 0;
+
 //Kirstyn shhhhhh
 obj_kirsten_front.image_speed = 0;
 obj_kirsten_front.image_index = 0;
 
-//Stop miller
 obj_default.active = false;
-if(freeze_counter == 0) obj_default.sprite_index = spr_default_standing;
+if(freeze_counter == 0){
+	//Stop miller
+	obj_default.sprite_index = spr_default_standing;
+	//Stop the rain
+	obj_drop.stopper = .25;
+	layer_hspeed(layer_get_id("bg1"),.125);
+	layer_hspeed(layer_get_id("bg2"),.25);
+	layer_hspeed(layer_get_id("bg3"),.5);
+	
+}
 
 //Disable blinking
 with(obj_dynamic_beard){
@@ -35,6 +43,11 @@ if(freeze_counter == 2 * room_speed){
 	
 	obj_default.image_speed = 1;
 	obj_default.image_index = 0;
+	
+	obj_drop.stopper = .5;
+	layer_hspeed(layer_get_id("bg1"),0.25);
+	layer_hspeed(layer_get_id("bg2"),.5);
+	layer_hspeed(layer_get_id("bg3"),1);
 
 }
 
@@ -43,13 +56,14 @@ if(obj_default.image_index == 3){
 	
 	obj_default.y += GRID_SIZE;
 	obj_default.sprite_index = spr_default_sleeping;
+	obj_default.image_speed = 0;
 	
 
 }
 
 
 
-if(obj_default.sprite_index == spr_default_sleeping){
+if(obj_default.sprite_index == spr_default_sleeping && !global.tutorial_on){
 
 	if(global.timer > .2){
 		if(!audio_is_playing(snd_typing))audio_play_sound(snd_typing, 0, false);
@@ -65,7 +79,7 @@ if(obj_default.sprite_index == spr_default_sleeping){
 
 }
 
-if(global.timer == 0){
+if(!instance_exists(obj_drop)) && (global.timer == 0 || global.tutorial_on){
 	
 	for(i = 0; i < array_length_1d(global.bottle_number); i++){
 	
@@ -73,25 +87,16 @@ if(global.timer == 0){
 	
 	}
 	
-	if(instance_exists(obj_drop)) obj_drop.x = -1000;
-	if(instance_exists(obj_drop)) obj_drop.y = -1000;
-	
-	global.fade_to_black = true;
-
-
+	if(global.tutorial_on){
+		obj_tutorial_master.death = true;
+	}else{
+		global.fade_to_black = true;
+	}
 }
 
 if(obj_game_logic.fade_out_variance == 1) {
 	global.fade_to_black = false;
-	
-	if(global.tutorial_on){
-		
-		scr_restart();
-		room_restart();
-	
-	}else{
-		room_goto(game_over);
-	}
+	room_goto(game_over);
 }
 
 
