@@ -68,7 +68,6 @@ for(i = 0; i < global.player_lives / 6; i++){
 //So we know when everything is frozen after gameover
 freeze_counter = 0;
 turn_off_title_song = true;
-
 dying = false;
 fade_out_variance = 0;
 

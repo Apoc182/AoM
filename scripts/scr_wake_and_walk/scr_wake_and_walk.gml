@@ -1,6 +1,6 @@
 
 //Insert waking up animation here
-if(obj_sleeping.sprite_index == spr_default_sleeping){
+if(obj_sleeping.sprite_index == spr_default_sleeping && walking_counter == room_speed * 2){
 
 	obj_sleeping.sprite_index = spr_walking;
 	
@@ -11,7 +11,7 @@ if(obj_sleeping.sprite_index == spr_default_sleeping){
 
 //Wait for an arbitrary amount of time...
 //Coming kirstyn
-if(walking_counter == room_speed * 2){
+if(walking_counter == room_speed * 4){
 
 
 
@@ -19,7 +19,7 @@ if(walking_counter == room_speed * 2){
 
 //When kirsten is said...
 
-if(walking_counter >= 5 * room_speed){
+if(walking_counter >= 7 * room_speed){
 
 	obj_sleeping.x += 4;
 

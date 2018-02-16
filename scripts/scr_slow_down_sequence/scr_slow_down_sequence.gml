@@ -1,5 +1,4 @@
 
-
 //Timer stop
 obj_game_logic.alarm[4] = 0;
 
@@ -65,7 +64,6 @@ if(obj_default.image_index == 3){
 	obj_default.sprite_index = spr_default_sleeping;	
 	obj_default.image_speed = 0;
 	
-	if(!audio_is_playing(snd_dead))audio_play_sound(snd_dead, 0, false);
 	
 
 }
@@ -104,8 +102,22 @@ if(!instance_exists(obj_drop)) && (global.timer == 0 || global.tutorial_on){
 }
 
 if(obj_game_logic.fade_out_variance == 1) {
+	
+	obj_game_logic.fade_out_variance = 1.1;
+	with obj_default move_towards_point(448, 608, 4);
+
+	
+	
+}
+
+
+
+if(floor(point_distance(obj_default.x, obj_default.y, 448, 608)) < 5){
+
+	
 	global.fade_to_black = false;
 	room_goto(game_over);
+
 }
 
 

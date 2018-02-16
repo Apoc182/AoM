@@ -1,7 +1,7 @@
 //Check for drop collision with player
 
 //If drop hits player
-if(place_meeting(x,y,obj_default) && !drop_contact){
+if(place_meeting(x,y,obj_default) && !drop_contact && obj_default.active){
 	//If the umbrella is away when this happens.
 	if(!global.umbrella_out && !ground_contact){		
 		if(!global.invulnerable){
