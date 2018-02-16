@@ -36,28 +36,28 @@ global.colour_array = [];
 switch(player_drop_ratio){
 	
 	case 1:
-		global.colour_array = [c_white, c_white, c_white, c_white, 
-								c_white, c_white, c_white, c_black];
+		global.colour_array = [c_white, c_white, c_white, c_white, c_white, 
+								c_white, c_white, c_white, c_white, c_black];
 		break;
 								   
 	case 2:
-		global.colour_array = [c_white, c_white, c_white, c_white, 
-								c_white, c_white, c_black, c_black];
+		global.colour_array = [c_white, c_white, c_white, c_white, c_white, 
+								c_white, c_white, c_white, c_white, c_white, 
+								c_white, c_white, c_white, c_white, c_white, 
+								c_white, c_white, c_black, c_black, c_black];
 		break;
 								   
 	case 3:
-		global.colour_array = [c_white, c_white, c_white, c_white, 
-								c_white, c_black, c_black, c_black];
+		global.colour_array = [c_white, c_white, c_white, c_white, c_black];
 		break;
 								   
 	case 4:
-		global.colour_array = [c_white, c_white, c_white, c_white, 
-								c_black, c_black, c_black, c_black];
+		global.colour_array = [c_white, c_white, c_white, c_black];
 		break;
 								   
 	default:
-		global.colour_array = [c_white, c_white, c_white, c_white, 
-								c_white, c_white, c_white, c_black];
+		global.colour_array = [c_white, c_white, c_white, c_white, c_white, 
+								c_white, c_white, c_white, c_white, c_black];
 		break;
 }
 

@@ -27,5 +27,5 @@ right_bottle = undefined;
 //fill = false;
 
 
-fill_speed = .1;
+fill_speed = .25;
 previous_lives = global.player_lives;

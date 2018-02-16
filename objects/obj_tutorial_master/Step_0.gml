@@ -113,8 +113,8 @@ if(current_text_pos == 5 && next_text = false){
 	
 	//Ran once only
 	if(active){
-		global.colour_array = [c_white, c_white, c_white, c_white, 
-							   c_white, c_white, c_white, c_black];
+		global.colour_array = [c_white, c_white, c_white, c_white, c_white, 
+								c_white, c_white, c_white, c_white, c_black];
 		active = false;
 	}
 	

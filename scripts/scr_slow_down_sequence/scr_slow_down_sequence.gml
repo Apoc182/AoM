@@ -72,16 +72,16 @@ if(obj_default.image_index == 3){
 
 if(obj_default.sprite_index == spr_default_sleeping && !global.tutorial_on){
 
-	if(global.timer > .2){
+	if(global.timer > 0){
 		if(!audio_is_playing(snd_typing))audio_play_sound(snd_typing, 0, false);
-		global.scr++;
-		global.timer -= .2;
+		global.scr += 5;
+		global.timer--;
 	}
 	
-	if(global.timer == .2){
-		global.scr++;
-		global.timer = 0;
-	}
+	//if(global.timer == .2){
+	//	global.scr++;
+	//	global.timer = 0;
+	//}
 
 
 }
