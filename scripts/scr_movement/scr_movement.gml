@@ -3,12 +3,12 @@ pressed_left = keyboard_check(ord("A")) || keyboard_check(vk_left);
 pressed_right = keyboard_check(ord("D")) || keyboard_check(vk_right);
 
 //Sets speed to 0 if player tries to leave the screen.
-if (x - (sprite_actual_width/2) + spd <= 0 || x + (sprite_actual_width/2) + spd >= (GRID_SIZE * 32)){
+if (x - (sprite_actual_width/2) + spd <= 0 || x + (sprite_actual_width/2) + spd >= (SCREEN_WIDTH)){
 	spd = 0;
 }
 
 //Increments speed accordingly when player goes right.
-if (pressed_right && !pressed_left && x + (sprite_actual_width/2) + spd < (GRID_SIZE * 32)){
+if (pressed_right && !pressed_left && x + (sprite_actual_width/2) + spd < (SCREEN_WIDTH)){
 	moving = true;
 	if (spd < global.top_spd){
 		spd += inertia;
@@ -101,7 +101,11 @@ if((sign(spd) == 1 && pressed_left) || (sign(spd) == -1 && pressed_right)){
 //Ensure both keys at the same time produces no effect
 if(pressed_right && pressed_left){
 
-	sprite_index = standing;
+	if(global.umbrella_out && global.ignorance_level > 0){
+		sprite_index = umbrella_standing;
+	}else{
+		sprite_index = standing;
+	}
 	scr_inertia();
 
 }

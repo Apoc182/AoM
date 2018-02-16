@@ -101,6 +101,13 @@ if(box.open){
 
 draw_set_color(c_white);
 
-draw_sprite(spr_barber_pole, scr_draw_sprite_animator(animation_fps, sprite_get_number(spr_barber_pole)), GRID_SIZE * 3, GRID_SIZE * 10);
+draw_sprite(spr_barber_pole, animation_frame, GRID_SIZE * 3, GRID_SIZE * 10);
+
+//Animate above
+if(animation_frame < sprite_get_number(spr_barber_pole)){
+	animation_frame += animation_fps / room_speed;
+}else{
+	animation_frame = 0;
+}
 
 

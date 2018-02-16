@@ -8,6 +8,6 @@ if(global.debugging){
 
 if(global.fade_to_black){
 
-	draw_sprite_ext(spr_lightning, 0, (GRID_SIZE * 32)/2, GRID_SIZE * 14, 1, 1, 0, c_black, obj_game_logic.fade_out_variance);
+	draw_sprite_ext(spr_lightning, 0, (SCREEN_WIDTH)/2, GRID_SIZE * 14, 1, 1, 0, c_black, obj_game_logic.fade_out_variance);
 
 }

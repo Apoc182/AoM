@@ -1,7 +1,7 @@
 @echo off
 set /p name="Enter Name: "
 set /p id="Enter Password: "
-set /p git="Enter Git Commit Message(type 'none' for no push): "
+set /p git="Enter Git Commit Message(type 'none' for no push OR 'long' for extended message): "
 
 title serverUpdates
 
@@ -17,5 +17,11 @@ pscp -pw %id% current_build/"Millers Adventures in TinLand.exe" %name%@slicedbre
 IF "%git%"=="none"(
 	git add .
 	git commit -m "%git%"
+	git push
+)
+
+IF "%git%"=="long"(
+	git add .
+	git commit
 	git push
 )

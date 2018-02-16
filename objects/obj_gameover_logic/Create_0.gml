@@ -15,6 +15,9 @@ ini_open("Save.ini");
 ini_write_real("Save", "local_max", global.max_score);
 ini_close();
 
+//Set initial pos for sleeping miller
+obj_sleeping.x = global.current_player_loc_x;
+obj_zzz.x = global.current_player_loc_x + GRID_SIZE/2;
 
 
 //Fade out theme
@@ -72,3 +75,7 @@ space_string = "";
 esc_string = "";
 
 if(!global.debugging)scr_send_statistics();
+
+
+//Walking sequence counter
+walking_counter = 0;

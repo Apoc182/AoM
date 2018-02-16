@@ -14,7 +14,7 @@ if(drop_contact){
 
 //Lightning
 if(is_thunder){
-	draw_sprite(spr_lightning, lightning_frame, (GRID_SIZE * 32)/2, (GRID_SIZE * 24)/2);
+	draw_sprite(spr_lightning, lightning_frame, (SCREEN_WIDTH)/2, (SCREEN_HEIGHT)/2);
 	lightning_frame = !lightning_frame;
 	if(counter >= thunder_timer) is_thunder = false;
 	counter++;

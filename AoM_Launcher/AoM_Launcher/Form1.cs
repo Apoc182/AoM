@@ -40,7 +40,8 @@ namespace AoM_Launcher {
             btn_download_updates.Text = "Updating...";
             btn_download_updates.Enabled = false;
             downloadOrUpdate();
-            MessageBox.Show("Update Complete!");          
+            MessageBox.Show("Update Complete!");
+            btn_download_updates.Text = "Up-to-date!";
             gameChecks();
 
 
@@ -121,6 +122,7 @@ namespace AoM_Launcher {
 
             }
             else {
+
 
                 local_version = Convert.ToDouble(System.IO.File.ReadAllText(install_directory + "\\version.txt"));
                 remote_version = Convert.ToDouble(wc.DownloadString(downloadLocation + "version.txt"));

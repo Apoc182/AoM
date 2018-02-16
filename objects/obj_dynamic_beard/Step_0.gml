@@ -27,5 +27,26 @@ if(!turning){
 	}
 }
 
+//Handles talking. In order to use, set 'talking' to true and 'cur_voice' to the voiceline being said.
+//NOTE: if it is one long, drawn out word, set one word to true.
+
+if(talking){
+	if(one_word){
+		image_index = 1;
+	}else{
+		image_speed = 1;
+	}
+}
+	
+if(!is_undefined(cur_voice) && !audio_is_playing(cur_voice)){
+
+	image_speed = 0;
+	image_index = 0;
+	talking = false;
+	cur_voice = undefined;
+	one_word = false;
+
+}
+
 
 

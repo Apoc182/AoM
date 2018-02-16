@@ -57,7 +57,6 @@ for(i = 0; i < ds_grid_width(global.all_beard_properties); i++){
 
 if(keyboard_check_pressed(vk_escape) && !dying && !global.tutorial_on){
 	instance_create_depth(x, y, 0, obj_pause_handler);
-	audio_play_sound(snd_selected, 0, false);
 }
 
 if(global.fade_to_black && fade_out_variance < 1) fade_out_variance += .01;

@@ -551,6 +551,14 @@
             }
         },
         {
+            "Key": "6ade2ddb-38c0-44f6-a3e0-43e81adf8edd",
+            "Value": {
+                "id": "543368f1-5a52-4c58-881c-693ed08c01e0",
+                "resourcePath": "scripts\\scr_wake_and_walk\\scr_wake_and_walk.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "6b7a3f2b-8d39-42c5-92bd-7d2624019ee5",
             "Value": {
                 "id": "66afc58c-1485-4f92-9a0e-d86aa1ccf514",
@@ -1488,7 +1496,8 @@
         "5fde3f43-2364-4f8d-b7f0-9c9d63c19640",
         "3507b0d0-fe37-405e-abee-e9e1e9c48eb4",
         "18297715-da0c-4855-a0ab-07a6537c5908",
-        "30e2e5a4-f6af-4638-a6e5-02587470ea3c"
+        "30e2e5a4-f6af-4638-a6e5-02587470ea3c",
+        "6ade2ddb-38c0-44f6-a3e0-43e81adf8edd"
     ],
     "tutorial": ""
 }

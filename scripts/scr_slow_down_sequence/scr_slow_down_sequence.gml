@@ -1,3 +1,5 @@
+
+
 //Timer stop
 obj_game_logic.alarm[4] = 0;
 
@@ -13,8 +15,13 @@ obj_kirsten_front.image_index = 0;
 
 obj_default.active = false;
 if(freeze_counter == 0){
+	
+	//Slowly kill music
+	if(audio_is_playing(snd_title)) audio_sound_gain(snd_title, 0, 2000);
+	
 	//Stop miller
 	obj_default.sprite_index = spr_default_standing;
+	
 	//Stop the rain
 	obj_drop.stopper = .25;
 	layer_hspeed(layer_get_id("bg1"),.125);
@@ -55,8 +62,10 @@ if(freeze_counter == 2 * room_speed){
 if(obj_default.image_index == 3){
 	
 	obj_default.y += GRID_SIZE;
-	obj_default.sprite_index = spr_default_sleeping;
+	obj_default.sprite_index = spr_default_sleeping;	
 	obj_default.image_speed = 0;
+	
+	if(!audio_is_playing(snd_dead))audio_play_sound(snd_dead, 0, false);
 	
 
 }
@@ -100,34 +109,4 @@ if(obj_game_logic.fade_out_variance == 1) {
 }
 
 
-
-
-//if(audio_is_playing(snd_title) && turn_off_title_song){
-
-//	turn_off_title_song = false;
-//	audio_sound_gain(snd_title, 0, 2000);
-	
-//}
-
-
-//if(freeze_counter > 2 * room_speed){
-//	if(global.timer > 0){
-//		if(!audio_is_playing(snd_typing))audio_play_sound(snd_typing, 0, false);
-//		global.scr++;
-//		global.timer -= .2;
-//	}else{
-//		audio_stop_sound(snd_typing);
-//	}
-//}
-
-
-//if(global.timer == 0 && !audio_is_playing(snd_dead)) audio_play_sound(snd_dead, 0, false);
-
-//if(freeze_counter > 2 * room_speed) obj_default.y -= 1;
-//if(freeze_counter > 4 * room_speed) room_goto(game_over);
-
-//if(alarm[4])alarm[4] = 0;
-//if(alarm[0])alarm[0] = 0;
-//if(alarm[1])alarm[1] = 0;
-//if(global.invulnerable) global.invulnerable = false;
 freeze_counter++;

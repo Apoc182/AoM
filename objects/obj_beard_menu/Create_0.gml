@@ -21,9 +21,9 @@ box.x2_open = GRID_SIZE * 31
 box.y1_open = GRID_SIZE * 3.5
 box.y2_open = GRID_SIZE * 20
 box.x1_closed = GRID_SIZE * 22
-box.x2_closed = GRID_SIZE * 24
+box.x2_closed = SCREEN_HEIGHT
 box.x1 = GRID_SIZE * 22
-box.x2 = GRID_SIZE * 24
+box.x2 = SCREEN_HEIGHT
 box.box_in = true;
 
 //Make blinking happen.

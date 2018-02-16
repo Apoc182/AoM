@@ -26,7 +26,6 @@ if(!instance_exists(box)){
 if(keyboard_check_pressed(vk_escape)){
 	box.box_out = true;
 	resume = true;
-	audio_play_sound(snd_selected, 0, false);
 }
 
 ////Menu selection

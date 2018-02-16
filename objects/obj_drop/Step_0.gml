@@ -6,7 +6,10 @@ if(place_meeting(x,y,obj_default) && !drop_contact){
 	if(!global.umbrella_out && !ground_contact){		
 		if(!global.invulnerable){
 			global.player_lives -= global.player_damage;
-			audio_play_sound(global.rain_hit[random(array_length_1d(global.rain_hit) - 1)], 0, false);
+			cunt = audio_play_sound(global.rain_hit[random(array_length_1d(global.rain_hit) - 1)], 0, false);
+			obj_dynamic_beard.talking = true;
+			obj_dynamic_beard.cur_voice = cunt;
+			obj_dynamic_beard.one_word = true;
 			global.cuntTally++;
 		}
 		global.invulnerable = true;
@@ -50,7 +53,7 @@ if(place_meeting(x,y,obj_default) && !drop_contact){
 }
 
 
-if (y > (GRID_SIZE * 24) - sprite_get_height(spr_floor) && !drop_contact && !ground_contact){
+if (y > (SCREEN_HEIGHT) - sprite_get_height(spr_floor) && !drop_contact && !ground_contact){
 
 	sprite_index = spr_splash;
 	if(this_colour == c_black) image_blend = c_black;
@@ -75,3 +78,4 @@ if(drop_contact){
 }else if(!ground_contact){
 	y += (global.drop_base_speed + this_speed) * stopper;
 }
+

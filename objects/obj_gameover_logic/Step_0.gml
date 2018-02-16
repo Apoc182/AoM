@@ -1,5 +1,6 @@
-obj_sleeping.x = global.current_player_loc_x;
-obj_zzz.x = global.current_player_loc_x + GRID_SIZE/2;
+if(instance_exists(obj_sleeping)) scr_wake_and_walk();
+
+
 
 
 if(keyboard_check_pressed(vk_space) && !disable_space){

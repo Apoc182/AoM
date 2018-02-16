@@ -9,7 +9,7 @@ if(box.open){
 			draw_set_color(make_color_rgb(124,124,124));
 		}
 		
-		draw_text((GRID_SIZE * 32)/2, ((GRID_SIZE * 24)/2 - (2 * GRID_SIZE)) + (i * GRID_SIZE), menu_items[i]);	
+		draw_text((SCREEN_WIDTH)/2, ((SCREEN_HEIGHT)/2 - (2 * GRID_SIZE)) + (i * GRID_SIZE), menu_items[i]);	
 		draw_set_color(c_white);
 	}
 }

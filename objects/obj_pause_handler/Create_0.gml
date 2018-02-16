@@ -7,7 +7,7 @@ layer_hspeed(layer_get_id("bg2"),0);
 layer_hspeed(layer_get_id("bg3"),0);
 
 
-box = instance_create_depth((GRID_SIZE * 32)/2, (GRID_SIZE * 24)/2, 50, obj_animated_box);
+box = instance_create_depth((SCREEN_WIDTH)/2, (SCREEN_HEIGHT)/2, 50, obj_animated_box);
 box.box_in = true;
 box.x1_open = GRID_SIZE * 11.5
 box.x2_open = GRID_SIZE * 20.5

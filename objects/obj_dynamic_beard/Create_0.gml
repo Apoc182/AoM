@@ -14,6 +14,7 @@ dynamic beard allocation.
 
 //Get current beard
 sprite_index = scr_get_current_beard(BRD_SPRITE_NAME);
+image_speed = 0;
 turning = false;
 
 
@@ -29,3 +30,12 @@ alarm[0] = room_speed * random(5);
 blinking = false;
 
 frame_counter = 0;
+
+//A boolean for talking.
+talking = false;
+
+//Current voice line
+cur_voice = undefined;
+
+//Just to make the long drawn out 'cunts' look better
+one_word = false;

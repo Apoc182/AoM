@@ -76,10 +76,14 @@ if(previous_highlighted != highlighted_beard) audio_play_sound(snd_selected, 0, 
 
 
 if((keyboard_check_pressed(vk_enter) || keyboard_check_pressed(vk_space)) && box.open){
-	if(highlighted_beard + scroller >= scr_number_beards_unlocked()){
-	}else{
-	confirm = true;
-	box.box_out = true;
+	
+	if(!(highlighted_beard + scroller >= scr_number_beards_unlocked())){
+		
+		//Plays confirmation sound
+		audio_play_sound(snd_confirm, 0, false);
+		
+		confirm = true;
+		box.box_out = true;
 	}
 }
 
