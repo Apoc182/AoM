@@ -663,6 +663,14 @@
             }
         },
         {
+            "Key": "7adce911-c4a4-4b11-b1ff-26b32ed0a34e",
+            "Value": {
+                "id": "c5c8fb40-36cd-4dc8-b42b-d44f780b7d2f",
+                "resourcePath": "sprites\\spr_talk\\spr_talk.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "7b6e1f6b-6c10-40a1-b306-ee0c2da7dce4",
             "Value": {
                 "id": "65dde0c3-ffee-4186-8a24-5769a6013d50",
