@@ -22,7 +22,6 @@ if(next_text = true){
 if(current_text_pos == 1 && next_text = false){
 	if(keyboard_check_pressed(vk_space)){
 		next_text = true;
-		audio_play_sound(snd_tutorial_prog, 0, false);
 	}
 }
 
@@ -42,7 +41,6 @@ if(current_text_pos == 2 && next_text = false){
 	if(!instance_exists(new_bitter)){
 		red_bitter_spawns = true;
 		next_text = true;
-		audio_play_sound(snd_tutorial_prog, 0, false);
 	}
 
 }
@@ -68,7 +66,6 @@ if(current_text_pos == 3 && next_text = false){
 		//Get hit on the head
 		if(global.player_lives < current_lives){
 			next_text = true;
-			audio_play_sound(snd_tutorial_prog, 0, false);
 			red_bitter_spawns = false;
 			global.time_multiplier = 0;
 			with obj_game_logic {
@@ -101,7 +98,6 @@ if(current_text_pos == 4 && next_text = false){
 	//Constantly running
 	if(!instance_exists(new_sauce)){
 		next_text = true;
-		audio_play_sound(snd_tutorial_prog, 0, false);
 		hot_sauce_spawns = true;
 		red_bitter_spawns = true;
 	}

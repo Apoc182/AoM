@@ -25,6 +25,7 @@ if (move != 0){
 
 push = max(keyboard_check_pressed(vk_enter), keyboard_check_pressed(vk_space), 0);
 
+
 //For using left and right to control toggle items
 if(!push && options && (mpos == 2 || mpos == 3)){
 
@@ -85,14 +86,12 @@ if (push && !fading && options){
 			}else{		
 				window_set_fullscreen(false);
 			}
-			audio_play_sound(snd_selected, 0, false);
 			scr_save_screen_size();
 			break;
 		}
 		
 		case 3:{
 			global.tutorial_on = !global.tutorial_on;
-			audio_play_sound(snd_selected, 0, false);
 			break;
 		}
 		

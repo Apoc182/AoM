@@ -11,6 +11,7 @@ using System.Windows.Forms;
 using System.Net;
 using System.IO;
 using System.Diagnostics;
+using System.Threading;
 
 
 namespace AoM_Launcher {
@@ -19,136 +20,118 @@ namespace AoM_Launcher {
         WebClient wc = new WebClient();
         String install_directory = Path.GetPathRoot(Environment.SystemDirectory) + "Games\\TinTimeStudios\\Trouble in TinTown\\";
         String downloadLocation = "http://slicedbread.ddns.net/install/";
+        bool installed = false;
+
+       
 
         public main() {
 
+            CenterToScreen();
             InitializeComponent();
         }
 
         private void Form1_Load(object sender, EventArgs e) {
 
-            gameChecks();
+
+            CenterToScreen();
+
             
-  
+
+            //Initialise a connection.
+            WebClient connection = new WebClient();
+
+            //Check for an installation
+            if (DownloadTools.checkIfInstalled(connection)) {
+                installed = true;
+
+                //If the current application is not located in the install, open it.
+                if (AppDomain.CurrentDomain.BaseDirectory != install_directory) {
+                    Process.Start(install_directory + "AoM_Launcher.exe");
+                    Application.Exit();
+
+                }
+
+            }
+            else {
+
+                btn_play.Text = "Install";
+                installed = false;
+
+
+            }
+
+            //Check for updates if installed
+            if (installed) {
+                var temp_update_number = DownloadTools.checkForUpdates(connection);
+
+                if (temp_update_number > 0){
+
+                    MessageBox.Show("Update version " + temp_update_number.ToString());
+                    btn_download_updates.Enabled = true;
+                }
+
+            }
 
         }
 
- 
 
-        private void btn_download_updates_Click(object sender, EventArgs e) {
 
-            btn_download_updates.Text = "Updating...";
-            btn_download_updates.Enabled = false;
-            downloadOrUpdate();
-            MessageBox.Show("Update Complete!");
-            btn_download_updates.Text = "Up-to-date!";
-            gameChecks();
+        private async void btn_download_updates_Click(object sender, EventArgs e) {
 
+            //Load up install complete sound
+            var player = new System.Media.SoundPlayer();
+            player.Stream = Properties.Resources.cunt_long;
+
+            if (installed) {
+
+                btn_download_updates.Enabled = false;
+                btn_play.Enabled = false;
+                btn_download_updates.Text = "Updating...";
+                pictureBox1.Image = AoM_Launcher.Properties.Resources.miller_walk;
+                await DownloadTools.downloadOrUpdate(wc);
+                player.Play();
+                pictureBox1.Image = AoM_Launcher.Properties.Resources.miller;
+                DownloadTools.restart();
+
+            }
 
         }
 
-        private void btn_play_Click(object sender, EventArgs e) {
+        private async void btn_play_Click(object sender, EventArgs e) {
 
+            //Load up install complete sound
+            var player = new System.Media.SoundPlayer();
+            player.Stream = Properties.Resources.cunt_long;
 
-            if (btn_play.Text == "Play!") {
+            if (installed) {
 
                 Process.Start(install_directory + "Millers Adventures in TinLand.exe");
                 Application.Exit();
 
             }
-
-
-            if (btn_play.Text == "Install") {
-
-
-                Directory.CreateDirectory(install_directory);
-                btn_play.Enabled = false;
-                btn_play.Text = "Installing...";
-                downloadOrUpdate();
-                btn_play.Enabled = true;
-                gameChecks();
-                btn_play.Text = "Play!";
-
-
-            }
-
-            
-        }
-
-
-
-        private void downloadOrUpdate() {
-
-            String[] files = new String[3] { "data.win", "Millers Adventures in TinLand.exe", "version.txt"};
-            foreach (String file in files) {
-
-                String temp_download = downloadLocation + file;
-                Uri download = new Uri(temp_download);
-                wc.DownloadFile(download, install_directory + file);
-
-            }
-
-
-
-            if (!File.Exists(install_directory + "AoM_Launcher.exe")) {
-                String temp_download = downloadLocation + "AoM_Launcher.exe";
-                Uri download = new Uri(temp_download);
-                wc.DownloadFile(download, install_directory + "AoM_Launcher.exe");
-
-            }
-
-                if (!File.Exists(System.Environment.GetFolderPath(Environment.SpecialFolder.CommonDesktopDirectory) + "\\Trouble in TinTown.lnk")) {
-
-                Uri download = new Uri(downloadLocation + "Trouble in TinTown.lnk");
-                wc.DownloadFile(download, System.Environment.GetFolderPath(Environment.SpecialFolder.DesktopDirectory) + "\\Trouble in TinTown.lnk");
-
-            }
-
-
-        }
-
-
-        private void gameChecks() {
-
-
-            double local_version = 0;
-            double remote_version = 0;
-
-
-
-            if (!Directory.Exists(install_directory)) {
-
-                btn_play.Text = "Install";
-
-            }
             else {
 
+                btn_play.Enabled = false;
+                btn_play.Text = "Installing...";
+                pictureBox1.Image = AoM_Launcher.Properties.Resources.miller_walk;
+                await DownloadTools.downloadOrUpdate(wc);
+                player.Play();
+                pictureBox1.Image = AoM_Launcher.Properties.Resources.miller;
+                btn_play.Enabled = true;
+                btn_play.Text = "Play!";
+                installed = true;
 
-                local_version = Convert.ToDouble(System.IO.File.ReadAllText(install_directory + "\\version.txt"));
-                remote_version = Convert.ToDouble(wc.DownloadString(downloadLocation + "version.txt"));
+
+
 
             }
 
-            //Convert full numbers to decimals
-            remote_version *= .001;
-            local_version *= .001;
-
-            //Delete beards.ini if in beta
-
-    
 
 
-            //Check for updates
-            if (local_version != remote_version) {
+        }
 
-                btn_download_updates.Enabled = true;
-                MessageBox.Show("Update version " + Convert.ToString(remote_version) + " available.");
-
-            }
-
-            //Display version
-            lbl_version.Text = "Current version: " + local_version;
-
+        private void btn_exit_Click(object sender, EventArgs e) {
+            Application.Exit();
         }
     }
 }

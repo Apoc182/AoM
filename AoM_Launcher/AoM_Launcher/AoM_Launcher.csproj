@@ -64,6 +64,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Class1.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -112,6 +113,18 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\icon.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\miller_walk.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\miller.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\snd_cunt_lng.mp3" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cunt-long.wav" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

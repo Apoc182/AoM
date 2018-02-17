@@ -519,6 +519,14 @@
             }
         },
         {
+            "Key": "6190c6ff-bfab-4335-8124-8a2c35f3b948",
+            "Value": {
+                "id": "3e846f2a-6a25-4b44-a3a1-dee32b35b6e8",
+                "resourcePath": "scripts\\scr_play_fill\\scr_play_fill.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "61919720-1751-4d5a-8189-db1ad4d14c3d",
             "Value": {
                 "id": "6b444cf5-62fd-4c01-b1a2-33a0497480d9",
@@ -975,6 +983,14 @@
             }
         },
         {
+            "Key": "b5c95d60-3f8f-4732-96ea-3501f2c54223",
+            "Value": {
+                "id": "d43bfce8-23ad-4aaa-a5b1-844eb69143b5",
+                "resourcePath": "sounds\\snd_denied\\snd_denied.yy",
+                "resourceType": "GMSound"
+            }
+        },
+        {
             "Key": "b87a5d79-86ea-496a-8896-a14f147445a0",
             "Value": {
                 "id": "9e71d4bb-7f59-4b7f-aa20-4cdb84319916",
@@ -1335,14 +1351,6 @@
             }
         },
         {
-            "Key": "e1b05635-6847-480f-bd38-e40ef87a1f3c",
-            "Value": {
-                "id": "2cab0b61-758a-4268-87dd-8f37c8074589",
-                "resourcePath": "sounds\\snd_tutorial_prog\\snd_tutorial_prog.yy",
-                "resourceType": "GMSound"
-            }
-        },
-        {
             "Key": "e4ece695-7c9b-4dd8-bf06-f84ecb9d424d",
             "Value": {
                 "id": "e5ebe53a-a1a7-447d-9795-64a4c1ee260e",
@@ -1521,7 +1529,8 @@
         "3507b0d0-fe37-405e-abee-e9e1e9c48eb4",
         "18297715-da0c-4855-a0ab-07a6537c5908",
         "30e2e5a4-f6af-4638-a6e5-02587470ea3c",
-        "6ade2ddb-38c0-44f6-a3e0-43e81adf8edd"
+        "6ade2ddb-38c0-44f6-a3e0-43e81adf8edd",
+        "6190c6ff-bfab-4335-8124-8a2c35f3b948"
     ],
     "tutorial": ""
 }

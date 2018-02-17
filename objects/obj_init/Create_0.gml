@@ -90,7 +90,7 @@ global.all_beard_properties = ds_grid_create(BRD_NUMBER_OF_BEARDS, BRD_MAX_BEARD
 //!!!
 //!!!
 	
-scr_add_beard_to_grid(spr_beard_normal, "Miller's Beard", "No bonus", true, false, 0, ["umbrella", 1],
+scr_add_beard_to_grid(spr_beard_normal, "Miller's Beard", "No bonus", true, true, 0, ["umbrella", 1],
 						["speed", 1], ["lives", 3], ["score", 1], ["damage", 1], ["drop_ratio", 1]);
 						  
 scr_add_beard_to_grid(spr_clean_shaven, "Clean Shaven", "No bonus", true, false, 0, ["umbrella", 1],

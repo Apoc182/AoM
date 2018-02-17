@@ -18,6 +18,8 @@ if(!instance_exists(box)){
 }
 
 
+
+
 //Manipulate dynamic beards.
 if(blinking){
 	
@@ -84,6 +86,10 @@ if((keyboard_check_pressed(vk_enter) || keyboard_check_pressed(vk_space)) && box
 		
 		confirm = true;
 		box.box_out = true;
+	} else{
+	
+		audio_play_sound(snd_denied, 0, false);
+	
 	}
 }
 
