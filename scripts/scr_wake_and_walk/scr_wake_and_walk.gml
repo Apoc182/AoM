@@ -12,8 +12,16 @@ if(obj_sleeping.sprite_index == spr_default_sleeping){
 
 
 if(obj_sleeping.image_index >= 8){
-	obj_sleeping.sprite_index = spr_beardwalk;
+	obj_sleeping.sprite_index = spr_talk;
+	audio_play_sound(snd_coming, 0, false);
 }
+
+if(obj_sleeping.sprite_index == spr_talk && !audio_is_playing(snd_coming)){
+
+	obj_sleeping.sprite_index = spr_beardwalk;
+
+}
+
 
 if(obj_sleeping.sprite_index == spr_beardwalk){
 	obj_sleeping.x += 4;
