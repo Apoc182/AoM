@@ -1,5 +1,5 @@
-if(instance_exists(obj_sleeping)) scr_wake_and_walk();
 
+if(wake_up && instance_exists(obj_sleeping)) scr_wake_and_walk();
 
 
 
@@ -18,3 +18,5 @@ if(keyboard_check_pressed(vk_escape) && !disable_space){
 	room_goto(rm_title);
 
 }
+
+
