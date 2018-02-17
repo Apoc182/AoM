@@ -8,7 +8,7 @@ alarm[1] = room_speed/2;
 if(global.scr > 0 && !global.debugging){
 	http_get("http://gmscoreboard.com/handle_score.php?tagid=5a46f6769a1aa15146000542325&player=" + global.user_name +"&score=" + string(global.scr));
 }
-audio_play_sound(snd_awCunt, 0, false);
+
 
 //Save max_score
 ini_open("Save.ini");
