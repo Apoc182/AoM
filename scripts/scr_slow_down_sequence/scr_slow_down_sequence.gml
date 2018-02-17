@@ -64,6 +64,7 @@ if(obj_default.image_index == 8){
 	obj_default.y += GRID_SIZE;
 	obj_default.sprite_index = spr_default_sleeping;	
 	obj_default.image_speed = 0;
+	original_score = global.timer;
 	
 	
 
@@ -106,6 +107,7 @@ if(obj_game_logic.fade_out_variance == 1) {
 	
 	obj_game_logic.fade_out_variance = 1.1;
 	with obj_default move_towards_point(448, 608, 4);
+	if(!global.debugging)scr_send_statistics();
 
 	
 	

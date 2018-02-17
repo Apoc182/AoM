@@ -71,3 +71,6 @@ turn_off_title_song = true;
 dying = false;
 fade_out_variance = 0;
 
+//So we can remember what the score was for statistical purposes.
+original_score = 0;
+
