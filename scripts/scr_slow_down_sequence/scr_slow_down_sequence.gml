@@ -58,8 +58,9 @@ if(freeze_counter == 2 * room_speed){
 }
 
 //Play animation once
-if(obj_default.image_index == 3){
+if(obj_default.image_index == 8){
 	
+	obj_default.x -= GRID_SIZE*2;
 	obj_default.y += GRID_SIZE;
 	obj_default.sprite_index = spr_default_sleeping;	
 	obj_default.image_speed = 0;
