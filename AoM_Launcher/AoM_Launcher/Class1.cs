@@ -101,8 +101,8 @@ namespace AoM_Launcher {
 
 
             //Convert full numbers to decimals
-            remote_version *= .001;
-            local_version *= .001;
+            remote_version *= .1;
+            local_version *= .1;
 
 
             //Check for updates

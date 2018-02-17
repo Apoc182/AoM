@@ -8,8 +8,8 @@ if(!global.tutorial_on){
 	tutorial_text = [
 					 "",
 					 "Welcome to Miller's dream!\nPress SPACE to use your Umbrella of Ignorance!",
-					 "Collect `Der Bitter' to fill Umbrella metre.", 
-					 "Awesome! Now here comes the rain!\nDon't let Kirstyn wake you!",
+					 "Collect the tins to fill the Umbrella metre.", 
+					 "Awesome! Now here comes the rain!\nDon't let Kirstyn's fair arguments wake you!",
 					 "Collect Smokey Joe's delicious hotsauce to replenish lives!",
 					 "Collect the black sentences with the \numbrella for mad-ass points!",
 					 "You know what's up, now get out there!",
