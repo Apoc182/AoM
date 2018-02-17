@@ -1,7 +1,7 @@
 //Fade in 
 audio_stop_sound(snd_title);
 audio_stop_sound(snd_sheeran);
-audio_play_sound(snd_title,0,false);
+audio_play_sound(snd_title,0,true);
 audio_sound_gain(snd_title, 0, 0);
 audio_sound_gain(snd_title, .25, 1000);
 audio_sound_gain(snd_gameover, 0, 1000);

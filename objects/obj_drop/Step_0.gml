@@ -40,6 +40,7 @@ if(place_meeting(x,y,obj_default) && !drop_contact && obj_default.active){
 		}else{
 			if(global.ignorance_level > 0){
 				global.ignorance_level -= global.drop_on_umbrella_ignorance_points;
+				audio_play_sound(snd_denied, 0, false);
 			}
 
 			instance_destroy();

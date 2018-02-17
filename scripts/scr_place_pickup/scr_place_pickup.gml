@@ -1,8 +1,8 @@
 ///value0 hi
 
 if(argument0 == "x"){
-	cur_x = 126 + random(918 - 126);
-	while(cur_x > obj_default.x - sprite_get_width(spr_default_standing)/2 && cur_x < obj_default.x + sprite_get_width(spr_default_standing)/2) cur_x = 126 + random(918 - 126);
+	cur_x = GRID_SIZE * 4 + random(GRID_SIZE * 28 - (GRID_SIZE * 4));
+	while(cur_x > (obj_default.x - GRID_SIZE * 2) && cur_x < obj_default.x + GRID_SIZE * 2) cur_x = GRID_SIZE * 4 + random(GRID_SIZE * 28 - (GRID_SIZE * 4));
 	return cur_x;
 }
 
