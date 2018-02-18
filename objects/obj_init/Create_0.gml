@@ -123,7 +123,7 @@ scr_add_beard_to_grid(spr_abe, "Honest Abe", "Greatly increases umbrella induran
 scr_add_beard_to_grid(spr_mario, "Jumpman", "Greatly increases score", false, false, 6000, ["umbrella", 1],
 						["speed", 1], ["lives", 3], ["score", 1.5], ["damage", 1], ["drop_ratio", 1]);
 						
-scr_add_beard_to_grid(spr_white, "White Wizard", "Greatly increases black drop rate", false, false, 2500, ["umbrella", 1],
+scr_add_beard_to_grid(spr_white, "White Wizard", "Greatly increases black drop rate", false, false, 7000, ["umbrella", 1],
 						["speed", 1], ["lives", 3], ["score", 1], ["damage", 1], ["drop_ratio", 3]);
 	
 scr_add_beard_to_grid(spr_viking, "Erik the Red", "Slightly increases all stats", false, false, 8000, ["umbrella", .5],

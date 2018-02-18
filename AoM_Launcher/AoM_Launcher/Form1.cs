@@ -68,6 +68,7 @@ namespace AoM_Launcher {
 
                     MessageBox.Show("Update version " + temp_update_number.ToString());
                     btn_download_updates.Enabled = true;
+                    btn_play.Enabled = false;
                 }
 
             }
