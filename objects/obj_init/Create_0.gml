@@ -6,7 +6,7 @@ ini_close();
 //Debugging tools
 
 	//Master switch
-	global.debugging = false;
+	global.debugging = true;
 	
 	//Starting room
 	starting_room = rm_title;
@@ -147,11 +147,11 @@ if(file_exists("Save.ini")){
 
 	
 //Open all beards for debugger
-if(global.debugging){
-	for(i = 0; i < BRD_NUMBER_OF_BEARDS; i++){
-		ds_grid_set(global.all_beard_properties, i, BRD_UNLOCKED, true);
-	}
-}
+//if(global.debugging){
+//	for(i = 0; i < BRD_NUMBER_OF_BEARDS; i++){
+//		ds_grid_set(global.all_beard_properties, i, BRD_UNLOCKED, true);
+//	}
+//}
 	
 
 
@@ -185,7 +185,8 @@ global.username_exists = false;
 
 
 
-
+//Black drop multiplier
+global.black_drop_multiplier = 0;
 
 
 global.drop_base_speed = 4;

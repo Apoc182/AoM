@@ -94,6 +94,7 @@ if(global.debugging){
 	draw_text(10, GRID_SIZE * 4 + (text_size * 6), "Damage multiplier: " + string(ds_map_find_value(scr_get_current_beard(BRD_MULTIPLIERS), "damage")));
 	draw_text(10, GRID_SIZE * 4 + (text_size * 7), "Drop multiplier: " + string(ds_map_find_value(scr_get_current_beard(BRD_MULTIPLIERS), "drop_ratio")));
 	draw_text(10, GRID_SIZE * 4 + (text_size * 8), "Seconds between drops: " + string(drop_speed / room_speed));
+	draw_text(10, GRID_SIZE * 4 + (text_size * 10), "Black drop multiplier: " + string(global.black_drop_multiplier));
 	draw_set_color(c_white);
 }
 

@@ -22,14 +22,16 @@ namespace AoM_Launcher {
             if (!Directory.Exists(install_directory)) Directory.CreateDirectory(install_directory);
 
             //Downloads all the required files async
-            String[] files = new String[4] { "data.win", "Millers Adventures in TinLand.exe", "version.txt", "llauncher.bat" };
-            foreach (String file in files) {
+            
+                String[] files = new String[4] { "data.win", "Millers Adventures in TinLand.exe", "version.txt", "llauncher.bat" };
+                foreach (String file in files) {
 
                 String temp_download = downloadLocation + file;
                 Uri download = new Uri(temp_download);
                 await Task.Run(() => wc.DownloadFile(download, install_directory + file));
 
-            }
+                }
+
 
             //Downloads the launcher
 

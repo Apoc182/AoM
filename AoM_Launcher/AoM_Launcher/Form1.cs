@@ -35,7 +35,7 @@ namespace AoM_Launcher {
 
             CenterToScreen();
 
-            
+
 
             //Initialise a connection.
             WebClient connection = new WebClient();
@@ -45,34 +45,33 @@ namespace AoM_Launcher {
                 installed = true;
 
                 //If the current application is not located in the install, open it.
-                if (AppDomain.CurrentDomain.BaseDirectory != install_directory) {
+                if ((AppDomain.CurrentDomain.BaseDirectory != install_directory) && File.Exists(install_directory + "AoM_Launcher")) {
+
                     Process.Start(install_directory + "AoM_Launcher.exe");
                     Application.Exit();
 
                 }
 
-            }
-            else {
+                else {
 
-                btn_play.Text = "Install";
-                installed = false;
+                    btn_play.Text = "Install";
+                    installed = false;
 
-
-            }
-
-            //Check for updates if installed
-            if (installed) {
-                var temp_update_number = DownloadTools.checkForUpdates(connection);
-
-                if (temp_update_number > 0){
-
-                    MessageBox.Show("Update version " + temp_update_number.ToString());
-                    btn_download_updates.Enabled = true;
-                    btn_play.Enabled = false;
                 }
 
-            }
+                //Check for updates if installed
+                if (installed) {
+                    var temp_update_number = DownloadTools.checkForUpdates(connection);
 
+                    if (temp_update_number > 0) {
+
+                        MessageBox.Show("Update version " + temp_update_number.ToString());
+                        btn_download_updates.Enabled = true;
+                        btn_play.Enabled = false;
+                    }
+
+                }
+            }
         }
 
 
