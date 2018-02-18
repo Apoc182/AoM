@@ -1,7 +1,7 @@
 //Check for drop collision with player
 
 //If drop hits player
-if(place_meeting(x,y,obj_default) && !drop_contact && obj_default.active){
+if(place_meeting(x,y,obj_default) && !drop_contact && obj_default.active && !ground_contact){
 	//If the umbrella is away when this happens.
 	if(!global.umbrella_out && !ground_contact){		
 		if(!global.invulnerable){
@@ -11,6 +11,7 @@ if(place_meeting(x,y,obj_default) && !drop_contact && obj_default.active){
 			obj_dynamic_beard.cur_voice = cunt;
 			obj_dynamic_beard.one_word = true;
 			global.cuntTally++;
+			global.black_drop_multiplier = 0;
 		}
 		global.invulnerable = true;
 		with (obj_default){
@@ -25,9 +26,10 @@ if(place_meeting(x,y,obj_default) && !drop_contact && obj_default.active){
 	
 	
 	//If umbrella is out
-	if(global.umbrella_out){
+	if(global.umbrella_out && !drop_contact && !ground_contact){
 		
 		if(this_colour == c_black){
+			this_text = scr_score_display(global.black_drop_umbrella);
 			if(global.is_thor){
 				audio_play_sound(snd_thunder, 0, false);
 				is_thunder = true;
@@ -37,13 +39,14 @@ if(place_meeting(x,y,obj_default) && !drop_contact && obj_default.active){
 				global.black_drop_multiplier += 1;
 			
 			}
-			this_text = scr_score_display(global.black_drop_umbrella);	
+				
 		}else{
 			if(global.ignorance_level > 0){
 				global.ignorance_level -= global.drop_on_umbrella_ignorance_points;
 				audio_play_sound(snd_denied, 0, false);
 			}
-
+			
+			global.black_drop_multiplier = 0;
 			instance_destroy();
 		}		
 	}
