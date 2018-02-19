@@ -72,9 +72,11 @@ if (y > (SCREEN_HEIGHT) - sprite_get_height(spr_floor) && !drop_contact && !grou
 	
 
 if(ground_contact){
-	
-	if(this_colour == c_black) global.black_drop_multiplier = 0;
-	if(image_index == 3) instance_destroy();
+
+	if(image_index == 4){
+		if(this_colour == c_black) global.black_drop_multiplier = 0;
+		instance_destroy();
+	}
 
 }
 

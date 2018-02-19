@@ -4,6 +4,11 @@ if(global.debugging){
 	if(keyboard_check_pressed(vk_control)) global.scr += 100;
 	if(keyboard_check_pressed(vk_alt)) instance_create_depth(scr_place_pickup("x"), scr_place_pickup("y"), obj_default.depth, obj_hot_sauce);
 	if(keyboard_check_pressed(vk_shift)) instance_create_depth(scr_place_pickup("x"), scr_place_pickup("y"), obj_default.depth, obj_rb_can);
+	if(keyboard_check_pressed(vk_tab)) global.colour_array = [c_black];
+	if(keyboard_check_pressed(vk_f1)) {
+		global.drop_base_speed = 0;
+		drop_speed = 3 * room_speed;
+	}
 
 }
 
@@ -23,7 +28,6 @@ if (global.scr > global.max_score && !global.tutorial_on){
 
 
 if(!alarm[1] && !global.tutorial_on){
-	switcher = random(1);
 	alarm[1] = room_speed * (10 + random(5));
 }
 

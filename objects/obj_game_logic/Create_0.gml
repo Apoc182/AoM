@@ -64,6 +64,9 @@ for(i = 0; i < global.player_lives / 6; i++){
 
 }
 
+//Array for selecting pickups
+pickups = [obj_rb_can, obj_rb_can, obj_rb_can, obj_hot_sauce, obj_hot_sauce];
+
 
 //So we know when everything is frozen after gameover
 freeze_counter = 0;

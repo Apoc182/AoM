@@ -40,7 +40,8 @@ if(global.timer mod 60 < 10){
 draw_text(15 * GRID_SIZE, GRID_SIZE, string(floor(global.timer/60)) + ":" + leading_zero + string(global.timer mod 60));
 draw_set_halign(fa_left)
 
-
+//Draw kirstyn
+if(!instance_exists(obj_kirsten_front)) instance_create_depth(GRID_SIZE * 30, GRID_SIZE, 198, obj_kirsten_front);
 
 
 //Display beard unlocked.
@@ -94,7 +95,6 @@ if(global.debugging){
 	draw_text(10, GRID_SIZE * 4 + (text_size * 6), "Damage multiplier: " + string(ds_map_find_value(scr_get_current_beard(BRD_MULTIPLIERS), "damage")));
 	draw_text(10, GRID_SIZE * 4 + (text_size * 7), "Drop multiplier: " + string(ds_map_find_value(scr_get_current_beard(BRD_MULTIPLIERS), "drop_ratio")));
 	draw_text(10, GRID_SIZE * 4 + (text_size * 8), "Seconds between drops: " + string(drop_speed / room_speed));
-	draw_text(10, GRID_SIZE * 4 + (text_size * 10), "Black drop multiplier: " + string(global.black_drop_multiplier));
 	draw_set_color(c_white);
 }
 
@@ -104,6 +104,21 @@ if(global.fade_to_black){
 
 }
 
+//Draw combo multiplier
+
+if(global.black_drop_multiplier != 0){
+	draw_set_color(c_red);
+	draw_text(GRID_SIZE * 25.5, GRID_SIZE * 2.5, "COMBO x");
+	if(global.black_drop_multiplier < 10){
+		draw_text_transformed(GRID_SIZE * 29, GRID_SIZE * 2.5, global.black_drop_multiplier, 1 + (global.black_drop_multiplier / 10), 
+							  1 + (global.black_drop_multiplier / 10), 0);
+	}else{
+	
+		draw_text_transformed(GRID_SIZE * 29, GRID_SIZE * 2.5, global.black_drop_multiplier, 2, 2, 0);
+	
+	}
+	draw_set_color(c_white);
+}
 
 
 
