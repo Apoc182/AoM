@@ -46,7 +46,7 @@ draw_text(15 * GRID_SIZE, GRID_SIZE, string(floor(global.timer/60)) + ":" + lead
 draw_set_halign(fa_left)
 
 //Draw kirstyn
-if(!instance_exists(obj_kirsten_front)) instance_create_depth(GRID_SIZE * 30, GRID_SIZE, -75, obj_kirsten_front);
+if(!instance_exists(obj_kirsten_front)) instance_create_depth(GRID_SIZE * 30, GRID_SIZE, 40, obj_kirsten_front);
 
 
 //Display beard unlocked.
@@ -82,7 +82,7 @@ if(global.ignorance_level > previous_ignorance_level){
 }
 
 draw_sprite(spr_ignorancometre, previous_ignorance_level, 
-			21 * GRID_SIZE, 
+			20.5 * GRID_SIZE, 
 			GRID_SIZE);
 			
 //Debugger HUD

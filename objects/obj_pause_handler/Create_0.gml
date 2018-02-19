@@ -1,7 +1,8 @@
 screen_save("pause.png");
 instance_deactivate_all(true);
 pause = sprite_add("pause.png", 0, false, true, 0, 0);
-layer_background_change(layer_background_get_id(layer_get_id("pause")),pause);
+layer_background_change(layer_background_get_id(layer_get_id("pause_screen")), pause);
+layer_background_change(layer_background_get_id(layer_get_id("pause_overlay")), pause_overlay);
 layer_hspeed(layer_get_id("bg1"),0);
 layer_hspeed(layer_get_id("bg2"),0);
 layer_hspeed(layer_get_id("bg3"),0);

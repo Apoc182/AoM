@@ -6,7 +6,7 @@ ini_close();
 //Debugging tools
 
 	//Master switch
-	global.debugging = false;
+	global.debugging = true;
 	
 	//Starting room
 	starting_room = rm_title;
@@ -99,7 +99,7 @@ scr_add_beard_to_grid(spr_clean_shaven, "Clean Shaven", "No bonus", true, false,
 scr_add_beard_to_grid(spr_freeman,  "Free Man", "Slightly increases speed", false, false, 500, ["umbrella", 1],
 						["speed", 1.25], ["lives", 3], ["score", 1], ["damage", 1], ["drop_ratio", 1]);
 
-scr_add_beard_to_grid(spr_van_dyke, "Van Dyke", "Increases lives", false, false, 1000, ["umbrella", 1],
+scr_add_beard_to_grid(spr_van_dyke, "Van Dyke", "Slighlty increases lives", false, false, 1000, ["umbrella", 1],
 						["speed", 1], ["lives", 4], ["score", 1], ["damage", 1], ["drop_ratio", 1]);			  
 	
 scr_add_beard_to_grid(spr_chops_2, "Burnside", "Slightly increases umbrella endurance", false, false, 1500, ["umbrella", .5],
@@ -114,8 +114,8 @@ scr_add_beard_to_grid(spr_grey, "Old Greybeard", "Slightly increases black drop 
 scr_add_beard_to_grid(spr_beard_chops, "Logan", "Greatly increases speed", false, false, 3000, ["umbrella", 1],
 						["speed", 1.5], ["lives", 3], ["score", 1], ["damage", 1], ["drop_ratio", 1]);
 						  
-scr_add_beard_to_grid(spr_sorcerer, "Sorcerer", "Reduces damage taken", false, false, 4000, ["umbrella", 1],
-						["speed", 1], ["lives", 3], ["score", 1], ["damage", .5], ["drop_ratio", 1]);
+scr_add_beard_to_grid(spr_sorcerer, "Sorcerer", "Greatly increases lives", false, false, 4000, ["umbrella", 1],
+						["speed", 1], ["lives", 5], ["score", 1], ["damage", 1], ["drop_ratio", 1]);
 
 scr_add_beard_to_grid(spr_abe, "Honest Abe", "Greatly increases umbrella indurance", false, false, 5000, ["umbrella", .25],
 						["speed", 1], ["lives", 3], ["score", 1], ["damage", 1], ["drop_ratio", 1]);
@@ -127,16 +127,16 @@ scr_add_beard_to_grid(spr_white, "White Wizard", "Greatly increases black drop r
 						["speed", 1], ["lives", 3], ["score", 1], ["damage", 1], ["drop_ratio", 3]);
 	
 scr_add_beard_to_grid(spr_viking, "Erik the Red", "Slightly increases all stats", false, false, 8000, ["umbrella", .5],
-						["speed", 1.25], ["lives", 4], ["score", 1.25], ["damage", 1], ["drop_ratio", 1]);
+						["speed", 1.25], ["lives", 4], ["score", 1.25], ["damage", 1], ["drop_ratio", 2]);
 						  
 scr_add_beard_to_grid(spr_beard_black, "Blackbeard", "Greatly increases all stats", false, false, 10000, ["umbrella", .25],
-						["speed", 1.5], ["lives", 4], ["score", 1.5], ["damage", .5], ["drop_ratio", 1]);
+						["speed", 1.5], ["lives", 5], ["score", 1.5], ["damage", 1], ["drop_ratio", 3]);
 						
-scr_add_beard_to_grid(spr_blonde, "God of Thunder", "Greatly increases all stats\n\nSlightly increases black drop rate", false, false, 12000, ["umbrella", .25],
-						["speed", 1.5], ["lives", 4], ["score", 1.5], ["damage", .5], ["drop_ratio", 2]);
+scr_add_beard_to_grid(spr_blonde, "God of Thunder", "Greatly increases all stats", false, false, 12000, ["umbrella", .25],
+						["speed", 1.5], ["lives", 5], ["score", 1.5], ["damage", 1], ["drop_ratio", 2]);
 						
-scr_add_beard_to_grid(spr_ginger, "Fire Crotch", "Greatly increases all stats\n\nGreatly increases black drop rate", false, false, 15000, ["umbrella", .25],
-						["speed", 1.5], ["lives", 4], ["score", 1.5], ["damage", .5], ["drop_ratio", 3]);
+scr_add_beard_to_grid(spr_ginger, "Fire Crotch", "Greatly increases all stats", false, false, 15000, ["umbrella", .25],
+						["speed", 1.5], ["lives", 5], ["score", 1.5], ["damage", 1], ["drop_ratio", 3]);
 
 
 //Load current and unlocked values from player save.

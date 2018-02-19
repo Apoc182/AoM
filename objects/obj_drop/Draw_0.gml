@@ -14,9 +14,11 @@ if(drop_contact){
 
 //Lightning
 if(is_thunder){
-	draw_sprite(spr_lightning, lightning_frame, (SCREEN_WIDTH)/2, (SCREEN_HEIGHT)/2);
 	lightning_frame = !lightning_frame;
 	if(counter >= thunder_timer) is_thunder = false;
 	counter++;
+	if(lightning_frame){
+		draw_set_colour(c_aqua);
+		draw_rectangle(view_xview[0], view_yview[0], view_xview[0] + view_wview[0], view_yview[0] + view_hview[0],	0);
+	}
 }
-

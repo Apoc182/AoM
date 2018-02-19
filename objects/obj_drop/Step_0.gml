@@ -36,9 +36,9 @@ if(place_meeting(x,y,obj_default) && !drop_contact && obj_default.active && !gro
 			}else{
 			
 				audio_play_sound(snd_black_drop_caught, 0, false);
-				global.black_drop_multiplier += 1;
-			
 			}
+			
+			global.black_drop_multiplier += 1;
 				
 		}else{
 			if(global.ignorance_level > 0){
@@ -72,12 +72,8 @@ if (y > (SCREEN_HEIGHT) - sprite_get_height(spr_floor) && !drop_contact && !grou
 	
 
 if(ground_contact){
-
-	if(image_index == 4){
-		if(this_colour == c_black) global.black_drop_multiplier = 0;
-		instance_destroy();
-	}
-
+	if(image_index == 0) && (this_colour == c_black) global.black_drop_multiplier = 0;
+	if(image_index == 4)instance_destroy();
 }
 
 if(drop_contact){

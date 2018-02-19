@@ -2,7 +2,8 @@ if(!instance_exists(box)){
 	if(resume){
 		instance_activate_all();
 		instance_destroy();
-		layer_background_change(layer_background_get_id(layer_get_id("pause")),spr_blank);
+		layer_background_change(layer_background_get_id(layer_get_id("pause_screen")), spr_blank);
+		layer_background_change(layer_background_get_id(layer_get_id("pause_overlay")), spr_blank);
 		layer_hspeed(layer_get_id("bg1"),0.5);
 		layer_hspeed(layer_get_id("bg2"),1);
 		layer_hspeed(layer_get_id("bg3"),2);

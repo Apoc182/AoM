@@ -70,5 +70,5 @@ alarm[2] = 5 * room_speed;
 space_string = "";
 esc_string = "";
 
-alarm[3] = 3 * room_speed;
+alarm[3] = 5 * room_speed;
 wake_up = false;

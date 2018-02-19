@@ -1,5 +1,6 @@
 /// @description Insert description here
 // You can write your code in this editor
+draw_sprite(spr_text,0,0,GRID_SIZE);
 
 draw_set_halign(fa_left);
 
