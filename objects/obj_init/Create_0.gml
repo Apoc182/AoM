@@ -9,7 +9,7 @@ ini_close();
 	global.debugging = true;
 	
 	//Starting room
-	starting_room = rm_title;
+	starting_room = dream;
 	
 	//Room skipper
 	if(global.debugging){
@@ -299,10 +299,3 @@ if(ini_key_exists("Save", "local_max")){
 
 
 ini_close();
-
-
-
-
-
-
-global.fade_to_black = false;

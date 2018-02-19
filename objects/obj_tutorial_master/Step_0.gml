@@ -153,17 +153,11 @@ if(rain_drop_spawns){
 	}
 }
 
-if(global.player_lives == 0){
-
-	scr_slow_down_sequence();
-
-}
-
 if (death){	
-	alpha_variance_again += fade_speed;
-	if(alpha_variance_again >= max_alpha_variance_again){
-		scr_restart();
-		room_restart();
+	if(!instance_exists(obj_fader)){
+		instance_create_depth(0,0,-500,obj_fader)
+		obj_fader.target = dream;
+		obj_fader.fade_color = c_white;
 	}
 }
 
@@ -172,11 +166,11 @@ if(keyboard_check(vk_escape)){
 }
 
 if(esc_set){
-	alpha_variance_again += fade_speed;
-	if(alpha_variance_again >= max_alpha_variance_again){
-		global.tutorial_on = false;
-		scr_save_ini("Save", "tutorial_on", global.tutorial_on);
-		scr_restart();
-		room_restart();
+	global.tutorial_on = false;
+	scr_save_ini("Save", "tutorial_on", global.tutorial_on);
+	if(!instance_exists(obj_fader)){
+		instance_create_depth(0,0,-500,obj_fader)
+		obj_fader.target = dream;
+		obj_fader.fade_color = c_white;
 	}
 }

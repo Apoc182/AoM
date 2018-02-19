@@ -15,11 +15,6 @@ ini_open("Save.ini");
 ini_write_real("Save", "local_max", global.max_score);
 ini_close();
 
-//Set initial pos for sleeping miller
-obj_sleeping.x = global.current_player_loc_x;
-obj_zzz.x = global.current_player_loc_x + GRID_SIZE/2;
-
-
 //Fade out theme
 audio_sound_gain(snd_title, 0, 1000);
 audio_sound_gain(snd_sheeran, 0, 1000);
@@ -75,5 +70,5 @@ alarm[2] = 5 * room_speed;
 space_string = "";
 esc_string = "";
 
-alarm[3] = 2 * room_speed;
+alarm[3] = 3 * room_speed;
 wake_up = false;

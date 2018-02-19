@@ -2,7 +2,7 @@ if(!instance_exists(box)){
 	if(resume){
 		instance_activate_all();
 		instance_destroy();
-		layer_background_change(layer_background_get_id(layer_get_id("bg4")),spr_bg4);
+		layer_background_change(layer_background_get_id(layer_get_id("pause")),spr_blank);
 		layer_hspeed(layer_get_id("bg1"),0.5);
 		layer_hspeed(layer_get_id("bg2"),1);
 		layer_hspeed(layer_get_id("bg3"),2);
@@ -12,12 +12,17 @@ if(!instance_exists(box)){
 
 	}
 	if(restart){
-		scr_restart();
-		room_restart();
+		if(!instance_exists(obj_fader)){
+			instance_create_depth(0,0,-500,obj_fader)
+			obj_fader.target = dream;
+			obj_fader.fade_color = c_white;
+		}
 	}
 	if(title){
-		scr_restart();
-		room_goto(rm_title);
+		if(!instance_exists(obj_fader)){
+			instance_create_depth(0,0,-500,obj_fader)
+			obj_fader.target = rm_title;
+		}
 	}
 	exit;
 }

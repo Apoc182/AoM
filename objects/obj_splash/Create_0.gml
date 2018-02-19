@@ -10,9 +10,7 @@ audio_play_sound(snd_splash, 0, false);
 
 image_alpha = 0;
 
-wait_time = 3.5;
 
-alarm[0] = wait_time * room_speed
 
 fade_in = true;
 toggle_sound_fade = true;

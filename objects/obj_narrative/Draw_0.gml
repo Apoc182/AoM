@@ -1,6 +1,7 @@
 if(!instance_exists(box))exit;
 
 if(show_escape_string){
+	draw_set_color(c_white)
 	
 	//Space to skip
 	draw_text(GRID_SIZE, GRID_SIZE, "Press ESC to skip...");

@@ -1,3 +1,5 @@
+if(instance_exists(obj_fader)) exit;
+
 if (box_in){
 	scr_text_box(spr_text_box, x1, y1, x2, y2);
 

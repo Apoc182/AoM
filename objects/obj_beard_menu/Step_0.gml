@@ -1,3 +1,6 @@
+//If fading occuring, cannot do anything
+if(instance_exists(obj_fader)) exit;
+
 if(!instance_exists(box)){
 	if(confirm){
 		//Clears the current default status.
@@ -13,7 +16,10 @@ if(!instance_exists(box)){
 		scr_set_game_metrics();
 	}
 	//Return to menu
-	room_goto_previous();	
+	if(!instance_exists(obj_fader)){
+		instance_create_depth(0,0,-50,obj_fader)
+		obj_fader.target = rm_title;
+	}
 	exit;
 }
 

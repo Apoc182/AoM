@@ -1,4 +1,3 @@
-
 //Timer stop
 obj_game_logic.alarm[4] = 0;
 
@@ -14,6 +13,10 @@ obj_kirsten_front.image_index = 0;
 
 obj_default.active = false;
 if(freeze_counter == 0){
+	instance_destroy(obj_default)
+	instance_destroy(obj_dynamic_beard);
+	instance_create_depth(global.current_player_loc_x, GRID_SIZE * 20, -200, obj_default);
+	instance_create_depth(global.current_player_loc_x, GRID_SIZE * 20, -225, obj_dynamic_beard);
 	
 	//Slowly kill music
 	if(audio_is_playing(snd_title)) audio_sound_gain(snd_title, 0, 2000);
@@ -80,48 +83,19 @@ if(obj_default.sprite_index == spr_default_sleeping && !global.tutorial_on){
 		global.timer--;
 	}
 	
-	//if(global.timer == .2){
-	//	global.scr++;
-	//	global.timer = 0;
-	//}
-
-
 }
 
 if(!instance_exists(obj_drop)) && (global.timer == 0 || global.tutorial_on){
 	
-	for(i = 0; i < array_length_1d(global.bottle_number); i++){
-	
-		instance_destroy(global.bottle_number[i]);
-	
-	}
-	
 	if(global.tutorial_on){
 		obj_tutorial_master.death = true;
 	}else{
-		global.fade_to_black = true;
+		if(!instance_exists(obj_fader)){
+			instance_create_depth(0,0,-100,obj_fader)
+			obj_fader.target = game_over;
+			if(!global.debugging)scr_send_statistics();
+		}
 	}
 }
-
-if(obj_game_logic.fade_out_variance == 1) {
-	
-	obj_game_logic.fade_out_variance = 1.1;
-	with obj_default move_towards_point(448, 608, 4);
-	if(!global.debugging)scr_send_statistics();
-
-	
-	
-}
-
-
-
-if(floor(point_distance(obj_default.x, obj_default.y, 448, 608)) < 5){
-
-	
-	global.fade_to_black = false;
-	room_goto(game_over);
-
-}
-
 
 freeze_counter++;

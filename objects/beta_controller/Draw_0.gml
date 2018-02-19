@@ -1,3 +1,4 @@
+draw_set_colour(c_red);
 draw_set_halign(fa_left);
 draw_text(GRID_SIZE, GRID_SIZE, "Thankyou for playing our game!\nAs we are sure you are aware, this is a closed beta.\nPlease take a moment to complete a few questions about\nyour experience to help us make this the greatest\nMiller-type game ever made!");
 draw_set_halign(fa_center);

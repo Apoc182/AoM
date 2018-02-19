@@ -4,22 +4,19 @@ drop_speed = .5 * room_speed; // Less is more. This is the length of time the al
 global.scr = 0;
 global.spd = 4;
 global.timer = 0;
-alarm[4] = room_speed;
+alarm[4] = -1;
 occupied_x = ds_list_create();
 
 
 
 global.time_multiplier = 0;
 
-previous_time_multiplier = global.time_multiplier;
-
-
 //The amount of time between speed increases
 time_speed_jump = .25;
 
 
 //Start the alarm
-alarm[3] = global.speed_jump;
+
 
 //Random colour array		
 colours = [c_aqua, c_blue, c_fuchsia, c_maroon, c_purple, c_yellow];
@@ -56,7 +53,7 @@ global.bottle_number = [];
 //Create life instances
 for(i = 0; i < global.player_lives / 6; i++){
 	
-	global.bottle_number[i] = instance_create_depth((27.5 * GRID_SIZE) - ((GRID_SIZE) * i), GRID_SIZE, 198, obj_life_bottle);
+	global.bottle_number[i] = instance_create_depth((27.5 * GRID_SIZE) - ((GRID_SIZE) * i), GRID_SIZE, -75, obj_life_bottle);
 	global.bottle_number[i].empty = i * 6;
 	global.bottle_number[i].half_full = (i + .5) * 6;
 	global.bottle_number[i].full = (i + 1) * 6;
@@ -72,7 +69,6 @@ pickups = [obj_rb_can, obj_rb_can, obj_rb_can, obj_hot_sauce, obj_hot_sauce];
 freeze_counter = 0;
 turn_off_title_song = true;
 dying = false;
-fade_out_variance = 0;
 
 //So we can remember what the score was for statistical purposes.
 original_score = 0;

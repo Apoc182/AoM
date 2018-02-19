@@ -1,7 +1,12 @@
-draw_sprite(spr_HUD, 0, 0, 0);
+//draw HUD
+draw_set_color(c_black);
+draw_set_alpha(0.75);
+draw_rectangle(0, 0, SCREEN_WIDTH, GRID_SIZE * 2, 0)
+
 
 //scoreboard
 draw_set_color(c_white);
+draw_set_alpha(1);
 draw_text(GRID_SIZE, GRID_SIZE / 2, global.user_name);
 draw_text(15 * GRID_SIZE, GRID_SIZE / 2,"Time");
 
@@ -41,7 +46,7 @@ draw_text(15 * GRID_SIZE, GRID_SIZE, string(floor(global.timer/60)) + ":" + lead
 draw_set_halign(fa_left)
 
 //Draw kirstyn
-if(!instance_exists(obj_kirsten_front)) instance_create_depth(GRID_SIZE * 30, GRID_SIZE, 198, obj_kirsten_front);
+if(!instance_exists(obj_kirsten_front)) instance_create_depth(GRID_SIZE * 30, GRID_SIZE, -75, obj_kirsten_front);
 
 
 //Display beard unlocked.
@@ -98,19 +103,13 @@ if(global.debugging){
 	draw_set_color(c_white);
 }
 
-if(global.fade_to_black){
-	
-	draw_sprite_ext(spr_lightning, 0, (SCREEN_WIDTH)/2, GRID_SIZE * -14, 1, 1, 0, c_black, fade_out_variance);
-
-}
-
 //Draw combo multiplier
 
-if(global.black_drop_multiplier != 0){
+if(global.black_drop_multiplier > 1 ){
 	draw_set_color(c_red);
-	draw_text(GRID_SIZE * 25.5, GRID_SIZE * 2.5, "COMBO x");
+	draw_text(GRID_SIZE * 25.5, GRID_SIZE * 2.5, "Combo x");
 	if(global.black_drop_multiplier < 10){
-		draw_text_transformed(GRID_SIZE * 29, GRID_SIZE * 2.5, global.black_drop_multiplier, 1 + (global.black_drop_multiplier / 10), 
+		draw_text_transformed(GRID_SIZE * 29.5, GRID_SIZE * 2.5, global.black_drop_multiplier, 1 + (global.black_drop_multiplier / 10), 
 							  1 + (global.black_drop_multiplier / 10), 0);
 	}else{
 	

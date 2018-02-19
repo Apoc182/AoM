@@ -6,10 +6,6 @@ draw_set_halign(fa_center);
 draw_text(GRID_SIZE * 16, GRID_SIZE * 2, "Select your Man-Muff");
 
 
-
-
-
-
 //Draws the barber scene and the miller sprite.
 draw_sprite(spr_barberbg, 0, GRID_SIZE * 2, GRID_SIZE * 6);
 draw_sprite(spr_default_standing, 0, GRID_SIZE * 7, GRID_SIZE * 13.5);
@@ -33,9 +29,9 @@ if(highlighted_beard + scroller >= scr_number_beards_unlocked()){
 	draw_sprite(spr_paper_bag, 0, GRID_SIZE * 7, GRID_SIZE * 13.5);
 	
 	//Here we can mention locked instead of description.
-	draw_text(GRID_SIZE * 16, GRID_SIZE * 21, "LOCKED");
-	
-
+	if(box.open){
+		draw_text(GRID_SIZE * 16, GRID_SIZE * 21, "LOCKED");
+	}
 
 }else{
 	
@@ -51,9 +47,9 @@ if(highlighted_beard + scroller >= scr_number_beards_unlocked()){
 	draw_sprite(ds_grid_get(global.all_beard_properties, highlighted_beard + scroller, BRD_SPRITE_NAME), 0, GRID_SIZE * 7, GRID_SIZE * 13.5);
 	
 	//We only want a description if the bag is not on the head.
-	draw_text(GRID_SIZE * 16, GRID_SIZE * 21, ds_grid_get(global.all_beard_properties, highlighted_beard + scroller, BRD_BEARD_DESCRIPTION));
-	
-	
+	if(box.open){
+		draw_text(GRID_SIZE * 16, GRID_SIZE * 21, ds_grid_get(global.all_beard_properties, highlighted_beard + scroller, BRD_BEARD_DESCRIPTION));
+	}
 
 }
 

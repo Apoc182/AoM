@@ -28,7 +28,7 @@ if(obj_sleeping.sprite_index == spr_beardwalk){
 }
 
 //Destroy the object when complete.
-if(obj_sleeping.x > SCREEN_WIDTH){
+if(obj_sleeping.x > SCREEN_WIDTH + GRID_SIZE){
 
 	instance_destroy(obj_sleeping);
 }
