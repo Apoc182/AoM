@@ -1,7 +1,6 @@
-if(!instance_exists(box))exit;
-
 //This will draw all the beards
 
+draw_set_color(c_white);
 draw_set_halign(fa_center);
 draw_text(GRID_SIZE * 16, GRID_SIZE * 2, "Select your Man-Muff");
 
@@ -29,8 +28,10 @@ if(highlighted_beard + scroller >= scr_number_beards_unlocked()){
 	draw_sprite(spr_paper_bag, 0, GRID_SIZE * 7, GRID_SIZE * 13.5);
 	
 	//Here we can mention locked instead of description.
-	if(box.open){
-		draw_text(GRID_SIZE * 16, GRID_SIZE * 21, "LOCKED");
+	if(instance_exists(box)){
+		if(box.open){
+			draw_text(GRID_SIZE * 16, GRID_SIZE * 21, "LOCKED");
+		}
 	}
 
 }else{
@@ -47,52 +48,50 @@ if(highlighted_beard + scroller >= scr_number_beards_unlocked()){
 	draw_sprite(ds_grid_get(global.all_beard_properties, highlighted_beard + scroller, BRD_SPRITE_NAME), 0, GRID_SIZE * 7, GRID_SIZE * 13.5);
 	
 	//We only want a description if the bag is not on the head.
-	if(box.open){
-		draw_text(GRID_SIZE * 16, GRID_SIZE * 21, ds_grid_get(global.all_beard_properties, highlighted_beard + scroller, BRD_BEARD_DESCRIPTION));
+	if(instance_exists(box)){
+		if(box.open){
+			draw_text(GRID_SIZE * 16, GRID_SIZE * 21, ds_grid_get(global.all_beard_properties, highlighted_beard + scroller, BRD_BEARD_DESCRIPTION));
+		}
 	}
 
 }
 
 
-
-
-
-
-
-if(box.open){
-	for(i = 0; i < menu_max_list; i++){
-		if(highlighted_beard == i){
-			draw_set_color(c_white);
-		}else{
-			draw_set_color(make_color_rgb(124, 124, 124));
-		}
+if(instance_exists(box)){
+	if(box.open){
+		for(i = 0; i < menu_max_list; i++){
+			if(highlighted_beard == i){
+				draw_set_color(c_white);
+			}else{
+				draw_set_color(make_color_rgb(124, 124, 124));
+			}
 		
-		if(ds_grid_get(global.all_beard_properties, scroller + i, BRD_UNLOCKED)){
-			draw_set_halign(fa_left);
-			draw_text(GRID_SIZE * 17.5, GRID_SIZE * 6.5 + (i * GRID_SIZE), ds_grid_get(global.all_beard_properties, scroller + i, BRD_BEARD_NAME))
-		}else{
-			draw_set_halign(fa_left);
-			draw_text(GRID_SIZE * 17.5, GRID_SIZE * 6.5 + (i * GRID_SIZE), string(ds_grid_get(global.all_beard_properties, scroller + i, BRD_SCORE_TO_UNLOCK)) + " points to unlock")
-		}
+			if(ds_grid_get(global.all_beard_properties, scroller + i, BRD_UNLOCKED)){
+				draw_set_halign(fa_left);
+				draw_text(GRID_SIZE * 17.5, GRID_SIZE * 6.5 + (i * GRID_SIZE), ds_grid_get(global.all_beard_properties, scroller + i, BRD_BEARD_NAME))
+			}else{
+				draw_set_halign(fa_left);
+				draw_text(GRID_SIZE * 17.5, GRID_SIZE * 6.5 + (i * GRID_SIZE), string(ds_grid_get(global.all_beard_properties, scroller + i, BRD_SCORE_TO_UNLOCK)) + " points to unlock")
+			}
 		
+		}
+
+		//For 'more' arrows
+
+		//Scroll down
+		if(menu_max_list + scroller <= ds_grid_width(global.all_beard_properties) - 1){
+
+			draw_sprite(spr_scroll_arrow, 0, GRID_SIZE * 22, GRID_SIZE * 17.5);
+
+		}
+
+		//Scroll up
+		if(scroller > 0){
+
+			draw_sprite_ext(spr_scroll_arrow, 0, GRID_SIZE * 22, GRID_SIZE * 6, 1, -1, 0, c_white, 1);
+
+		}
 	}
-
-	//For 'more' arrows
-
-	//Scroll down
-	if(menu_max_list + scroller <= ds_grid_width(global.all_beard_properties) - 1){
-
-		draw_sprite(spr_scroll_arrow, 0, GRID_SIZE * 22, GRID_SIZE * 17.5);
-
-	}
-
-	//Scroll up
-	if(scroller > 0){
-
-		draw_sprite_ext(spr_scroll_arrow, 0, GRID_SIZE * 22, GRID_SIZE * 6, 1, -1, 0, c_white, 1);
-
-	}
-
 }
 
 draw_set_color(c_white);

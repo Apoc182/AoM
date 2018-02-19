@@ -1,5 +1,5 @@
 //If fading occuring, cannot do anything
-if(instance_exists(obj_fader)) exit;
+if(instance_exists(obj_fader))exit;
 
 if(!instance_exists(box)){
 	if(confirm){
