@@ -127,13 +127,13 @@ scr_add_beard_to_grid(spr_white, "White Wizard", "Greatly increases black drop r
 						["speed", 1], ["lives", 3], ["score", 1], ["damage", 1], ["drop_ratio", 3]);
 	
 scr_add_beard_to_grid(spr_viking, "Erik the Red", "Slightly increases all stats", false, false, 8000, ["umbrella", .5],
-						["speed", 1.25], ["lives", 4], ["score", 1.25], ["damage", 1], ["drop_ratio", 2]);
+						["speed", 1.25], ["lives", 4], ["score", 1.25], ["damage", 1], ["drop_ratio", 3]);
 						  
 scr_add_beard_to_grid(spr_beard_black, "Blackbeard", "Greatly increases all stats", false, false, 10000, ["umbrella", .25],
 						["speed", 1.5], ["lives", 5], ["score", 1.5], ["damage", 1], ["drop_ratio", 3]);
 						
 scr_add_beard_to_grid(spr_blonde, "God of Thunder", "Greatly increases all stats", false, false, 12000, ["umbrella", .25],
-						["speed", 1.5], ["lives", 5], ["score", 1.5], ["damage", 1], ["drop_ratio", 2]);
+						["speed", 1.5], ["lives", 5], ["score", 1.5], ["damage", 1], ["drop_ratio", 3]);
 						
 scr_add_beard_to_grid(spr_ginger, "Fire Crotch", "Greatly increases all stats", false, false, 15000, ["umbrella", .25],
 						["speed", 1.5], ["lives", 5], ["score", 1.5], ["damage", 1], ["drop_ratio", 3]);

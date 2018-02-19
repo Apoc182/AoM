@@ -82,7 +82,7 @@ if(global.ignorance_level > previous_ignorance_level){
 }
 
 draw_sprite(spr_ignorancometre, previous_ignorance_level, 
-			20.5 * GRID_SIZE, 
+			21 * GRID_SIZE, 
 			GRID_SIZE);
 			
 //Debugger HUD
