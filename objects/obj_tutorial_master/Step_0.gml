@@ -153,14 +153,6 @@ if(rain_drop_spawns){
 	}
 }
 
-if (death){	
-	if(!instance_exists(obj_fader)){
-		instance_create_depth(0,0,-500,obj_fader)
-		obj_fader.target = dream;
-		obj_fader.fade_color = c_white;
-	}
-}
-
 if(keyboard_check(vk_escape)){
 	esc_set = true;
 }
@@ -168,9 +160,5 @@ if(keyboard_check(vk_escape)){
 if(esc_set){
 	global.tutorial_on = false;
 	scr_save_ini("Save", "tutorial_on", global.tutorial_on);
-	if(!instance_exists(obj_fader)){
-		instance_create_depth(0,0,-500,obj_fader)
-		obj_fader.target = dream;
-		obj_fader.fade_color = c_white;
-	}
+	scr_fader(dream, c_white);
 }

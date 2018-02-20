@@ -38,7 +38,6 @@ if(!global.tutorial_on){
 	rain_drop_spawns = false;
 
 	esc_set = false;
-	death = false;
 	show_escape_string = false;
 	number_of_flashes = 0;
 	max_flash = 10;

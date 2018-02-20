@@ -1,11 +1,7 @@
 if(!instance_exists(box)){
 	audio_sound_gain(snd_lullaby, 0, 2000);
 	audio_sound_gain(snd_title, .25, 2000);
-	if(!instance_exists(obj_fader)){
-		instance_create_depth(0,0,-500,obj_fader)
-		obj_fader.target = dream;
-		obj_fader.fade_color = c_white;
-	}
+	scr_fader(dream, c_white);
 	exit;
 }
 
@@ -52,11 +48,7 @@ if(keyboard_check_pressed(vk_escape)){
 	}else{
 		audio_sound_gain(snd_lullaby, 0, 2000);
 		audio_sound_gain(snd_title, .25, 2000);
-		if(!instance_exists(obj_fader)){
-			instance_create_depth(0,0,-500,obj_fader)
-			obj_fader.target = dream;
-			obj_fader.fade_color = c_white;
-		}
+		scr_fader(dream, c_white);
 	}
 }
 

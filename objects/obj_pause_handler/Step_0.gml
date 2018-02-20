@@ -12,19 +12,8 @@ if(!instance_exists(box)){
 		}
 
 	}
-	if(restart){
-		if(!instance_exists(obj_fader)){
-			instance_create_depth(0,0,-500,obj_fader)
-			obj_fader.target = dream;
-			obj_fader.fade_color = c_white;
-		}
-	}
-	if(title){
-		if(!instance_exists(obj_fader)){
-			instance_create_depth(0,0,-500,obj_fader)
-			obj_fader.target = rm_title;
-		}
-	}
+	if(restart)	scr_fader(dream, c_white);
+	if(title) scr_fader(rm_title);
 	exit;
 }
 

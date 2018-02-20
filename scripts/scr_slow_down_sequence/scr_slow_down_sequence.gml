@@ -87,14 +87,12 @@ if(obj_default.sprite_index == spr_default_sleeping && !global.tutorial_on){
 if(!instance_exists(obj_drop)) && (global.timer == 0 || global.tutorial_on){
 	
 	if(global.tutorial_on){
-		obj_tutorial_master.death = true;
+		scr_fader(dream, c_white);
 	}else{
-		if(!instance_exists(obj_fader)){
-			instance_create_depth(0,0,25,obj_fader)
-			obj_fader.target = game_over;
-			if(!global.debugging)scr_send_statistics();
-		}
+		scr_fader(game_over, c_black, 25);
+		if(!global.debugging)scr_send_statistics();
 	}
 }
+
 
 freeze_counter++;

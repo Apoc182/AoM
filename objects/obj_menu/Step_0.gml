@@ -35,10 +35,7 @@ if (push && !options){
 		
 		case 0: {					
 			//Goto the room
-			if(!instance_exists(obj_fader)){
-				instance_create_depth(0,0,50,obj_fader)
-				obj_fader.target = rm_intro;
-			}
+			scr_fader(rm_intro, c_black, 50);
 			break;
 		}
 		
@@ -68,18 +65,12 @@ if (push && options){
 	switch (mpos){
 		
 		case 0: {					
-			if(!instance_exists(obj_fader)){
-				instance_create_depth(0,0,-50,obj_fader)
-				obj_fader.target = rm_enter_name;
-			}
+			scr_fader(rm_enter_name);
 			break;
 		}
 		
 		case 1:{
-			if(!instance_exists(obj_fader)){
-				instance_create_depth(0,0,-50,obj_fader)
-				obj_fader.target = rm_beard_select;
-			}
+			scr_fader(rm_beard_select);
 			break;					  
 		}							  
 									  

@@ -16,10 +16,7 @@ if(!instance_exists(box)){
 		scr_set_game_metrics();
 	}
 	//Return to menu
-	if(!instance_exists(obj_fader)){
-		instance_create_depth(0,0,-50,obj_fader)
-		obj_fader.target = rm_title;
-	}
+	scr_fader(rm_title);
 	exit;
 }
 

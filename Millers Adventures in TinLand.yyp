@@ -111,6 +111,14 @@
             }
         },
         {
+            "Key": "1455aca9-bf5d-47cd-9790-412bd1a47131",
+            "Value": {
+                "id": "62576fc8-2dca-4449-9589-3e73c50a2577",
+                "resourcePath": "scripts\\scr_fader\\scr_fader.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "169cfe2a-0080-48a2-a8ae-2a676fa3de9b",
             "Value": {
                 "id": "d230a004-dd1f-4308-8569-93f68da76e25",
@@ -1656,9 +1664,6 @@
         "bbe9c852-778e-4a37-b80e-c4e023fe745f",
         "23138fc4-3a7d-4e1f-8fb1-1b12758cc877",
         "bfc800d8-2341-43d4-b91b-9066b2ac2adb",
-        "3507b0d0-fe37-405e-abee-e9e1e9c48eb4",
-        "6ade2ddb-38c0-44f6-a3e0-43e81adf8edd",
-        "5fde3f43-2364-4f8d-b7f0-9c9d63c19640",
         "2b1217ab-d568-41c0-88fa-894e7e8898a9",
         "3e4eda72-ab84-46d0-a42a-2d222d3771f4",
         "aaf924b7-fabd-4afe-b147-127f768300e5",
@@ -1666,7 +1671,11 @@
         "30e2e5a4-f6af-4638-a6e5-02587470ea3c",
         "35f4981c-bde9-429f-8713-49e6aa56fc49",
         "623aea5c-972b-4e05-bbdd-167fe13236a9",
-        "6190c6ff-bfab-4335-8124-8a2c35f3b948"
+        "6190c6ff-bfab-4335-8124-8a2c35f3b948",
+        "3507b0d0-fe37-405e-abee-e9e1e9c48eb4",
+        "6ade2ddb-38c0-44f6-a3e0-43e81adf8edd",
+        "5fde3f43-2364-4f8d-b7f0-9c9d63c19640",
+        "1455aca9-bf5d-47cd-9790-412bd1a47131"
     ],
     "tutorial": ""
 }
