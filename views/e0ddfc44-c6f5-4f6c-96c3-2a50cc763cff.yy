@@ -9,9 +9,8 @@
         "78a54fd8-4ecb-464e-be41-4bc12900fab9",
         "496400dc-bd2e-4d1e-b969-7fe12b6aa2f1",
         "4601a366-5b23-417d-85bc-3ba7ee8b7d32",
-        "a9766686-f4bb-423f-80ae-d3d913b06af3",
-        "e4ece695-7c9b-4dd8-bf06-f84ecb9d424d",
-        "8d801139-727f-46c6-9559-d95b285ac287"
+        "43144ab2-0c5b-4e21-af25-15fef0e5a3a8",
+        "f6ef94fd-c282-4541-96d9-d329393c6bd9"
     ],
     "filterType": "GMSprite",
     "folderName": "Backgounds",

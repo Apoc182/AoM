@@ -20,3 +20,5 @@ x1 = x1_closed;
 x2 = x2_closed;
 y1 = y1_closed;
 y2 = y2_closed;
+
+play = true;

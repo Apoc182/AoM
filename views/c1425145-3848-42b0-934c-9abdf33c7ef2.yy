@@ -10,10 +10,10 @@
         "4d949ce4-044b-4d94-8aaa-bcb1407c2478",
         "e537996f-4f2d-44dc-91bb-57b5619cc134",
         "be23f159-1b1a-4af9-8bbe-8fbd675bdf3b",
-        "71968d8d-c828-4096-bbe3-4bd6d07a4167",
-        "eab7dc85-31ff-4067-99aa-faa37e319257",
+        "3a9baca3-3218-4a6c-b95e-29b2e9cea877",
         "4fab2da8-0003-410c-b81b-40998287c178",
-        "3a9baca3-3218-4a6c-b95e-29b2e9cea877"
+        "71968d8d-c828-4096-bbe3-4bd6d07a4167",
+        "eab7dc85-31ff-4067-99aa-faa37e319257"
     ],
     "filterType": "GMSprite",
     "folderName": "miller_sprites",

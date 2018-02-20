@@ -73,3 +73,4 @@ dying = false;
 //So we can remember what the score was for statistical purposes.
 original_score = 0;
 
+umbrella_snd = true;

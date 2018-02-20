@@ -66,3 +66,11 @@ if(keyboard_check_pressed(vk_escape) && !dying && !global.tutorial_on){
 	instance_create_depth(x, y, -400, obj_pause_handler);
 }
 
+
+
+if(global.umbrella_out && umbrella_snd){
+	audio_play_sound(snd_umbrella_open,1000,false);
+	umbrella_snd = false;
+}
+
+if(!global.umbrella_out) umbrella_snd = true;

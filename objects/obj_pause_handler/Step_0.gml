@@ -28,11 +28,7 @@ if(!instance_exists(box)){
 	exit;
 }
 
-////Checks for ESC key and opens and closed the menu appropriately
-if(keyboard_check_pressed(vk_escape)){
-	box.box_out = true;
-	resume = true;
-}
+
 
 ////Menu selection
 if(box.open){
@@ -73,6 +69,13 @@ if(box.open){
 				break;
 		}
 	}
+	
+	////Checks for ESC key and opens and closed the menu appropriately
+	if(keyboard_check_pressed(vk_escape)){
+		box.box_out = true;
+		resume = true;
+	}
+
 }
 
 previous_mover = mover;

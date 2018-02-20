@@ -47,7 +47,17 @@ if(keyboard_check_pressed(vk_space) && message_current == message_end &&
 
 if(keyboard_check_pressed(vk_escape)){
 	keyboard_clear(vk_escape);
-	box.box_out = true;
+	if(box.open){
+		box.box_out = true;
+	}else{
+		audio_sound_gain(snd_lullaby, 0, 2000);
+		audio_sound_gain(snd_title, .25, 2000);
+		if(!instance_exists(obj_fader)){
+			instance_create_depth(0,0,-500,obj_fader)
+			obj_fader.target = dream;
+			obj_fader.fade_color = c_white;
+		}
+	}
 }
 
 if(text_increaser == max_size || text_increaser == 0){
