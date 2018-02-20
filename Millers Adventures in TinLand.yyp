@@ -1623,6 +1623,14 @@
             }
         },
         {
+            "Key": "fb6c74a4-ca89-445f-bf4b-9d4356aacbac",
+            "Value": {
+                "id": "aba9f88d-7806-4480-8930-767ec012044a",
+                "resourcePath": "sounds\\snd_umbrella_close\\snd_umbrella_close.yy",
+                "resourceType": "GMSound"
+            }
+        },
+        {
             "Key": "fde13e02-92ab-4419-a5ca-a96b1915a75c",
             "Value": {
                 "id": "e512809e-75f0-4485-8b3f-6abf63b7ff0a",

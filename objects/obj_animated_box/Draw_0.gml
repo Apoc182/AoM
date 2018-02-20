@@ -4,7 +4,7 @@ if(box_in){
 	scr_text_box(spr_text_box, x1, y1, x2, y2);
 	
 	if(play && !open){
-		audio_play_sound(snd_box_open, 1000, false);
+		audio_play_sound(snd_box_open, 0, false);
 		play = false;
 	}
 	
@@ -29,7 +29,7 @@ if(box_out){
 	scr_text_box(spr_text_box, x1, y1, x2, y2);
 	
 	if(play && y_open){
-      audio_play_sound(snd_box_close, 1000, false);
+      audio_play_sound(snd_box_close, 0, false);
       play = false;
 	}
 	
