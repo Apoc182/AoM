@@ -28,3 +28,4 @@ if(ini_key_exists("Save", "Name") && !global.username_exists){
 box = instance_create_depth((SCREEN_WIDTH)/2, (SCREEN_HEIGHT)/2, 50, obj_animated_box);
 box.box_in = true;
 box.y2_open = GRID_SIZE * 14.5
+init = true;

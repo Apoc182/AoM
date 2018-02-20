@@ -58,7 +58,7 @@ if(box.open){
 
 
 
-	//Don't let the beard selector off screen
+	////Don't let the beard selector off screen
 	if(highlighted_beard > menu_max_list - 1){
 	
 		scroller++;
@@ -91,7 +91,7 @@ if(box.open){
 			box.box_out = true;
 		} else{
 	
-			audio_play_sound(snd_denied, 0, false);
+			if(!audio_is_playing(snd_denied)) audio_play_sound(snd_denied, 0, false);
 	
 		}
 	}

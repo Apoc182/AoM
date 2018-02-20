@@ -44,6 +44,7 @@ if(scr_get_current_beard(BRD_SPRITE_NAME) == spr_ginger){
 		audio_sound_gain(snd_title, 0, 0);
 		if(audio_is_playing(snd_sheeran)) audio_stop_sound(snd_sheeran);
 		audio_play_sound(snd_sheeran, 0, true);
+		audio_sound_gain(snd_sheeran,1,0);
 		
 
 }

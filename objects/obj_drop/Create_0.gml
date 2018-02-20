@@ -18,3 +18,15 @@ counter = 0;
 
 //For the freezing effect
 stopper = 1;
+
+//combo array
+snd_combo_array[0] = snd_combo1;
+snd_combo_array[1] = snd_combo2;
+snd_combo_array[2] = snd_combo3;
+snd_combo_array[3] = snd_combo4;
+snd_combo_array[4] = snd_combo5;
+snd_combo_array[5] = snd_combo6;
+snd_combo_array[6] = snd_combo7;
+snd_combo_array[7] = snd_combo8;
+snd_combo_array[8] = snd_combo9;
+snd_combo_array[9] = snd_combo10;

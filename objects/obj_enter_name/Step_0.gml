@@ -3,6 +3,10 @@ if(!instance_exists(box)){
 	exit;
 }
 if box.open{
+	if(init){
+		keyboard_string ="";
+		init = false;
+	}
 
 	if(keyboard_check(vk_anykey) && !keyboard_check(vk_enter) && !keyboard_check(vk_backspace) && 
 	   !keyboard_check(vk_space) && !keyboard_check(vk_escape)){
@@ -39,7 +43,7 @@ if box.open{
 
 	if ((keyboard_check_pressed(vk_enter) || keyboard_check_pressed(vk_space)) && user_name == "" && box.open){
 
-		audio_play_sound(snd_denied, 0, false);
+		if(!audio_is_playing(snd_denied)) audio_play_sound(snd_denied, 0, false);
 	
 	}
 }

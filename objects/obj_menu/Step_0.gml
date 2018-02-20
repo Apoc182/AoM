@@ -101,7 +101,7 @@ if (push && options){
 //Esc takes to exit
 if(keyboard_check_pressed(vk_escape) && !options){
 	mpos = 2; 
-	audio_play_sound(snd_back, 0, false);
+	if(!audio_is_playing(snd_back)) audio_play_sound(snd_back, 0, false);
 }
 
 //Esc takes to exit

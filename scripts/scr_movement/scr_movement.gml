@@ -67,9 +67,11 @@ if (keyboard_check(vk_space)){
 		
 	}else if(keyboard_check_pressed(vk_space)){
 		//Play the 'out of umbrella' sound
-		cunted = audio_play_sound(snd_get_cunted, 0, false);
-		obj_dynamic_beard.talking = true;
-		obj_dynamic_beard.cur_voice = cunted;
+		if(!audio_is_playing(snd_get_cunted)){
+			cunted = audio_play_sound(snd_get_cunted, 0, false);
+			obj_dynamic_beard.talking = true;
+			obj_dynamic_beard.cur_voice = cunted;
+		}
 	}
 	
 	if(global.ignorance_level == 0) global.umbrella_out = false;

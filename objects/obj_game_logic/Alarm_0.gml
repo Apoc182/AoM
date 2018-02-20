@@ -6,13 +6,13 @@
 
 
 y_location = random(50) * -1;
-x_location = floor(random((SCREEN_WIDTH)));
+x_location = floor(sprite_get_height(spr_nesfont)/2 + random(SCREEN_WIDTH - (sprite_get_height(spr_nesfont))));
 
 //Prevent the drops from spawning on the same x coordinate.
 
 for(var i = 0; i < sprite_get_width(drop) * 2; i++){
 	if(ds_list_find_index(occupied_x, (x_location - sprite_get_width(drop)) + i) != -1){
-		x_location = floor(random((SCREEN_WIDTH)));
+		x_location = floor(sprite_get_height(spr_nesfont)/2 + random(SCREEN_WIDTH - (sprite_get_height(spr_nesfont))));
 		i = -1;
 	}
 }

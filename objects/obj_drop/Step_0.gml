@@ -14,6 +14,9 @@ if(place_meeting(x,y,obj_default) && obj_default.active){
 			global.player_lives -= global.player_damage;
 			
 			//Miller says cunt
+			audio_stop_sound(snd_quick_cunt);
+			audio_stop_sound(snd_cunt_lng);
+			audio_stop_sound(snd_aw_cunt);
 			cunt = audio_play_sound(global.rain_hit[random(array_length_1d(global.rain_hit) - 1)], 0, false);
 			obj_dynamic_beard.talking = true;
 			obj_dynamic_beard.cur_voice = cunt;
@@ -52,7 +55,10 @@ if(place_meeting(x,y,obj_default) && obj_default.active){
 			
 			//play drop caught sound
 			}else{
-				audio_play_sound(snd_black_drop_caught, 0, false);
+				audio_stop_sound(snd_combo_array[clamp(global.black_drop_multiplier-1,0,9)]);
+				combo = audio_play_sound(snd_combo_array[clamp(global.black_drop_multiplier,0,9)], 0, false);
+				obj_dynamic_beard.talking = true;
+				obj_dynamic_beard.cur_voice = combo;
 			}
 			
 			//increase combo multiplier

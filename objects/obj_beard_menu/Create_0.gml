@@ -33,7 +33,14 @@ frame_count = 0;
 
 //Make the menu scroll
 menu_max_list = 11;
-scroller = 0;
+
+if(1 + highlighted_beard > menu_max_list){
+	scroller = 1 + highlighted_beard- menu_max_list;
+	highlighted_beard -= scroller;
+}else{
+	scroller = 0;
+}
+
 final_beard = false;
 previous_highlighted = highlighted_beard;
 
