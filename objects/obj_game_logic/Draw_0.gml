@@ -101,7 +101,9 @@ if(global.debugging){
 	draw_text(GRID_SIZE, GRID_SIZE * 4 + (text_size * 8), "Drop multiplier: " + string(ds_map_find_value(scr_get_current_beard(BRD_MULTIPLIERS), "drop_ratio")));
 	draw_text(GRID_SIZE, GRID_SIZE * 4 + (text_size * 10), "Seconds between drops: " + string(drop_speed / room_speed));
 	if(global.black_drop_multiplier < 2 ) draw_text(GRID_SIZE * 25.5, GRID_SIZE * 2.5, "Combo x " + string(global.black_drop_multiplier));
-	draw_set_color(c_white);
+	draw_text(GRID_SIZE * 25.5, GRID_SIZE * 3.5, "Max   x " + string(global.black_drop_multiplier_max));
+
+draw_set_color(c_white);
 }
 
 //Draw combo multiplier
