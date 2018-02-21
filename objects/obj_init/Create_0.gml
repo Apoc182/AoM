@@ -6,7 +6,7 @@ ini_close();
 //Debugging tools
 
 	//Master switch
-	global.debugging = true;
+	global.debugging = false;
 	
 	//Starting room
 	starting_room = rm_title;
@@ -32,6 +32,7 @@ ini_close();
 
 
 global.is_thor = false;
+global.black_drop_multiplier_max = 0;
 
 //Beard grid macro's
 #macro BRD_MAX_BEARD_PROPERTIES 7

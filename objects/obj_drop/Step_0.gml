@@ -63,7 +63,7 @@ if(place_meeting(x,y,obj_default) && obj_default.active){
 			
 			//increase combo multiplier
 			global.black_drop_multiplier += 1;
-			
+			if(global.black_drop_multiplier_max < global.black_drop_multiplier) global.black_drop_multiplier_max = global.black_drop_multiplier;			
 			//for white drops		
 		}else{
 			
@@ -79,7 +79,7 @@ if(place_meeting(x,y,obj_default) && obj_default.active){
 			instance_destroy();
 
 			//put umbrella away
-			keyboard_key_release(vk_space);
+			keyboard_clear(vk_space);
 		}	
 	}
 }
