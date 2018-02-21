@@ -26,7 +26,7 @@ if(control){
 	}
 }
 
-if(audio_is_playing(obj_music.music_playing) = 0) music_playing = 0;
+if(!audio_is_playing(obj_music.music_playing)) music_playing = 0;
 
 switch(music_playing){
 	case 0: {
