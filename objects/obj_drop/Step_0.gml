@@ -59,6 +59,7 @@ if(place_meeting(x,y,obj_default) && obj_default.active){
 				combo = audio_play_sound(snd_combo_array[clamp(global.black_drop_multiplier,0,9)], 0, false);
 				obj_dynamic_beard.talking = true;
 				obj_dynamic_beard.cur_voice = combo;
+				if(global.black_drop_multiplier == 9 || global.black_drop_multiplier == 0) obj_dynamic_beard.one_word = true;
 			}
 			
 			//increase combo multiplier
