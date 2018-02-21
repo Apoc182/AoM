@@ -9,4 +9,7 @@ if(keyboard_check_pressed(vk_space) && !disable_space) scr_fader(rm_beta);
 	//scr_restart();
 	//room_goto(dream);
 
-if(keyboard_check_pressed(vk_escape) && !disable_space) scr_fader(rm_title);
+if(keyboard_check_pressed(vk_escape) && !disable_space){
+	scr_fader(rm_title);
+	scr_music_stop();
+}

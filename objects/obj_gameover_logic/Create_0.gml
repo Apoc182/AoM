@@ -15,15 +15,8 @@ ini_open("Save.ini");
 ini_write_real("Save", "local_max", global.max_score);
 ini_close();
 
-//Fade out theme
-audio_sound_gain(snd_title, 0, 1000);
-audio_sound_gain(snd_sheeran, 0, 1000);
-
 //Fade in gamover
-audio_stop_sound(snd_gameover);
-audio_play_sound(snd_gameover, 0, false);
-audio_sound_gain(snd_gameover, 0, 0);
-audio_sound_gain(snd_gameover, .5, 1000);
+scr_music_play(snd_gameover);
 
 //Delays the score being printed to the screen to allow http request to process.
 alarm[0] = 2 * room_speed;

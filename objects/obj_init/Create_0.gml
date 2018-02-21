@@ -6,15 +6,15 @@ ini_close();
 //Debugging tools
 
 	//Master switch
-	global.debugging = false;
+	global.debugging = true;
 	
 	//Starting room
-	starting_room = rm_title;
+	//starting_room = rm_splash;
 	
 	//Room skipper
-	if(global.debugging){
-		room_goto(starting_room);
-	}
+	//if(global.debugging){
+	//	room_goto(starting_room);
+	//}
 	
 	//Dummy values for skipping rooms
 	if(global.debugging){

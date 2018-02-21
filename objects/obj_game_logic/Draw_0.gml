@@ -91,16 +91,16 @@ if(global.debugging){
 	draw_set_color(c_silver);
 	var text_size = sprite_get_height(spr_nesfont);
 	
-	draw_text(10, GRID_SIZE * 4, "Ignoracometre: " + string(string(global.ignorance_level)));
-	draw_text(10, GRID_SIZE * 4 + text_size, "Lives: " + string(global.player_lives / 6));
-	draw_text(10, GRID_SIZE * 4 + (text_size * 2), "Umbrella multiplier: " + string(ds_map_find_value(scr_get_current_beard(BRD_MULTIPLIERS), "umbrella")));
-	draw_text(10, GRID_SIZE * 4 + (text_size * 3), "Speed multiplier: " + string(ds_map_find_value(scr_get_current_beard(BRD_MULTIPLIERS), "speed")));
-	draw_text(10, GRID_SIZE * 4 + (text_size * 4), "Lives multiplier: " + string(ds_map_find_value(scr_get_current_beard(BRD_MULTIPLIERS), "lives")));
-	draw_text(10, GRID_SIZE * 4 + (text_size * 5), "Score multiplier: " + string(ds_map_find_value(scr_get_current_beard(BRD_MULTIPLIERS), "score")));
-	draw_text(10, GRID_SIZE * 4 + (text_size * 6), "Damage multiplier: " + string(ds_map_find_value(scr_get_current_beard(BRD_MULTIPLIERS), "damage")));
-	draw_text(10, GRID_SIZE * 4 + (text_size * 7), "Drop multiplier: " + string(ds_map_find_value(scr_get_current_beard(BRD_MULTIPLIERS), "drop_ratio")));
-	draw_text(10, GRID_SIZE * 4 + (text_size * 8), "Seconds between drops: " + string(drop_speed / room_speed));
-	draw_text(10, GRID_SIZE * 4 + (text_size * 10), "Combo: " + string(global.black_drop_multiplier));
+	draw_text(GRID_SIZE, GRID_SIZE * 4, "Ignoracometre: " + string(string(global.ignorance_level)));
+	draw_text(GRID_SIZE, GRID_SIZE * 4 + text_size, "Lives: " + string(global.player_lives / 6));
+	draw_text(GRID_SIZE, GRID_SIZE * 4 + (text_size * 3), "Umbrella multiplier: " + string(ds_map_find_value(scr_get_current_beard(BRD_MULTIPLIERS), "umbrella")));
+	draw_text(GRID_SIZE, GRID_SIZE * 4 + (text_size * 4), "Speed multiplier: " + string(ds_map_find_value(scr_get_current_beard(BRD_MULTIPLIERS), "speed")));
+	draw_text(GRID_SIZE, GRID_SIZE * 4 + (text_size * 5), "Lives multiplier: " + string(ds_map_find_value(scr_get_current_beard(BRD_MULTIPLIERS), "lives")));
+	draw_text(GRID_SIZE, GRID_SIZE * 4 + (text_size * 6), "Score multiplier: " + string(ds_map_find_value(scr_get_current_beard(BRD_MULTIPLIERS), "score")));
+	draw_text(GRID_SIZE, GRID_SIZE * 4 + (text_size * 7), "Damage multiplier: " + string(ds_map_find_value(scr_get_current_beard(BRD_MULTIPLIERS), "damage")));
+	draw_text(GRID_SIZE, GRID_SIZE * 4 + (text_size * 8), "Drop multiplier: " + string(ds_map_find_value(scr_get_current_beard(BRD_MULTIPLIERS), "drop_ratio")));
+	draw_text(GRID_SIZE, GRID_SIZE * 4 + (text_size * 10), "Seconds between drops: " + string(drop_speed / room_speed));
+	if(global.black_drop_multiplier < 2 ) draw_text(GRID_SIZE * 25.5, GRID_SIZE * 2.5, "Combo x " + string(global.black_drop_multiplier));
 	draw_set_color(c_white);
 }
 

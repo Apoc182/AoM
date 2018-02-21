@@ -21,13 +21,7 @@ with (obj_kirsten_side) {
 				
 }
 
-//Shut the title sound up
-audio_sound_gain(snd_title, 0, 2000);
-
-//Play millers sleepy music
-audio_play_sound(snd_lullaby, 0, true);
-audio_sound_gain(snd_lullaby, 0, 0);
-audio_sound_gain(snd_lullaby, 1, 5000);
+scr_music_play(snd_lullaby);
 
 
 show_escape_string = false;

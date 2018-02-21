@@ -36,6 +36,7 @@ if (push && !options){
 		case 0: {					
 			//Goto the room
 			scr_fader(rm_intro, c_black, 50);
+			scr_music_stop();
 			break;
 		}
 		

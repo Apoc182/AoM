@@ -3,7 +3,7 @@
     "modelName": "GMSound",
     "mvc": "1.0",
     "name": "snd_sheeran",
-    "audioGroupGuid": "7b2c4976-1e09-44e5-8256-c527145e03bb",
+    "audioGroupGuid": "ee7ec268-f863-4d50-b32c-482f4131a639",
     "bitDepth": 1,
     "bitRate": 128,
     "kind": 0,

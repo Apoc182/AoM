@@ -1,6 +1,5 @@
 if(!instance_exists(box)){
-	audio_sound_gain(snd_lullaby, 0, 2000);
-	audio_sound_gain(snd_title, .25, 2000);
+	scr_music_stop();
 	scr_fader(dream, c_white);
 	exit;
 }
@@ -46,8 +45,7 @@ if(keyboard_check_pressed(vk_escape)){
 	if(box.open){
 		box.box_out = true;
 	}else{
-		audio_sound_gain(snd_lullaby, 0, 2000);
-		audio_sound_gain(snd_title, .25, 2000);
+		scr_music_stop();
 		scr_fader(dream, c_white);
 	}
 }

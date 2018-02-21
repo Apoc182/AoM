@@ -15,7 +15,7 @@ obj_default.active = false;
 if(freeze_counter == 0){
 	
 	//Slowly kill music
-	if(audio_is_playing(snd_title)) audio_sound_gain(snd_title, 0, 2000);
+	scr_music_stop();
 	
 	//Stop miller
 	obj_default.sprite_index = spr_default_standing;
