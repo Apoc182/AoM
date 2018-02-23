@@ -57,8 +57,10 @@ if(beard_unlocked){
 		x_co = obj_default.x - obj_default.sprite_width/2;
 		y_co = obj_default.y- obj_default.sprite_height/2 - 20;
 		draw_text(x_co, y_co, "New beard Unlocked!");
+		audio_play_sound(snd_beard_unlocked,0,false);
 		first_unlocked = false;
 	}else{
+		
 		draw_text(x_co, y_co - floater, "New beard Unlocked!");
 		floater++;
 	}

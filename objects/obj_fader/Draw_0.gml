@@ -3,7 +3,6 @@ fade_alpha = clamp(fade_alpha + (fade_state * fade_speed),0,1);
 
 //if fade out complete, go to target room and start fade in
 if(fade_alpha == 1){
-	//scr_restart();
 	room_goto(target);
 	fade_state = -1;
 }

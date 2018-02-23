@@ -16,7 +16,7 @@ ini_write_real("Save", "local_max", global.max_score);
 ini_close();
 
 //Fade in gamover
-scr_music_play(snd_gameover);
+scr_music_play(snd_gameover,false);
 
 //Delays the score being printed to the screen to allow http request to process.
 alarm[0] = 2 * room_speed;

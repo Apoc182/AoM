@@ -15,10 +15,10 @@ obj_default.active = false;
 if(freeze_counter == 0){
 	
 	//Slowly kill music
-	scr_music_stop();
+	scr_music_fade(-1);
 	
 	//Stop miller
-	obj_default.sprite_index = spr_default_standing;
+	obj_default.sprite_index = obj_default.standing;
 	
 	//Stop the rain
 	obj_drop.stopper = .25;
@@ -90,7 +90,8 @@ if(!instance_exists(obj_drop)) && (global.timer == 0 || global.tutorial_on){
 		scr_fader(dream, c_white);
 	}else{
 		scr_fader(game_over, c_black, 25);
-		if(!global.debugging)scr_send_statistics();
+		//if(!global.debugging)
+		scr_send_statistics();
 	}
 }
 

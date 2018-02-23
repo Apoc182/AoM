@@ -1,1 +1,2 @@
-instance_destroy()
+//start fade out
+fade = true;

@@ -133,10 +133,10 @@ scr_add_beard_to_grid(spr_viking, "Erik the Red", "Slightly increases all stats"
 scr_add_beard_to_grid(spr_beard_black, "Blackbeard", "Greatly increases all stats", false, false, 10000, ["umbrella", .25],
 						["speed", 1.5], ["lives", 5], ["score", 1.5], ["damage", 1], ["drop_ratio", 3]);
 						
-scr_add_beard_to_grid(spr_blonde, "God of Thunder", "Greatly increases all stats", false, false, 12000, ["umbrella", .25],
+scr_add_beard_to_grid(spr_blonde, "God of Thunder", "Greatly increases all stats", false, false, 15000, ["umbrella", .25],
 						["speed", 1.5], ["lives", 5], ["score", 1.5], ["damage", 1], ["drop_ratio", 3]);
 						
-scr_add_beard_to_grid(spr_ginger, "Fire Crotch", "Greatly increases all stats", false, false, 15000, ["umbrella", .25],
+scr_add_beard_to_grid(spr_ginger, "Fire Crotch", "Greatly increases all stats", false, false, 20000, ["umbrella", .25],
 						["speed", 1.5], ["lives", 5], ["score", 1.5], ["damage", 1], ["drop_ratio", 3]);
 
 

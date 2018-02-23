@@ -1,4 +1,4 @@
-if (instance_place(x, y, obj_default)){
+if (instance_place(x, y, obj_default) && global.player_lives){
 	
 	//Here we change the pitch of the fill sound based on how much umbrella power we alread have.
 	

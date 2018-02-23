@@ -69,11 +69,15 @@ if(keyboard_check_pressed(vk_escape) && !dying && !global.tutorial_on){
 
 
 if(global.umbrella_out && umbrella_snd){
-	audio_play_sound(snd_umbrella_open,0,false);
+	audio_stop_sound(snd_umbrella_close);
+	var umbrella_open = audio_play_sound(snd_umbrella_open, 0, false);
+	audio_sound_pitch(umbrella_open, (random(20) + 90) * .01);
 	umbrella_snd = false;
 }
 
 if(!global.umbrella_out && !umbrella_snd){
-	audio_play_sound(snd_umbrella_close,0,false);
+	audio_stop_sound(snd_umbrella_open);
+	var umbrella_close = audio_play_sound(snd_umbrella_close, 0, false);
+	audio_sound_pitch(umbrella_close, (random(20) + 90) * .01);
 	umbrella_snd = true;
 }

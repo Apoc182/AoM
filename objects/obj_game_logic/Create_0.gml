@@ -1,3 +1,5 @@
+scr_restart();
+
 beard_unlocked = false;
 alarm_on = false;
 drop_speed = .5 * room_speed; // Less is more. This is the length of time the alarm is set for.

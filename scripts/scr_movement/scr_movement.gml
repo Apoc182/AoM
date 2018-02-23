@@ -48,7 +48,7 @@ if(image_index >= 1 && image_index < 1.5){
 		
 		//Multiplier is between 0 and 1. A random number between 80 and 100 times .01 for a max pitch shift
 		//of 20%
-		audio_sound_pitch(step, (random(20) + 80) * .01);
+		audio_sound_pitch(step, (random(20) + 90) * .01);
 	}
 
 

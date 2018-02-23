@@ -2,7 +2,7 @@ if(instance_exists(obj_fader)) exit;
 
 if(!instance_exists(box)){
 	if(resume){
-		audio_resume_sound(obj_music.music_playing);
+		audio_resume_all();
 		instance_activate_all();
 		instance_destroy();
 		layer_background_change(layer_background_get_id(layer_get_id("pause_screen")), spr_blank);
@@ -16,12 +16,12 @@ if(!instance_exists(box)){
 
 	}
 	if(restart){
-		scr_music_stop();
+		audio_stop_all();
 		scr_fader(dream, c_white)
 	}
 	if(title){
+		audio_stop_all();
 		scr_fader(rm_title);
-		scr_music_stop();
 	}
 	exit;
 }
