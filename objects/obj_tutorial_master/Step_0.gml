@@ -160,5 +160,6 @@ if(keyboard_check(vk_escape)){
 if(esc_set){
 	global.tutorial_on = false;
 	scr_save_ini("Save", "tutorial_on", global.tutorial_on);
+	audio_stop_all();
 	scr_fader(dream, c_white);
 }

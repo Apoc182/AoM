@@ -27,7 +27,7 @@ if(!global.tutorial_on){
 	active = true;
 
 	//Set the ignorancometre low
-	global.ignorance_level = 8;
+	global.ignorance_level = 12;
 
 
 	alarm_delay = 2;
