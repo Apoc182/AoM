@@ -25,3 +25,6 @@ restart = false;
 title = false;
 previous_mover = mover;
 
+//Save max_score
+scr_update_max_score();
+

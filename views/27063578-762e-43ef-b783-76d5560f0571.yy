@@ -9,7 +9,8 @@
         "86f62d63-7673-4644-b4c5-afe5ec28320d",
         "bedb2b08-ddbe-4e58-9f6f-6130ff0ccf3b",
         "43e06358-1583-4706-b50f-737f3c3e9bf0",
-        "bbe9c852-778e-4a37-b80e-c4e023fe745f"
+        "bbe9c852-778e-4a37-b80e-c4e023fe745f",
+        "09a3d1bd-a4d3-4e33-9357-3daecb78a3aa"
     ],
     "filterType": "GMScript",
     "folderName": "beard_grid_scripts",

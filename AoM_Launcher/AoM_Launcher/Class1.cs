@@ -124,14 +124,16 @@ namespace AoM_Launcher {
         //Restarts the software to update it
         public static void restart() {
 
+            
             String install_directory = Path.GetPathRoot(Environment.SystemDirectory) + "Games\\TinTimeStudios\\Trouble in TinTown\\";
 
-            MessageBox.Show("Launcher must now restart to update.");
-            System.Environment.CurrentDirectory = install_directory;
-            Process.Start(install_directory + "llauncher.bat");
-            Application.Exit();
-
-        }
+            if (File.Exists(install_directory + "temp.exe")) {
+                MessageBox.Show("Launcher must now restart to update.");
+                System.Environment.CurrentDirectory = install_directory;
+                Process.Start(install_directory + "llauncher.bat");
+                Application.Exit();
+            } 
+                    }
 
 
 

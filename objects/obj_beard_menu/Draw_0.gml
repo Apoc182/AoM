@@ -81,14 +81,14 @@ if(instance_exists(box)){
 		//Scroll down
 		if(menu_max_list + scroller <= ds_grid_width(global.all_beard_properties) - 1){
 
-			draw_sprite(spr_scroll_arrow, 0, GRID_SIZE * 22, GRID_SIZE * 17.5);
+			draw_sprite(spr_scroll_arrow, animation_frame_arrow, GRID_SIZE * 22, GRID_SIZE * 17.5);
 
 		}
 
 		//Scroll up
 		if(scroller > 0){
 
-			draw_sprite_ext(spr_scroll_arrow, 0, GRID_SIZE * 22, GRID_SIZE * 6, 1, -1, 0, c_white, 1);
+			draw_sprite_ext(spr_scroll_arrow, animation_frame_arrow, GRID_SIZE * 22, GRID_SIZE * 6, 1, -1, 0, c_white, 1);
 
 		}
 	}
@@ -98,11 +98,18 @@ draw_set_color(c_white);
 
 draw_sprite(spr_barber_pole, animation_frame, GRID_SIZE * 3, GRID_SIZE * 10);
 
-//Animate above
+//Animate barber pole.
 if(animation_frame < sprite_get_number(spr_barber_pole)){
 	animation_frame += animation_fps / room_speed;
 }else{
 	animation_frame = 0;
 }
 
+
+//Animate arrows
+if(animation_frame_arrow < sprite_get_number(spr_scroll_arrow)){
+	animation_frame_arrow += animation_fps_arrow / room_speed;
+}else{
+	animation_frame_arrow = 0;
+}
 

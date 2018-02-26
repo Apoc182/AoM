@@ -73,3 +73,6 @@ dying = false;
 original_score = 0;
 
 umbrella_snd = true;
+
+//So we only retrieve the scores once
+async_init = true;

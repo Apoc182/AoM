@@ -47,3 +47,7 @@ previous_highlighted = highlighted_beard;
 //Animate the barber pole
 animation_frame = 0;
 animation_fps = 10;
+
+//Animate the arrows
+animation_frame_arrow = 0;
+animation_fps_arrow = 3;

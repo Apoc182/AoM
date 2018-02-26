@@ -34,30 +34,32 @@ namespace AoM_Launcher {
 
 
             CenterToScreen();
-
-
-
             //Initialise a connection.
             WebClient connection = new WebClient();
+
 
             //Check for an installation
             if (DownloadTools.checkIfInstalled(connection)) {
                 installed = true;
 
                 //If the current application is not located in the install, open it.
-                if ((AppDomain.CurrentDomain.BaseDirectory != install_directory) && File.Exists(install_directory + "AoM_Launcher")) {
+                if ((AppDomain.CurrentDomain.BaseDirectory != install_directory) && File.Exists(install_directory + "AoM_Launcher.exe")) {
 
                     Process.Start(install_directory + "AoM_Launcher.exe");
                     Application.Exit();
 
                 }
+            }
+            else {
 
-                else {
+                btn_play.Text = "Install";
+                installed = false;               
 
-                    btn_play.Text = "Install";
-                    installed = false;
+            }
 
-                }
+
+                
+
 
                 //Check for updates if installed
                 if (installed) {
@@ -71,7 +73,7 @@ namespace AoM_Launcher {
                     }
 
                 }
-            }
+            
         }
 
 
@@ -109,6 +111,7 @@ namespace AoM_Launcher {
                 Application.Exit();
 
             }
+
             else {
 
                 btn_play.Enabled = false;
@@ -117,8 +120,9 @@ namespace AoM_Launcher {
                 await DownloadTools.downloadOrUpdate(wc);
                 player.Play();
                 pictureBox1.Image = AoM_Launcher.Properties.Resources.miller;
-                btn_play.Enabled = true;
+                DownloadTools.restart();
                 btn_play.Text = "Play!";
+                btn_play.Enabled = true;
                 installed = true;
 
 

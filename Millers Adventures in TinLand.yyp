@@ -87,6 +87,14 @@
             }
         },
         {
+            "Key": "09a3d1bd-a4d3-4e33-9357-3daecb78a3aa",
+            "Value": {
+                "id": "6a62e797-d39a-4b07-ab64-2d74ffcbf887",
+                "resourcePath": "scripts\\scr_update_max_score\\scr_update_max_score.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "0e9d3a00-2df7-478f-8519-fed049cc8773",
             "Value": {
                 "id": "4fdcbc75-0988-4e40-8222-fa8c3f1a00d7",
@@ -1766,6 +1774,7 @@
         "bedb2b08-ddbe-4e58-9f6f-6130ff0ccf3b",
         "43e06358-1583-4706-b50f-737f3c3e9bf0",
         "bbe9c852-778e-4a37-b80e-c4e023fe745f",
+        "09a3d1bd-a4d3-4e33-9357-3daecb78a3aa",
         "23138fc4-3a7d-4e1f-8fb1-1b12758cc877",
         "bfc800d8-2341-43d4-b91b-9066b2ac2adb",
         "2b1217ab-d568-41c0-88fa-894e7e8898a9",
