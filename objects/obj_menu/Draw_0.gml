@@ -2,6 +2,7 @@
 // You can write your code in this editor
 draw_sprite(spr_text,0,0,GRID_SIZE);
 
+draw_set_color(c_white);
 draw_set_halign(fa_right);
 if(version_exists) draw_text(GRID_SIZE * 31.5, GRID_SIZE * 21, "Version " + string(version_number));
 
