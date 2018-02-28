@@ -559,6 +559,14 @@
             }
         },
         {
+            "Key": "512d7b67-fc68-400c-8a3d-b456e7274d28",
+            "Value": {
+                "id": "e2da205a-351a-4748-8154-1ed6eb26146f",
+                "resourcePath": "sprites\\spr_kirstyns_eyelids\\spr_kirstyns_eyelids.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "515db536-37eb-46c4-85fe-8605d8ed2ac9",
             "Value": {
                 "id": "a65f480e-a6a2-4308-a4c9-3295b8dfb07d",

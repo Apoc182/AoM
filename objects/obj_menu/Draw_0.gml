@@ -2,6 +2,9 @@
 // You can write your code in this editor
 draw_sprite(spr_text,0,0,GRID_SIZE);
 
+
+draw_text(GRID_SIZE * 24, GRID_SIZE *20, "Version " + string(version_number * .1));
+
 draw_set_halign(fa_left);
 
 for (var i = 0; i < array_length_1d(menu); i += 1){

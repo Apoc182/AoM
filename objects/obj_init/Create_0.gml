@@ -34,6 +34,9 @@ ini_close();
 global.is_thor = false;
 global.black_drop_multiplier_max = 0;
 
+//For statistics
+global.num_black_drops = 0;
+
 //Beard grid macro's
 #macro BRD_MAX_BEARD_PROPERTIES 7
 

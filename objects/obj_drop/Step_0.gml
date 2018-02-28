@@ -44,9 +44,12 @@ if(place_meeting(x,y,obj_default) && obj_default.active){
 		audio_stop_sound(snd_black_drop_caught);
 		var drop_caught = audio_play_sound(snd_black_drop_caught, 0, false);
 		audio_sound_pitch(drop_caught, (random(10) + 95) * .01);
+		
 	
 		//for black drops
 		if(this_colour == c_black){
+			//Count them
+			global.num_black_drops++;
 			
 			//change to score
 			instance_change(obj_score, true);

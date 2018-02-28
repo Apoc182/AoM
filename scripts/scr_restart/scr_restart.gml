@@ -9,5 +9,6 @@ global.scr = 0;
 global.time_multiplier = 0;
 global.black_drop_multiplier = 0;
 global.black_drop_multiplier_max = 0;
+global.num_black_drops = 0;
 scr_set_game_metrics();
 keyboard_clear(vk_space);

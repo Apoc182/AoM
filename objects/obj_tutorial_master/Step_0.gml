@@ -93,6 +93,7 @@ if(current_text_pos == 4 && next_text = false){
 		new_sauce = instance_create_depth(scr_place_pickup("x"), scr_place_pickup("y"), obj_default.depth, obj_hot_sauce);
 		new_sauce.alarm[1] = false;
 		active = false;
+		global.ignorance_level = 16;
 	}
 	
 	//Constantly running
