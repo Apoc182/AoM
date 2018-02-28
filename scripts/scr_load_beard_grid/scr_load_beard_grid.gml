@@ -4,13 +4,23 @@ ini_open("save.ini");
 
 var high_score = ini_read_real("Save", "local_max", 0);
 var current = ds_list_create();
+var used_map = ds_map_create();
+ds_map_read(used_map, ini_read_string("Save", "used", ""));
 ds_list_read(current, ini_read_string("Save", "current", ""));
 
-
+	
 
 
 
 for(i = 0; i < ds_grid_width(global.all_beard_properties); i++){
+	
+	//Apply used states to beards
+	if(ds_map_find_value(used_map, ds_grid_get(global.all_beard_properties, i, BRD_BEARD_NAME))){
+	
+		ds_grid_set(global.all_beard_properties, i, BRD_USED, true);
+		
+	}
+	
 
 	var score_unlock = ds_grid_get(global.all_beard_properties, i, BRD_SCORE_TO_UNLOCK)
 	

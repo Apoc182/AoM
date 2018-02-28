@@ -9,6 +9,5 @@ var current_ip = "http://slicedbread.ddns.net"
 
 var to_send = "/submit_data.php?name=" + global.user_name + "&time_alive=" + string(original_score) + "&beard_used_desc=" + scr_get_current_beard(BRD_BEARD_DESCRIPTION) + "&score=" + string(global.scr) + "&c_tally=" + string(global.cuntTally) + "&multiplier=" + string(global.black_drop_multiplier_max) + "&black_count=" + string(global.num_black_drops);
 
-show_message(to_send);
 
 http_get(current_ip + to_send);

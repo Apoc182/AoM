@@ -38,7 +38,7 @@ global.black_drop_multiplier_max = 0;
 global.num_black_drops = 0;
 
 //Beard grid macro's
-#macro BRD_MAX_BEARD_PROPERTIES 7
+#macro BRD_MAX_BEARD_PROPERTIES 8
 
 
 
@@ -49,7 +49,8 @@ global.num_black_drops = 0;
 #macro BRD_UNLOCKED 3
 #macro BRD_CURRENT 4
 #macro BRD_SCORE_TO_UNLOCK 5
-#macro BRD_MULTIPLIERS 6
+#macro BRD_USED 6
+#macro BRD_MULTIPLIERS 7
 
 
 
@@ -94,52 +95,52 @@ global.all_beard_properties = ds_grid_create(BRD_NUMBER_OF_BEARDS, BRD_MAX_BEARD
 //!!!
 //!!!
 	
-scr_add_beard_to_grid(spr_beard_normal, "Miller's Beard", "No bonus", true, true, 0, ["umbrella", 1],
+scr_add_beard_to_grid(spr_beard_normal, "Miller's Beard", "No bonus", true, true, 0, true, ["umbrella", 1],
 						["speed", 1], ["lives", 3], ["score", 1], ["damage", 1], ["drop_ratio", 1]);
 						  
-scr_add_beard_to_grid(spr_clean_shaven, "Clean Shaven", "No bonus", true, false, 0, ["umbrella", 1],
+scr_add_beard_to_grid(spr_clean_shaven, "Clean Shaven", "No bonus", true, false, 0, true, ["umbrella", 1],
 						["speed", 1], ["lives", 3], ["score", 1], ["damage", 1], ["drop_ratio", 1]);
 
-scr_add_beard_to_grid(spr_freeman,  "Free Man", "Slightly increases speed", false, false, 500, ["umbrella", 1],
+scr_add_beard_to_grid(spr_freeman,  "Free Man", "Slightly increases speed", false, false, 500, false, ["umbrella", 1],
 						["speed", 1.25], ["lives", 3], ["score", 1], ["damage", 1], ["drop_ratio", 1]);
 
-scr_add_beard_to_grid(spr_van_dyke, "Van Dyke", "Slighlty increases lives", false, false, 1000, ["umbrella", 1],
+scr_add_beard_to_grid(spr_van_dyke, "Van Dyke", "Slighlty increases lives", false, false, 1000, false, ["umbrella", 1],
 						["speed", 1], ["lives", 4], ["score", 1], ["damage", 1], ["drop_ratio", 1]);			  
 	
-scr_add_beard_to_grid(spr_chops_2, "Burnside", "Slightly increases umbrella endurance", false, false, 1500, ["umbrella", .5],
+scr_add_beard_to_grid(spr_chops_2, "Burnside", "Slightly increases umbrella endurance", false, false, 1500, false, ["umbrella", .5],
 						["speed", 1], ["lives", 3], ["score", 1], ["damage", 1], ["drop_ratio", 1]);
 	
-scr_add_beard_to_grid(spr_chaplin, "Great Dictator", "Slightly increases score", false, false, 2000, ["umbrella", 1],
+scr_add_beard_to_grid(spr_chaplin, "Great Dictator", "Slightly increases score", false, false, 2000, false, ["umbrella", 1],
 						["speed", 1], ["lives", 3], ["score", 1.25], ["damage", 1], ["drop_ratio", 1]);
 						  
-scr_add_beard_to_grid(spr_grey, "Old Greybeard", "Slightly increases black drop rate", false, false, 2500, ["umbrella", 1],
+scr_add_beard_to_grid(spr_grey, "Old Greybeard", "Slightly increases black drop rate", false, false, 2500, false, ["umbrella", 1],
 						["speed", 1], ["lives", 3], ["score", 1], ["damage", 1], ["drop_ratio", 2]);
 						  
-scr_add_beard_to_grid(spr_beard_chops, "Logan", "Greatly increases speed", false, false, 3000, ["umbrella", 1],
+scr_add_beard_to_grid(spr_beard_chops, "Logan", "Greatly increases speed", false, false, 3000, false, ["umbrella", 1],
 						["speed", 1.5], ["lives", 3], ["score", 1], ["damage", 1], ["drop_ratio", 1]);
 						  
-scr_add_beard_to_grid(spr_sorcerer, "Sorcerer", "Greatly increases lives", false, false, 4000, ["umbrella", 1],
+scr_add_beard_to_grid(spr_sorcerer, "Sorcerer", "Greatly increases lives", false, false, 4000, false, ["umbrella", 1],
 						["speed", 1], ["lives", 5], ["score", 1], ["damage", 1], ["drop_ratio", 1]);
 
-scr_add_beard_to_grid(spr_abe, "Honest Abe", "Greatly increases umbrella indurance", false, false, 5000, ["umbrella", .25],
+scr_add_beard_to_grid(spr_abe, "Honest Abe", "Greatly increases umbrella indurance", false, false, 5000, false, ["umbrella", .25],
 						["speed", 1], ["lives", 3], ["score", 1], ["damage", 1], ["drop_ratio", 1]);
 	
-scr_add_beard_to_grid(spr_mario, "Jumpman", "Greatly increases score", false, false, 6000, ["umbrella", 1],
+scr_add_beard_to_grid(spr_mario, "Jumpman", "Greatly increases score", false, false, 6000, false, ["umbrella", 1],
 						["speed", 1], ["lives", 3], ["score", 1.5], ["damage", 1], ["drop_ratio", 1]);
 						
-scr_add_beard_to_grid(spr_white, "White Wizard", "Greatly increases black drop rate", false, false, 7000, ["umbrella", 1],
+scr_add_beard_to_grid(spr_white, "White Wizard", "Greatly increases black drop rate", false, false, 7000, false, ["umbrella", 1],
 						["speed", 1], ["lives", 3], ["score", 1], ["damage", 1], ["drop_ratio", 3]);
 	
-scr_add_beard_to_grid(spr_viking, "Erik the Red", "Slightly increases all stats", false, false, 8000, ["umbrella", .5],
+scr_add_beard_to_grid(spr_viking, "Erik the Red", "Slightly increases all stats", false, false, 8000, false, ["umbrella", .5],
 						["speed", 1.25], ["lives", 4], ["score", 1.25], ["damage", 1], ["drop_ratio", 2]);
 						  
-scr_add_beard_to_grid(spr_beard_black, "Blackbeard", "Greatly increases all stats", false, false, 10000, ["umbrella", .25],
+scr_add_beard_to_grid(spr_beard_black, "Blackbeard", "Greatly increases all stats", false, false, 10000, false, ["umbrella", .25],
 						["speed", 1.5], ["lives", 5], ["score", 1.5], ["damage", 1], ["drop_ratio", 3]);
 						
-scr_add_beard_to_grid(spr_blonde, "God of Thunder", "Greatly increases all stats", false, false, 15000, ["umbrella", .25],
+scr_add_beard_to_grid(spr_blonde, "God of Thunder", "Greatly increases all stats", false, false, 15000, false, ["umbrella", .25],
 						["speed", 1.5], ["lives", 5], ["score", 1.5], ["damage", 1], ["drop_ratio", 3]);
 						
-scr_add_beard_to_grid(spr_ginger, "Fire Crotch", "Greatly increases all stats", false, false, 20000, ["umbrella", .25],
+scr_add_beard_to_grid(spr_ginger, "Fire Crotch", "Greatly increases all stats", false, false, 20000, false, ["umbrella", .25],
 						["speed", 1.5], ["lives", 5], ["score", 1.5], ["damage", 1], ["drop_ratio", 3]);
 
 

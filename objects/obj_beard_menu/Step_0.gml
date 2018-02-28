@@ -8,6 +8,9 @@ if(!instance_exists(box)){
 	
 		//Sets the new beard.
 		ds_grid_set(global.all_beard_properties, highlighted_beard + scroller, BRD_CURRENT, true);
+		
+		//Sets current beard to not new
+		ds_grid_set(global.all_beard_properties, highlighted_beard + scroller, BRD_USED, true);
 	
 		//Save changes
 		scr_save_beard_grid();

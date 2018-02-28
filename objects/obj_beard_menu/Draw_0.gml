@@ -67,8 +67,21 @@ if(instance_exists(box)){
 			}
 		
 			if(ds_grid_get(global.all_beard_properties, scroller + i, BRD_UNLOCKED)){
+				if(!ds_grid_get(global.all_beard_properties, scroller + i, BRD_USED)){
+					var new_text = "New!";
+				}else{
+					var new_text = "";
+				}
 				draw_set_halign(fa_left);
-				draw_text(GRID_SIZE * 17.5, GRID_SIZE * 6.5 + (i * GRID_SIZE), ds_grid_get(global.all_beard_properties, scroller + i, BRD_BEARD_NAME))
+				draw_text(GRID_SIZE * 17.5, GRID_SIZE * 6.5 + (i * GRID_SIZE), ds_grid_get(global.all_beard_properties, scroller + i, BRD_BEARD_NAME));
+				var text_width = GRID_SIZE * 17.5 + string_width(ds_grid_get(global.all_beard_properties, scroller + i, BRD_BEARD_NAME));
+				
+				draw_set_color(c_white);
+				draw_set_alpha(animation_frame_arrow);
+				draw_text(text_width + GRID_SIZE / 2, GRID_SIZE * 6.5 + (i * GRID_SIZE), new_text);
+				draw_set_alpha(1);
+				draw_set_color(make_color_rgb(124, 124, 124));
+				
 			}else{
 				draw_set_halign(fa_left);
 				draw_text(GRID_SIZE * 17.5, GRID_SIZE * 6.5 + (i * GRID_SIZE), string(ds_grid_get(global.all_beard_properties, scroller + i, BRD_SCORE_TO_UNLOCK)) + " points to unlock")
