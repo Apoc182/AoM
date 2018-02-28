@@ -1,4 +1,15 @@
-screen_save("pause.png");
+if(window_get_fullscreen()){
+	var width_scaled = display_get_height() / SCREEN_HEIGHT * SCREEN_WIDTH;	
+	var x_scaled = ((display_get_width() - width_scaled) / 2) / (display_get_width() / SCREEN_WIDTH);
+}else{
+
+	var x_scaled = 0;
+	var width_scaled = SCREEN_WIDTH;
+
+}
+
+screen_save_part("pause.png", x_scaled, 0, width_scaled, display_get_height());
+//screen_save("pause.png");
 instance_deactivate_all(true);
 instance_activate_object(obj_music);
 audio_pause_all();
