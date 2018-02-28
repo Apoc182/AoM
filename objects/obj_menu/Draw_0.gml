@@ -2,8 +2,8 @@
 // You can write your code in this editor
 draw_sprite(spr_text,0,0,GRID_SIZE);
 
-
-draw_text(GRID_SIZE * 24, GRID_SIZE *20, "Version " + string(version_number * .1));
+draw_set_halign(fa_right);
+if(version_exists) draw_text(GRID_SIZE * 31.5, GRID_SIZE * 21, "Version " + string(version_number));
 
 draw_set_halign(fa_left);
 
