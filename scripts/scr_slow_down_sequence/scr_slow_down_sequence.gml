@@ -84,17 +84,13 @@ if(obj_default.sprite_index == spr_default_sleeping && !global.tutorial_on){
 	
 }
 
+
 if(!instance_exists(obj_drop)) && (global.timer == 0 || global.tutorial_on){
 	
 	
 	if(global.tutorial_on){
 		scr_fader(dream, c_white);
 	}else{
-		
-		//Send scores.
-		if(global.scr > 0 && !global.debugging){
-			http_get("http://gmscoreboard.com/handle_score.php?tagid=5a46f6769a1aa15146000542325&player=" + global.user_name +"&score=" + string(global.scr));
-		}
 		
 		scr_fader(game_over, c_black, 25);
 		//if(!global.debugging)

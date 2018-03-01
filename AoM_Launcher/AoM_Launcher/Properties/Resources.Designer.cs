@@ -98,5 +98,15 @@ namespace AoM_Launcher.Properties {
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap miller_walk_1__1_ {
+            get {
+                object obj = ResourceManager.GetObject("miller_walk_1 (1)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
     }
 }

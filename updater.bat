@@ -13,6 +13,9 @@ pscp -pw %id% current_build/version.txt %name%@slicedbread.ddns.net:/var/www/htm
 pscp -pw %id% AoM_Launcher/AoM_Launcher/bin/Debug/AoM_Launcher.exe %name%@slicedbread.ddns.net:/var/www/html/install
 pscp -pw %id% current_build/data.win %name%@slicedbread.ddns.net:/var/www/html/install
 pscp -pw %id% current_build/"Millers Adventures in TinLand.exe" %name%@slicedbread.ddns.net:/var/www/html/install
+pscp -pw %id% current_build/"audiogroup1.dat" %name%@slicedbread.ddns.net:/var/www/html/install
+pscp -pw %id% current_build/"audiogroup2.dat" %name%@slicedbread.ddns.net:/var/www/html/install
+pscp -pw %id% current_build/"audiogroup3.dat" %name%@slicedbread.ddns.net:/var/www/html/install
 
 IF "%git%" EQU "none" (
 	EXIT /B 0

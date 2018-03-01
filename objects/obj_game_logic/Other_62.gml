@@ -48,6 +48,7 @@ if(ds_map_find_value(async_load, "url") == "http://gmscoreboard.com/handle_score
 	
 	]
 
+		global.top_players = [];
 		
 		for (var i = 0; i < 10; i++){
 			if(!is_undefined(ds_map_find_value(map, player_positions[i]))){

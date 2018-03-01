@@ -65,7 +65,7 @@ namespace AoM_Launcher {
                 if (installed) {
                     var temp_update_number = DownloadTools.checkForUpdates(connection);
 
-                    if (temp_update_number > 0) {
+                    if (temp_update_number > 0 || !DownloadTools.checkFilesPresent()) {
 
                         MessageBox.Show("Update version " + temp_update_number.ToString());
                         btn_download_updates.Enabled = true;
@@ -89,7 +89,7 @@ namespace AoM_Launcher {
                 btn_download_updates.Enabled = false;
                 btn_play.Enabled = false;
                 btn_download_updates.Text = "Updating...";
-                pictureBox1.Image = AoM_Launcher.Properties.Resources.miller_walk;
+                pictureBox1.Image = AoM_Launcher.Properties.Resources.miller_walk_1__1_;
                 await DownloadTools.downloadOrUpdate(wc);
                 player.Play();
                 pictureBox1.Image = AoM_Launcher.Properties.Resources.miller;

@@ -13,6 +13,24 @@ namespace AoM_Launcher {
     public class DownloadTools {
 
 
+        public static bool checkFilesPresent() {
+
+            //Probably make this check all files at some point.
+
+            String install_directory = Path.GetPathRoot(Environment.SystemDirectory) + "Games\\TinTimeStudios\\Trouble in TinTown\\";
+            if (File.Exists(install_directory + "audiogroup1.dat")) {
+
+                return true;
+
+            }
+            else {
+
+                return false;
+
+            }
+
+        }
+
         public static async Task downloadOrUpdate(WebClient wc) {
             //Variables
             String downloadLocation = "http://slicedbread.ddns.net/install/";
@@ -23,7 +41,7 @@ namespace AoM_Launcher {
 
             //Downloads all the required files async
             
-                String[] files = new String[4] { "data.win", "Millers Adventures in TinLand.exe", "version.txt", "llauncher.bat" };
+                String[] files = new String[7] { "data.win", "Millers Adventures in TinLand.exe", "version.txt", "llauncher.bat", "audiogroup1.dat", "audiogroup2.dat", "audiogroup3.dat" };
                 foreach (String file in files) {
 
                 String temp_download = downloadLocation + file;

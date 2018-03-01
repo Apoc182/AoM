@@ -42,11 +42,14 @@ if(!alarm[1] && !global.tutorial_on){
 //If run out of lives, game over
 if(global.player_lives <= 0){
 	
+	//Send scores.
+	if(freeze_counter == 1 * room_speed) http_get("http://gmscoreboard.com/handle_score.php?tagid=5a46f6769a1aa15146000542325&player=" + global.user_name +"&score=" + string(global.scr + (5 * global.timer)))
 
 	//Retrieve high scores.
-	http_get("http://gmscoreboard.com/handle_score.php?tagid=5a46f6769a1aa15146000542325&getscore=10");
+	if(freeze_counter == 3 * room_speed) http_get("http://gmscoreboard.com/handle_score.php?tagid=5a46f6769a1aa15146000542325&getscore=10");
 
 	scr_slow_down_sequence();
+	
 
 }
 
