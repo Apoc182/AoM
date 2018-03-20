@@ -37,5 +37,5 @@ talking = false;
 //Current voice line
 cur_voice = undefined;
 
-//Just to make the long drawn out 'cunts' look better
+//Just to make the long drawn out words look better
 one_word = false;

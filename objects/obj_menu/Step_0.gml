@@ -21,7 +21,7 @@ if (move != 0){
 push = max(keyboard_check_pressed(vk_enter), keyboard_check_pressed(vk_space), 0);
 
 //For using left and right to control toggle items
-if(!push && options && (mpos == 2 || mpos == 3)){
+if(!push && options && (scr_range(mpos, 2, 4))){
 
 	push = max(keyboard_check_pressed(vk_left), keyboard_check_pressed(vk_right), keyboard_check_pressed(ord("A")), keyboard_check_pressed(ord("D")), 0);
 
@@ -41,7 +41,7 @@ if (push && !options){
 		}
 		
 		case 1:{
-			menu = ["Change Name", "Change Beard", "Full Screen", "Tutorial"];
+			menu = ["Change Name", "Change Beard", "Profanity", "Full Screen", "Tutorial"];
 			mpos = 0;
 			push = false;
 			options = true;
@@ -70,12 +70,19 @@ if (push && options){
 			break;
 		}
 		
+		
 		case 1:{
 			scr_fader(rm_beard_select);
 			break;					  
-		}							  
+		}
+		
+		case 2:{
+			obj_music.dialogue_volume = !obj_music.dialogue_volume;
+			break;					  
+		}			
 									  
-		case 2:{					  
+									  
+		case 3:{					  
 			if(!window_get_fullscreen()){			  
 				window_set_fullscreen(true);
 			}else{		
@@ -85,7 +92,7 @@ if (push && options){
 			break;
 		}
 		
-		case 3:{
+		case 4:{
 			global.tutorial_on = !global.tutorial_on;
 			break;
 		}

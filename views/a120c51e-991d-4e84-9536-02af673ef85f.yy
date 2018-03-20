@@ -11,7 +11,7 @@
         "f6ce56c4-f10c-4d0a-a1e3-2c60a2d1889d"
     ],
     "filterType": "GMSound",
-    "folderName": "cunt",
+    "folderName": "cnt",
     "isDefaultView": false,
     "localisedFolderName": ""
 }

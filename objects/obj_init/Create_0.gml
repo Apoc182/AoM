@@ -3,6 +3,7 @@ ini_open("Save.ini");
 window_set_fullscreen(ini_read_real("Save", "Fullscreen", false));
 ini_close();
 
+
 //Debugging tools
 
 	//Master switch
@@ -285,14 +286,12 @@ global.thinking_out_loud = [
 global.thinking_out_loud_length = array_length_1d(global.thinking_out_loud);
 
 global.rain_hit = [
-	snd_quick_cunt,
-	snd_cunt_lng,
-	snd_aw_cunt
+	snd_quick_cnt,
+	snd_cnt_lng,
+	snd_aw_cnt
 
 ]
 
-//Count times cunts said
-global.cuntTally = 0;
 
 //Max score - Check ini first, then if not present, load 0.
 ini_open("Save.ini");

@@ -11,9 +11,15 @@ if(obj_sleeping.sprite_index == spr_default_sleeping){
 }
 
 
-if(obj_sleeping.image_index >= 8){
+if(obj_sleeping.image_index >= 8 && obj_music.dialogue_volume == 1){
 	obj_sleeping.sprite_index = spr_talk;
 	audio_play_sound(snd_coming, 0, false);
+}
+
+if(obj_sleeping.image_index >= 8 && obj_music.dialogue_volume == 0){
+
+	obj_sleeping.sprite_index = spr_beardwalk;
+
 }
 
 if(obj_sleeping.sprite_index == spr_talk && !audio_is_playing(snd_coming)){

@@ -30,7 +30,7 @@ if(!turning){
 //Handles talking. In order to use, set 'talking' to true and 'cur_voice' to the voiceline being said.
 //NOTE: if it is one long, drawn out word, set one word to true.
 
-if(talking){
+if(talking && obj_music.dialogue_volume != 0){
 	if(one_word){
 		image_index = 1;
 	}else{

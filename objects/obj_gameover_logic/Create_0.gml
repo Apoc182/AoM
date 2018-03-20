@@ -6,10 +6,6 @@ dot_dot = "";
 alarm[1] = room_speed/2;
 
 
-
-
-
-
 //Fade in gamover
 scr_music_play(snd_gameover,false);
 

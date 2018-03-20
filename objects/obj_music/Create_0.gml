@@ -6,7 +6,7 @@ music_playing = snd_splash;
 
 music_volume = 1;
 sfx_volume = 1;
-dialogue_volume = 1;
+dialogue_volume = 0;
 
 control = false;
 music_target = 0;

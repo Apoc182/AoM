@@ -13,13 +13,12 @@ if(place_meeting(x,y,obj_default) && obj_default.active){
 			//decrease lives
 			global.player_lives -= global.player_damage;
 			
-			//Miller says cunt
+			//Miller speaks
 			audio_group_stop_all(audiogroup_dialogue);
-			cunt = audio_play_sound(global.rain_hit[random(array_length_1d(global.rain_hit) - 1)], 0, false);
+			cnt = audio_play_sound(global.rain_hit[random(array_length_1d(global.rain_hit) - 1)], 0, false);
 			obj_dynamic_beard.talking = true;
-			obj_dynamic_beard.cur_voice = cunt;
+			obj_dynamic_beard.cur_voice = cnt;
 			obj_dynamic_beard.one_word = true;
-			global.cuntTally++;
 			
 			//reset combo multiplier
 			global.black_drop_multiplier = 0;

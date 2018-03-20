@@ -80,9 +80,6 @@ namespace AoM_Launcher {
 
         private async void btn_download_updates_Click(object sender, EventArgs e) {
 
-            //Load up install complete sound
-            var player = new System.Media.SoundPlayer();
-            player.Stream = Properties.Resources.cunt_long;
 
             if (installed) {
 
@@ -91,7 +88,6 @@ namespace AoM_Launcher {
                 btn_download_updates.Text = "Updating...";
                 pictureBox1.Image = AoM_Launcher.Properties.Resources.miller_walk_1__1_;
                 await DownloadTools.downloadOrUpdate(wc);
-                player.Play();
                 pictureBox1.Image = AoM_Launcher.Properties.Resources.miller;
                 DownloadTools.restart();
 
@@ -101,9 +97,6 @@ namespace AoM_Launcher {
 
         private async void btn_play_Click(object sender, EventArgs e) {
 
-            //Load up install complete sound
-            var player = new System.Media.SoundPlayer();
-            player.Stream = Properties.Resources.cunt_long;
 
             if (installed) {
 
@@ -118,7 +111,6 @@ namespace AoM_Launcher {
                 btn_play.Text = "Installing...";
                 pictureBox1.Image = AoM_Launcher.Properties.Resources.miller_walk;
                 await DownloadTools.downloadOrUpdate(wc);
-                player.Play();
                 pictureBox1.Image = AoM_Launcher.Properties.Resources.miller;
                 DownloadTools.restart();
                 btn_play.Text = "Play!";
